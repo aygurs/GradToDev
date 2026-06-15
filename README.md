@@ -4,9 +4,9 @@ A polished React + TypeScript revision app for graduate and junior developers wh
 
 ## Current learning library
 
-- 17 hardcoded topics
-- 529 flashcards
-- 503 questions
+- 19 hardcoded topics
+- 591 flashcards
+- 565 questions
 - Question styles include multiple choice, true/false, scenario questions and typed-answer recall
 - Explanations are shown after every question
 - Content now goes beyond syntax into UI engineering, tooling, algorithms, security, performance, reliability and professional workflow
@@ -30,6 +30,8 @@ A polished React + TypeScript revision app for graduate and junior developers wh
 - Node.js, Tooling & Runtime Fundamentals
 - DSA & Problem Solving
 - Security, Performance & Reliability
+- HTML Semantics & Good Practices
+- CSS Layout, Styling & Animations
 
 ## Running locally
 

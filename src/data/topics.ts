@@ -2,6 +2,1148 @@ import { Topic } from '../types/index';
 
 export const topics = [
   {
+    "id": "html-semantics-good-practices",
+    "title": "HTML Semantics & Good Practices",
+    "description": "Learn semantic structure, forms, accessibility, metadata and HTML habits that make interfaces easier to use and maintain.",
+    "flashcards": [
+      {
+        "id": "html-semantics-card-01",
+        "front": "What does semantic HTML mean?",
+        "back": "Semantic HTML means using elements based on their meaning, not just their appearance. This helps accessibility tools, search engines and other developers understand the page structure.",
+        "example": "<button>Save</button>\n<!-- Better than <div onclick=\"save()\">Save</div> -->"
+      },
+      {
+        "id": "html-semantics-card-02",
+        "front": "Why use headings in order?",
+        "back": "Headings create a document outline. Use one clear h1 for the page title, then h2, h3 and so on without skipping levels just for styling.",
+        "example": "<h1>Dashboard</h1>\n<h2>Devices</h2>\n<h3>Offline devices</h3>"
+      },
+      {
+        "id": "html-semantics-card-03",
+        "front": "What is the purpose of <main>?",
+        "back": "<main> wraps the main unique content of the page. It helps screen reader users jump past repeated navigation and headers.",
+        "example": "<main>\n  <h1>Settings</h1>\n</main>"
+      },
+      {
+        "id": "html-semantics-card-04",
+        "front": "When should you use <nav>?",
+        "back": "Use <nav> for a major block of navigation links, such as the site menu, sidebar navigation or pagination navigation.",
+        "example": "<nav aria-label=\"Main navigation\">...</nav>"
+      },
+      {
+        "id": "html-semantics-card-05",
+        "front": "What is the purpose of <section>?",
+        "back": "<section> groups related content that usually has its own heading. Do not use it just as a generic wrapper when a div would be clearer.",
+        "example": "<section>\n  <h2>Billing details</h2>\n</section>"
+      },
+      {
+        "id": "html-semantics-card-06",
+        "front": "When should you use <article>?",
+        "back": "Use <article> for self-contained content that could stand on its own, such as a blog post, card, review or news item.",
+        "example": "<article>\n  <h2>Release notes</h2>\n</article>"
+      },
+      {
+        "id": "html-semantics-card-07",
+        "front": "What is the difference between <button> and <a>?",
+        "back": "Use <button> for actions that happen on the current page. Use <a> for navigation to another page, route, file or location.",
+        "example": "<button>Open modal</button>\n<a href=\"/docs\">Read docs</a>"
+      },
+      {
+        "id": "html-semantics-card-08",
+        "front": "Why should images have alt text?",
+        "back": "alt text describes meaningful images for people using screen readers or when images fail to load. Decorative images should usually use empty alt text.",
+        "example": "<img src=\"chart.png\" alt=\"Sales increased in Q4\" />"
+      },
+      {
+        "id": "html-semantics-card-09",
+        "front": "What does empty alt text mean?",
+        "back": "alt=\"\" tells assistive tech to ignore a decorative image. This avoids noisy descriptions that do not help the user.",
+        "example": "<img src=\"divider.svg\" alt=\"\" />"
+      },
+      {
+        "id": "html-semantics-card-10",
+        "front": "Why connect labels to form controls?",
+        "back": "Labels make inputs easier to click and announce the input purpose to screen readers. Use htmlFor in React and id on the input.",
+        "example": "<label for=\"email\">Email</label>\n<input id=\"email\" type=\"email\" />"
+      },
+      {
+        "id": "html-semantics-card-11",
+        "front": "What does required do?",
+        "back": "required tells the browser a form field must be filled before submission. It gives built-in validation but you should still validate on the server.",
+        "example": "<input name=\"email\" required />"
+      },
+      {
+        "id": "html-semantics-card-12",
+        "front": "Why use the correct input type?",
+        "back": "Input types like email, number, date and password improve validation, mobile keyboards and accessibility.",
+        "example": "<input type=\"email\" />\n<input type=\"password\" />"
+      },
+      {
+        "id": "html-semantics-card-13",
+        "front": "What is autocomplete used for?",
+        "back": "autocomplete helps browsers fill known fields like name, email and address. It improves form speed and accessibility.",
+        "example": "<input autocomplete=\"email\" />"
+      },
+      {
+        "id": "html-semantics-card-14",
+        "front": "What does aria-label do?",
+        "back": "aria-label gives an accessible name to an element when visible text is missing or not enough. Use native labels and visible text first when possible.",
+        "example": "<button aria-label=\"Close dialog\">×</button>"
+      },
+      {
+        "id": "html-semantics-card-15",
+        "front": "When should you avoid ARIA?",
+        "back": "Avoid ARIA when native HTML already gives the correct meaning and behaviour. Native elements are usually more reliable than recreating controls with divs.",
+        "example": "<button>Submit</button>\n<!-- Better than <div role=\"button\">Submit</div> -->"
+      },
+      {
+        "id": "html-semantics-card-16",
+        "front": "What is tabindex used for?",
+        "back": "tabindex controls keyboard focus order. Use tabindex=\"0\" sparingly to make custom interactive elements focusable, and avoid positive tabindex values.",
+        "example": "<div tabindex=\"0\">Focusable</div>"
+      },
+      {
+        "id": "html-semantics-card-17",
+        "front": "What is a landmark?",
+        "back": "Landmarks are page regions like header, nav, main, aside and footer. They help assistive technology users understand and jump around the page.",
+        "example": "<header>...</header>\n<main>...</main>\n<footer>...</footer>"
+      },
+      {
+        "id": "html-semantics-card-18",
+        "front": "What is a fieldset used for?",
+        "back": "fieldset groups related form controls, and legend describes the group. It is especially useful for radio buttons and checkboxes.",
+        "example": "<fieldset>\n  <legend>Choose a plan</legend>\n</fieldset>"
+      },
+      {
+        "id": "html-semantics-card-19",
+        "front": "Why use lists for list content?",
+        "back": "ul, ol and li communicate that items belong to a list. This is better than many unrelated divs when the content is a list.",
+        "example": "<ul>\n  <li>JavaScript</li>\n  <li>TypeScript</li>\n</ul>"
+      },
+      {
+        "id": "html-semantics-card-20",
+        "front": "When should you use a table?",
+        "back": "Use a table for tabular data with rows and columns, not for page layout. Include headers so users understand what each cell means.",
+        "example": "<table>\n  <thead>...</thead>\n  <tbody>...</tbody>\n</table>"
+      },
+      {
+        "id": "html-semantics-card-21",
+        "front": "What is progressive enhancement?",
+        "back": "Progressive enhancement means building a basic experience that works first, then adding richer JavaScript or styling on top where supported.",
+        "example": "<form action=\"/search\" method=\"GET\">...</form>"
+      },
+      {
+        "id": "html-semantics-card-22",
+        "front": "Why include lang on the html element?",
+        "back": "The lang attribute tells browsers and screen readers the language of the page, which improves pronunciation, translation and accessibility.",
+        "example": "<html lang=\"en\">"
+      },
+      {
+        "id": "html-semantics-card-23",
+        "front": "What viewport meta tag is used for responsive pages?",
+        "back": "The viewport meta tag tells mobile browsers how to scale the page. Without it, responsive CSS may not behave as expected on phones.",
+        "example": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />"
+      },
+      {
+        "id": "html-semantics-card-24",
+        "front": "What is lazy loading for images?",
+        "back": "loading=\"lazy\" lets the browser delay loading off-screen images until they are needed, which can improve initial page performance.",
+        "example": "<img src=\"large-photo.jpg\" alt=\"Team photo\" loading=\"lazy\" />"
+      },
+      {
+        "id": "html-semantics-card-25",
+        "front": "Why specify width and height on images?",
+        "back": "Image width and height let the browser reserve space before the image loads, reducing layout shift and improving perceived quality.",
+        "example": "<img src=\"hero.jpg\" alt=\"Dashboard preview\" width=\"1200\" height=\"600\" />"
+      },
+      {
+        "id": "html-semantics-card-26",
+        "front": "What are data attributes?",
+        "back": "data-* attributes store small custom values in HTML. They are useful for testing hooks or metadata, but avoid using them as a replacement for app state.",
+        "example": "<button data-testid=\"save-button\">Save</button>"
+      },
+      {
+        "id": "html-semantics-card-27",
+        "front": "Why is valid nesting important?",
+        "back": "Valid HTML nesting prevents browser correction from creating unexpected DOM structure. It also helps accessibility and makes debugging easier.",
+        "example": "<button><span>Save</span></button>\n<!-- Avoid putting interactive controls inside buttons -->"
+      },
+      {
+        "id": "html-semantics-card-28",
+        "front": "What should go in the <head>?",
+        "back": "The head contains metadata like title, meta tags, icons, styles and scripts. It is not for visible page content.",
+        "example": "<head>\n  <title>GradToDev</title>\n</head>"
+      },
+      {
+        "id": "html-semantics-card-29",
+        "front": "Why use descriptive link text?",
+        "back": "Link text should explain where the link goes. Avoid vague text like ‘click here’ because it is unhelpful when read out of context.",
+        "example": "<a href=\"/settings\">Account settings</a>"
+      },
+      {
+        "id": "html-semantics-card-30",
+        "front": "What is a skip link?",
+        "back": "A skip link lets keyboard users jump directly to the main content, avoiding repeated navigation on every page.",
+        "example": "<a href=\"#main\" class=\"skip-link\">Skip to main content</a>"
+      }
+    ],
+    "questions": [
+      {
+        "id": "html-semantics-q-01",
+        "type": "multiple-choice",
+        "prompt": "Which element is best for the main unique content of a page?",
+        "options": [
+          "<main>",
+          "<span>",
+          "<br>",
+          "<style>"
+        ],
+        "correctAnswer": "<main>",
+        "explanation": "<main> identifies the primary page content and helps assistive technology users skip repeated layout areas."
+      },
+      {
+        "id": "html-semantics-q-02",
+        "type": "true-false",
+        "prompt": "True or false: A <button> should usually be used for actions, while an <a> should usually be used for navigation.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "Buttons perform actions on the current page. Links navigate to another route, page, file or location."
+      },
+      {
+        "id": "html-semantics-q-03",
+        "type": "scenario",
+        "prompt": "You need to create a clickable control that opens a modal. Which element is the best starting point?",
+        "options": [
+          "<button>",
+          "<a href=\"#\">",
+          "<div>",
+          "<span>"
+        ],
+        "correctAnswer": "<button>",
+        "explanation": "Opening a modal is an action, so a button gives the correct semantics and keyboard behaviour by default."
+      },
+      {
+        "id": "html-semantics-q-04",
+        "type": "type-answer",
+        "prompt": "Type the attribute used to provide alternative text for an image.",
+        "correctAnswer": "alt",
+        "acceptedAnswers": [
+          "alt",
+          "alt attribute"
+        ],
+        "explanation": "The alt attribute provides a text alternative for meaningful images."
+      },
+      {
+        "id": "html-semantics-q-05",
+        "type": "multiple-choice",
+        "prompt": "Which pattern is best for a decorative image?",
+        "options": [
+          "alt=\"\"",
+          "No alt attribute at all",
+          "alt=\"image\"",
+          "role=\"button\""
+        ],
+        "correctAnswer": "alt=\"\"",
+        "explanation": "Empty alt text tells assistive technologies to ignore decorative images."
+      },
+      {
+        "id": "html-semantics-q-06",
+        "type": "true-false",
+        "prompt": "True or false: Positive tabindex values are usually recommended for controlling focus order.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "False",
+        "explanation": "Positive tabindex values can create confusing focus order. Prefer natural DOM order and use tabindex=\"0\" sparingly."
+      },
+      {
+        "id": "html-semantics-q-07",
+        "type": "scenario",
+        "prompt": "You have a group of radio buttons for choosing a plan. Which elements help describe the group accessibly?",
+        "options": [
+          "fieldset and legend",
+          "section and br",
+          "div and span",
+          "img and alt"
+        ],
+        "correctAnswer": "fieldset and legend",
+        "explanation": "fieldset groups related form controls, and legend provides the group label."
+      },
+      {
+        "id": "html-semantics-q-08",
+        "type": "type-answer",
+        "prompt": "Type the React prop used instead of 'for' to connect a label to an input.",
+        "correctAnswer": "htmlFor",
+        "acceptedAnswers": [
+          "htmlFor",
+          "htmlfor"
+        ],
+        "explanation": "In React, label uses htmlFor because for is a reserved JavaScript word."
+      },
+      {
+        "id": "html-semantics-q-09",
+        "type": "multiple-choice",
+        "prompt": "Which input type is best for an email field?",
+        "options": [
+          "email",
+          "text",
+          "button",
+          "hidden"
+        ],
+        "correctAnswer": "email",
+        "explanation": "type=\"email\" improves browser validation, mobile keyboard behaviour and semantics."
+      },
+      {
+        "id": "html-semantics-q-10",
+        "type": "true-false",
+        "prompt": "True or false: aria-label should replace visible labels on every form input.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "False",
+        "explanation": "Visible labels are usually better because they help everyone. ARIA is useful when a visible label is not available or not enough."
+      },
+      {
+        "id": "html-semantics-q-11",
+        "type": "scenario",
+        "prompt": "A screen reader user needs to jump past repeated navigation. Which pattern helps?",
+        "options": [
+          "A skip link to main content",
+          "More div wrappers",
+          "A background image",
+          "A hidden password input"
+        ],
+        "correctAnswer": "A skip link to main content",
+        "explanation": "Skip links let keyboard and screen reader users jump directly to the main page content."
+      },
+      {
+        "id": "html-semantics-q-12",
+        "type": "type-answer",
+        "prompt": "Type the attribute on <html> that declares the page language.",
+        "correctAnswer": "lang",
+        "acceptedAnswers": [
+          "lang",
+          "language attribute"
+        ],
+        "explanation": "The lang attribute helps screen readers pronounce content correctly and helps browsers understand the page language."
+      },
+      {
+        "id": "html-semantics-q-13",
+        "type": "multiple-choice",
+        "prompt": "Which element should wrap a major navigation area?",
+        "options": [
+          "<nav>",
+          "<b>",
+          "<small>",
+          "<canvas>"
+        ],
+        "correctAnswer": "<nav>",
+        "explanation": "<nav> identifies a block of important navigation links."
+      },
+      {
+        "id": "html-semantics-q-14",
+        "type": "scenario",
+        "prompt": "You are displaying pricing data in rows and columns. What HTML structure is most appropriate?",
+        "options": [
+          "table with header cells",
+          "a list of random divs",
+          "a canvas only",
+          "a paragraph with spaces"
+        ],
+        "correctAnswer": "table with header cells",
+        "explanation": "Tables are appropriate for tabular data because they communicate row/column relationships."
+      },
+      {
+        "id": "html-semantics-q-15",
+        "type": "true-false",
+        "prompt": "True or false: <section> should normally have a heading that explains the grouped content.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "A section represents a meaningful region of content, and a heading usually makes that meaning clear."
+      },
+      {
+        "id": "html-semantics-q-16",
+        "type": "type-answer",
+        "prompt": "Type the image attribute value that delays loading an off-screen image until needed: loading=\"____\".",
+        "correctAnswer": "lazy",
+        "acceptedAnswers": [
+          "lazy"
+        ],
+        "explanation": "loading=\"lazy\" lets the browser defer off-screen image loading."
+      },
+      {
+        "id": "html-semantics-q-17",
+        "type": "multiple-choice",
+        "prompt": "Which link text is most accessible?",
+        "options": [
+          "View account settings",
+          "Click here",
+          "More",
+          "Read"
+        ],
+        "correctAnswer": "View account settings",
+        "explanation": "Descriptive link text tells users where the link goes, even when read out of context."
+      },
+      {
+        "id": "html-semantics-q-18",
+        "type": "scenario",
+        "prompt": "You need a self-contained blog post preview that could stand alone. Which element is a good fit?",
+        "options": [
+          "<article>",
+          "<br>",
+          "<strong>",
+          "<input>"
+        ],
+        "correctAnswer": "<article>",
+        "explanation": "<article> is designed for self-contained content like posts, cards and reviews."
+      },
+      {
+        "id": "html-semantics-q-19",
+        "type": "true-false",
+        "prompt": "True or false: You should use headings for visual size only, even if it breaks the page outline.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "False",
+        "explanation": "Headings should describe structure. Use CSS to change visual size instead of choosing heading levels for appearance only."
+      },
+      {
+        "id": "html-semantics-q-20",
+        "type": "type-answer",
+        "prompt": "Type the HTML element used to define a page title in the browser tab.",
+        "correctAnswer": "title",
+        "acceptedAnswers": [
+          "title",
+          "<title>",
+          "title element"
+        ],
+        "explanation": "The <title> element inside <head> sets the browser tab title and helps search/bookmark context."
+      },
+      {
+        "id": "html-semantics-q-21",
+        "type": "multiple-choice",
+        "prompt": "Which meta tag is important for responsive layouts on mobile?",
+        "options": [
+          "viewport",
+          "charset only",
+          "robots only",
+          "author only"
+        ],
+        "correctAnswer": "viewport",
+        "explanation": "The viewport meta tag tells mobile browsers how to size and scale the page."
+      },
+      {
+        "id": "html-semantics-q-22",
+        "type": "scenario",
+        "prompt": "A custom icon-only close button has no visible text. What should you add?",
+        "options": [
+          "aria-label=\"Close dialog\"",
+          "alt on the button",
+          "href=\"close\"",
+          "tabindex=\"99\""
+        ],
+        "correctAnswer": "aria-label=\"Close dialog\"",
+        "explanation": "An icon-only button needs an accessible name, and aria-label is a common solution."
+      },
+      {
+        "id": "html-semantics-q-23",
+        "type": "true-false",
+        "prompt": "True or false: Server-side validation is still needed even when HTML required attributes are used.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "Client-side validation improves UX but can be bypassed. Server-side validation protects the system."
+      },
+      {
+        "id": "html-semantics-q-24",
+        "type": "type-answer",
+        "prompt": "Type the custom attribute prefix used for storing small metadata in HTML.",
+        "correctAnswer": "data-",
+        "acceptedAnswers": [
+          "data-",
+          "data attribute",
+          "data attributes"
+        ],
+        "explanation": "Custom data attributes start with data-, such as data-testid or data-user-id."
+      },
+      {
+        "id": "html-semantics-q-25",
+        "type": "multiple-choice",
+        "prompt": "Which is the best reason to set image width and height attributes?",
+        "options": [
+          "To reduce layout shift while the image loads",
+          "To make JavaScript faster",
+          "To disable caching",
+          "To make alt text unnecessary"
+        ],
+        "correctAnswer": "To reduce layout shift while the image loads",
+        "explanation": "Width and height allow the browser to reserve space before the image loads."
+      },
+      {
+        "id": "html-semantics-q-26",
+        "type": "scenario",
+        "prompt": "You are building a list of navigation links. What structure is usually appropriate?",
+        "options": [
+          "nav containing a ul of links",
+          "many clickable spans",
+          "a table for layout",
+          "a canvas drawing"
+        ],
+        "correctAnswer": "nav containing a ul of links",
+        "explanation": "A nav landmark plus list structure communicates navigation and item relationships clearly."
+      },
+      {
+        "id": "html-semantics-q-27",
+        "type": "true-false",
+        "prompt": "True or false: Native HTML controls often provide keyboard behaviour without extra JavaScript.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "Native controls like button, input and select come with built-in keyboard and accessibility behaviour."
+      },
+      {
+        "id": "html-semantics-q-28",
+        "type": "type-answer",
+        "prompt": "Type the element used to provide a caption/title for a fieldset group.",
+        "correctAnswer": "legend",
+        "acceptedAnswers": [
+          "legend",
+          "<legend>"
+        ],
+        "explanation": "legend names a fieldset group, which is especially useful for radio and checkbox groups."
+      },
+      {
+        "id": "html-semantics-q-29",
+        "type": "multiple-choice",
+        "prompt": "Which is usually the best first rule for ARIA?",
+        "options": [
+          "Use native HTML first where possible",
+          "Use role=\"button\" everywhere",
+          "Hide all text from screen readers",
+          "Replace all labels with placeholders"
+        ],
+        "correctAnswer": "Use native HTML first where possible",
+        "explanation": "Native HTML is usually more robust than recreating semantics and behaviour manually with ARIA."
+      },
+      {
+        "id": "html-semantics-q-30",
+        "type": "scenario",
+        "prompt": "An input only has a placeholder saying 'Email'. What is the better accessibility improvement?",
+        "options": [
+          "Add a real visible label connected to the input",
+          "Replace input with div",
+          "Remove the placeholder and label",
+          "Use an h1 inside the input"
+        ],
+        "correctAnswer": "Add a real visible label connected to the input",
+        "explanation": "Placeholders disappear when typing and are not a replacement for labels."
+      }
+    ]
+  },
+  {
+    "id": "css-layout-animations",
+    "title": "CSS Layout, Styling & Animations",
+    "description": "Practise CSS fundamentals, layout systems, responsive design, accessibility states, transitions, animations and maintainable styling.",
+    "flashcards": [
+      {
+        "id": "css-fundamentals-card-01",
+        "front": "What is the CSS cascade?",
+        "back": "The cascade is how the browser decides which CSS rule wins when multiple rules target the same element. It considers importance, specificity, source order and origin.",
+        "example": "button { color: blue; }\n.primary { color: green; }"
+      },
+      {
+        "id": "css-fundamentals-card-02",
+        "front": "What is specificity?",
+        "back": "Specificity is the weight of a selector. IDs are stronger than classes, and classes are stronger than element selectors. High specificity can make styles harder to override.",
+        "example": "#saveButton > .button > button"
+      },
+      {
+        "id": "css-fundamentals-card-03",
+        "front": "What does inheritance mean in CSS?",
+        "back": "Some CSS properties, like color and font-family, are inherited by child elements. Others, like margin and border, are not inherited by default.",
+        "example": "body { font-family: system-ui; color: #111; }"
+      },
+      {
+        "id": "css-fundamentals-card-04",
+        "front": "What is the box model?",
+        "back": "The box model describes how content, padding, border and margin combine to create the space an element takes up.",
+        "example": ".card { padding: 1rem; border: 1px solid #ddd; margin: 1rem; }"
+      },
+      {
+        "id": "css-fundamentals-card-05",
+        "front": "Why use box-sizing: border-box?",
+        "back": "border-box makes width and height include content, padding and border. This makes layout sizing more predictable.",
+        "example": "*, *::before, *::after { box-sizing: border-box; }"
+      },
+      {
+        "id": "css-fundamentals-card-06",
+        "front": "What is display: block?",
+        "back": "Block elements start on a new line and take the full available width by default. Divs, sections and paragraphs are common block elements.",
+        "example": ".panel { display: block; }"
+      },
+      {
+        "id": "css-fundamentals-card-07",
+        "front": "What is display: inline?",
+        "back": "Inline elements flow with text and do not start on a new line. Width and height do not apply in the same way as block elements.",
+        "example": "span { display: inline; }"
+      },
+      {
+        "id": "css-fundamentals-card-08",
+        "front": "What is display: flex?",
+        "back": "Flexbox lays items out in one dimension, either a row or a column. It is great for alignment, spacing and component layouts.",
+        "example": ".toolbar { display: flex; align-items: center; gap: 0.75rem; }"
+      },
+      {
+        "id": "css-fundamentals-card-09",
+        "front": "What does justify-content do in flexbox?",
+        "back": "justify-content aligns items along the main axis. In a row, it controls horizontal distribution.",
+        "example": ".row { display: flex; justify-content: space-between; }"
+      },
+      {
+        "id": "css-fundamentals-card-10",
+        "front": "What does align-items do in flexbox?",
+        "back": "align-items aligns items along the cross axis. In a row, it commonly controls vertical alignment.",
+        "example": ".row { display: flex; align-items: center; }"
+      },
+      {
+        "id": "css-fundamentals-card-11",
+        "front": "What is CSS Grid good for?",
+        "back": "Grid is designed for two-dimensional layouts: rows and columns at the same time. It is good for page layouts and card grids.",
+        "example": ".grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }"
+      },
+      {
+        "id": "css-fundamentals-card-12",
+        "front": "What does gap do?",
+        "back": "gap creates space between flex or grid items without needing margins on individual children.",
+        "example": ".cards { display: grid; gap: 1rem; }"
+      },
+      {
+        "id": "css-fundamentals-card-13",
+        "front": "What are CSS custom properties?",
+        "back": "Custom properties, often called CSS variables, store reusable values. They are useful for themes, spacing scales and design tokens.",
+        "example": ":root { --brand: #58cc02; }\nbutton { background: var(--brand); }"
+      },
+      {
+        "id": "css-fundamentals-card-14",
+        "front": "What is a pseudo-class?",
+        "back": "A pseudo-class targets a state or condition, such as hover, focus, disabled or first-child.",
+        "example": "button:hover { transform: translateY(-1px); }"
+      },
+      {
+        "id": "css-fundamentals-card-15",
+        "front": "What is a pseudo-element?",
+        "back": "A pseudo-element styles a specific part of an element or creates generated content, such as ::before or ::after.",
+        "example": ".badge::before { content: \"★\"; }"
+      },
+      {
+        "id": "css-fundamentals-card-16",
+        "front": "Why style :focus-visible?",
+        "back": "focus-visible lets you show a clear outline for keyboard users without showing it for every mouse click. It improves accessibility.",
+        "example": "button:focus-visible { outline: 3px solid #58cc02; }"
+      },
+      {
+        "id": "css-fundamentals-card-17",
+        "front": "What are media queries?",
+        "back": "Media queries apply CSS only when conditions are true, such as viewport width or user preferences.",
+        "example": "@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }"
+      },
+      {
+        "id": "css-fundamentals-card-18",
+        "front": "What is responsive design?",
+        "back": "Responsive design makes layouts adapt to different screen sizes and input types. It usually combines flexible units, grids and media queries.",
+        "example": "width: min(100%, 64rem);"
+      },
+      {
+        "id": "css-fundamentals-card-19",
+        "front": "What are relative units?",
+        "back": "Relative units like rem, em, %, vw and vh scale based on context. They are often better for responsive and accessible design than fixed pixels everywhere.",
+        "example": ".card { padding: 1rem; max-width: 60rem; }"
+      },
+      {
+        "id": "css-fundamentals-card-20",
+        "front": "What is position: relative?",
+        "back": "position: relative keeps the element in normal layout but allows offsetting it and creates a positioning context for absolute children.",
+        "example": ".card { position: relative; }"
+      },
+      {
+        "id": "css-fundamentals-card-21",
+        "front": "What is position: absolute?",
+        "back": "position: absolute removes an element from normal document flow and positions it relative to the nearest positioned ancestor.",
+        "example": ".badge { position: absolute; top: 1rem; right: 1rem; }"
+      },
+      {
+        "id": "css-fundamentals-card-22",
+        "front": "What is position: sticky?",
+        "back": "position: sticky behaves like normal positioning until a scroll threshold is reached, then sticks within its parent container.",
+        "example": ".tabs { position: sticky; top: 0; }"
+      },
+      {
+        "id": "css-fundamentals-card-23",
+        "front": "What is z-index?",
+        "back": "z-index controls stacking order for positioned elements and items in stacking contexts. It only works as expected when stacking contexts are understood.",
+        "example": ".modal { position: fixed; z-index: 1000; }"
+      },
+      {
+        "id": "css-fundamentals-card-24",
+        "front": "What is a transition?",
+        "back": "A transition animates a property between old and new values when a state changes, such as hover or focus.",
+        "example": "button { transition: transform 160ms ease; }\nbutton:hover { transform: translateY(-2px); }"
+      },
+      {
+        "id": "css-fundamentals-card-25",
+        "front": "What is a keyframe animation?",
+        "back": "Keyframes define multiple stages of an animation. Use them for motion that runs automatically or has more than two states.",
+        "example": "@keyframes pulse { from { opacity: .6; } to { opacity: 1; } }"
+      },
+      {
+        "id": "css-fundamentals-card-26",
+        "front": "Why respect prefers-reduced-motion?",
+        "back": "Some users feel discomfort from motion. prefers-reduced-motion lets you reduce or remove animations for those users.",
+        "example": "@media (prefers-reduced-motion: reduce) { * { animation: none; transition: none; } }"
+      },
+      {
+        "id": "css-fundamentals-card-27",
+        "front": "Which CSS properties are best for animation performance?",
+        "back": "Transform and opacity are usually safer to animate because they often avoid expensive layout recalculation compared with width, height or top.",
+        "example": ".toast { transform: translateY(0); opacity: 1; }"
+      },
+      {
+        "id": "css-fundamentals-card-28",
+        "front": "What is object-fit?",
+        "back": "object-fit controls how replaced content like images and videos fit inside their box. cover crops, contain fits without cropping.",
+        "example": "img { width: 100%; height: 12rem; object-fit: cover; }"
+      },
+      {
+        "id": "css-fundamentals-card-29",
+        "front": "What is overflow?",
+        "back": "overflow controls what happens when content is too large for its box. Common values include hidden, auto and scroll.",
+        "example": ".panel { overflow: auto; }"
+      },
+      {
+        "id": "css-fundamentals-card-30",
+        "front": "What is a BEM-style class name?",
+        "back": "BEM is a naming convention that makes component styles explicit: block, element and modifier. It can help avoid unclear class names in larger projects.",
+        "example": ".card {}\n.card__title {}\n.card--featured {}"
+      },
+      {
+        "id": "css-fundamentals-card-31",
+        "front": "Why avoid !important?",
+        "back": "!important overrides normal cascade rules and can make styles hard to maintain. Use it rarely, usually only for utility overrides or unavoidable third-party conflicts.",
+        "example": ".hidden { display: none !important; }"
+      },
+      {
+        "id": "css-fundamentals-card-32",
+        "front": "What is a design token?",
+        "back": "A design token is a named value for design decisions like colour, spacing or font size. In CSS, tokens are often implemented as custom properties.",
+        "example": "--space-4: 1rem;\n--color-primary: #58cc02;"
+      }
+    ],
+    "questions": [
+      {
+        "id": "css-fundamentals-q-01",
+        "type": "multiple-choice",
+        "prompt": "What does the CSS cascade decide?",
+        "options": [
+          "Which style rule wins when multiple rules apply",
+          "Which API route is called",
+          "Which HTML file is loaded first",
+          "Which database row is updated"
+        ],
+        "correctAnswer": "Which style rule wins when multiple rules apply",
+        "explanation": "The cascade decides the winning declaration based on importance, specificity, source order and origin."
+      },
+      {
+        "id": "css-fundamentals-q-02",
+        "type": "true-false",
+        "prompt": "True or false: An ID selector usually has higher specificity than a class selector.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "ID selectors are more specific than class selectors, which can make them harder to override."
+      },
+      {
+        "id": "css-fundamentals-q-03",
+        "type": "scenario",
+        "prompt": "Your component width becomes larger than expected after adding padding. Which CSS rule often makes sizing more predictable?",
+        "options": [
+          "box-sizing: border-box",
+          "position: sticky",
+          "text-transform: uppercase",
+          "animation-delay: 2s"
+        ],
+        "correctAnswer": "box-sizing: border-box",
+        "explanation": "border-box includes padding and border inside the declared width and height."
+      },
+      {
+        "id": "css-fundamentals-q-04",
+        "type": "type-answer",
+        "prompt": "Type the CSS layout mode commonly used for one-dimensional alignment in a row or column.",
+        "correctAnswer": "flexbox",
+        "acceptedAnswers": [
+          "flexbox",
+          "flex",
+          "display flex",
+          "display: flex"
+        ],
+        "explanation": "Flexbox is ideal for one-dimensional layouts and alignment."
+      },
+      {
+        "id": "css-fundamentals-q-05",
+        "type": "multiple-choice",
+        "prompt": "Which layout system is best designed for rows and columns together?",
+        "options": [
+          "CSS Grid",
+          "Inline layout",
+          "Float-only layout",
+          "Text decoration"
+        ],
+        "correctAnswer": "CSS Grid",
+        "explanation": "Grid is a two-dimensional layout system for rows and columns."
+      },
+      {
+        "id": "css-fundamentals-q-06",
+        "type": "true-false",
+        "prompt": "True or false: gap can be used with flex and grid layouts.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "gap creates spacing between flex or grid items without individual child margins."
+      },
+      {
+        "id": "css-fundamentals-q-07",
+        "type": "scenario",
+        "prompt": "You need to reuse the same brand colour across many components and support theming later. What CSS feature is a good fit?",
+        "options": [
+          "CSS custom properties",
+          "Inline hardcoded colours everywhere",
+          "Random IDs",
+          "HTML tables"
+        ],
+        "correctAnswer": "CSS custom properties",
+        "explanation": "Custom properties store reusable values and are often used for themes and design tokens."
+      },
+      {
+        "id": "css-fundamentals-q-08",
+        "type": "type-answer",
+        "prompt": "Type the selector pseudo-class that targets keyboard focus in a user-friendly way: :____.",
+        "correctAnswer": "focus-visible",
+        "acceptedAnswers": [
+          "focus-visible",
+          ":focus-visible"
+        ],
+        "explanation": ":focus-visible is useful for showing clear focus styles mainly when users navigate with the keyboard."
+      },
+      {
+        "id": "css-fundamentals-q-09",
+        "type": "multiple-choice",
+        "prompt": "Which is an example of a pseudo-element?",
+        "options": [
+          "::before",
+          ":hover",
+          ".button",
+          "#app"
+        ],
+        "correctAnswer": "::before",
+        "explanation": "Pseudo-elements like ::before and ::after target generated or specific parts of an element."
+      },
+      {
+        "id": "css-fundamentals-q-10",
+        "type": "true-false",
+        "prompt": "True or false: Media queries can be used to change layout based on viewport width.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "Media queries apply CSS only when conditions like max-width are met."
+      },
+      {
+        "id": "css-fundamentals-q-11",
+        "type": "scenario",
+        "prompt": "A page looks cramped on mobile. Which CSS technique is most directly relevant?",
+        "options": [
+          "Responsive design with media queries/flexible layout",
+          "Adding more z-index values",
+          "Using only fixed pixel widths",
+          "Removing all semantic HTML"
+        ],
+        "correctAnswer": "Responsive design with media queries/flexible layout",
+        "explanation": "Responsive design adapts layout to the available screen size."
+      },
+      {
+        "id": "css-fundamentals-q-12",
+        "type": "type-answer",
+        "prompt": "Type the CSS property that controls what happens when content overflows its box.",
+        "correctAnswer": "overflow",
+        "acceptedAnswers": [
+          "overflow"
+        ],
+        "explanation": "overflow controls clipping and scroll behaviour for content that exceeds the box."
+      },
+      {
+        "id": "css-fundamentals-q-13",
+        "type": "multiple-choice",
+        "prompt": "Which position value keeps an element in normal flow but allows top/right/bottom/left offsets?",
+        "options": [
+          "relative",
+          "absolute",
+          "fixed",
+          "static only"
+        ],
+        "correctAnswer": "relative",
+        "explanation": "position: relative keeps the element in the document flow and can create a positioning context."
+      },
+      {
+        "id": "css-fundamentals-q-14",
+        "type": "scenario",
+        "prompt": "You want a badge in the top-right corner of a card. The card should be the positioning context. What should the card usually have?",
+        "options": [
+          "position: relative",
+          "display: none",
+          "overflow: scroll only",
+          "font-weight: bold"
+        ],
+        "correctAnswer": "position: relative",
+        "explanation": "An absolutely positioned child positions itself relative to the nearest positioned ancestor."
+      },
+      {
+        "id": "css-fundamentals-q-15",
+        "type": "true-false",
+        "prompt": "True or false: z-index is always simple and ignores stacking contexts.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "False",
+        "explanation": "z-index is affected by positioning and stacking contexts, which can make layering more complex."
+      },
+      {
+        "id": "css-fundamentals-q-16",
+        "type": "multiple-choice",
+        "prompt": "Which property is usually better to animate for performance?",
+        "options": [
+          "transform",
+          "width",
+          "height",
+          "top"
+        ],
+        "correctAnswer": "transform",
+        "explanation": "transform and opacity are usually cheaper to animate than layout-affecting properties like width or top."
+      },
+      {
+        "id": "css-fundamentals-q-17",
+        "type": "type-answer",
+        "prompt": "Type the CSS at-rule used to define named animation steps.",
+        "correctAnswer": "@keyframes",
+        "acceptedAnswers": [
+          "@keyframes",
+          "keyframes"
+        ],
+        "explanation": "@keyframes defines the stages of a CSS animation."
+      },
+      {
+        "id": "css-fundamentals-q-18",
+        "type": "scenario",
+        "prompt": "A user has reduced motion enabled. Which media feature should your CSS respect?",
+        "options": [
+          "prefers-reduced-motion",
+          "max-database-size",
+          "hover-title",
+          "aria-hidden"
+        ],
+        "correctAnswer": "prefers-reduced-motion",
+        "explanation": "prefers-reduced-motion lets you reduce or remove animations for motion-sensitive users."
+      },
+      {
+        "id": "css-fundamentals-q-19",
+        "type": "true-false",
+        "prompt": "True or false: transition is useful for animating changes between states like hover and focus.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "Transitions animate between previous and new property values when state changes."
+      },
+      {
+        "id": "css-fundamentals-q-20",
+        "type": "multiple-choice",
+        "prompt": "What does object-fit: cover usually do to an image?",
+        "options": [
+          "Fills the box while possibly cropping the image",
+          "Stretches text vertically",
+          "Makes the image load from an API",
+          "Disables alt text"
+        ],
+        "correctAnswer": "Fills the box while possibly cropping the image",
+        "explanation": "cover fills the box while preserving aspect ratio, which may crop the image."
+      },
+      {
+        "id": "css-fundamentals-q-21",
+        "type": "type-answer",
+        "prompt": "Type the CSS function used to read a custom property: ____(--brand-color).",
+        "correctAnswer": "var",
+        "acceptedAnswers": [
+          "var",
+          "var()"
+        ],
+        "explanation": "var() reads the value of a CSS custom property."
+      },
+      {
+        "id": "css-fundamentals-q-22",
+        "type": "scenario",
+        "prompt": "A teammate uses !important repeatedly to fix styles. What is the main risk?",
+        "options": [
+          "Future overrides become harder and the cascade becomes messy",
+          "The HTML becomes semantic automatically",
+          "The bundle always gets smaller",
+          "Images lazy-load automatically"
+        ],
+        "correctAnswer": "Future overrides become harder and the cascade becomes messy",
+        "explanation": "!important bypasses normal cascade expectations and can make CSS difficult to maintain."
+      },
+      {
+        "id": "css-fundamentals-q-23",
+        "type": "true-false",
+        "prompt": "True or false: rem units are often useful for scalable spacing and typography.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "rem units scale relative to the root font size, which can support accessibility and consistency."
+      },
+      {
+        "id": "css-fundamentals-q-24",
+        "type": "multiple-choice",
+        "prompt": "Which naming pattern is closest to BEM?",
+        "options": [
+          "card__title and card--featured",
+          "card title featured random",
+          "#card #title #featured",
+          "button > div > span"
+        ],
+        "correctAnswer": "card__title and card--featured",
+        "explanation": "BEM uses block, element and modifier patterns, often like block__element and block--modifier."
+      },
+      {
+        "id": "css-fundamentals-q-25",
+        "type": "scenario",
+        "prompt": "You need a header that scrolls normally until it reaches the top, then stays visible. Which position value fits?",
+        "options": [
+          "sticky",
+          "absolute",
+          "static",
+          "inherit only"
+        ],
+        "correctAnswer": "sticky",
+        "explanation": "position: sticky sticks after a scroll threshold while still being constrained by its parent."
+      },
+      {
+        "id": "css-fundamentals-q-26",
+        "type": "type-answer",
+        "prompt": "Type the CSS property used to create space inside an element between content and border.",
+        "correctAnswer": "padding",
+        "acceptedAnswers": [
+          "padding"
+        ],
+        "explanation": "Padding is inside the border; margin is outside the border."
+      },
+      {
+        "id": "css-fundamentals-q-27",
+        "type": "multiple-choice",
+        "prompt": "Which property aligns flex items on the cross axis?",
+        "options": [
+          "align-items",
+          "justify-content",
+          "grid-template-columns",
+          "z-index"
+        ],
+        "correctAnswer": "align-items",
+        "explanation": "align-items controls cross-axis alignment in flexbox."
+      },
+      {
+        "id": "css-fundamentals-q-28",
+        "type": "true-false",
+        "prompt": "True or false: Source order can matter when selectors have equal specificity.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "When specificity and importance are equal, later rules usually win."
+      },
+      {
+        "id": "css-fundamentals-q-29",
+        "type": "scenario",
+        "prompt": "You need a simple hover animation for a button lift effect. Which CSS property is a good candidate?",
+        "options": [
+          "transform: translateY(-2px)",
+          "width: 9000px",
+          "display: table",
+          "position: fixed on every button"
+        ],
+        "correctAnswer": "transform: translateY(-2px)",
+        "explanation": "transform is usually performant and good for small motion effects."
+      },
+      {
+        "id": "css-fundamentals-q-30",
+        "type": "type-answer",
+        "prompt": "Type the CSS property that controls the time curve of a transition, such as ease or linear.",
+        "correctAnswer": "transition-timing-function",
+        "acceptedAnswers": [
+          "transition-timing-function",
+          "timing-function",
+          "transition timing function"
+        ],
+        "explanation": "transition-timing-function controls how the animation progresses over time."
+      },
+      {
+        "id": "css-fundamentals-q-31",
+        "type": "multiple-choice",
+        "prompt": "Which is a good use of a CSS design token?",
+        "options": [
+          "Naming a reusable spacing value like --space-4",
+          "Storing a password in CSS",
+          "Replacing all HTML headings",
+          "Making API requests"
+        ],
+        "correctAnswer": "Naming a reusable spacing value like --space-4",
+        "explanation": "Design tokens name reusable design decisions such as spacing, colours and typography."
+      },
+      {
+        "id": "css-fundamentals-q-32",
+        "type": "scenario",
+        "prompt": "A card grid should automatically create columns that fit available space. Which pattern is useful?",
+        "options": [
+          "grid-template-columns: repeat(auto-fit, minmax(...))",
+          "float every card left forever",
+          "position absolute every card",
+          "Use only br tags"
+        ],
+        "correctAnswer": "grid-template-columns: repeat(auto-fit, minmax(...))",
+        "explanation": "auto-fit with minmax is a common responsive grid pattern."
+      }
+    ]
+  },
+  {
     "id": "js-core-syntax",
     "title": "JavaScript Core Syntax",
     "description": "Build confidence with everyday JavaScript syntax, values, functions and control flow.",
@@ -5881,6 +7023,474 @@ export const topics = [
     ]
   },
   {
+    "id": "react-ui-patterns",
+    "title": "React & UI Engineering Patterns",
+    "description": "Practise the React and UI patterns junior developers use in real product code.",
+    "flashcards": [
+      {
+        "id": "react-ui-patterns-extra-card-01-components",
+        "front": "What is a React component?",
+        "back": "A component is a reusable piece of UI described by a function. It receives inputs through props and returns what should be shown.",
+        "example": "function Badge({ label }) { return <span>{label}</span>; }"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-02-props",
+        "front": "What are props?",
+        "back": "Props are read-only inputs passed from a parent component to a child component. They let components be reusable with different data.",
+        "example": "<UserCard name=\"Jay\" />"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-03-state",
+        "front": "What is state?",
+        "back": "State is data a component owns that can change over time and cause the UI to rerender.",
+        "example": "const [count, setCount] = useState(0);"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-04-effect",
+        "front": "What is useEffect for?",
+        "back": "useEffect runs side effects after rendering, such as subscribing to events, syncing document title or fetching data when inputs change.",
+        "example": "useEffect(() => { document.title = title; }, [title]);"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-05-effect-cleanup",
+        "front": "Why clean up effects?",
+        "back": "Cleanup prevents leaks and duplicate subscriptions when a component unmounts or effect dependencies change.",
+        "example": "return () => window.removeEventListener(\"resize\", onResize);"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-06-keys",
+        "front": "Why do lists need keys?",
+        "back": "Keys help React match list items between renders. Stable keys prevent wrong items being reused when lists reorder.",
+        "example": "items.map(item => <Row key={item.id} item={item} />)"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-07-lifting-state",
+        "front": "What is lifting state up?",
+        "back": "Lifting state up means moving shared state to the nearest common parent so multiple children can use or update it.",
+        "example": "Parent owns selectedId; list and details receive it."
+      },
+      {
+        "id": "react-ui-patterns-extra-card-08-composition",
+        "front": "What is composition?",
+        "back": "Composition builds complex UI by combining small components instead of making one huge component.",
+        "example": "<Card><Profile /></Card>"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-09-conditional-render",
+        "front": "What is conditional rendering?",
+        "back": "Conditional rendering shows different UI based on state, props or permissions.",
+        "example": "{isLoading ? <Spinner /> : <Content />}"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-10-custom-hook",
+        "front": "What is a custom hook?",
+        "back": "A custom hook is a function starting with use that reuses stateful logic between components.",
+        "example": "function useWindowSize() { ... }"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-11-context",
+        "front": "When use Context?",
+        "back": "Context passes values through a component tree without manually passing props at every level. Use it for shared values like theme or auth, not every local state value.",
+        "example": "const ThemeContext = createContext(\"light\");"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-12-rerender",
+        "front": "What causes a rerender?",
+        "back": "A component rerenders when its state changes, its parent rerenders, or subscribed context changes.",
+        "example": "setCount(count + 1)"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-13-derived-props",
+        "front": "Avoid copying props to state?",
+        "back": "Copying props into state often creates stale duplicates. Prefer deriving values during render unless the user is editing a local draft.",
+        "example": "const fullName = `${first} ${last}`;"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-14-error-boundary",
+        "front": "What is an error boundary?",
+        "back": "An error boundary catches rendering errors in part of a React tree and shows fallback UI instead of crashing the whole app.",
+        "example": "<ErrorBoundary fallback={<ErrorPage />}>"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-15-forms",
+        "front": "Controlled vs uncontrolled forms?",
+        "back": "Controlled forms store values in React state. Uncontrolled forms let the DOM keep the value and read it through refs when needed.",
+        "example": "const value = inputRef.current?.value;"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-16-optimistic-ui",
+        "front": "What is optimistic UI?",
+        "back": "Optimistic UI updates immediately before the server confirms success. If the request fails, the UI must roll back or show an error.",
+        "example": "Show new todo immediately, then remove it if save fails."
+      },
+      {
+        "id": "react-ui-patterns-extra-card-17-suspense",
+        "front": "What is Suspense conceptually?",
+        "back": "Suspense lets parts of the UI show fallback content while waiting for async data or lazy-loaded code, depending on framework support.",
+        "example": "<Suspense fallback={<Spinner />}>"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-18-lazy",
+        "front": "Why lazy-load components?",
+        "back": "Lazy loading splits code so users download heavy screens only when needed, improving initial load time.",
+        "example": "const Settings = lazy(() => import(\"./Settings\"));"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-19-prop-drilling",
+        "front": "What is prop drilling?",
+        "back": "Prop drilling is passing props through many layers that do not use them, just to reach a deep child. Sometimes composition or context can help.",
+        "example": "App -> Layout -> Panel -> Button"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-20-component-api",
+        "front": "What makes a good component API?",
+        "back": "A good component API has clear prop names, sensible defaults, predictable behaviour and avoids exposing unnecessary internal details.",
+        "example": "<Button variant=\"primary\" size=\"sm\" disabled />"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-21-accessibility-props",
+        "front": "Why pass accessible labels?",
+        "back": "Icon-only buttons and custom controls need accessible names so screen reader users know what they do.",
+        "example": "<button aria-label=\"Close dialog\">×</button>"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-22-rendering-cost",
+        "front": "What is rendering cost?",
+        "back": "Rendering cost is the time spent recalculating and updating UI. Large lists, expensive calculations and unnecessary rerenders can make apps feel slow.",
+        "example": "Virtualise a list with thousands of rows."
+      },
+      {
+        "id": "react-ui-patterns-extra-card-23-use-ref",
+        "front": "What is useRef for?",
+        "back": "useRef stores a mutable value that persists between renders without causing a rerender. It is commonly used for DOM nodes and timers.",
+        "example": "const inputRef = useRef<HTMLInputElement>(null);"
+      },
+      {
+        "id": "react-ui-patterns-extra-card-24-separation",
+        "front": "Why separate container and presentational concerns?",
+        "back": "Separating data/loading logic from display components can make UI easier to test and reuse. It is a pattern, not a strict rule.",
+        "example": "UserPage fetches; UserCard displays."
+      },
+      {
+        "id": "react-ui-patterns-extra-card-25-component-tests",
+        "front": "What should component tests check?",
+        "back": "Component tests should check user-visible behaviour: what appears, what can be clicked, and how the UI responds.",
+        "example": "expect(screen.getByRole(\"button\", { name: /save/i })).toBeEnabled();"
+      }
+    ],
+    "questions": [
+      {
+        "id": "react-ui-patterns-extra-q-01-props",
+        "type": "multiple-choice",
+        "prompt": "What are props in React?",
+        "correctAnswer": "Read-only inputs passed from a parent to a child component.",
+        "explanation": "Props configure components and should not be mutated by the child.",
+        "options": [
+          "Read-only inputs passed from a parent to a child component.",
+          "A database table.",
+          "A CSS-only animation.",
+          "A browser storage API."
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-02-state",
+        "type": "type-answer",
+        "prompt": "Type the React hook commonly used for local component state.",
+        "correctAnswer": "useState",
+        "explanation": "useState stores state and gives you a setter to update it.",
+        "acceptedAnswers": [
+          "useState",
+          "usestate"
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-03-keys",
+        "type": "scenario",
+        "prompt": "A list reorders and input values appear attached to the wrong rows. What is a likely issue?",
+        "correctAnswer": "unstable keys",
+        "explanation": "Using array indexes or unstable keys can cause React to reuse the wrong list items.",
+        "options": [
+          "unstable keys",
+          "too many CSS variables",
+          "wrong HTTP status code",
+          "missing JSON.stringify"
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-04-effect-cleanup",
+        "type": "true-false",
+        "prompt": "True or false: Effects that subscribe to external events should usually clean up the subscription.",
+        "correctAnswer": "True",
+        "explanation": "Cleanup avoids duplicate listeners and memory leaks.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-05-custom-hook",
+        "type": "multiple-choice",
+        "prompt": "What is a custom hook mainly used for?",
+        "correctAnswer": "Reusing stateful logic between components.",
+        "explanation": "Custom hooks extract reusable hook-based logic into a function.",
+        "options": [
+          "Reusing stateful logic between components.",
+          "Styling only.",
+          "Creating database indexes.",
+          "Replacing TypeScript types."
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-06-controlled",
+        "type": "scenario",
+        "prompt": "A form input value comes from React state and updates with onChange. What is this called?",
+        "correctAnswer": "controlled input",
+        "explanation": "A controlled input uses React state as the source of truth.",
+        "options": [
+          "controlled input",
+          "webhook",
+          "source map",
+          "circuit breaker"
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-07-context",
+        "type": "multiple-choice",
+        "prompt": "When is Context a reasonable fit?",
+        "correctAnswer": "Sharing values like theme/auth through many components.",
+        "explanation": "Context avoids prop drilling for broadly shared values.",
+        "options": [
+          "Sharing values like theme/auth through many components.",
+          "Replacing every local useState.",
+          "Making HTTP requests faster automatically.",
+          "Sorting arrays by default."
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-08-optimistic",
+        "type": "scenario",
+        "prompt": "The UI shows a new item immediately before the API confirms it saved. What pattern is this?",
+        "correctAnswer": "optimistic UI",
+        "explanation": "Optimistic UI improves perceived speed but needs rollback/error handling.",
+        "options": [
+          "optimistic UI",
+          "CSRF",
+          "hoisting",
+          "offset pagination"
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-09-aria-label",
+        "type": "type-answer",
+        "prompt": "Type the attribute that gives an accessible name to an icon-only button.",
+        "correctAnswer": "aria-label",
+        "explanation": "aria-label provides a text label for assistive technologies.",
+        "acceptedAnswers": [
+          "aria-label",
+          "aria label"
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-10-prop-drilling",
+        "type": "multiple-choice",
+        "prompt": "What is prop drilling?",
+        "correctAnswer": "Passing props through layers that do not use them just to reach a deeper child.",
+        "explanation": "Prop drilling can sometimes be reduced with composition or context.",
+        "options": [
+          "Passing props through layers that do not use them just to reach a deeper child.",
+          "Sending props to an API.",
+          "Encrypting component props.",
+          "Compiling JSX to CSS."
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-11-ref",
+        "type": "true-false",
+        "prompt": "True or false: Updating a useRef value causes a component rerender.",
+        "correctAnswer": "False",
+        "explanation": "Refs persist between renders but changing ref.current does not trigger a rerender.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-12-lazy",
+        "type": "multiple-choice",
+        "prompt": "Why lazy-load a large route component?",
+        "correctAnswer": "To reduce initial JavaScript downloaded by the user.",
+        "explanation": "Lazy loading supports code splitting and can improve initial load.",
+        "options": [
+          "To reduce initial JavaScript downloaded by the user.",
+          "To make TypeScript optional.",
+          "To disable the browser cache.",
+          "To avoid all testing."
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-13-error-boundary",
+        "type": "type-answer",
+        "prompt": "Type the React pattern/component used to catch rendering errors and show fallback UI.",
+        "correctAnswer": "error boundary",
+        "explanation": "Error boundaries catch render errors in a subtree.",
+        "acceptedAnswers": [
+          "error boundary",
+          "error boundaries"
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-14-derived",
+        "type": "scenario",
+        "prompt": "A component stores fullName in state even though it can be calculated from firstName and lastName. What issue might this cause?",
+        "correctAnswer": "stale derived state",
+        "explanation": "Duplicating derived values in state can get out of sync.",
+        "options": [
+          "stale derived state",
+          "CORS preflight",
+          "HTTP caching",
+          "locale sorting"
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-15-component-api",
+        "type": "multiple-choice",
+        "prompt": "Which prop design is clearest for a reusable button?",
+        "correctAnswer": "variant=\"primary\" and disabled as explicit props.",
+        "explanation": "Clear, predictable props make component usage easier.",
+        "options": [
+          "variant=\"primary\" and disabled as explicit props.",
+          "A prop named x that accepts any value.",
+          "Mutating props inside the button.",
+          "Hardcoding every button as primary."
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-16-tests",
+        "type": "scenario",
+        "prompt": "A component test clicks Save and checks that a success message appears. What kind of thing is it testing?",
+        "correctAnswer": "user-visible behaviour",
+        "explanation": "Good component tests focus on behaviour users can observe.",
+        "options": [
+          "user-visible behaviour",
+          "private implementation details only",
+          "database schema migrations",
+          "CDN cache headers"
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-17-suspense",
+        "type": "multiple-choice",
+        "prompt": "What does Suspense show while waiting for supported async/lazy content?",
+        "correctAnswer": "fallback UI",
+        "explanation": "Suspense renders fallback UI while content is not ready.",
+        "options": [
+          "fallback UI",
+          "a SQL query",
+          "a Git tag",
+          "a cookie"
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-18-lift",
+        "type": "type-answer",
+        "prompt": "Type the phrase for moving shared state to the nearest common parent.",
+        "correctAnswer": "lifting state up",
+        "explanation": "Lifting state up lets multiple children share and update the same source of truth.",
+        "acceptedAnswers": [
+          "lifting state up",
+          "lift state up"
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-19-composition",
+        "type": "true-false",
+        "prompt": "True or false: Composition means building larger UIs by combining smaller components.",
+        "correctAnswer": "True",
+        "explanation": "Composition keeps components focused and reusable.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-20-rerender",
+        "type": "multiple-choice",
+        "prompt": "Which change commonly causes a component to rerender?",
+        "correctAnswer": "Its state is updated.",
+        "explanation": "State updates cause React to rerender the component.",
+        "options": [
+          "Its state is updated.",
+          "A CSS file exists.",
+          "A comment is added to code.",
+          "A server returns 204 somewhere else."
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-21-effect-deps",
+        "type": "scenario",
+        "prompt": "An effect reads userId but userId is missing from the dependency array. What risk does this create?",
+        "correctAnswer": "stale values",
+        "explanation": "Missing dependencies can make effects use old values.",
+        "options": [
+          "stale values",
+          "automatic encryption",
+          "array mutation",
+          "semantic version bump"
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-22-uncontrolled",
+        "type": "multiple-choice",
+        "prompt": "How does an uncontrolled input usually keep its current value?",
+        "correctAnswer": "In the DOM, read through a ref when needed.",
+        "explanation": "Uncontrolled inputs are managed by the DOM rather than React state.",
+        "options": [
+          "In the DOM, read through a ref when needed.",
+          "In a CDN.",
+          "In TypeScript types at runtime.",
+          "In a package-lock file."
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-23-memo",
+        "type": "true-false",
+        "prompt": "True or false: Memoization should be used everywhere by default.",
+        "correctAnswer": "False",
+        "explanation": "Memoization has complexity and overhead. Use it for real rerender or expensive calculation problems.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-24-container",
+        "type": "multiple-choice",
+        "prompt": "Why separate data-fetching components from display components?",
+        "correctAnswer": "It can make display components easier to reuse and test.",
+        "explanation": "Separating concerns keeps UI components focused.",
+        "options": [
+          "It can make display components easier to reuse and test.",
+          "It makes all API calls synchronous.",
+          "It removes the need for props.",
+          "It prevents every runtime error."
+        ]
+      },
+      {
+        "id": "react-ui-patterns-extra-q-25-large-list",
+        "type": "scenario",
+        "prompt": "A page renders 10,000 rows and scrolling is slow. What UI technique can help?",
+        "correctAnswer": "virtualisation",
+        "explanation": "Virtualisation renders only the visible rows plus a buffer.",
+        "options": [
+          "virtualisation",
+          "JSON.parse",
+          "cookie auth",
+          "Object.hasOwn"
+        ]
+      }
+    ]
+  },
+  {
     "id": "debugging-testing-quality",
     "title": "Debugging, Testing & Code Quality",
     "description": "Build practical habits for finding bugs, writing tests and keeping code readable",
@@ -6464,1650 +8074,6 @@ export const topics = [
           "formatter only",
           "image optimiser",
           "package registry"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "system-design-web",
-    "title": "Web System Design Basics",
-    "description": "Learn the practical architecture ideas behind real web applications",
-    "flashcards": [
-      {
-        "id": "system-design-web-card-01",
-        "front": "What should you know about client-server?",
-        "back": "Client-server architecture separates the user-facing client from server-side logic and data.",
-        "example": "browser calls API"
-      },
-      {
-        "id": "system-design-web-card-02",
-        "front": "What should you know about frontend?",
-        "back": "The frontend runs in the user’s browser or app and handles UI interactions.",
-        "example": "React app"
-      },
-      {
-        "id": "system-design-web-card-03",
-        "front": "What should you know about backend?",
-        "back": "The backend runs on servers and handles business logic, auth and data access.",
-        "example": "Express API"
-      },
-      {
-        "id": "system-design-web-card-04",
-        "front": "What should you know about database?",
-        "back": "A database stores persistent application data.",
-        "example": "Postgres"
-      },
-      {
-        "id": "system-design-web-card-05",
-        "front": "What should you know about cache?",
-        "back": "A cache stores frequently used data temporarily to reduce latency or load.",
-        "example": "Redis cache"
-      },
-      {
-        "id": "system-design-web-card-06",
-        "front": "What should you know about CDN?",
-        "back": "A CDN serves static assets from locations closer to users.",
-        "example": "images from CDN"
-      },
-      {
-        "id": "system-design-web-card-07",
-        "front": "What should you know about load balancer?",
-        "back": "A load balancer spreads traffic across multiple servers.",
-        "example": "Nginx/ALB"
-      },
-      {
-        "id": "system-design-web-card-08",
-        "front": "What should you know about horizontal scaling?",
-        "back": "Horizontal scaling adds more machines or instances to handle more traffic.",
-        "example": "more API pods"
-      },
-      {
-        "id": "system-design-web-card-09",
-        "front": "What should you know about vertical scaling?",
-        "back": "Vertical scaling gives one machine more CPU or memory.",
-        "example": "larger server"
-      },
-      {
-        "id": "system-design-web-card-10",
-        "front": "What should you know about latency?",
-        "back": "Latency is the time a request takes to get a response.",
-        "example": "200ms response"
-      },
-      {
-        "id": "system-design-web-card-11",
-        "front": "What should you know about throughput?",
-        "back": "Throughput is how much work a system handles over time.",
-        "example": "requests per second"
-      },
-      {
-        "id": "system-design-web-card-12",
-        "front": "What should you know about availability?",
-        "back": "Availability is how often a system is working when users need it.",
-        "example": "99.9% uptime"
-      },
-      {
-        "id": "system-design-web-card-13",
-        "front": "What should you know about reliability?",
-        "back": "Reliability is the ability to keep behaving correctly over time and failures.",
-        "example": "retry safe jobs"
-      },
-      {
-        "id": "system-design-web-card-14",
-        "front": "What should you know about single point of failure?",
-        "back": "A single point of failure can bring down the system if it breaks.",
-        "example": "one database without backup"
-      },
-      {
-        "id": "system-design-web-card-15",
-        "front": "What should you know about stateless server?",
-        "back": "A stateless server does not store user session data in memory between requests.",
-        "example": "token-based auth"
-      },
-      {
-        "id": "system-design-web-card-16",
-        "front": "What should you know about stateful service?",
-        "back": "A stateful service stores important state and needs careful persistence.",
-        "example": "database"
-      },
-      {
-        "id": "system-design-web-card-17",
-        "front": "What should you know about queue?",
-        "back": "A queue stores work to be processed asynchronously.",
-        "example": "send email job"
-      },
-      {
-        "id": "system-design-web-card-18",
-        "front": "What should you know about message broker?",
-        "back": "A message broker moves messages between producers and consumers.",
-        "example": "RabbitMQ"
-      },
-      {
-        "id": "system-design-web-card-19",
-        "front": "What should you know about event-driven design?",
-        "back": "Event-driven design reacts to events rather than direct request chains.",
-        "example": "user.created event"
-      },
-      {
-        "id": "system-design-web-card-20",
-        "front": "What should you know about polling?",
-        "back": "Polling repeatedly asks for updates at intervals.",
-        "example": "GET status every 5s"
-      },
-      {
-        "id": "system-design-web-card-21",
-        "front": "What should you know about WebSocket?",
-        "back": "WebSockets keep a two-way connection open for real-time updates.",
-        "example": "live chat"
-      },
-      {
-        "id": "system-design-web-card-22",
-        "front": "What should you know about rate limit design?",
-        "back": "Rate limits protect systems from abuse or accidental overload.",
-        "example": "100 requests/min"
-      },
-      {
-        "id": "system-design-web-card-23",
-        "front": "What should you know about API gateway?",
-        "back": "An API gateway routes, secures and manages API traffic.",
-        "example": "gateway before services"
-      },
-      {
-        "id": "system-design-web-card-24",
-        "front": "What should you know about monitoring?",
-        "back": "Monitoring tracks system health with metrics, logs and alerts.",
-        "example": "error rate alert"
-      },
-      {
-        "id": "system-design-web-card-25",
-        "front": "What should you know about graceful degradation?",
-        "back": "Graceful degradation means the app still offers reduced functionality when part of it fails.",
-        "example": "show cached data"
-      },
-      {
-        "id": "system-design-web-extra-card-sli-slo",
-        "front": "What are SLIs and SLOs?",
-        "back": "An SLI is a measured reliability indicator, like request success rate. An SLO is a target for that indicator, like 99.9% successful requests.",
-        "example": "SLI: p95 latency. SLO: p95 latency under 300ms."
-      },
-      {
-        "id": "system-design-web-extra-card-queue",
-        "front": "Why use a queue?",
-        "back": "A queue buffers work so a system can process tasks asynchronously. It helps smooth traffic spikes and decouple services.",
-        "example": "API -> queue -> worker sends email"
-      },
-      {
-        "id": "system-design-web-extra-card-eventual-consistency",
-        "front": "What is eventual consistency?",
-        "back": "Eventual consistency means different parts of a system may briefly disagree, but they should converge later. It is common in distributed systems.",
-        "example": "A newly uploaded image may take seconds to appear in search."
-      },
-      {
-        "id": "system-design-web-extra-card-circuit-breaker",
-        "front": "What is a circuit breaker?",
-        "back": "A circuit breaker stops calling a failing dependency for a while. This prevents repeated slow failures from taking down the caller too.",
-        "example": "If payment API fails repeatedly, stop calls briefly and show fallback."
-      },
-      {
-        "id": "system-design-web-extra-card-load-shedding",
-        "front": "What is load shedding?",
-        "back": "Load shedding intentionally rejects or drops lower-priority work when a system is overloaded so critical work can keep running.",
-        "example": "Return 503 for expensive reports during an outage."
-      },
-      {
-        "id": "system-design-web-extra-card-backup-restore",
-        "front": "Why test backups?",
-        "back": "A backup is only useful if it can be restored. Teams should test restore procedures before an emergency.",
-        "example": "Run a staging restore from last night’s backup."
-      },
-      {
-        "id": "system-design-web-extra-card-cdn",
-        "front": "What does a CDN do?",
-        "back": "A content delivery network caches static assets near users, reducing latency and load on the origin server.",
-        "example": "Images, JS bundles and CSS can be served from a CDN."
-      },
-      {
-        "id": "system-design-web-extra-card-rate-limiter",
-        "front": "Where can rate limiting happen?",
-        "back": "Rate limiting can happen at an API gateway, load balancer, service or application layer. It protects systems from abuse and accidental overload.",
-        "example": "100 requests per minute per user"
-      }
-    ],
-    "questions": [
-      {
-        "id": "system-design-web-q-01",
-        "type": "multiple-choice",
-        "prompt": "Which option best describes client-server?",
-        "options": [
-          "Client-server architecture separates the user-facing client from server-side logic and data.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
-        ],
-        "correctAnswer": "Client-server architecture separates the user-facing client from server-side logic and data.",
-        "explanation": "Client-server architecture separates the user-facing client from server-side logic and data."
-      },
-      {
-        "id": "system-design-web-q-02",
-        "type": "true-false",
-        "prompt": "True or false: The frontend runs in the user’s browser or app and handles UI interactions.",
-        "options": [
-          "True",
-          "False"
-        ],
-        "correctAnswer": "True",
-        "explanation": "The frontend runs in the user’s browser or app and handles UI interactions."
-      },
-      {
-        "id": "system-design-web-q-03",
-        "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to backend. What is the best choice?",
-        "options": [
-          "backend",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
-        ],
-        "correctAnswer": "backend",
-        "explanation": "The backend runs on servers and handles business logic, auth and data access. Example: Express API"
-      },
-      {
-        "id": "system-design-web-q-04",
-        "type": "type-answer",
-        "prompt": "Type the key syntax, method, or concept name for this description: A database stores persistent application data.",
-        "correctAnswer": "database",
-        "acceptedAnswers": [
-          "database",
-          "database",
-          "database"
-        ],
-        "explanation": "A database stores persistent application data."
-      },
-      {
-        "id": "system-design-web-q-05",
-        "type": "multiple-choice",
-        "prompt": "Which option best describes cache?",
-        "options": [
-          "A cache stores frequently used data temporarily to reduce latency or load.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
-        ],
-        "correctAnswer": "A cache stores frequently used data temporarily to reduce latency or load.",
-        "explanation": "A cache stores frequently used data temporarily to reduce latency or load."
-      },
-      {
-        "id": "system-design-web-q-06",
-        "type": "true-false",
-        "prompt": "True or false: A CDN serves static assets from locations closer to users.",
-        "options": [
-          "True",
-          "False"
-        ],
-        "correctAnswer": "True",
-        "explanation": "A CDN serves static assets from locations closer to users."
-      },
-      {
-        "id": "system-design-web-q-07",
-        "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to load balancer. What is the best choice?",
-        "options": [
-          "load balancer",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
-        ],
-        "correctAnswer": "load balancer",
-        "explanation": "A load balancer spreads traffic across multiple servers. Example: Nginx/ALB"
-      },
-      {
-        "id": "system-design-web-q-08",
-        "type": "type-answer",
-        "prompt": "Type the key syntax, method, or concept name for this description: Horizontal scaling adds more machines or instances to handle more traffic.",
-        "correctAnswer": "horizontal scaling",
-        "acceptedAnswers": [
-          "horizontal scaling",
-          "horizontal scaling",
-          "horizontal scaling"
-        ],
-        "explanation": "Horizontal scaling adds more machines or instances to handle more traffic."
-      },
-      {
-        "id": "system-design-web-q-09",
-        "type": "multiple-choice",
-        "prompt": "Which option best describes vertical scaling?",
-        "options": [
-          "Vertical scaling gives one machine more CPU or memory.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
-        ],
-        "correctAnswer": "Vertical scaling gives one machine more CPU or memory.",
-        "explanation": "Vertical scaling gives one machine more CPU or memory."
-      },
-      {
-        "id": "system-design-web-q-10",
-        "type": "true-false",
-        "prompt": "True or false: Latency is the time a request takes to get a response.",
-        "options": [
-          "True",
-          "False"
-        ],
-        "correctAnswer": "True",
-        "explanation": "Latency is the time a request takes to get a response."
-      },
-      {
-        "id": "system-design-web-q-11",
-        "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to throughput. What is the best choice?",
-        "options": [
-          "throughput",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
-        ],
-        "correctAnswer": "throughput",
-        "explanation": "Throughput is how much work a system handles over time. Example: requests per second"
-      },
-      {
-        "id": "system-design-web-q-12",
-        "type": "type-answer",
-        "prompt": "Type the key syntax, method, or concept name for this description: Availability is how often a system is working when users need it.",
-        "correctAnswer": "availability",
-        "acceptedAnswers": [
-          "availability",
-          "availability",
-          "availability"
-        ],
-        "explanation": "Availability is how often a system is working when users need it."
-      },
-      {
-        "id": "system-design-web-q-13",
-        "type": "multiple-choice",
-        "prompt": "Which option best describes reliability?",
-        "options": [
-          "Reliability is the ability to keep behaving correctly over time and failures.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
-        ],
-        "correctAnswer": "Reliability is the ability to keep behaving correctly over time and failures.",
-        "explanation": "Reliability is the ability to keep behaving correctly over time and failures."
-      },
-      {
-        "id": "system-design-web-q-14",
-        "type": "true-false",
-        "prompt": "True or false: A single point of failure can bring down the system if it breaks.",
-        "options": [
-          "True",
-          "False"
-        ],
-        "correctAnswer": "True",
-        "explanation": "A single point of failure can bring down the system if it breaks."
-      },
-      {
-        "id": "system-design-web-q-15",
-        "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to stateless server. What is the best choice?",
-        "options": [
-          "stateless server",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
-        ],
-        "correctAnswer": "stateless server",
-        "explanation": "A stateless server does not store user session data in memory between requests. Example: token-based auth"
-      },
-      {
-        "id": "system-design-web-q-16",
-        "type": "type-answer",
-        "prompt": "Type the key syntax, method, or concept name for this description: A stateful service stores important state and needs careful persistence.",
-        "correctAnswer": "stateful service",
-        "acceptedAnswers": [
-          "stateful service",
-          "stateful service",
-          "stateful service"
-        ],
-        "explanation": "A stateful service stores important state and needs careful persistence."
-      },
-      {
-        "id": "system-design-web-q-17",
-        "type": "multiple-choice",
-        "prompt": "Which option best describes queue?",
-        "options": [
-          "A queue stores work to be processed asynchronously.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
-        ],
-        "correctAnswer": "A queue stores work to be processed asynchronously.",
-        "explanation": "A queue stores work to be processed asynchronously."
-      },
-      {
-        "id": "system-design-web-q-18",
-        "type": "true-false",
-        "prompt": "True or false: A message broker moves messages between producers and consumers.",
-        "options": [
-          "True",
-          "False"
-        ],
-        "correctAnswer": "True",
-        "explanation": "A message broker moves messages between producers and consumers."
-      },
-      {
-        "id": "system-design-web-q-19",
-        "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to event-driven design. What is the best choice?",
-        "options": [
-          "event-driven design",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
-        ],
-        "correctAnswer": "event-driven design",
-        "explanation": "Event-driven design reacts to events rather than direct request chains. Example: user.created event"
-      },
-      {
-        "id": "system-design-web-q-20",
-        "type": "type-answer",
-        "prompt": "Type the key syntax, method, or concept name for this description: Polling repeatedly asks for updates at intervals.",
-        "correctAnswer": "polling",
-        "acceptedAnswers": [
-          "polling",
-          "polling",
-          "polling"
-        ],
-        "explanation": "Polling repeatedly asks for updates at intervals."
-      },
-      {
-        "id": "system-design-web-q-21",
-        "type": "multiple-choice",
-        "prompt": "Which option best describes WebSocket?",
-        "options": [
-          "WebSockets keep a two-way connection open for real-time updates.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
-        ],
-        "correctAnswer": "WebSockets keep a two-way connection open for real-time updates.",
-        "explanation": "WebSockets keep a two-way connection open for real-time updates."
-      },
-      {
-        "id": "system-design-web-q-22",
-        "type": "true-false",
-        "prompt": "True or false: Rate limits protect systems from abuse or accidental overload.",
-        "options": [
-          "True",
-          "False"
-        ],
-        "correctAnswer": "True",
-        "explanation": "Rate limits protect systems from abuse or accidental overload."
-      },
-      {
-        "id": "system-design-web-q-23",
-        "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to API gateway. What is the best choice?",
-        "options": [
-          "API gateway",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
-        ],
-        "correctAnswer": "API gateway",
-        "explanation": "An API gateway routes, secures and manages API traffic. Example: gateway before services"
-      },
-      {
-        "id": "system-design-web-q-24",
-        "type": "type-answer",
-        "prompt": "Type the key syntax, method, or concept name for this description: Monitoring tracks system health with metrics, logs and alerts.",
-        "correctAnswer": "monitoring",
-        "acceptedAnswers": [
-          "monitoring",
-          "monitoring",
-          "monitoring"
-        ],
-        "explanation": "Monitoring tracks system health with metrics, logs and alerts."
-      },
-      {
-        "id": "system-design-web-q-25",
-        "type": "multiple-choice",
-        "prompt": "Which option best describes graceful degradation?",
-        "options": [
-          "Graceful degradation means the app still offers reduced functionality when part of it fails.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
-        ],
-        "correctAnswer": "Graceful degradation means the app still offers reduced functionality when part of it fails.",
-        "explanation": "Graceful degradation means the app still offers reduced functionality when part of it fails."
-      },
-      {
-        "id": "system-design-web-extra-q-queue-scenario",
-        "type": "scenario",
-        "prompt": "Users upload videos and processing takes minutes. What design component can decouple upload from processing?",
-        "correctAnswer": "queue",
-        "explanation": "A queue lets the API accept work quickly while workers process jobs asynchronously.",
-        "options": [
-          "queue",
-          "CSS grid",
-          "local variable",
-          "template literal"
-        ]
-      },
-      {
-        "id": "system-design-web-extra-q-slo-type",
-        "type": "type-answer",
-        "prompt": "Type the term for a reliability target such as “99.9% of requests succeed”.",
-        "correctAnswer": "SLO",
-        "explanation": "An SLO is a service level objective.",
-        "acceptedAnswers": [
-          "slo",
-          "service level objective"
-        ]
-      },
-      {
-        "id": "system-design-web-extra-q-eventual-tf",
-        "type": "true-false",
-        "prompt": "True or false: eventual consistency means data may briefly differ between systems but should converge later.",
-        "correctAnswer": "True",
-        "explanation": "Eventual consistency accepts temporary differences in exchange for scalability or availability.",
-        "options": [
-          "True",
-          "False"
-        ]
-      },
-      {
-        "id": "system-design-web-extra-q-cdn-mcq",
-        "type": "multiple-choice",
-        "prompt": "What is a CDN mainly used for in web systems?",
-        "correctAnswer": "Caching and serving content closer to users.",
-        "explanation": "CDNs reduce latency and origin load by serving assets from edge locations.",
-        "options": [
-          "Caching and serving content closer to users.",
-          "Compiling TypeScript only.",
-          "Replacing all databases.",
-          "Writing unit tests automatically."
-        ]
-      },
-      {
-        "id": "system-design-web-extra-q-circuit-breaker-scenario",
-        "type": "scenario",
-        "prompt": "A downstream API keeps timing out and is slowing your app. Which reliability pattern temporarily stops calling it?",
-        "correctAnswer": "circuit breaker",
-        "explanation": "A circuit breaker opens after repeated failures and gives the dependency time to recover.",
-        "options": [
-          "circuit breaker",
-          "cursor pagination",
-          "destructuring",
-          "semantic HTML"
-        ]
-      },
-      {
-        "id": "system-design-web-extra-q-backup-restore",
-        "type": "multiple-choice",
-        "prompt": "Why should teams test database restores?",
-        "correctAnswer": "To prove backups can actually be used during an incident.",
-        "explanation": "Backups are not enough unless restore steps are known and verified.",
-        "options": [
-          "To prove backups can actually be used during an incident.",
-          "To make queries faster in the browser.",
-          "To remove the need for authentication.",
-          "To replace monitoring."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "professional-dev-workflows",
-    "title": "Professional Dev Workflow",
-    "description": "Practise the tools and habits used on real engineering teams",
-    "flashcards": [
-      {
-        "id": "professional-dev-workflows-card-01",
-        "front": "What should you know about Git commit?",
-        "back": "A Git commit saves a snapshot of changes with a message explaining why.",
-        "example": "git commit -m"
-      },
-      {
-        "id": "professional-dev-workflows-card-02",
-        "front": "What should you know about branch?",
-        "back": "A branch lets you work on changes without touching the main line directly.",
-        "example": "feature/add-quiz"
-      },
-      {
-        "id": "professional-dev-workflows-card-03",
-        "front": "What should you know about merge?",
-        "back": "A merge combines changes from one branch into another.",
-        "example": "git merge main"
-      },
-      {
-        "id": "professional-dev-workflows-card-04",
-        "front": "What should you know about rebase?",
-        "back": "A rebase replays commits on top of another branch to create a cleaner history.",
-        "example": "git rebase main"
-      },
-      {
-        "id": "professional-dev-workflows-card-05",
-        "front": "What should you know about pull request?",
-        "back": "A pull request proposes changes and invites review before merging.",
-        "example": "open PR"
-      },
-      {
-        "id": "professional-dev-workflows-card-06",
-        "front": "What should you know about code review?",
-        "back": "Code review improves quality through feedback before code reaches users.",
-        "example": "request changes"
-      },
-      {
-        "id": "professional-dev-workflows-card-07",
-        "front": "What should you know about CI?",
-        "back": "CI automatically checks code with tests, linting or builds on each change.",
-        "example": "GitHub Actions"
-      },
-      {
-        "id": "professional-dev-workflows-card-08",
-        "front": "What should you know about CD?",
-        "back": "CD automatically prepares or deploys code after checks pass.",
-        "example": "deploy pipeline"
-      },
-      {
-        "id": "professional-dev-workflows-card-09",
-        "front": "What should you know about environment variable?",
-        "back": "Environment variables configure apps without hardcoding secrets or environment-specific values.",
-        "example": "VITE_API_URL"
-      },
-      {
-        "id": "professional-dev-workflows-card-10",
-        "front": "What should you know about feature flag?",
-        "back": "A feature flag turns functionality on or off without redeploying code.",
-        "example": "enableNewSearch"
-      },
-      {
-        "id": "professional-dev-workflows-card-11",
-        "front": "What should you know about semantic versioning?",
-        "back": "Semantic versioning communicates breaking, feature and patch changes.",
-        "example": "1.4.2"
-      },
-      {
-        "id": "professional-dev-workflows-card-12",
-        "front": "What should you know about changelog?",
-        "back": "A changelog records meaningful changes between versions.",
-        "example": "Added quiz results"
-      },
-      {
-        "id": "professional-dev-workflows-card-13",
-        "front": "What should you know about issue ticket?",
-        "back": "An issue ticket describes work, context, acceptance criteria and discussion.",
-        "example": "Jira ticket"
-      },
-      {
-        "id": "professional-dev-workflows-card-14",
-        "front": "What should you know about acceptance criteria?",
-        "back": "Acceptance criteria define what must be true for work to be considered done.",
-        "example": "Given/When/Then"
-      },
-      {
-        "id": "professional-dev-workflows-card-15",
-        "front": "What should you know about definition of done?",
-        "back": "Definition of done is the team’s shared quality bar before work is complete.",
-        "example": "tests pass, reviewed"
-      },
-      {
-        "id": "professional-dev-workflows-card-16",
-        "front": "What should you know about Agile sprint?",
-        "back": "A sprint is a short planned period of work, often one or two weeks.",
-        "example": "2-week sprint"
-      },
-      {
-        "id": "professional-dev-workflows-card-17",
-        "front": "What should you know about standup?",
-        "back": "A standup is a short team sync on progress, blockers and plans.",
-        "example": "daily standup"
-      },
-      {
-        "id": "professional-dev-workflows-card-18",
-        "front": "What should you know about retrospective?",
-        "back": "A retrospective helps the team improve its process after a sprint.",
-        "example": "what went well"
-      },
-      {
-        "id": "professional-dev-workflows-card-19",
-        "front": "What should you know about documentation?",
-        "back": "Documentation explains how code, systems or decisions work for future readers.",
-        "example": "README"
-      },
-      {
-        "id": "professional-dev-workflows-card-20",
-        "front": "What should you know about README?",
-        "back": "A README explains what the project is and how to run or use it.",
-        "example": "npm install"
-      },
-      {
-        "id": "professional-dev-workflows-card-21",
-        "front": "What should you know about ADR?",
-        "back": "An ADR records an important architecture decision and why it was made.",
-        "example": "ADR-001"
-      },
-      {
-        "id": "professional-dev-workflows-card-22",
-        "front": "What should you know about dependency update?",
-        "back": "Dependency updates bring fixes and features but need testing for breaking changes.",
-        "example": "npm update"
-      },
-      {
-        "id": "professional-dev-workflows-card-23",
-        "front": "What should you know about security audit?",
-        "back": "A security audit checks dependencies or code for known vulnerabilities.",
-        "example": "npm audit"
-      },
-      {
-        "id": "professional-dev-workflows-card-24",
-        "front": "What should you know about release branch?",
-        "back": "A release branch stabilises code before shipping a version.",
-        "example": "release/1.2"
-      },
-      {
-        "id": "professional-dev-workflows-card-25",
-        "front": "What should you know about rollback?",
-        "back": "A rollback restores a previous working version if a release causes problems.",
-        "example": "rollback deployment"
-      },
-      {
-        "id": "professional-dev-workflows-extra-card-conventional-commits",
-        "front": "What are Conventional Commits?",
-        "back": "Conventional Commits use prefixes like feat:, fix: and chore: to make commit intent clear and support automated changelogs.",
-        "example": "feat: add quiz results summary"
-      },
-      {
-        "id": "professional-dev-workflows-extra-card-trunk-based",
-        "front": "What is trunk-based development?",
-        "back": "Trunk-based development means developers integrate small changes into the main branch frequently, often using feature flags for unfinished work.",
-        "example": "Small PRs merged daily into main."
-      },
-      {
-        "id": "professional-dev-workflows-extra-card-feature-flags",
-        "front": "What are feature flags?",
-        "back": "Feature flags let teams ship code with features turned on or off by configuration. They reduce release risk and support gradual rollout.",
-        "example": "if (flags.newDashboard) showNewDashboard();"
-      },
-      {
-        "id": "professional-dev-workflows-extra-card-semver",
-        "front": "What is semantic versioning?",
-        "back": "Semantic versioning uses major.minor.patch. Major means breaking change, minor means backwards-compatible feature, patch means backwards-compatible fix.",
-        "example": "2.4.1"
-      },
-      {
-        "id": "professional-dev-workflows-extra-card-adr",
-        "front": "What is an ADR?",
-        "back": "An Architecture Decision Record briefly documents an important technical decision, context, options and consequences. It helps future developers understand why choices were made.",
-        "example": "ADR: Use Supabase for auth in MVP"
-      },
-      {
-        "id": "professional-dev-workflows-extra-card-codeowners",
-        "front": "What is CODEOWNERS?",
-        "back": "CODEOWNERS maps files or folders to people/teams who should review changes. It helps route PR reviews to the right experts.",
-        "example": "/src/design-system/ @team/design-system"
-      },
-      {
-        "id": "professional-dev-workflows-extra-card-dependency-updates",
-        "front": "Why update dependencies regularly?",
-        "back": "Regular dependency updates reduce security risk, keep tooling supported and make upgrades smaller. Automated PRs can help but still need review.",
-        "example": "Dependabot opens a Vite patch update PR."
-      },
-      {
-        "id": "professional-dev-workflows-extra-card-rollback-plan",
-        "front": "What is a rollback plan?",
-        "back": "A rollback plan explains how to return to a safe previous version if a release causes problems. It is part of responsible deployment.",
-        "example": "Revert deployment to version 1.8.3 if error rate rises."
-      }
-    ],
-    "questions": [
-      {
-        "id": "professional-dev-workflows-q-01",
-        "type": "multiple-choice",
-        "prompt": "Which option best describes Git commit?",
-        "options": [
-          "A Git commit saves a snapshot of changes with a message explaining why.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
-        ],
-        "correctAnswer": "A Git commit saves a snapshot of changes with a message explaining why.",
-        "explanation": "A Git commit saves a snapshot of changes with a message explaining why."
-      },
-      {
-        "id": "professional-dev-workflows-q-02",
-        "type": "true-false",
-        "prompt": "True or false: A branch lets you work on changes without touching the main line directly.",
-        "options": [
-          "True",
-          "False"
-        ],
-        "correctAnswer": "True",
-        "explanation": "A branch lets you work on changes without touching the main line directly."
-      },
-      {
-        "id": "professional-dev-workflows-q-03",
-        "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to merge. What is the best choice?",
-        "options": [
-          "merge",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
-        ],
-        "correctAnswer": "merge",
-        "explanation": "A merge combines changes from one branch into another. Example: git merge main"
-      },
-      {
-        "id": "professional-dev-workflows-q-04",
-        "type": "type-answer",
-        "prompt": "Type the key syntax, method, or concept name for this description: A rebase replays commits on top of another branch to create a cleaner history.",
-        "correctAnswer": "rebase",
-        "acceptedAnswers": [
-          "rebase",
-          "rebase",
-          "rebase"
-        ],
-        "explanation": "A rebase replays commits on top of another branch to create a cleaner history."
-      },
-      {
-        "id": "professional-dev-workflows-q-05",
-        "type": "multiple-choice",
-        "prompt": "Which option best describes pull request?",
-        "options": [
-          "A pull request proposes changes and invites review before merging.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
-        ],
-        "correctAnswer": "A pull request proposes changes and invites review before merging.",
-        "explanation": "A pull request proposes changes and invites review before merging."
-      },
-      {
-        "id": "professional-dev-workflows-q-06",
-        "type": "true-false",
-        "prompt": "True or false: Code review improves quality through feedback before code reaches users.",
-        "options": [
-          "True",
-          "False"
-        ],
-        "correctAnswer": "True",
-        "explanation": "Code review improves quality through feedback before code reaches users."
-      },
-      {
-        "id": "professional-dev-workflows-q-07",
-        "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to CI. What is the best choice?",
-        "options": [
-          "CI",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
-        ],
-        "correctAnswer": "CI",
-        "explanation": "CI automatically checks code with tests, linting or builds on each change. Example: GitHub Actions"
-      },
-      {
-        "id": "professional-dev-workflows-q-08",
-        "type": "type-answer",
-        "prompt": "Type the key syntax, method, or concept name for this description: CD automatically prepares or deploys code after checks pass.",
-        "correctAnswer": "CD",
-        "acceptedAnswers": [
-          "CD",
-          "CD",
-          "CD"
-        ],
-        "explanation": "CD automatically prepares or deploys code after checks pass."
-      },
-      {
-        "id": "professional-dev-workflows-q-09",
-        "type": "multiple-choice",
-        "prompt": "Which option best describes environment variable?",
-        "options": [
-          "Environment variables configure apps without hardcoding secrets or environment-specific values.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
-        ],
-        "correctAnswer": "Environment variables configure apps without hardcoding secrets or environment-specific values.",
-        "explanation": "Environment variables configure apps without hardcoding secrets or environment-specific values."
-      },
-      {
-        "id": "professional-dev-workflows-q-10",
-        "type": "true-false",
-        "prompt": "True or false: A feature flag turns functionality on or off without redeploying code.",
-        "options": [
-          "True",
-          "False"
-        ],
-        "correctAnswer": "True",
-        "explanation": "A feature flag turns functionality on or off without redeploying code."
-      },
-      {
-        "id": "professional-dev-workflows-q-11",
-        "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to semantic versioning. What is the best choice?",
-        "options": [
-          "semantic versioning",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
-        ],
-        "correctAnswer": "semantic versioning",
-        "explanation": "Semantic versioning communicates breaking, feature and patch changes. Example: 1.4.2"
-      },
-      {
-        "id": "professional-dev-workflows-q-12",
-        "type": "type-answer",
-        "prompt": "Type the key syntax, method, or concept name for this description: A changelog records meaningful changes between versions.",
-        "correctAnswer": "changelog",
-        "acceptedAnswers": [
-          "changelog",
-          "changelog",
-          "changelog"
-        ],
-        "explanation": "A changelog records meaningful changes between versions."
-      },
-      {
-        "id": "professional-dev-workflows-q-13",
-        "type": "multiple-choice",
-        "prompt": "Which option best describes issue ticket?",
-        "options": [
-          "An issue ticket describes work, context, acceptance criteria and discussion.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
-        ],
-        "correctAnswer": "An issue ticket describes work, context, acceptance criteria and discussion.",
-        "explanation": "An issue ticket describes work, context, acceptance criteria and discussion."
-      },
-      {
-        "id": "professional-dev-workflows-q-14",
-        "type": "true-false",
-        "prompt": "True or false: Acceptance criteria define what must be true for work to be considered done.",
-        "options": [
-          "True",
-          "False"
-        ],
-        "correctAnswer": "True",
-        "explanation": "Acceptance criteria define what must be true for work to be considered done."
-      },
-      {
-        "id": "professional-dev-workflows-q-15",
-        "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to definition of done. What is the best choice?",
-        "options": [
-          "definition of done",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
-        ],
-        "correctAnswer": "definition of done",
-        "explanation": "Definition of done is the team’s shared quality bar before work is complete. Example: tests pass, reviewed"
-      },
-      {
-        "id": "professional-dev-workflows-q-16",
-        "type": "type-answer",
-        "prompt": "Type the key syntax, method, or concept name for this description: A sprint is a short planned period of work, often one or two weeks.",
-        "correctAnswer": "Agile sprint",
-        "acceptedAnswers": [
-          "Agile sprint",
-          "Agile sprint",
-          "Agile sprint"
-        ],
-        "explanation": "A sprint is a short planned period of work, often one or two weeks."
-      },
-      {
-        "id": "professional-dev-workflows-q-17",
-        "type": "multiple-choice",
-        "prompt": "Which option best describes standup?",
-        "options": [
-          "A standup is a short team sync on progress, blockers and plans.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
-        ],
-        "correctAnswer": "A standup is a short team sync on progress, blockers and plans.",
-        "explanation": "A standup is a short team sync on progress, blockers and plans."
-      },
-      {
-        "id": "professional-dev-workflows-q-18",
-        "type": "true-false",
-        "prompt": "True or false: A retrospective helps the team improve its process after a sprint.",
-        "options": [
-          "True",
-          "False"
-        ],
-        "correctAnswer": "True",
-        "explanation": "A retrospective helps the team improve its process after a sprint."
-      },
-      {
-        "id": "professional-dev-workflows-q-19",
-        "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to documentation. What is the best choice?",
-        "options": [
-          "documentation",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
-        ],
-        "correctAnswer": "documentation",
-        "explanation": "Documentation explains how code, systems or decisions work for future readers. Example: README"
-      },
-      {
-        "id": "professional-dev-workflows-q-20",
-        "type": "type-answer",
-        "prompt": "Type the key syntax, method, or concept name for this description: A README explains what the project is and how to run or use it.",
-        "correctAnswer": "README",
-        "acceptedAnswers": [
-          "README",
-          "README",
-          "README"
-        ],
-        "explanation": "A README explains what the project is and how to run or use it."
-      },
-      {
-        "id": "professional-dev-workflows-q-21",
-        "type": "multiple-choice",
-        "prompt": "Which option best describes ADR?",
-        "options": [
-          "An ADR records an important architecture decision and why it was made.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
-        ],
-        "correctAnswer": "An ADR records an important architecture decision and why it was made.",
-        "explanation": "An ADR records an important architecture decision and why it was made."
-      },
-      {
-        "id": "professional-dev-workflows-q-22",
-        "type": "true-false",
-        "prompt": "True or false: Dependency updates bring fixes and features but need testing for breaking changes.",
-        "options": [
-          "True",
-          "False"
-        ],
-        "correctAnswer": "True",
-        "explanation": "Dependency updates bring fixes and features but need testing for breaking changes."
-      },
-      {
-        "id": "professional-dev-workflows-q-23",
-        "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to security audit. What is the best choice?",
-        "options": [
-          "security audit",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
-        ],
-        "correctAnswer": "security audit",
-        "explanation": "A security audit checks dependencies or code for known vulnerabilities. Example: npm audit"
-      },
-      {
-        "id": "professional-dev-workflows-q-24",
-        "type": "type-answer",
-        "prompt": "Type the key syntax, method, or concept name for this description: A release branch stabilises code before shipping a version.",
-        "correctAnswer": "release branch",
-        "acceptedAnswers": [
-          "release branch",
-          "release branch",
-          "release branch"
-        ],
-        "explanation": "A release branch stabilises code before shipping a version."
-      },
-      {
-        "id": "professional-dev-workflows-q-25",
-        "type": "multiple-choice",
-        "prompt": "Which option best describes rollback?",
-        "options": [
-          "A rollback restores a previous working version if a release causes problems.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
-        ],
-        "correctAnswer": "A rollback restores a previous working version if a release causes problems.",
-        "explanation": "A rollback restores a previous working version if a release causes problems."
-      },
-      {
-        "id": "professional-dev-workflows-extra-q-conventional-type",
-        "type": "type-answer",
-        "prompt": "Type the commit prefix commonly used for a bug fix in Conventional Commits.",
-        "correctAnswer": "fix:",
-        "explanation": "fix: marks a commit as a bug fix.",
-        "acceptedAnswers": [
-          "fix",
-          "fix:"
-        ]
-      },
-      {
-        "id": "professional-dev-workflows-extra-q-feature-flag-scenario",
-        "type": "scenario",
-        "prompt": "You want to merge unfinished code safely and enable it later for 10% of users. What should you use?",
-        "correctAnswer": "feature flag",
-        "explanation": "Feature flags separate code deployment from feature release.",
-        "options": [
-          "feature flag",
-          "git blame",
-          "npm audit",
-          "manual rebase only"
-        ]
-      },
-      {
-        "id": "professional-dev-workflows-extra-q-semver-mcq",
-        "type": "multiple-choice",
-        "prompt": "In semantic versioning, which number usually changes for a breaking change?",
-        "correctAnswer": "major",
-        "explanation": "Major version changes indicate breaking changes.",
-        "options": [
-          "major",
-          "minor",
-          "patch",
-          "build metadata only"
-        ]
-      },
-      {
-        "id": "professional-dev-workflows-extra-q-adr-tf",
-        "type": "true-false",
-        "prompt": "True or false: An ADR records why an important technical decision was made.",
-        "correctAnswer": "True",
-        "explanation": "ADRs capture context, decision and consequences so future developers understand the reasoning.",
-        "options": [
-          "True",
-          "False"
-        ]
-      },
-      {
-        "id": "professional-dev-workflows-extra-q-codeowners-purpose",
-        "type": "multiple-choice",
-        "prompt": "What is CODEOWNERS used for?",
-        "correctAnswer": "Automatically suggesting or requiring reviewers for certain files.",
-        "explanation": "CODEOWNERS maps paths to people or teams responsible for reviewing changes.",
-        "options": [
-          "Automatically suggesting or requiring reviewers for certain files.",
-          "Compiling CSS.",
-          "Encrypting secrets.",
-          "Replacing package-lock.json."
-        ]
-      },
-      {
-        "id": "professional-dev-workflows-extra-q-rollback-scenario",
-        "type": "scenario",
-        "prompt": "A release causes a spike in errors. What prepared plan helps restore the previous working version quickly?",
-        "correctAnswer": "rollback plan",
-        "explanation": "A rollback plan reduces incident time by making recovery steps clear.",
-        "options": [
-          "rollback plan",
-          "string trimming",
-          "array flattening",
-          "hover state"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "react-ui-patterns",
-    "title": "React & UI Engineering Patterns",
-    "description": "Practise the React and UI patterns junior developers use in real product code.",
-    "flashcards": [
-      {
-        "id": "react-ui-patterns-extra-card-01-components",
-        "front": "What is a React component?",
-        "back": "A component is a reusable piece of UI described by a function. It receives inputs through props and returns what should be shown.",
-        "example": "function Badge({ label }) { return <span>{label}</span>; }"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-02-props",
-        "front": "What are props?",
-        "back": "Props are read-only inputs passed from a parent component to a child component. They let components be reusable with different data.",
-        "example": "<UserCard name=\"Jay\" />"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-03-state",
-        "front": "What is state?",
-        "back": "State is data a component owns that can change over time and cause the UI to rerender.",
-        "example": "const [count, setCount] = useState(0);"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-04-effect",
-        "front": "What is useEffect for?",
-        "back": "useEffect runs side effects after rendering, such as subscribing to events, syncing document title or fetching data when inputs change.",
-        "example": "useEffect(() => { document.title = title; }, [title]);"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-05-effect-cleanup",
-        "front": "Why clean up effects?",
-        "back": "Cleanup prevents leaks and duplicate subscriptions when a component unmounts or effect dependencies change.",
-        "example": "return () => window.removeEventListener(\"resize\", onResize);"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-06-keys",
-        "front": "Why do lists need keys?",
-        "back": "Keys help React match list items between renders. Stable keys prevent wrong items being reused when lists reorder.",
-        "example": "items.map(item => <Row key={item.id} item={item} />)"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-07-lifting-state",
-        "front": "What is lifting state up?",
-        "back": "Lifting state up means moving shared state to the nearest common parent so multiple children can use or update it.",
-        "example": "Parent owns selectedId; list and details receive it."
-      },
-      {
-        "id": "react-ui-patterns-extra-card-08-composition",
-        "front": "What is composition?",
-        "back": "Composition builds complex UI by combining small components instead of making one huge component.",
-        "example": "<Card><Profile /></Card>"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-09-conditional-render",
-        "front": "What is conditional rendering?",
-        "back": "Conditional rendering shows different UI based on state, props or permissions.",
-        "example": "{isLoading ? <Spinner /> : <Content />}"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-10-custom-hook",
-        "front": "What is a custom hook?",
-        "back": "A custom hook is a function starting with use that reuses stateful logic between components.",
-        "example": "function useWindowSize() { ... }"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-11-context",
-        "front": "When use Context?",
-        "back": "Context passes values through a component tree without manually passing props at every level. Use it for shared values like theme or auth, not every local state value.",
-        "example": "const ThemeContext = createContext(\"light\");"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-12-rerender",
-        "front": "What causes a rerender?",
-        "back": "A component rerenders when its state changes, its parent rerenders, or subscribed context changes.",
-        "example": "setCount(count + 1)"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-13-derived-props",
-        "front": "Avoid copying props to state?",
-        "back": "Copying props into state often creates stale duplicates. Prefer deriving values during render unless the user is editing a local draft.",
-        "example": "const fullName = `${first} ${last}`;"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-14-error-boundary",
-        "front": "What is an error boundary?",
-        "back": "An error boundary catches rendering errors in part of a React tree and shows fallback UI instead of crashing the whole app.",
-        "example": "<ErrorBoundary fallback={<ErrorPage />}>"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-15-forms",
-        "front": "Controlled vs uncontrolled forms?",
-        "back": "Controlled forms store values in React state. Uncontrolled forms let the DOM keep the value and read it through refs when needed.",
-        "example": "const value = inputRef.current?.value;"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-16-optimistic-ui",
-        "front": "What is optimistic UI?",
-        "back": "Optimistic UI updates immediately before the server confirms success. If the request fails, the UI must roll back or show an error.",
-        "example": "Show new todo immediately, then remove it if save fails."
-      },
-      {
-        "id": "react-ui-patterns-extra-card-17-suspense",
-        "front": "What is Suspense conceptually?",
-        "back": "Suspense lets parts of the UI show fallback content while waiting for async data or lazy-loaded code, depending on framework support.",
-        "example": "<Suspense fallback={<Spinner />}>"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-18-lazy",
-        "front": "Why lazy-load components?",
-        "back": "Lazy loading splits code so users download heavy screens only when needed, improving initial load time.",
-        "example": "const Settings = lazy(() => import(\"./Settings\"));"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-19-prop-drilling",
-        "front": "What is prop drilling?",
-        "back": "Prop drilling is passing props through many layers that do not use them, just to reach a deep child. Sometimes composition or context can help.",
-        "example": "App -> Layout -> Panel -> Button"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-20-component-api",
-        "front": "What makes a good component API?",
-        "back": "A good component API has clear prop names, sensible defaults, predictable behaviour and avoids exposing unnecessary internal details.",
-        "example": "<Button variant=\"primary\" size=\"sm\" disabled />"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-21-accessibility-props",
-        "front": "Why pass accessible labels?",
-        "back": "Icon-only buttons and custom controls need accessible names so screen reader users know what they do.",
-        "example": "<button aria-label=\"Close dialog\">×</button>"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-22-rendering-cost",
-        "front": "What is rendering cost?",
-        "back": "Rendering cost is the time spent recalculating and updating UI. Large lists, expensive calculations and unnecessary rerenders can make apps feel slow.",
-        "example": "Virtualise a list with thousands of rows."
-      },
-      {
-        "id": "react-ui-patterns-extra-card-23-use-ref",
-        "front": "What is useRef for?",
-        "back": "useRef stores a mutable value that persists between renders without causing a rerender. It is commonly used for DOM nodes and timers.",
-        "example": "const inputRef = useRef<HTMLInputElement>(null);"
-      },
-      {
-        "id": "react-ui-patterns-extra-card-24-separation",
-        "front": "Why separate container and presentational concerns?",
-        "back": "Separating data/loading logic from display components can make UI easier to test and reuse. It is a pattern, not a strict rule.",
-        "example": "UserPage fetches; UserCard displays."
-      },
-      {
-        "id": "react-ui-patterns-extra-card-25-component-tests",
-        "front": "What should component tests check?",
-        "back": "Component tests should check user-visible behaviour: what appears, what can be clicked, and how the UI responds.",
-        "example": "expect(screen.getByRole(\"button\", { name: /save/i })).toBeEnabled();"
-      }
-    ],
-    "questions": [
-      {
-        "id": "react-ui-patterns-extra-q-01-props",
-        "type": "multiple-choice",
-        "prompt": "What are props in React?",
-        "correctAnswer": "Read-only inputs passed from a parent to a child component.",
-        "explanation": "Props configure components and should not be mutated by the child.",
-        "options": [
-          "Read-only inputs passed from a parent to a child component.",
-          "A database table.",
-          "A CSS-only animation.",
-          "A browser storage API."
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-02-state",
-        "type": "type-answer",
-        "prompt": "Type the React hook commonly used for local component state.",
-        "correctAnswer": "useState",
-        "explanation": "useState stores state and gives you a setter to update it.",
-        "acceptedAnswers": [
-          "useState",
-          "usestate"
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-03-keys",
-        "type": "scenario",
-        "prompt": "A list reorders and input values appear attached to the wrong rows. What is a likely issue?",
-        "correctAnswer": "unstable keys",
-        "explanation": "Using array indexes or unstable keys can cause React to reuse the wrong list items.",
-        "options": [
-          "unstable keys",
-          "too many CSS variables",
-          "wrong HTTP status code",
-          "missing JSON.stringify"
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-04-effect-cleanup",
-        "type": "true-false",
-        "prompt": "True or false: Effects that subscribe to external events should usually clean up the subscription.",
-        "correctAnswer": "True",
-        "explanation": "Cleanup avoids duplicate listeners and memory leaks.",
-        "options": [
-          "True",
-          "False"
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-05-custom-hook",
-        "type": "multiple-choice",
-        "prompt": "What is a custom hook mainly used for?",
-        "correctAnswer": "Reusing stateful logic between components.",
-        "explanation": "Custom hooks extract reusable hook-based logic into a function.",
-        "options": [
-          "Reusing stateful logic between components.",
-          "Styling only.",
-          "Creating database indexes.",
-          "Replacing TypeScript types."
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-06-controlled",
-        "type": "scenario",
-        "prompt": "A form input value comes from React state and updates with onChange. What is this called?",
-        "correctAnswer": "controlled input",
-        "explanation": "A controlled input uses React state as the source of truth.",
-        "options": [
-          "controlled input",
-          "webhook",
-          "source map",
-          "circuit breaker"
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-07-context",
-        "type": "multiple-choice",
-        "prompt": "When is Context a reasonable fit?",
-        "correctAnswer": "Sharing values like theme/auth through many components.",
-        "explanation": "Context avoids prop drilling for broadly shared values.",
-        "options": [
-          "Sharing values like theme/auth through many components.",
-          "Replacing every local useState.",
-          "Making HTTP requests faster automatically.",
-          "Sorting arrays by default."
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-08-optimistic",
-        "type": "scenario",
-        "prompt": "The UI shows a new item immediately before the API confirms it saved. What pattern is this?",
-        "correctAnswer": "optimistic UI",
-        "explanation": "Optimistic UI improves perceived speed but needs rollback/error handling.",
-        "options": [
-          "optimistic UI",
-          "CSRF",
-          "hoisting",
-          "offset pagination"
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-09-aria-label",
-        "type": "type-answer",
-        "prompt": "Type the attribute that gives an accessible name to an icon-only button.",
-        "correctAnswer": "aria-label",
-        "explanation": "aria-label provides a text label for assistive technologies.",
-        "acceptedAnswers": [
-          "aria-label",
-          "aria label"
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-10-prop-drilling",
-        "type": "multiple-choice",
-        "prompt": "What is prop drilling?",
-        "correctAnswer": "Passing props through layers that do not use them just to reach a deeper child.",
-        "explanation": "Prop drilling can sometimes be reduced with composition or context.",
-        "options": [
-          "Passing props through layers that do not use them just to reach a deeper child.",
-          "Sending props to an API.",
-          "Encrypting component props.",
-          "Compiling JSX to CSS."
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-11-ref",
-        "type": "true-false",
-        "prompt": "True or false: Updating a useRef value causes a component rerender.",
-        "correctAnswer": "False",
-        "explanation": "Refs persist between renders but changing ref.current does not trigger a rerender.",
-        "options": [
-          "True",
-          "False"
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-12-lazy",
-        "type": "multiple-choice",
-        "prompt": "Why lazy-load a large route component?",
-        "correctAnswer": "To reduce initial JavaScript downloaded by the user.",
-        "explanation": "Lazy loading supports code splitting and can improve initial load.",
-        "options": [
-          "To reduce initial JavaScript downloaded by the user.",
-          "To make TypeScript optional.",
-          "To disable the browser cache.",
-          "To avoid all testing."
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-13-error-boundary",
-        "type": "type-answer",
-        "prompt": "Type the React pattern/component used to catch rendering errors and show fallback UI.",
-        "correctAnswer": "error boundary",
-        "explanation": "Error boundaries catch render errors in a subtree.",
-        "acceptedAnswers": [
-          "error boundary",
-          "error boundaries"
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-14-derived",
-        "type": "scenario",
-        "prompt": "A component stores fullName in state even though it can be calculated from firstName and lastName. What issue might this cause?",
-        "correctAnswer": "stale derived state",
-        "explanation": "Duplicating derived values in state can get out of sync.",
-        "options": [
-          "stale derived state",
-          "CORS preflight",
-          "HTTP caching",
-          "locale sorting"
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-15-component-api",
-        "type": "multiple-choice",
-        "prompt": "Which prop design is clearest for a reusable button?",
-        "correctAnswer": "variant=\"primary\" and disabled as explicit props.",
-        "explanation": "Clear, predictable props make component usage easier.",
-        "options": [
-          "variant=\"primary\" and disabled as explicit props.",
-          "A prop named x that accepts any value.",
-          "Mutating props inside the button.",
-          "Hardcoding every button as primary."
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-16-tests",
-        "type": "scenario",
-        "prompt": "A component test clicks Save and checks that a success message appears. What kind of thing is it testing?",
-        "correctAnswer": "user-visible behaviour",
-        "explanation": "Good component tests focus on behaviour users can observe.",
-        "options": [
-          "user-visible behaviour",
-          "private implementation details only",
-          "database schema migrations",
-          "CDN cache headers"
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-17-suspense",
-        "type": "multiple-choice",
-        "prompt": "What does Suspense show while waiting for supported async/lazy content?",
-        "correctAnswer": "fallback UI",
-        "explanation": "Suspense renders fallback UI while content is not ready.",
-        "options": [
-          "fallback UI",
-          "a SQL query",
-          "a Git tag",
-          "a cookie"
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-18-lift",
-        "type": "type-answer",
-        "prompt": "Type the phrase for moving shared state to the nearest common parent.",
-        "correctAnswer": "lifting state up",
-        "explanation": "Lifting state up lets multiple children share and update the same source of truth.",
-        "acceptedAnswers": [
-          "lifting state up",
-          "lift state up"
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-19-composition",
-        "type": "true-false",
-        "prompt": "True or false: Composition means building larger UIs by combining smaller components.",
-        "correctAnswer": "True",
-        "explanation": "Composition keeps components focused and reusable.",
-        "options": [
-          "True",
-          "False"
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-20-rerender",
-        "type": "multiple-choice",
-        "prompt": "Which change commonly causes a component to rerender?",
-        "correctAnswer": "Its state is updated.",
-        "explanation": "State updates cause React to rerender the component.",
-        "options": [
-          "Its state is updated.",
-          "A CSS file exists.",
-          "A comment is added to code.",
-          "A server returns 204 somewhere else."
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-21-effect-deps",
-        "type": "scenario",
-        "prompt": "An effect reads userId but userId is missing from the dependency array. What risk does this create?",
-        "correctAnswer": "stale values",
-        "explanation": "Missing dependencies can make effects use old values.",
-        "options": [
-          "stale values",
-          "automatic encryption",
-          "array mutation",
-          "semantic version bump"
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-22-uncontrolled",
-        "type": "multiple-choice",
-        "prompt": "How does an uncontrolled input usually keep its current value?",
-        "correctAnswer": "In the DOM, read through a ref when needed.",
-        "explanation": "Uncontrolled inputs are managed by the DOM rather than React state.",
-        "options": [
-          "In the DOM, read through a ref when needed.",
-          "In a CDN.",
-          "In TypeScript types at runtime.",
-          "In a package-lock file."
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-23-memo",
-        "type": "true-false",
-        "prompt": "True or false: Memoization should be used everywhere by default.",
-        "correctAnswer": "False",
-        "explanation": "Memoization has complexity and overhead. Use it for real rerender or expensive calculation problems.",
-        "options": [
-          "True",
-          "False"
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-24-container",
-        "type": "multiple-choice",
-        "prompt": "Why separate data-fetching components from display components?",
-        "correctAnswer": "It can make display components easier to reuse and test.",
-        "explanation": "Separating concerns keeps UI components focused.",
-        "options": [
-          "It can make display components easier to reuse and test.",
-          "It makes all API calls synchronous.",
-          "It removes the need for props.",
-          "It prevents every runtime error."
-        ]
-      },
-      {
-        "id": "react-ui-patterns-extra-q-25-large-list",
-        "type": "scenario",
-        "prompt": "A page renders 10,000 rows and scrolling is slow. What UI technique can help?",
-        "correctAnswer": "virtualisation",
-        "explanation": "Virtualisation renders only the visible rows plus a buffer.",
-        "options": [
-          "virtualisation",
-          "JSON.parse",
-          "cookie auth",
-          "Object.hasOwn"
         ]
       }
     ]
@@ -9044,6 +9010,594 @@ export const topics = [
     ]
   },
   {
+    "id": "system-design-web",
+    "title": "Web System Design Basics",
+    "description": "Learn the practical architecture ideas behind real web applications",
+    "flashcards": [
+      {
+        "id": "system-design-web-card-01",
+        "front": "What should you know about client-server?",
+        "back": "Client-server architecture separates the user-facing client from server-side logic and data.",
+        "example": "browser calls API"
+      },
+      {
+        "id": "system-design-web-card-02",
+        "front": "What should you know about frontend?",
+        "back": "The frontend runs in the user’s browser or app and handles UI interactions.",
+        "example": "React app"
+      },
+      {
+        "id": "system-design-web-card-03",
+        "front": "What should you know about backend?",
+        "back": "The backend runs on servers and handles business logic, auth and data access.",
+        "example": "Express API"
+      },
+      {
+        "id": "system-design-web-card-04",
+        "front": "What should you know about database?",
+        "back": "A database stores persistent application data.",
+        "example": "Postgres"
+      },
+      {
+        "id": "system-design-web-card-05",
+        "front": "What should you know about cache?",
+        "back": "A cache stores frequently used data temporarily to reduce latency or load.",
+        "example": "Redis cache"
+      },
+      {
+        "id": "system-design-web-card-06",
+        "front": "What should you know about CDN?",
+        "back": "A CDN serves static assets from locations closer to users.",
+        "example": "images from CDN"
+      },
+      {
+        "id": "system-design-web-card-07",
+        "front": "What should you know about load balancer?",
+        "back": "A load balancer spreads traffic across multiple servers.",
+        "example": "Nginx/ALB"
+      },
+      {
+        "id": "system-design-web-card-08",
+        "front": "What should you know about horizontal scaling?",
+        "back": "Horizontal scaling adds more machines or instances to handle more traffic.",
+        "example": "more API pods"
+      },
+      {
+        "id": "system-design-web-card-09",
+        "front": "What should you know about vertical scaling?",
+        "back": "Vertical scaling gives one machine more CPU or memory.",
+        "example": "larger server"
+      },
+      {
+        "id": "system-design-web-card-10",
+        "front": "What should you know about latency?",
+        "back": "Latency is the time a request takes to get a response.",
+        "example": "200ms response"
+      },
+      {
+        "id": "system-design-web-card-11",
+        "front": "What should you know about throughput?",
+        "back": "Throughput is how much work a system handles over time.",
+        "example": "requests per second"
+      },
+      {
+        "id": "system-design-web-card-12",
+        "front": "What should you know about availability?",
+        "back": "Availability is how often a system is working when users need it.",
+        "example": "99.9% uptime"
+      },
+      {
+        "id": "system-design-web-card-13",
+        "front": "What should you know about reliability?",
+        "back": "Reliability is the ability to keep behaving correctly over time and failures.",
+        "example": "retry safe jobs"
+      },
+      {
+        "id": "system-design-web-card-14",
+        "front": "What should you know about single point of failure?",
+        "back": "A single point of failure can bring down the system if it breaks.",
+        "example": "one database without backup"
+      },
+      {
+        "id": "system-design-web-card-15",
+        "front": "What should you know about stateless server?",
+        "back": "A stateless server does not store user session data in memory between requests.",
+        "example": "token-based auth"
+      },
+      {
+        "id": "system-design-web-card-16",
+        "front": "What should you know about stateful service?",
+        "back": "A stateful service stores important state and needs careful persistence.",
+        "example": "database"
+      },
+      {
+        "id": "system-design-web-card-17",
+        "front": "What should you know about queue?",
+        "back": "A queue stores work to be processed asynchronously.",
+        "example": "send email job"
+      },
+      {
+        "id": "system-design-web-card-18",
+        "front": "What should you know about message broker?",
+        "back": "A message broker moves messages between producers and consumers.",
+        "example": "RabbitMQ"
+      },
+      {
+        "id": "system-design-web-card-19",
+        "front": "What should you know about event-driven design?",
+        "back": "Event-driven design reacts to events rather than direct request chains.",
+        "example": "user.created event"
+      },
+      {
+        "id": "system-design-web-card-20",
+        "front": "What should you know about polling?",
+        "back": "Polling repeatedly asks for updates at intervals.",
+        "example": "GET status every 5s"
+      },
+      {
+        "id": "system-design-web-card-21",
+        "front": "What should you know about WebSocket?",
+        "back": "WebSockets keep a two-way connection open for real-time updates.",
+        "example": "live chat"
+      },
+      {
+        "id": "system-design-web-card-22",
+        "front": "What should you know about rate limit design?",
+        "back": "Rate limits protect systems from abuse or accidental overload.",
+        "example": "100 requests/min"
+      },
+      {
+        "id": "system-design-web-card-23",
+        "front": "What should you know about API gateway?",
+        "back": "An API gateway routes, secures and manages API traffic.",
+        "example": "gateway before services"
+      },
+      {
+        "id": "system-design-web-card-24",
+        "front": "What should you know about monitoring?",
+        "back": "Monitoring tracks system health with metrics, logs and alerts.",
+        "example": "error rate alert"
+      },
+      {
+        "id": "system-design-web-card-25",
+        "front": "What should you know about graceful degradation?",
+        "back": "Graceful degradation means the app still offers reduced functionality when part of it fails.",
+        "example": "show cached data"
+      },
+      {
+        "id": "system-design-web-extra-card-sli-slo",
+        "front": "What are SLIs and SLOs?",
+        "back": "An SLI is a measured reliability indicator, like request success rate. An SLO is a target for that indicator, like 99.9% successful requests.",
+        "example": "SLI: p95 latency. SLO: p95 latency under 300ms."
+      },
+      {
+        "id": "system-design-web-extra-card-queue",
+        "front": "Why use a queue?",
+        "back": "A queue buffers work so a system can process tasks asynchronously. It helps smooth traffic spikes and decouple services.",
+        "example": "API -> queue -> worker sends email"
+      },
+      {
+        "id": "system-design-web-extra-card-eventual-consistency",
+        "front": "What is eventual consistency?",
+        "back": "Eventual consistency means different parts of a system may briefly disagree, but they should converge later. It is common in distributed systems.",
+        "example": "A newly uploaded image may take seconds to appear in search."
+      },
+      {
+        "id": "system-design-web-extra-card-circuit-breaker",
+        "front": "What is a circuit breaker?",
+        "back": "A circuit breaker stops calling a failing dependency for a while. This prevents repeated slow failures from taking down the caller too.",
+        "example": "If payment API fails repeatedly, stop calls briefly and show fallback."
+      },
+      {
+        "id": "system-design-web-extra-card-load-shedding",
+        "front": "What is load shedding?",
+        "back": "Load shedding intentionally rejects or drops lower-priority work when a system is overloaded so critical work can keep running.",
+        "example": "Return 503 for expensive reports during an outage."
+      },
+      {
+        "id": "system-design-web-extra-card-backup-restore",
+        "front": "Why test backups?",
+        "back": "A backup is only useful if it can be restored. Teams should test restore procedures before an emergency.",
+        "example": "Run a staging restore from last night’s backup."
+      },
+      {
+        "id": "system-design-web-extra-card-cdn",
+        "front": "What does a CDN do?",
+        "back": "A content delivery network caches static assets near users, reducing latency and load on the origin server.",
+        "example": "Images, JS bundles and CSS can be served from a CDN."
+      },
+      {
+        "id": "system-design-web-extra-card-rate-limiter",
+        "front": "Where can rate limiting happen?",
+        "back": "Rate limiting can happen at an API gateway, load balancer, service or application layer. It protects systems from abuse and accidental overload.",
+        "example": "100 requests per minute per user"
+      }
+    ],
+    "questions": [
+      {
+        "id": "system-design-web-q-01",
+        "type": "multiple-choice",
+        "prompt": "Which option best describes client-server?",
+        "options": [
+          "Client-server architecture separates the user-facing client from server-side logic and data.",
+          "It is only used for styling HTML elements.",
+          "It automatically sends data to a server.",
+          "It is a database table for storing application records."
+        ],
+        "correctAnswer": "Client-server architecture separates the user-facing client from server-side logic and data.",
+        "explanation": "Client-server architecture separates the user-facing client from server-side logic and data."
+      },
+      {
+        "id": "system-design-web-q-02",
+        "type": "true-false",
+        "prompt": "True or false: The frontend runs in the user’s browser or app and handles UI interactions.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "The frontend runs in the user’s browser or app and handles UI interactions."
+      },
+      {
+        "id": "system-design-web-q-03",
+        "type": "scenario",
+        "prompt": "Scenario: You are reviewing code and see a need related to backend. What is the best choice?",
+        "options": [
+          "backend",
+          "Use any unrelated syntax and hope TypeScript catches it",
+          "Ignore the issue until runtime",
+          "Move the logic into CSS"
+        ],
+        "correctAnswer": "backend",
+        "explanation": "The backend runs on servers and handles business logic, auth and data access. Example: Express API"
+      },
+      {
+        "id": "system-design-web-q-04",
+        "type": "type-answer",
+        "prompt": "Type the key syntax, method, or concept name for this description: A database stores persistent application data.",
+        "correctAnswer": "database",
+        "acceptedAnswers": [
+          "database",
+          "database",
+          "database"
+        ],
+        "explanation": "A database stores persistent application data."
+      },
+      {
+        "id": "system-design-web-q-05",
+        "type": "multiple-choice",
+        "prompt": "Which option best describes cache?",
+        "options": [
+          "A cache stores frequently used data temporarily to reduce latency or load.",
+          "It is only used for styling HTML elements.",
+          "It automatically sends data to a server.",
+          "It is a database table for storing application records."
+        ],
+        "correctAnswer": "A cache stores frequently used data temporarily to reduce latency or load.",
+        "explanation": "A cache stores frequently used data temporarily to reduce latency or load."
+      },
+      {
+        "id": "system-design-web-q-06",
+        "type": "true-false",
+        "prompt": "True or false: A CDN serves static assets from locations closer to users.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "A CDN serves static assets from locations closer to users."
+      },
+      {
+        "id": "system-design-web-q-07",
+        "type": "scenario",
+        "prompt": "Scenario: You are reviewing code and see a need related to load balancer. What is the best choice?",
+        "options": [
+          "load balancer",
+          "Use any unrelated syntax and hope TypeScript catches it",
+          "Ignore the issue until runtime",
+          "Move the logic into CSS"
+        ],
+        "correctAnswer": "load balancer",
+        "explanation": "A load balancer spreads traffic across multiple servers. Example: Nginx/ALB"
+      },
+      {
+        "id": "system-design-web-q-08",
+        "type": "type-answer",
+        "prompt": "Type the key syntax, method, or concept name for this description: Horizontal scaling adds more machines or instances to handle more traffic.",
+        "correctAnswer": "horizontal scaling",
+        "acceptedAnswers": [
+          "horizontal scaling",
+          "horizontal scaling",
+          "horizontal scaling"
+        ],
+        "explanation": "Horizontal scaling adds more machines or instances to handle more traffic."
+      },
+      {
+        "id": "system-design-web-q-09",
+        "type": "multiple-choice",
+        "prompt": "Which option best describes vertical scaling?",
+        "options": [
+          "Vertical scaling gives one machine more CPU or memory.",
+          "It is only used for styling HTML elements.",
+          "It automatically sends data to a server.",
+          "It is a database table for storing application records."
+        ],
+        "correctAnswer": "Vertical scaling gives one machine more CPU or memory.",
+        "explanation": "Vertical scaling gives one machine more CPU or memory."
+      },
+      {
+        "id": "system-design-web-q-10",
+        "type": "true-false",
+        "prompt": "True or false: Latency is the time a request takes to get a response.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "Latency is the time a request takes to get a response."
+      },
+      {
+        "id": "system-design-web-q-11",
+        "type": "scenario",
+        "prompt": "Scenario: You are reviewing code and see a need related to throughput. What is the best choice?",
+        "options": [
+          "throughput",
+          "Use any unrelated syntax and hope TypeScript catches it",
+          "Ignore the issue until runtime",
+          "Move the logic into CSS"
+        ],
+        "correctAnswer": "throughput",
+        "explanation": "Throughput is how much work a system handles over time. Example: requests per second"
+      },
+      {
+        "id": "system-design-web-q-12",
+        "type": "type-answer",
+        "prompt": "Type the key syntax, method, or concept name for this description: Availability is how often a system is working when users need it.",
+        "correctAnswer": "availability",
+        "acceptedAnswers": [
+          "availability",
+          "availability",
+          "availability"
+        ],
+        "explanation": "Availability is how often a system is working when users need it."
+      },
+      {
+        "id": "system-design-web-q-13",
+        "type": "multiple-choice",
+        "prompt": "Which option best describes reliability?",
+        "options": [
+          "Reliability is the ability to keep behaving correctly over time and failures.",
+          "It is only used for styling HTML elements.",
+          "It automatically sends data to a server.",
+          "It is a database table for storing application records."
+        ],
+        "correctAnswer": "Reliability is the ability to keep behaving correctly over time and failures.",
+        "explanation": "Reliability is the ability to keep behaving correctly over time and failures."
+      },
+      {
+        "id": "system-design-web-q-14",
+        "type": "true-false",
+        "prompt": "True or false: A single point of failure can bring down the system if it breaks.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "A single point of failure can bring down the system if it breaks."
+      },
+      {
+        "id": "system-design-web-q-15",
+        "type": "scenario",
+        "prompt": "Scenario: You are reviewing code and see a need related to stateless server. What is the best choice?",
+        "options": [
+          "stateless server",
+          "Use any unrelated syntax and hope TypeScript catches it",
+          "Ignore the issue until runtime",
+          "Move the logic into CSS"
+        ],
+        "correctAnswer": "stateless server",
+        "explanation": "A stateless server does not store user session data in memory between requests. Example: token-based auth"
+      },
+      {
+        "id": "system-design-web-q-16",
+        "type": "type-answer",
+        "prompt": "Type the key syntax, method, or concept name for this description: A stateful service stores important state and needs careful persistence.",
+        "correctAnswer": "stateful service",
+        "acceptedAnswers": [
+          "stateful service",
+          "stateful service",
+          "stateful service"
+        ],
+        "explanation": "A stateful service stores important state and needs careful persistence."
+      },
+      {
+        "id": "system-design-web-q-17",
+        "type": "multiple-choice",
+        "prompt": "Which option best describes queue?",
+        "options": [
+          "A queue stores work to be processed asynchronously.",
+          "It is only used for styling HTML elements.",
+          "It automatically sends data to a server.",
+          "It is a database table for storing application records."
+        ],
+        "correctAnswer": "A queue stores work to be processed asynchronously.",
+        "explanation": "A queue stores work to be processed asynchronously."
+      },
+      {
+        "id": "system-design-web-q-18",
+        "type": "true-false",
+        "prompt": "True or false: A message broker moves messages between producers and consumers.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "A message broker moves messages between producers and consumers."
+      },
+      {
+        "id": "system-design-web-q-19",
+        "type": "scenario",
+        "prompt": "Scenario: You are reviewing code and see a need related to event-driven design. What is the best choice?",
+        "options": [
+          "event-driven design",
+          "Use any unrelated syntax and hope TypeScript catches it",
+          "Ignore the issue until runtime",
+          "Move the logic into CSS"
+        ],
+        "correctAnswer": "event-driven design",
+        "explanation": "Event-driven design reacts to events rather than direct request chains. Example: user.created event"
+      },
+      {
+        "id": "system-design-web-q-20",
+        "type": "type-answer",
+        "prompt": "Type the key syntax, method, or concept name for this description: Polling repeatedly asks for updates at intervals.",
+        "correctAnswer": "polling",
+        "acceptedAnswers": [
+          "polling",
+          "polling",
+          "polling"
+        ],
+        "explanation": "Polling repeatedly asks for updates at intervals."
+      },
+      {
+        "id": "system-design-web-q-21",
+        "type": "multiple-choice",
+        "prompt": "Which option best describes WebSocket?",
+        "options": [
+          "WebSockets keep a two-way connection open for real-time updates.",
+          "It is only used for styling HTML elements.",
+          "It automatically sends data to a server.",
+          "It is a database table for storing application records."
+        ],
+        "correctAnswer": "WebSockets keep a two-way connection open for real-time updates.",
+        "explanation": "WebSockets keep a two-way connection open for real-time updates."
+      },
+      {
+        "id": "system-design-web-q-22",
+        "type": "true-false",
+        "prompt": "True or false: Rate limits protect systems from abuse or accidental overload.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "Rate limits protect systems from abuse or accidental overload."
+      },
+      {
+        "id": "system-design-web-q-23",
+        "type": "scenario",
+        "prompt": "Scenario: You are reviewing code and see a need related to API gateway. What is the best choice?",
+        "options": [
+          "API gateway",
+          "Use any unrelated syntax and hope TypeScript catches it",
+          "Ignore the issue until runtime",
+          "Move the logic into CSS"
+        ],
+        "correctAnswer": "API gateway",
+        "explanation": "An API gateway routes, secures and manages API traffic. Example: gateway before services"
+      },
+      {
+        "id": "system-design-web-q-24",
+        "type": "type-answer",
+        "prompt": "Type the key syntax, method, or concept name for this description: Monitoring tracks system health with metrics, logs and alerts.",
+        "correctAnswer": "monitoring",
+        "acceptedAnswers": [
+          "monitoring",
+          "monitoring",
+          "monitoring"
+        ],
+        "explanation": "Monitoring tracks system health with metrics, logs and alerts."
+      },
+      {
+        "id": "system-design-web-q-25",
+        "type": "multiple-choice",
+        "prompt": "Which option best describes graceful degradation?",
+        "options": [
+          "Graceful degradation means the app still offers reduced functionality when part of it fails.",
+          "It is only used for styling HTML elements.",
+          "It automatically sends data to a server.",
+          "It is a database table for storing application records."
+        ],
+        "correctAnswer": "Graceful degradation means the app still offers reduced functionality when part of it fails.",
+        "explanation": "Graceful degradation means the app still offers reduced functionality when part of it fails."
+      },
+      {
+        "id": "system-design-web-extra-q-queue-scenario",
+        "type": "scenario",
+        "prompt": "Users upload videos and processing takes minutes. What design component can decouple upload from processing?",
+        "correctAnswer": "queue",
+        "explanation": "A queue lets the API accept work quickly while workers process jobs asynchronously.",
+        "options": [
+          "queue",
+          "CSS grid",
+          "local variable",
+          "template literal"
+        ]
+      },
+      {
+        "id": "system-design-web-extra-q-slo-type",
+        "type": "type-answer",
+        "prompt": "Type the term for a reliability target such as “99.9% of requests succeed”.",
+        "correctAnswer": "SLO",
+        "explanation": "An SLO is a service level objective.",
+        "acceptedAnswers": [
+          "slo",
+          "service level objective"
+        ]
+      },
+      {
+        "id": "system-design-web-extra-q-eventual-tf",
+        "type": "true-false",
+        "prompt": "True or false: eventual consistency means data may briefly differ between systems but should converge later.",
+        "correctAnswer": "True",
+        "explanation": "Eventual consistency accepts temporary differences in exchange for scalability or availability.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      {
+        "id": "system-design-web-extra-q-cdn-mcq",
+        "type": "multiple-choice",
+        "prompt": "What is a CDN mainly used for in web systems?",
+        "correctAnswer": "Caching and serving content closer to users.",
+        "explanation": "CDNs reduce latency and origin load by serving assets from edge locations.",
+        "options": [
+          "Caching and serving content closer to users.",
+          "Compiling TypeScript only.",
+          "Replacing all databases.",
+          "Writing unit tests automatically."
+        ]
+      },
+      {
+        "id": "system-design-web-extra-q-circuit-breaker-scenario",
+        "type": "scenario",
+        "prompt": "A downstream API keeps timing out and is slowing your app. Which reliability pattern temporarily stops calling it?",
+        "correctAnswer": "circuit breaker",
+        "explanation": "A circuit breaker opens after repeated failures and gives the dependency time to recover.",
+        "options": [
+          "circuit breaker",
+          "cursor pagination",
+          "destructuring",
+          "semantic HTML"
+        ]
+      },
+      {
+        "id": "system-design-web-extra-q-backup-restore",
+        "type": "multiple-choice",
+        "prompt": "Why should teams test database restores?",
+        "correctAnswer": "To prove backups can actually be used during an incident.",
+        "explanation": "Backups are not enough unless restore steps are known and verified.",
+        "options": [
+          "To prove backups can actually be used during an incident.",
+          "To make queries faster in the browser.",
+          "To remove the need for authentication.",
+          "To replace monitoring."
+        ]
+      }
+    ]
+  },
+  {
     "id": "security-performance-reliability",
     "title": "Security, Performance & Reliability",
     "description": "Learn the production-minded habits that separate code that works locally from code that survives real users.",
@@ -9507,6 +10061,594 @@ export const topics = [
         "options": [
           "True",
           "False"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "professional-dev-workflows",
+    "title": "Professional Dev Workflow",
+    "description": "Practise the tools and habits used on real engineering teams",
+    "flashcards": [
+      {
+        "id": "professional-dev-workflows-card-01",
+        "front": "What should you know about Git commit?",
+        "back": "A Git commit saves a snapshot of changes with a message explaining why.",
+        "example": "git commit -m"
+      },
+      {
+        "id": "professional-dev-workflows-card-02",
+        "front": "What should you know about branch?",
+        "back": "A branch lets you work on changes without touching the main line directly.",
+        "example": "feature/add-quiz"
+      },
+      {
+        "id": "professional-dev-workflows-card-03",
+        "front": "What should you know about merge?",
+        "back": "A merge combines changes from one branch into another.",
+        "example": "git merge main"
+      },
+      {
+        "id": "professional-dev-workflows-card-04",
+        "front": "What should you know about rebase?",
+        "back": "A rebase replays commits on top of another branch to create a cleaner history.",
+        "example": "git rebase main"
+      },
+      {
+        "id": "professional-dev-workflows-card-05",
+        "front": "What should you know about pull request?",
+        "back": "A pull request proposes changes and invites review before merging.",
+        "example": "open PR"
+      },
+      {
+        "id": "professional-dev-workflows-card-06",
+        "front": "What should you know about code review?",
+        "back": "Code review improves quality through feedback before code reaches users.",
+        "example": "request changes"
+      },
+      {
+        "id": "professional-dev-workflows-card-07",
+        "front": "What should you know about CI?",
+        "back": "CI automatically checks code with tests, linting or builds on each change.",
+        "example": "GitHub Actions"
+      },
+      {
+        "id": "professional-dev-workflows-card-08",
+        "front": "What should you know about CD?",
+        "back": "CD automatically prepares or deploys code after checks pass.",
+        "example": "deploy pipeline"
+      },
+      {
+        "id": "professional-dev-workflows-card-09",
+        "front": "What should you know about environment variable?",
+        "back": "Environment variables configure apps without hardcoding secrets or environment-specific values.",
+        "example": "VITE_API_URL"
+      },
+      {
+        "id": "professional-dev-workflows-card-10",
+        "front": "What should you know about feature flag?",
+        "back": "A feature flag turns functionality on or off without redeploying code.",
+        "example": "enableNewSearch"
+      },
+      {
+        "id": "professional-dev-workflows-card-11",
+        "front": "What should you know about semantic versioning?",
+        "back": "Semantic versioning communicates breaking, feature and patch changes.",
+        "example": "1.4.2"
+      },
+      {
+        "id": "professional-dev-workflows-card-12",
+        "front": "What should you know about changelog?",
+        "back": "A changelog records meaningful changes between versions.",
+        "example": "Added quiz results"
+      },
+      {
+        "id": "professional-dev-workflows-card-13",
+        "front": "What should you know about issue ticket?",
+        "back": "An issue ticket describes work, context, acceptance criteria and discussion.",
+        "example": "Jira ticket"
+      },
+      {
+        "id": "professional-dev-workflows-card-14",
+        "front": "What should you know about acceptance criteria?",
+        "back": "Acceptance criteria define what must be true for work to be considered done.",
+        "example": "Given/When/Then"
+      },
+      {
+        "id": "professional-dev-workflows-card-15",
+        "front": "What should you know about definition of done?",
+        "back": "Definition of done is the team’s shared quality bar before work is complete.",
+        "example": "tests pass, reviewed"
+      },
+      {
+        "id": "professional-dev-workflows-card-16",
+        "front": "What should you know about Agile sprint?",
+        "back": "A sprint is a short planned period of work, often one or two weeks.",
+        "example": "2-week sprint"
+      },
+      {
+        "id": "professional-dev-workflows-card-17",
+        "front": "What should you know about standup?",
+        "back": "A standup is a short team sync on progress, blockers and plans.",
+        "example": "daily standup"
+      },
+      {
+        "id": "professional-dev-workflows-card-18",
+        "front": "What should you know about retrospective?",
+        "back": "A retrospective helps the team improve its process after a sprint.",
+        "example": "what went well"
+      },
+      {
+        "id": "professional-dev-workflows-card-19",
+        "front": "What should you know about documentation?",
+        "back": "Documentation explains how code, systems or decisions work for future readers.",
+        "example": "README"
+      },
+      {
+        "id": "professional-dev-workflows-card-20",
+        "front": "What should you know about README?",
+        "back": "A README explains what the project is and how to run or use it.",
+        "example": "npm install"
+      },
+      {
+        "id": "professional-dev-workflows-card-21",
+        "front": "What should you know about ADR?",
+        "back": "An ADR records an important architecture decision and why it was made.",
+        "example": "ADR-001"
+      },
+      {
+        "id": "professional-dev-workflows-card-22",
+        "front": "What should you know about dependency update?",
+        "back": "Dependency updates bring fixes and features but need testing for breaking changes.",
+        "example": "npm update"
+      },
+      {
+        "id": "professional-dev-workflows-card-23",
+        "front": "What should you know about security audit?",
+        "back": "A security audit checks dependencies or code for known vulnerabilities.",
+        "example": "npm audit"
+      },
+      {
+        "id": "professional-dev-workflows-card-24",
+        "front": "What should you know about release branch?",
+        "back": "A release branch stabilises code before shipping a version.",
+        "example": "release/1.2"
+      },
+      {
+        "id": "professional-dev-workflows-card-25",
+        "front": "What should you know about rollback?",
+        "back": "A rollback restores a previous working version if a release causes problems.",
+        "example": "rollback deployment"
+      },
+      {
+        "id": "professional-dev-workflows-extra-card-conventional-commits",
+        "front": "What are Conventional Commits?",
+        "back": "Conventional Commits use prefixes like feat:, fix: and chore: to make commit intent clear and support automated changelogs.",
+        "example": "feat: add quiz results summary"
+      },
+      {
+        "id": "professional-dev-workflows-extra-card-trunk-based",
+        "front": "What is trunk-based development?",
+        "back": "Trunk-based development means developers integrate small changes into the main branch frequently, often using feature flags for unfinished work.",
+        "example": "Small PRs merged daily into main."
+      },
+      {
+        "id": "professional-dev-workflows-extra-card-feature-flags",
+        "front": "What are feature flags?",
+        "back": "Feature flags let teams ship code with features turned on or off by configuration. They reduce release risk and support gradual rollout.",
+        "example": "if (flags.newDashboard) showNewDashboard();"
+      },
+      {
+        "id": "professional-dev-workflows-extra-card-semver",
+        "front": "What is semantic versioning?",
+        "back": "Semantic versioning uses major.minor.patch. Major means breaking change, minor means backwards-compatible feature, patch means backwards-compatible fix.",
+        "example": "2.4.1"
+      },
+      {
+        "id": "professional-dev-workflows-extra-card-adr",
+        "front": "What is an ADR?",
+        "back": "An Architecture Decision Record briefly documents an important technical decision, context, options and consequences. It helps future developers understand why choices were made.",
+        "example": "ADR: Use Supabase for auth in MVP"
+      },
+      {
+        "id": "professional-dev-workflows-extra-card-codeowners",
+        "front": "What is CODEOWNERS?",
+        "back": "CODEOWNERS maps files or folders to people/teams who should review changes. It helps route PR reviews to the right experts.",
+        "example": "/src/design-system/ @team/design-system"
+      },
+      {
+        "id": "professional-dev-workflows-extra-card-dependency-updates",
+        "front": "Why update dependencies regularly?",
+        "back": "Regular dependency updates reduce security risk, keep tooling supported and make upgrades smaller. Automated PRs can help but still need review.",
+        "example": "Dependabot opens a Vite patch update PR."
+      },
+      {
+        "id": "professional-dev-workflows-extra-card-rollback-plan",
+        "front": "What is a rollback plan?",
+        "back": "A rollback plan explains how to return to a safe previous version if a release causes problems. It is part of responsible deployment.",
+        "example": "Revert deployment to version 1.8.3 if error rate rises."
+      }
+    ],
+    "questions": [
+      {
+        "id": "professional-dev-workflows-q-01",
+        "type": "multiple-choice",
+        "prompt": "Which option best describes Git commit?",
+        "options": [
+          "A Git commit saves a snapshot of changes with a message explaining why.",
+          "It is only used for styling HTML elements.",
+          "It automatically sends data to a server.",
+          "It is a database table for storing application records."
+        ],
+        "correctAnswer": "A Git commit saves a snapshot of changes with a message explaining why.",
+        "explanation": "A Git commit saves a snapshot of changes with a message explaining why."
+      },
+      {
+        "id": "professional-dev-workflows-q-02",
+        "type": "true-false",
+        "prompt": "True or false: A branch lets you work on changes without touching the main line directly.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "A branch lets you work on changes without touching the main line directly."
+      },
+      {
+        "id": "professional-dev-workflows-q-03",
+        "type": "scenario",
+        "prompt": "Scenario: You are reviewing code and see a need related to merge. What is the best choice?",
+        "options": [
+          "merge",
+          "Use any unrelated syntax and hope TypeScript catches it",
+          "Ignore the issue until runtime",
+          "Move the logic into CSS"
+        ],
+        "correctAnswer": "merge",
+        "explanation": "A merge combines changes from one branch into another. Example: git merge main"
+      },
+      {
+        "id": "professional-dev-workflows-q-04",
+        "type": "type-answer",
+        "prompt": "Type the key syntax, method, or concept name for this description: A rebase replays commits on top of another branch to create a cleaner history.",
+        "correctAnswer": "rebase",
+        "acceptedAnswers": [
+          "rebase",
+          "rebase",
+          "rebase"
+        ],
+        "explanation": "A rebase replays commits on top of another branch to create a cleaner history."
+      },
+      {
+        "id": "professional-dev-workflows-q-05",
+        "type": "multiple-choice",
+        "prompt": "Which option best describes pull request?",
+        "options": [
+          "A pull request proposes changes and invites review before merging.",
+          "It is only used for styling HTML elements.",
+          "It automatically sends data to a server.",
+          "It is a database table for storing application records."
+        ],
+        "correctAnswer": "A pull request proposes changes and invites review before merging.",
+        "explanation": "A pull request proposes changes and invites review before merging."
+      },
+      {
+        "id": "professional-dev-workflows-q-06",
+        "type": "true-false",
+        "prompt": "True or false: Code review improves quality through feedback before code reaches users.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "Code review improves quality through feedback before code reaches users."
+      },
+      {
+        "id": "professional-dev-workflows-q-07",
+        "type": "scenario",
+        "prompt": "Scenario: You are reviewing code and see a need related to CI. What is the best choice?",
+        "options": [
+          "CI",
+          "Use any unrelated syntax and hope TypeScript catches it",
+          "Ignore the issue until runtime",
+          "Move the logic into CSS"
+        ],
+        "correctAnswer": "CI",
+        "explanation": "CI automatically checks code with tests, linting or builds on each change. Example: GitHub Actions"
+      },
+      {
+        "id": "professional-dev-workflows-q-08",
+        "type": "type-answer",
+        "prompt": "Type the key syntax, method, or concept name for this description: CD automatically prepares or deploys code after checks pass.",
+        "correctAnswer": "CD",
+        "acceptedAnswers": [
+          "CD",
+          "CD",
+          "CD"
+        ],
+        "explanation": "CD automatically prepares or deploys code after checks pass."
+      },
+      {
+        "id": "professional-dev-workflows-q-09",
+        "type": "multiple-choice",
+        "prompt": "Which option best describes environment variable?",
+        "options": [
+          "Environment variables configure apps without hardcoding secrets or environment-specific values.",
+          "It is only used for styling HTML elements.",
+          "It automatically sends data to a server.",
+          "It is a database table for storing application records."
+        ],
+        "correctAnswer": "Environment variables configure apps without hardcoding secrets or environment-specific values.",
+        "explanation": "Environment variables configure apps without hardcoding secrets or environment-specific values."
+      },
+      {
+        "id": "professional-dev-workflows-q-10",
+        "type": "true-false",
+        "prompt": "True or false: A feature flag turns functionality on or off without redeploying code.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "A feature flag turns functionality on or off without redeploying code."
+      },
+      {
+        "id": "professional-dev-workflows-q-11",
+        "type": "scenario",
+        "prompt": "Scenario: You are reviewing code and see a need related to semantic versioning. What is the best choice?",
+        "options": [
+          "semantic versioning",
+          "Use any unrelated syntax and hope TypeScript catches it",
+          "Ignore the issue until runtime",
+          "Move the logic into CSS"
+        ],
+        "correctAnswer": "semantic versioning",
+        "explanation": "Semantic versioning communicates breaking, feature and patch changes. Example: 1.4.2"
+      },
+      {
+        "id": "professional-dev-workflows-q-12",
+        "type": "type-answer",
+        "prompt": "Type the key syntax, method, or concept name for this description: A changelog records meaningful changes between versions.",
+        "correctAnswer": "changelog",
+        "acceptedAnswers": [
+          "changelog",
+          "changelog",
+          "changelog"
+        ],
+        "explanation": "A changelog records meaningful changes between versions."
+      },
+      {
+        "id": "professional-dev-workflows-q-13",
+        "type": "multiple-choice",
+        "prompt": "Which option best describes issue ticket?",
+        "options": [
+          "An issue ticket describes work, context, acceptance criteria and discussion.",
+          "It is only used for styling HTML elements.",
+          "It automatically sends data to a server.",
+          "It is a database table for storing application records."
+        ],
+        "correctAnswer": "An issue ticket describes work, context, acceptance criteria and discussion.",
+        "explanation": "An issue ticket describes work, context, acceptance criteria and discussion."
+      },
+      {
+        "id": "professional-dev-workflows-q-14",
+        "type": "true-false",
+        "prompt": "True or false: Acceptance criteria define what must be true for work to be considered done.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "Acceptance criteria define what must be true for work to be considered done."
+      },
+      {
+        "id": "professional-dev-workflows-q-15",
+        "type": "scenario",
+        "prompt": "Scenario: You are reviewing code and see a need related to definition of done. What is the best choice?",
+        "options": [
+          "definition of done",
+          "Use any unrelated syntax and hope TypeScript catches it",
+          "Ignore the issue until runtime",
+          "Move the logic into CSS"
+        ],
+        "correctAnswer": "definition of done",
+        "explanation": "Definition of done is the team’s shared quality bar before work is complete. Example: tests pass, reviewed"
+      },
+      {
+        "id": "professional-dev-workflows-q-16",
+        "type": "type-answer",
+        "prompt": "Type the key syntax, method, or concept name for this description: A sprint is a short planned period of work, often one or two weeks.",
+        "correctAnswer": "Agile sprint",
+        "acceptedAnswers": [
+          "Agile sprint",
+          "Agile sprint",
+          "Agile sprint"
+        ],
+        "explanation": "A sprint is a short planned period of work, often one or two weeks."
+      },
+      {
+        "id": "professional-dev-workflows-q-17",
+        "type": "multiple-choice",
+        "prompt": "Which option best describes standup?",
+        "options": [
+          "A standup is a short team sync on progress, blockers and plans.",
+          "It is only used for styling HTML elements.",
+          "It automatically sends data to a server.",
+          "It is a database table for storing application records."
+        ],
+        "correctAnswer": "A standup is a short team sync on progress, blockers and plans.",
+        "explanation": "A standup is a short team sync on progress, blockers and plans."
+      },
+      {
+        "id": "professional-dev-workflows-q-18",
+        "type": "true-false",
+        "prompt": "True or false: A retrospective helps the team improve its process after a sprint.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "A retrospective helps the team improve its process after a sprint."
+      },
+      {
+        "id": "professional-dev-workflows-q-19",
+        "type": "scenario",
+        "prompt": "Scenario: You are reviewing code and see a need related to documentation. What is the best choice?",
+        "options": [
+          "documentation",
+          "Use any unrelated syntax and hope TypeScript catches it",
+          "Ignore the issue until runtime",
+          "Move the logic into CSS"
+        ],
+        "correctAnswer": "documentation",
+        "explanation": "Documentation explains how code, systems or decisions work for future readers. Example: README"
+      },
+      {
+        "id": "professional-dev-workflows-q-20",
+        "type": "type-answer",
+        "prompt": "Type the key syntax, method, or concept name for this description: A README explains what the project is and how to run or use it.",
+        "correctAnswer": "README",
+        "acceptedAnswers": [
+          "README",
+          "README",
+          "README"
+        ],
+        "explanation": "A README explains what the project is and how to run or use it."
+      },
+      {
+        "id": "professional-dev-workflows-q-21",
+        "type": "multiple-choice",
+        "prompt": "Which option best describes ADR?",
+        "options": [
+          "An ADR records an important architecture decision and why it was made.",
+          "It is only used for styling HTML elements.",
+          "It automatically sends data to a server.",
+          "It is a database table for storing application records."
+        ],
+        "correctAnswer": "An ADR records an important architecture decision and why it was made.",
+        "explanation": "An ADR records an important architecture decision and why it was made."
+      },
+      {
+        "id": "professional-dev-workflows-q-22",
+        "type": "true-false",
+        "prompt": "True or false: Dependency updates bring fixes and features but need testing for breaking changes.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "Dependency updates bring fixes and features but need testing for breaking changes."
+      },
+      {
+        "id": "professional-dev-workflows-q-23",
+        "type": "scenario",
+        "prompt": "Scenario: You are reviewing code and see a need related to security audit. What is the best choice?",
+        "options": [
+          "security audit",
+          "Use any unrelated syntax and hope TypeScript catches it",
+          "Ignore the issue until runtime",
+          "Move the logic into CSS"
+        ],
+        "correctAnswer": "security audit",
+        "explanation": "A security audit checks dependencies or code for known vulnerabilities. Example: npm audit"
+      },
+      {
+        "id": "professional-dev-workflows-q-24",
+        "type": "type-answer",
+        "prompt": "Type the key syntax, method, or concept name for this description: A release branch stabilises code before shipping a version.",
+        "correctAnswer": "release branch",
+        "acceptedAnswers": [
+          "release branch",
+          "release branch",
+          "release branch"
+        ],
+        "explanation": "A release branch stabilises code before shipping a version."
+      },
+      {
+        "id": "professional-dev-workflows-q-25",
+        "type": "multiple-choice",
+        "prompt": "Which option best describes rollback?",
+        "options": [
+          "A rollback restores a previous working version if a release causes problems.",
+          "It is only used for styling HTML elements.",
+          "It automatically sends data to a server.",
+          "It is a database table for storing application records."
+        ],
+        "correctAnswer": "A rollback restores a previous working version if a release causes problems.",
+        "explanation": "A rollback restores a previous working version if a release causes problems."
+      },
+      {
+        "id": "professional-dev-workflows-extra-q-conventional-type",
+        "type": "type-answer",
+        "prompt": "Type the commit prefix commonly used for a bug fix in Conventional Commits.",
+        "correctAnswer": "fix:",
+        "explanation": "fix: marks a commit as a bug fix.",
+        "acceptedAnswers": [
+          "fix",
+          "fix:"
+        ]
+      },
+      {
+        "id": "professional-dev-workflows-extra-q-feature-flag-scenario",
+        "type": "scenario",
+        "prompt": "You want to merge unfinished code safely and enable it later for 10% of users. What should you use?",
+        "correctAnswer": "feature flag",
+        "explanation": "Feature flags separate code deployment from feature release.",
+        "options": [
+          "feature flag",
+          "git blame",
+          "npm audit",
+          "manual rebase only"
+        ]
+      },
+      {
+        "id": "professional-dev-workflows-extra-q-semver-mcq",
+        "type": "multiple-choice",
+        "prompt": "In semantic versioning, which number usually changes for a breaking change?",
+        "correctAnswer": "major",
+        "explanation": "Major version changes indicate breaking changes.",
+        "options": [
+          "major",
+          "minor",
+          "patch",
+          "build metadata only"
+        ]
+      },
+      {
+        "id": "professional-dev-workflows-extra-q-adr-tf",
+        "type": "true-false",
+        "prompt": "True or false: An ADR records why an important technical decision was made.",
+        "correctAnswer": "True",
+        "explanation": "ADRs capture context, decision and consequences so future developers understand the reasoning.",
+        "options": [
+          "True",
+          "False"
+        ]
+      },
+      {
+        "id": "professional-dev-workflows-extra-q-codeowners-purpose",
+        "type": "multiple-choice",
+        "prompt": "What is CODEOWNERS used for?",
+        "correctAnswer": "Automatically suggesting or requiring reviewers for certain files.",
+        "explanation": "CODEOWNERS maps paths to people or teams responsible for reviewing changes.",
+        "options": [
+          "Automatically suggesting or requiring reviewers for certain files.",
+          "Compiling CSS.",
+          "Encrypting secrets.",
+          "Replacing package-lock.json."
+        ]
+      },
+      {
+        "id": "professional-dev-workflows-extra-q-rollback-scenario",
+        "type": "scenario",
+        "prompt": "A release causes a spike in errors. What prepared plan helps restore the previous working version quickly?",
+        "correctAnswer": "rollback plan",
+        "explanation": "A rollback plan reduces incident time by making recovery steps clear.",
+        "options": [
+          "rollback plan",
+          "string trimming",
+          "array flattening",
+          "hover state"
         ]
       }
     ]

@@ -9,13 +9,28 @@ interface QuestionsPageProps {
   onBackClick: () => void;
 }
 
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const shuffled = [...array];
+
+  for (let i = shuffled.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+
+  return shuffled;
+};
+
 export function QuestionsPage({ topic, onBackClick }: QuestionsPageProps) {
+  const [shuffledQuestions, setShuffledQuestions] = useState(() =>
+    shuffleArray(topic.questions)
+  );
+
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [quizResults, setQuizResults] = useState<QuizResult[]>([]);
   const [quizComplete, setQuizComplete] = useState(false);
 
-  const currentQuestion = topic.questions[currentQuestionIndex];
-  const isLastQuestion = currentQuestionIndex === topic.questions.length - 1;
+  const currentQuestion = shuffledQuestions[currentQuestionIndex];
+  const isLastQuestion = currentQuestionIndex === shuffledQuestions.length - 1;
 
   const handleSubmitAnswer = (selectedAnswer: string) => {
     const isCorrect = isAnswerCorrect(currentQuestion, selectedAnswer);
@@ -35,11 +50,12 @@ export function QuestionsPage({ topic, onBackClick }: QuestionsPageProps) {
     if (isLastQuestion) {
       setQuizComplete(true);
     } else {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setCurrentQuestionIndex((previousIndex) => previousIndex + 1);
     }
   };
 
   const handleRetakeQuiz = () => {
+    setShuffledQuestions(shuffleArray(topic.questions));
     setCurrentQuestionIndex(0);
     setQuizResults([]);
     setQuizComplete(false);
@@ -68,10 +84,11 @@ export function QuestionsPage({ topic, onBackClick }: QuestionsPageProps) {
         <button className="back-button" onClick={onBackClick}>
           ← Back
         </button>
+
         <QuestionCard
           question={currentQuestion}
           questionNumber={currentQuestionIndex + 1}
-          totalQuestions={topic.questions.length}
+          totalQuestions={shuffledQuestions.length}
           onSubmitAnswer={handleSubmitAnswer}
         />
       </div>

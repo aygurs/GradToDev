@@ -34,35 +34,42 @@ function App() {
 
   return (
     <div className="app">
-      {currentPage === 'topic-select' && (
-        <TopicSelectPage
-          topics={topics}
-          onSelectTopic={handleSelectTopic}
-        />
-      )}
+        {currentPage === 'topic-select' && (
+          <TopicSelectPage
+            topics={topics}
+            onSelectTopic={handleSelectTopic}
+          />
+        )}
 
-      {currentPage === 'mode-select' && selectedTopic && (
-        <TopicModePage
-          topic={selectedTopic}
-          onSelectFlashcards={handleSelectFlashcards}
-          onSelectQuestions={handleSelectQuestions}
-          onBackClick={handleBackToTopics}
-        />
-      )}
+        {currentPage === 'mode-select' && selectedTopic && (
+          <TopicModePage
+            topic={selectedTopic}
+            onSelectFlashcards={handleSelectFlashcards}
+            onSelectQuestions={handleSelectQuestions}
+            onBackClick={handleBackToTopics}
+          />
+        )}
 
-      {currentPage === 'flashcards' && selectedTopic && (
-        <FlashcardsPage
-          topic={selectedTopic}
-          onBackClick={handleBackToMode}
-        />
-      )}
+        {currentPage === 'flashcards' && selectedTopic && (
+          <FlashcardsPage
+            topic={selectedTopic}
+            onBackClick={handleBackToMode}
+          />
+        )}
 
-      {currentPage === 'questions' && selectedTopic && (
-        <QuestionsPage
-          topic={selectedTopic}
-          onBackClick={handleBackToMode}
-        />
-      )}
+        {currentPage === 'questions' && selectedTopic && (
+          <QuestionsPage
+            topic={selectedTopic}
+            onBackClick={handleBackToMode}
+          />
+        )}
+
+      <footer className="site-footer">
+        <a href="https://aydev.site" target="_blank" rel="noreferrer">
+          aydev
+        </a>
+        <span>© 2026</span>
+      </footer>
     </div>
   );
 }

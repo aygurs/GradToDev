@@ -328,6 +328,10 @@ button {
   position: relative;
 }
 
+.mode-space {
+  margin-top: 20px;
+}
+
 .mode-selector h2,
 .flashcard-header h2,
 .question-header h2,
@@ -405,9 +409,6 @@ button {
 }
 
 .back-button {
-  position: absolute;
-  top: 0;
-  left: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;

@@ -18,7 +18,7 @@ export function ModeSelector({
           ← Back
         </button>
 
-        <p className="eyebrow">Study mode</p>
+        <p className="eyebrow mode-space">Study mode</p>
         <h2>{topicTitle}</h2>
         <p className="mode-intro">Start with the cards to understand the idea, then answer questions to check recall.</p>
 

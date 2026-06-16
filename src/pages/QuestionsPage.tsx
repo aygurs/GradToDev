@@ -20,9 +20,15 @@ const shuffleArray = <T,>(array: T[]): T[] => {
   return shuffled;
 };
 
+const shuffleQuestionOptions = (questions: Topic['questions']) =>
+  shuffleArray(questions).map((question) => ({
+    ...question,
+    options: question.options ? shuffleArray(question.options) : question.options,
+  }));
+
 export function QuestionsPage({ topic, onBackClick }: QuestionsPageProps) {
   const [shuffledQuestions, setShuffledQuestions] = useState(() =>
-    shuffleArray(topic.questions)
+    shuffleQuestionOptions(topic.questions)
   );
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -55,7 +61,7 @@ export function QuestionsPage({ topic, onBackClick }: QuestionsPageProps) {
   };
 
   const handleRetakeQuiz = () => {
-    setShuffledQuestions(shuffleArray(topic.questions));
+    setShuffledQuestions(shuffleQuestionOptions(topic.questions));
     setCurrentQuestionIndex(0);
     setQuizResults([]);
     setQuizComplete(false);

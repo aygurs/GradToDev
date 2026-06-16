@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Question } from '../types/index';
 import { isAnswerCorrect } from '../utils';
+import { FormattedText } from './FormattedText';
 
 interface QuestionCardProps {
   question: Question;
@@ -54,7 +55,7 @@ export function QuestionCard({
 
       <div className="question-content">
         <div className="question-type-pill">{question.type ?? 'multiple-choice'}</div>
-        <p className="question-prompt">{question.prompt}</p>
+        <FormattedText text={question.prompt} className="question-prompt" />
 
         {hasOptions ? (
           <div className="options-group">
@@ -68,9 +69,9 @@ export function QuestionCard({
                   onChange={(e) => setSelectedAnswer(e.target.value)}
                   disabled={submitted}
                 />
-                <span className={`option-text ${submitted && isAnswerCorrect(question, option) ? 'correct' : ''} ${submitted && selectedAnswer === option && !isCorrect ? 'incorrect' : ''}`}>
-                  {option}
-                </span>
+                <div className={`option-text ${submitted && isAnswerCorrect(question, option) ? 'correct' : ''} ${submitted && selectedAnswer === option && !isCorrect ? 'incorrect' : ''}`}>
+                  <FormattedText text={option} />
+                </div>
               </label>
             ))}
           </div>
@@ -122,7 +123,7 @@ export function QuestionCard({
             {showExplanation && (
               <div className="explanation">
                 <p className="explanation-title">Explanation:</p>
-                <p className="explanation-text">{question.explanation}</p>
+                <FormattedText text={question.explanation} className="explanation-text" />
                 <button className="next-button" onClick={handleNext}>
                   {questionNumber === totalQuestions ? 'See Results' : 'Next Question'}
                 </button>

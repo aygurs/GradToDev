@@ -199,7 +199,7 @@ export const topics = [
           "<style>"
         ],
         "correctAnswer": "<main>",
-        "explanation": "<main> identifies the primary page content and helps assistive technology users skip repeated layout areas."
+        "explanation": "<main> identifies the primary page content and helps assistive technology users skip repeated layout areas.\n\nExample:\n<main>\n  <h1>Settings</h1>\n</main>"
       },
       {
         "id": "html-semantics-q-02",
@@ -210,7 +210,7 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Buttons perform actions on the current page. Links navigate to another route, page, file or location."
+        "explanation": "Buttons perform actions on the current page. Links navigate to another route, page, file or location.\n\nExample:\n<button>Open modal</button>\n<a href=\"/docs\">Read docs</a>"
       },
       {
         "id": "html-semantics-q-03",
@@ -223,7 +223,7 @@ export const topics = [
           "<span>"
         ],
         "correctAnswer": "<button>",
-        "explanation": "Opening a modal is an action, so a button gives the correct semantics and keyboard behaviour by default."
+        "explanation": "Opening a modal is an action, so a button gives the correct semantics and keyboard behaviour by default.\n\nExample:\n<button>Submit</button>\n<!-- Better than <div role=\"button\">Submit</div> -->"
       },
       {
         "id": "html-semantics-q-04",
@@ -234,7 +234,7 @@ export const topics = [
           "alt",
           "alt attribute"
         ],
-        "explanation": "The alt attribute provides a text alternative for meaningful images."
+        "explanation": "The alt attribute provides a text alternative for meaningful images.\n\nExample:\n<img src=\"chart.png\" alt=\"Sales increased in Q4\" />"
       },
       {
         "id": "html-semantics-q-05",
@@ -247,7 +247,7 @@ export const topics = [
           "role=\"button\""
         ],
         "correctAnswer": "alt=\"\"",
-        "explanation": "Empty alt text tells assistive technologies to ignore decorative images."
+        "explanation": "Empty alt text tells assistive technologies to ignore decorative images.\n\nExample:\n<img src=\"divider.svg\" alt=\"\" />"
       },
       {
         "id": "html-semantics-q-06",
@@ -258,7 +258,7 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "False",
-        "explanation": "Positive tabindex values can create confusing focus order. Prefer natural DOM order and use tabindex=\"0\" sparingly."
+        "explanation": "Positive tabindex values can create confusing focus order. Prefer natural DOM order and use tabindex=\"0\" sparingly.\n\nExample:\n<div tabindex=\"0\">Focusable</div>"
       },
       {
         "id": "html-semantics-q-07",
@@ -271,7 +271,7 @@ export const topics = [
           "img and alt"
         ],
         "correctAnswer": "fieldset and legend",
-        "explanation": "fieldset groups related form controls, and legend provides the group label."
+        "explanation": "fieldset groups related form controls, and legend provides the group label.\n\nExample:\n<fieldset>\n  <legend>Choose a plan</legend>\n</fieldset>"
       },
       {
         "id": "html-semantics-q-08",
@@ -282,7 +282,7 @@ export const topics = [
           "htmlFor",
           "htmlfor"
         ],
-        "explanation": "In React, label uses htmlFor because for is a reserved JavaScript word."
+        "explanation": "In React, label uses htmlFor because for is a reserved JavaScript word.\n\nExample:\n<label for=\"email\">Email</label>\n<input id=\"email\" type=\"email\" />"
       },
       {
         "id": "html-semantics-q-09",
@@ -295,7 +295,7 @@ export const topics = [
           "hidden"
         ],
         "correctAnswer": "email",
-        "explanation": "type=\"email\" improves browser validation, mobile keyboard behaviour and semantics."
+        "explanation": "type=\"email\" improves browser validation, mobile keyboard behaviour and semantics.\n\nExample:\n<input name=\"email\" required />"
       },
       {
         "id": "html-semantics-q-10",
@@ -306,7 +306,7 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "False",
-        "explanation": "Visible labels are usually better because they help everyone. ARIA is useful when a visible label is not available or not enough."
+        "explanation": "Visible labels are usually better because they help everyone. ARIA is useful when a visible label is not available or not enough.\n\nExample:\n<label for=\"email\">Email</label>\n<input id=\"email\" type=\"email\" />"
       },
       {
         "id": "html-semantics-q-11",
@@ -319,7 +319,7 @@ export const topics = [
           "A hidden password input"
         ],
         "correctAnswer": "A skip link to main content",
-        "explanation": "Skip links let keyboard and screen reader users jump directly to the main page content."
+        "explanation": "Skip links let keyboard and screen reader users jump directly to the main page content.\n\nExample:\n<a href=\"#main\" class=\"skip-link\">Skip to main content</a>\n<main id=\"main\">...</main>"
       },
       {
         "id": "html-semantics-q-12",
@@ -330,7 +330,7 @@ export const topics = [
           "lang",
           "language attribute"
         ],
-        "explanation": "The lang attribute helps screen readers pronounce content correctly and helps browsers understand the page language."
+        "explanation": "The lang attribute helps screen readers pronounce content correctly and helps browsers understand the page language.\n\nExample:\n<html lang=\"en\">"
       },
       {
         "id": "html-semantics-q-13",
@@ -343,7 +343,7 @@ export const topics = [
           "<canvas>"
         ],
         "correctAnswer": "<nav>",
-        "explanation": "<nav> identifies a block of important navigation links."
+        "explanation": "<nav> identifies a block of important navigation links.\n\nExample:\n<nav aria-label=\"Main navigation\">...</nav>"
       },
       {
         "id": "html-semantics-q-14",
@@ -356,7 +356,7 @@ export const topics = [
           "a paragraph with spaces"
         ],
         "correctAnswer": "table with header cells",
-        "explanation": "Tables are appropriate for tabular data because they communicate row/column relationships."
+        "explanation": "Tables are appropriate for tabular data because they communicate row/column relationships.\n\nExample:\n<table>\n  <thead>...</thead>\n  <tbody>...</tbody>\n</table>"
       },
       {
         "id": "html-semantics-q-15",
@@ -377,7 +377,7 @@ export const topics = [
         "acceptedAnswers": [
           "lazy"
         ],
-        "explanation": "loading=\"lazy\" lets the browser defer off-screen image loading."
+        "explanation": "loading=\"lazy\" lets the browser defer off-screen image loading.\n\nExample:\n<img src=\"large-photo.jpg\" alt=\"Team photo\" loading=\"lazy\" />"
       },
       {
         "id": "html-semantics-q-17",
@@ -390,7 +390,7 @@ export const topics = [
           "Read"
         ],
         "correctAnswer": "View account settings",
-        "explanation": "Descriptive link text tells users where the link goes, even when read out of context."
+        "explanation": "Descriptive link text tells users where the link goes, even when read out of context.\n\nExample:\n<a href=\"/settings\">View account settings</a>\n<!-- Better than: <a href=\"/settings\">Click here</a> -->"
       },
       {
         "id": "html-semantics-q-18",
@@ -403,7 +403,7 @@ export const topics = [
           "<input>"
         ],
         "correctAnswer": "<article>",
-        "explanation": "<article> is designed for self-contained content like posts, cards and reviews."
+        "explanation": "<article> is designed for self-contained content like posts, cards and reviews.\n\nExample:\n<article>\n  <h2>Release notes</h2>\n</article>"
       },
       {
         "id": "html-semantics-q-19",
@@ -414,7 +414,7 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "False",
-        "explanation": "Headings should describe structure. Use CSS to change visual size instead of choosing heading levels for appearance only."
+        "explanation": "Headings should describe structure. Use CSS to change visual size instead of choosing heading levels for appearance only.\n\nExample:\n<h1>Dashboard</h1>\n<h2>Devices</h2>\n<h3>Offline devices</h3>"
       },
       {
         "id": "html-semantics-q-20",
@@ -426,7 +426,7 @@ export const topics = [
           "<title>",
           "title element"
         ],
-        "explanation": "The <title> element inside <head> sets the browser tab title and helps search/bookmark context."
+        "explanation": "The <title> element inside <head> sets the browser tab title and helps search/bookmark context.\n\nExample:\n<head>\n  <title>GradToDev</title>\n</head>"
       },
       {
         "id": "html-semantics-q-21",
@@ -439,7 +439,7 @@ export const topics = [
           "author only"
         ],
         "correctAnswer": "viewport",
-        "explanation": "The viewport meta tag tells mobile browsers how to size and scale the page."
+        "explanation": "The viewport meta tag tells mobile browsers how to size and scale the page.\n\nExample:\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />"
       },
       {
         "id": "html-semantics-q-22",
@@ -452,7 +452,7 @@ export const topics = [
           "tabindex=\"99\""
         ],
         "correctAnswer": "aria-label=\"Close dialog\"",
-        "explanation": "An icon-only button needs an accessible name, and aria-label is a common solution."
+        "explanation": "An icon-only button needs an accessible name, and aria-label is a common solution.\n\nExample:\n<button aria-label=\"Close dialog\">×</button>"
       },
       {
         "id": "html-semantics-q-23",
@@ -463,7 +463,7 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Client-side validation improves UX but can be bypassed. Server-side validation protects the system."
+        "explanation": "Client-side validation improves UX but can be bypassed. Server-side validation protects the system.\n\nExample:\n<input name=\"email\" required />"
       },
       {
         "id": "html-semantics-q-24",
@@ -475,7 +475,7 @@ export const topics = [
           "data attribute",
           "data attributes"
         ],
-        "explanation": "Custom data attributes start with data-, such as data-testid or data-user-id."
+        "explanation": "Custom data attributes start with data-, such as data-testid or data-user-id.\n\nExample:\n<button data-testid=\"save-button\">Save</button>"
       },
       {
         "id": "html-semantics-q-25",
@@ -488,7 +488,7 @@ export const topics = [
           "To make alt text unnecessary"
         ],
         "correctAnswer": "To reduce layout shift while the image loads",
-        "explanation": "Width and height allow the browser to reserve space before the image loads."
+        "explanation": "Width and height allow the browser to reserve space before the image loads.\n\nExample:\n<img src=\"hero.jpg\" alt=\"Dashboard preview\" width=\"1200\" height=\"600\" />"
       },
       {
         "id": "html-semantics-q-26",
@@ -501,7 +501,7 @@ export const topics = [
           "a canvas drawing"
         ],
         "correctAnswer": "nav containing a ul of links",
-        "explanation": "A nav landmark plus list structure communicates navigation and item relationships clearly."
+        "explanation": "A nav landmark plus list structure communicates navigation and item relationships clearly.\n\nExample:\n<nav aria-label=\"Main navigation\">\n  <ul>\n    <li><a href=\"/topics\">Topics</a></li>\n  </ul>\n</nav>"
       },
       {
         "id": "html-semantics-q-27",
@@ -512,7 +512,7 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Native controls like button, input and select come with built-in keyboard and accessibility behaviour."
+        "explanation": "Native controls like button, input and select come with built-in keyboard and accessibility behaviour.\n\nExample:\n<button><span>Save</span></button>\n<!-- Avoid putting interactive controls inside buttons -->"
       },
       {
         "id": "html-semantics-q-28",
@@ -523,7 +523,7 @@ export const topics = [
           "legend",
           "<legend>"
         ],
-        "explanation": "legend names a fieldset group, which is especially useful for radio and checkbox groups."
+        "explanation": "legend names a fieldset group, which is especially useful for radio and checkbox groups.\n\nExample:\n<fieldset>\n  <legend>Choose a plan</legend>\n</fieldset>"
       },
       {
         "id": "html-semantics-q-29",
@@ -536,7 +536,7 @@ export const topics = [
           "Replace all labels with placeholders"
         ],
         "correctAnswer": "Use native HTML first where possible",
-        "explanation": "Native HTML is usually more robust than recreating semantics and behaviour manually with ARIA."
+        "explanation": "Native HTML is usually more robust than recreating semantics and behaviour manually with ARIA.\n\nExample:\n<button>Submit</button>\n<!-- Better than: <div role=\"button\">Submit</div> -->"
       },
       {
         "id": "html-semantics-q-30",
@@ -549,7 +549,7 @@ export const topics = [
           "Use an h1 inside the input"
         ],
         "correctAnswer": "Add a real visible label connected to the input",
-        "explanation": "Placeholders disappear when typing and are not a replacement for labels."
+        "explanation": "Placeholders disappear when typing and are not a replacement for labels.\n\nExample:\n<label for=\"email\">Email</label>\n<input id=\"email\" type=\"email\" placeholder=\"you@example.com\" />"
       }
     ]
   },
@@ -763,7 +763,7 @@ export const topics = [
           "Which database row is updated"
         ],
         "correctAnswer": "Which style rule wins when multiple rules apply",
-        "explanation": "The cascade decides the winning declaration based on importance, specificity, source order and origin."
+        "explanation": "The cascade decides the winning declaration based on importance, specificity, source order and origin.\n\nExample:\nbutton { color: blue; }\n.primary { color: green; }"
       },
       {
         "id": "css-fundamentals-q-02",
@@ -774,7 +774,7 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "ID selectors are more specific than class selectors, which can make them harder to override."
+        "explanation": "ID selectors are more specific than class selectors, which can make them harder to override.\n\nExample:\n#saveButton > .button > button"
       },
       {
         "id": "css-fundamentals-q-03",
@@ -787,7 +787,7 @@ export const topics = [
           "animation-delay: 2s"
         ],
         "correctAnswer": "box-sizing: border-box",
-        "explanation": "border-box includes padding and border inside the declared width and height."
+        "explanation": "border-box includes padding and border inside the declared width and height.\n\nExample:\n*, *::before, *::after { box-sizing: border-box; }"
       },
       {
         "id": "css-fundamentals-q-04",
@@ -800,7 +800,7 @@ export const topics = [
           "display flex",
           "display: flex"
         ],
-        "explanation": "Flexbox is ideal for one-dimensional layouts and alignment."
+        "explanation": "Flexbox is ideal for one-dimensional layouts and alignment.\n\nExample:\n.toolbar { display: flex; align-items: center; gap: 0.75rem; }"
       },
       {
         "id": "css-fundamentals-q-05",
@@ -813,7 +813,7 @@ export const topics = [
           "Text decoration"
         ],
         "correctAnswer": "CSS Grid",
-        "explanation": "Grid is a two-dimensional layout system for rows and columns."
+        "explanation": "Grid is a two-dimensional layout system for rows and columns.\n\nExample:\n.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }"
       },
       {
         "id": "css-fundamentals-q-06",
@@ -824,7 +824,7 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "gap creates spacing between flex or grid items without individual child margins."
+        "explanation": "gap creates spacing between flex or grid items without individual child margins.\n\nExample:\n@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }"
       },
       {
         "id": "css-fundamentals-q-07",
@@ -837,7 +837,7 @@ export const topics = [
           "HTML tables"
         ],
         "correctAnswer": "CSS custom properties",
-        "explanation": "Custom properties store reusable values and are often used for themes and design tokens."
+        "explanation": "Custom properties store reusable values and are often used for themes and design tokens.\n\nExample:\n:root { --brand: #58cc02; }\nbutton { background: var(--brand); }"
       },
       {
         "id": "css-fundamentals-q-08",
@@ -848,7 +848,7 @@ export const topics = [
           "focus-visible",
           ":focus-visible"
         ],
-        "explanation": ":focus-visible is useful for showing clear focus styles mainly when users navigate with the keyboard."
+        "explanation": ":focus-visible is useful for showing clear focus styles mainly when users navigate with the keyboard.\n\nExample:\nbutton:focus-visible { outline: 3px solid #58cc02; }"
       },
       {
         "id": "css-fundamentals-q-09",
@@ -861,7 +861,7 @@ export const topics = [
           "#app"
         ],
         "correctAnswer": "::before",
-        "explanation": "Pseudo-elements like ::before and ::after target generated or specific parts of an element."
+        "explanation": "Pseudo-elements like ::before and ::after target generated or specific parts of an element.\n\nExample:\n.badge::before { content: \"★\"; }"
       },
       {
         "id": "css-fundamentals-q-10",
@@ -872,7 +872,7 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Media queries apply CSS only when conditions like max-width are met."
+        "explanation": "Media queries apply CSS only when conditions like max-width are met.\n\nExample:\n@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }"
       },
       {
         "id": "css-fundamentals-q-11",
@@ -885,7 +885,7 @@ export const topics = [
           "Removing all semantic HTML"
         ],
         "correctAnswer": "Responsive design with media queries/flexible layout",
-        "explanation": "Responsive design adapts layout to the available screen size."
+        "explanation": "Responsive design adapts layout to the available screen size.\n\nExample:\nwidth: min(100%, 64rem);"
       },
       {
         "id": "css-fundamentals-q-12",
@@ -895,7 +895,7 @@ export const topics = [
         "acceptedAnswers": [
           "overflow"
         ],
-        "explanation": "overflow controls clipping and scroll behaviour for content that exceeds the box."
+        "explanation": "overflow controls clipping and scroll behaviour for content that exceeds the box.\n\nExample:\n.panel { overflow: auto; }"
       },
       {
         "id": "css-fundamentals-q-13",
@@ -908,7 +908,7 @@ export const topics = [
           "static only"
         ],
         "correctAnswer": "relative",
-        "explanation": "position: relative keeps the element in the document flow and can create a positioning context."
+        "explanation": "position: relative keeps the element in the document flow and can create a positioning context.\n\nExample:\n.card { position: relative; top: 0.25rem; }"
       },
       {
         "id": "css-fundamentals-q-14",
@@ -921,7 +921,7 @@ export const topics = [
           "font-weight: bold"
         ],
         "correctAnswer": "position: relative",
-        "explanation": "An absolutely positioned child positions itself relative to the nearest positioned ancestor."
+        "explanation": "An absolutely positioned child positions itself relative to the nearest positioned ancestor.\n\nExample:\n.card { position: relative; }"
       },
       {
         "id": "css-fundamentals-q-15",
@@ -945,7 +945,7 @@ export const topics = [
           "top"
         ],
         "correctAnswer": "transform",
-        "explanation": "transform and opacity are usually cheaper to animate than layout-affecting properties like width or top."
+        "explanation": "transform and opacity are usually cheaper to animate than layout-affecting properties like width or top.\n\nExample:\n.toast { transform: translateY(0); opacity: 1; }"
       },
       {
         "id": "css-fundamentals-q-17",
@@ -956,7 +956,7 @@ export const topics = [
           "@keyframes",
           "keyframes"
         ],
-        "explanation": "@keyframes defines the stages of a CSS animation."
+        "explanation": "@keyframes defines the stages of a CSS animation. In practice, this matters because it changes how you would write or review real application code.\n\nExample:\n@keyframes pulse {\n  from { opacity: .6; }\n  to { opacity: 1; }\n}\n.badge { animation: pulse 1s infinite alternate; }"
       },
       {
         "id": "css-fundamentals-q-18",
@@ -969,7 +969,7 @@ export const topics = [
           "aria-hidden"
         ],
         "correctAnswer": "prefers-reduced-motion",
-        "explanation": "prefers-reduced-motion lets you reduce or remove animations for motion-sensitive users."
+        "explanation": "prefers-reduced-motion lets you reduce or remove animations for motion-sensitive users.\n\nExample:\n@media (prefers-reduced-motion: reduce) { * { animation: none; transition: none; } }"
       },
       {
         "id": "css-fundamentals-q-19",
@@ -980,7 +980,7 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Transitions animate between previous and new property values when state changes."
+        "explanation": "Transitions animate between previous and new property values when state changes.\n\nExample:\n@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }"
       },
       {
         "id": "css-fundamentals-q-20",
@@ -993,7 +993,7 @@ export const topics = [
           "Disables alt text"
         ],
         "correctAnswer": "Fills the box while possibly cropping the image",
-        "explanation": "cover fills the box while preserving aspect ratio, which may crop the image."
+        "explanation": "cover fills the box while preserving aspect ratio, which may crop the image.\n\nExample:\nimg { width: 100%; height: 12rem; object-fit: cover; }"
       },
       {
         "id": "css-fundamentals-q-21",
@@ -1004,7 +1004,7 @@ export const topics = [
           "var",
           "var()"
         ],
-        "explanation": "var() reads the value of a CSS custom property."
+        "explanation": "var() reads the value of a CSS custom property.\n\nExample:\n:root { --brand: #58cc02; }\nbutton { background: var(--brand); }"
       },
       {
         "id": "css-fundamentals-q-22",
@@ -1017,7 +1017,7 @@ export const topics = [
           "Images lazy-load automatically"
         ],
         "correctAnswer": "Future overrides become harder and the cascade becomes messy",
-        "explanation": "!important bypasses normal cascade expectations and can make CSS difficult to maintain."
+        "explanation": "!important bypasses normal cascade expectations and can make CSS difficult to maintain.\n\nExample:\n.hidden { display: none !important; }"
       },
       {
         "id": "css-fundamentals-q-23",
@@ -1028,7 +1028,7 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "rem units scale relative to the root font size, which can support accessibility and consistency."
+        "explanation": "rem units scale relative to the root font size, which can support accessibility and consistency.\n\nExample:\n@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }"
       },
       {
         "id": "css-fundamentals-q-24",
@@ -1041,7 +1041,7 @@ export const topics = [
           "button > div > span"
         ],
         "correctAnswer": "card__title and card--featured",
-        "explanation": "BEM uses block, element and modifier patterns, often like block__element and block--modifier."
+        "explanation": "BEM uses block, element and modifier patterns, often like block__element and block--modifier.\n\nExample:\n.card {}\n.card__title {}\n.card--featured {}"
       },
       {
         "id": "css-fundamentals-q-25",
@@ -1054,7 +1054,7 @@ export const topics = [
           "inherit only"
         ],
         "correctAnswer": "sticky",
-        "explanation": "position: sticky sticks after a scroll threshold while still being constrained by its parent."
+        "explanation": "position: sticky sticks after a scroll threshold while still being constrained by its parent.\n\nExample:\n.tabs { position: sticky; top: 0; }"
       },
       {
         "id": "css-fundamentals-q-26",
@@ -1064,7 +1064,7 @@ export const topics = [
         "acceptedAnswers": [
           "padding"
         ],
-        "explanation": "Padding is inside the border; margin is outside the border."
+        "explanation": "Padding is inside the border; margin is outside the border.\n\nExample:\n.card { padding: 1rem; border: 1px solid #ddd; margin: 1rem; }"
       },
       {
         "id": "css-fundamentals-q-27",
@@ -1077,7 +1077,7 @@ export const topics = [
           "z-index"
         ],
         "correctAnswer": "align-items",
-        "explanation": "align-items controls cross-axis alignment in flexbox."
+        "explanation": "align-items controls cross-axis alignment in flexbox.\n\nExample:\n.row { display: flex; align-items: center; }"
       },
       {
         "id": "css-fundamentals-q-28",
@@ -1088,7 +1088,7 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "When specificity and importance are equal, later rules usually win."
+        "explanation": "When specificity and importance are equal, later rules usually win.\n\nExample:\n@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }"
       },
       {
         "id": "css-fundamentals-q-29",
@@ -1101,7 +1101,7 @@ export const topics = [
           "position: fixed on every button"
         ],
         "correctAnswer": "transform: translateY(-2px)",
-        "explanation": "transform is usually performant and good for small motion effects."
+        "explanation": "transform is usually performant and good for small motion effects.\n\nExample:\nbutton { transition: transform 160ms ease; }\nbutton:hover { transform: translateY(-2px); }"
       },
       {
         "id": "css-fundamentals-q-30",
@@ -1113,7 +1113,7 @@ export const topics = [
           "timing-function",
           "transition timing function"
         ],
-        "explanation": "transition-timing-function controls how the animation progresses over time."
+        "explanation": "transition-timing-function controls how the animation progresses over time. In practice, this matters because it changes how you would write or review real application code.\n\nExample:\nbutton { transition: transform 160ms ease-in-out; }"
       },
       {
         "id": "css-fundamentals-q-31",
@@ -1126,7 +1126,7 @@ export const topics = [
           "Making API requests"
         ],
         "correctAnswer": "Naming a reusable spacing value like --space-4",
-        "explanation": "Design tokens name reusable design decisions such as spacing, colours and typography."
+        "explanation": "Design tokens name reusable design decisions such as spacing, colours and typography.\n\nExample:\n:root { --space-4: 1rem; --color-primary: #58cc02; }\n.card { padding: var(--space-4); }"
       },
       {
         "id": "css-fundamentals-q-32",
@@ -1139,7 +1139,7 @@ export const topics = [
           "Use only br tags"
         ],
         "correctAnswer": "grid-template-columns: repeat(auto-fit, minmax(...))",
-        "explanation": "auto-fit with minmax is a common responsive grid pattern."
+        "explanation": "auto-fit with minmax is a common responsive grid pattern.\n\nExample:\n.cards {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));\n  gap: 1rem;\n}"
       }
     ]
   },
@@ -1354,12 +1354,12 @@ export const topics = [
         "prompt": "Which option best describes const?",
         "options": [
           "const creates a block-scoped variable that cannot be reassigned after its first value is set.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "An object stores related data as key-value pairs.",
+          "Truthy values behave like true in conditions, while falsy values behave like false.",
+          "Optional chaining safely reads nested properties when something may be null or undefined."
         ],
         "correctAnswer": "const creates a block-scoped variable that cannot be reassigned after its first value is set.",
-        "explanation": "const creates a block-scoped variable that cannot be reassigned after its first value is set. The value itself may still be mutable if it is an object or array."
+        "explanation": "const creates a block-scoped variable that cannot be reassigned after its first value is set. The value itself may still be mutable if it is an object or array.\n\nExample:\nconst user = { name: \"Jay\" };\nuser.name = \"Jay123\"; // allowed\nuser = {}; // not allowed"
       },
       {
         "id": "js-core-syntax-q-02",
@@ -1370,20 +1370,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "let creates a block-scoped variable that can be reassigned. Use it when the value genuinely changes, such as a counter or temporary result."
+        "explanation": "let creates a block-scoped variable that can be reassigned. Use it when the value genuinely changes, such as a counter or temporary result.\n\nExample:\nlet count = 0;\ncount += 1;"
       },
       {
         "id": "js-core-syntax-q-03",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to var. What is the best choice?",
+        "prompt": "Scenario: A teammate declares a variable with function scope and it is being hoisted in a confusing way. Which keyword caused that behaviour?",
         "options": [
           "var",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "spread syntax",
+          "switch",
+          "try/catch"
         ],
         "correctAnswer": "var",
-        "explanation": "var is function-scoped and can be hoisted in surprising ways. Modern code usually prefers const and let because block scope is easier to reason about. Example: if (true) { var x = 1; }\nconsole.log(x); // 1"
+        "explanation": "var is function-scoped and can be hoisted in surprising ways. Modern code usually prefers const and let because block scope is easier to reason about. Example: if (true) { var x = 1; }\nconsole.log(x); // 1\n\nExample:\nif (true) { var x = 1; }\nconsole.log(x); // 1"
       },
       {
         "id": "js-core-syntax-q-04",
@@ -1395,7 +1395,7 @@ export const topics = [
           "primitive values",
           "primitive values"
         ],
-        "explanation": "Primitive values are simple immutable values like string, number, boolean, null, undefined, symbol and bigint. They are compared by value."
+        "explanation": "Primitive values are simple immutable values like string, number, boolean, null, undefined, symbol and bigint. They are compared by value.\n\nExample:\nconst name = \"GradToDev\";\nconst isReady = true;"
       },
       {
         "id": "js-core-syntax-q-05",
@@ -1403,12 +1403,12 @@ export const topics = [
         "prompt": "Which option best describes objects?",
         "options": [
           "An object stores related data as key-value pairs.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Comments should explain why something exists when the code alone is not enough.",
+          "It returns the same output for the same input and avoids changing outside state.",
+          "const creates a block-scoped variable that cannot be reassigned after its first value is set."
         ],
         "correctAnswer": "An object stores related data as key-value pairs.",
-        "explanation": "An object stores related data as key-value pairs. Objects are compared by reference, so two identical-looking objects are not automatically equal."
+        "explanation": "An object stores related data as key-value pairs. Objects are compared by reference, so two identical-looking objects are not automatically equal.\n\nExample:\nconst user = { id: 1, role: \"admin\" };"
       },
       {
         "id": "js-core-syntax-q-06",
@@ -1419,20 +1419,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "=== checks equality without type coercion. It is usually safer because JavaScript will not silently convert values before comparing them."
+        "explanation": "=== checks equality without type coercion. It is usually safer because JavaScript will not silently convert values before comparing them.\n\nExample:\n0 === false // false\n0 == false // true"
       },
       {
         "id": "js-core-syntax-q-07",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to template literals. What is the best choice?",
+        "prompt": "Scenario: You need to build `Hello, Aydin!` using a variable inside a string without lots of `+` concatenation. What should you use?",
         "options": [
           "template literals",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "arrow function",
+          "return",
+          "spread syntax"
         ],
         "correctAnswer": "template literals",
-        "explanation": "Template literals use backticks and let you insert expressions into strings with ${}. They are easier to read than long string concatenation. Example: const msg = `Hello ${name}`;"
+        "explanation": "Template literals use backticks and let you insert expressions into strings with ${}. They are easier to read than long string concatenation. Example: const msg = `Hello ${name}`;\n\nExample:\nconst msg = `Hello ${name}`;"
       },
       {
         "id": "js-core-syntax-q-08",
@@ -1444,7 +1444,7 @@ export const topics = [
           "if statements",
           "if statements"
         ],
-        "explanation": "An if statement runs code only when a condition is truthy. It is the basic tool for branching logic."
+        "explanation": "An if statement runs code only when a condition is truthy. It is the basic tool for branching logic.\n\nExample:\nif (user.isAdmin) {\n  showAdminPanel();\n}"
       },
       {
         "id": "js-core-syntax-q-09",
@@ -1452,12 +1452,12 @@ export const topics = [
         "prompt": "Which option best describes truthy/falsy?",
         "options": [
           "Truthy values behave like true in conditions, while falsy values behave like false.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "An object stores related data as key-value pairs.",
+          "Optional chaining safely reads nested properties when something may be null or undefined.",
+          "Default parameters give function arguments fallback values when the caller passes undefined or leaves the argument out."
         ],
         "correctAnswer": "Truthy values behave like true in conditions, while falsy values behave like false.",
-        "explanation": "Truthy values behave like true in conditions, while falsy values behave like false. Common falsy values include false, 0, empty string, null, undefined and NaN."
+        "explanation": "Truthy values behave like true in conditions, while falsy values behave like false. Common falsy values include false, 0, empty string, null, undefined and NaN.\n\nExample:\nif (username) {\n  save(username);\n}"
       },
       {
         "id": "js-core-syntax-q-10",
@@ -1468,20 +1468,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "&& returns the first falsy value or the last value if all are truthy. It is commonly used for combining conditions."
+        "explanation": "&& returns the first falsy value or the last value if all are truthy. It is commonly used for combining conditions.\n\nExample:\nif (username) {\n  save(username);\n}"
       },
       {
         "id": "js-core-syntax-q-11",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to ||. What is the best choice?",
+        "prompt": "Scenario: You want to show a fallback username when `displayName` is empty, null, or undefined. Which operator is commonly used?",
         "options": [
           "||",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "try/catch",
+          "import",
+          "closure"
         ],
         "correctAnswer": "||",
-        "explanation": "|| returns the first truthy value. It is often used for fallbacks, but it treats empty strings and 0 as missing too. Example: const label = customLabel || \"Default\";"
+        "explanation": "|| returns the first truthy value. It is often used for fallbacks, but it treats empty strings and 0 as missing too. Example: const label = customLabel || \"Default\";\n\nExample:\nconst label = customLabel || \"Default\";"
       },
       {
         "id": "js-core-syntax-q-12",
@@ -1493,7 +1493,7 @@ export const topics = [
           "??",
           "??"
         ],
-        "explanation": "?? returns the right-hand value only when the left-hand value is null or undefined. It is safer than || when 0 or empty string are valid values."
+        "explanation": "?? returns the right-hand value only when the left-hand value is null or undefined. It is safer than || when 0 or empty string are valid values.\n\nExample:\nconst pageSize = userPageSize ?? 20;"
       },
       {
         "id": "js-core-syntax-q-13",
@@ -1501,12 +1501,12 @@ export const topics = [
         "prompt": "Which option best describes ?.?",
         "options": [
           "Optional chaining safely reads nested properties when something may be null or undefined.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "It returns the same output for the same input and avoids changing outside state.",
+          "const creates a block-scoped variable that cannot be reassigned after its first value is set.",
+          "An object stores related data as key-value pairs."
         ],
         "correctAnswer": "Optional chaining safely reads nested properties when something may be null or undefined.",
-        "explanation": "Optional chaining safely reads nested properties when something may be null or undefined. It prevents common cannot read property errors."
+        "explanation": "Optional chaining safely reads nested properties when something may be null or undefined. It prevents common cannot read property errors.\n\nExample:\nconst city = user.address?.city;"
       },
       {
         "id": "js-core-syntax-q-14",
@@ -1517,20 +1517,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "A function is a reusable block of code that can accept inputs and return an output. Functions help keep code organised and testable."
+        "explanation": "A function is a reusable block of code that can accept inputs and return an output. Functions help keep code organised and testable.\n\nExample:\nfunction add(a, b) { return a + b; }"
       },
       {
         "id": "js-core-syntax-q-15",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to arrow function. What is the best choice?",
+        "prompt": "Scenario: You need a short callback for `items.map(...)` and want lexical `this` behaviour. What should you use?",
         "options": [
           "arrow function",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "primitive",
+          "template literals",
+          "if"
         ],
         "correctAnswer": "arrow function",
-        "explanation": "An arrow function is a shorter function syntax. It is common in callbacks and does not create its own this binding. Example: const double = (n) => n * 2;"
+        "explanation": "An arrow function is a shorter function syntax. It is common in callbacks and does not create its own this binding. Example: const double = (n) => n * 2;\n\nExample:\nconst double = (n) => n * 2;"
       },
       {
         "id": "js-core-syntax-q-16",
@@ -1542,7 +1542,7 @@ export const topics = [
           "return",
           "return"
         ],
-        "explanation": "return sends a value back from a function and stops that function running. Without return, a function returns undefined by default."
+        "explanation": "return sends a value back from a function and stops that function running. Without return, a function returns undefined by default.\n\nExample:\nfunction getName(user) {\n  return user.name;\n}"
       },
       {
         "id": "js-core-syntax-q-17",
@@ -1550,12 +1550,12 @@ export const topics = [
         "prompt": "Which option best describes default parameters?",
         "options": [
           "Default parameters give function arguments fallback values when the caller passes undefined or leaves the argument out.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "An object stores related data as key-value pairs.",
+          "Truthy values behave like true in conditions, while falsy values behave like false.",
+          "Optional chaining safely reads nested properties when something may be null or undefined."
         ],
         "correctAnswer": "Default parameters give function arguments fallback values when the caller passes undefined or leaves the argument out.",
-        "explanation": "Default parameters give function arguments fallback values when the caller passes undefined or leaves the argument out."
+        "explanation": "Default parameters give function arguments fallback values when the caller passes undefined or leaves the argument out.\n\nExample:\nfunction greet(name = \"there\") { return `Hi ${name}`; }"
       },
       {
         "id": "js-core-syntax-q-18",
@@ -1566,20 +1566,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Rest parameters collect extra function arguments into an array. They are useful when a function accepts a flexible number of values."
+        "explanation": "Rest parameters collect extra function arguments into an array. They are useful when a function accepts a flexible number of values.\n\nExample:\nfunction sum(...numbers) { return numbers.reduce((a,b)=>a+b,0); }"
       },
       {
         "id": "js-core-syntax-q-19",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to spread syntax. What is the best choice?",
+        "prompt": "Scenario: You want to copy an array and add one extra item without mutating the original array. What syntax helps with this?",
         "options": [
           "spread syntax",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "arrow function",
+          "return",
+          "switch"
         ],
         "correctAnswer": "spread syntax",
-        "explanation": "Spread syntax expands arrays or objects into another array, object or function call. It is often used to copy or combine values. Example: const copy = [...items];\nconst updated = { ...user, name: \"Jay\" };"
+        "explanation": "Spread syntax expands arrays or objects into another array, object or function call. It is often used to copy or combine values. Example: const copy = [...items];\nconst updated = { ...user, name: \"Jay\" };\n\nExample:\nconst copy = [...items];\nconst updated = { ...user, name: \"Jay\" };"
       },
       {
         "id": "js-core-syntax-q-20",
@@ -1591,7 +1591,7 @@ export const topics = [
           "switch statement",
           "switch statement"
         ],
-        "explanation": "A switch statement can make multiple exact-value branches clearer than a long chain of else-if statements."
+        "explanation": "A switch statement can make multiple exact-value branches clearer than a long chain of else-if statements.\n\nExample:\nswitch (status) {\n  case \"loading\": return \"Loading\";\n}"
       },
       {
         "id": "js-core-syntax-q-21",
@@ -1599,12 +1599,12 @@ export const topics = [
         "prompt": "Which option best describes for loop?",
         "options": [
           "A for loop repeats code while a condition is true.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Optional chaining safely reads nested properties when something may be null or undefined.",
+          "Default parameters give function arguments fallback values when the caller passes undefined or leaves the argument out.",
+          "Comments should explain why something exists when the code alone is not enough."
         ],
         "correctAnswer": "A for loop repeats code while a condition is true.",
-        "explanation": "A for loop repeats code while a condition is true. It is useful when you need index-based control."
+        "explanation": "A for loop repeats code while a condition is true. It is useful when you need index-based control.\n\nExample:\nfor (let i = 0; i < items.length; i++) {}"
       },
       {
         "id": "js-core-syntax-q-22",
@@ -1615,20 +1615,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "for...of loops over the values in an iterable like an array or string. It is cleaner than index loops when you only need values."
+        "explanation": "for...of loops over the values in an iterable like an array or string. It is cleaner than index loops when you only need values.\n\nExample:\nconst name = \"GradToDev\";\nconst isReady = true;"
       },
       {
         "id": "js-core-syntax-q-23",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to try/catch. What is the best choice?",
+        "prompt": "Scenario: Code might throw while parsing JSON, and you want to handle the failure gracefully. What should you use?",
         "options": [
           "try/catch",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "import",
+          "closure",
+          "var"
         ],
         "correctAnswer": "try/catch",
-        "explanation": "try/catch lets you handle errors without crashing the whole flow. Put risky code in try and handle failures in catch. Example: try { await save(); } catch (error) { showError(error); }"
+        "explanation": "try/catch lets you handle errors without crashing the whole flow. Put risky code in try and handle failures in catch. Example: try { await save(); } catch (error) { showError(error); }\n\nExample:\ntry { await save(); } catch (error) { showError(error); }"
       },
       {
         "id": "js-core-syntax-q-24",
@@ -1640,7 +1640,7 @@ export const topics = [
           "import/export",
           "import/export"
         ],
-        "explanation": "Imports and exports let you split code into files. Export makes code available, and import brings it into another module."
+        "explanation": "Imports and exports let you split code into files. Export makes code available, and import brings it into another module.\n\nExample:\nexport function format() {}\nimport { format } from \"./format\";"
       },
       {
         "id": "js-core-syntax-q-25",
@@ -1648,19 +1648,19 @@ export const topics = [
         "prompt": "Which option best describes comments?",
         "options": [
           "Comments should explain why something exists when the code alone is not enough.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Optional chaining safely reads nested properties when something may be null or undefined.",
+          "Default parameters give function arguments fallback values when the caller passes undefined or leaves the argument out.",
+          "A for loop repeats code while a condition is true."
         ],
         "correctAnswer": "Comments should explain why something exists when the code alone is not enough.",
-        "explanation": "Comments should explain why something exists when the code alone is not enough. Avoid comments that only repeat what the code already says."
+        "explanation": "Comments should explain why something exists when the code alone is not enough. Avoid comments that only repeat what the code already says.\n\nExample:\n// Use server time because client clocks can be wrong."
       },
       {
         "id": "js-core-syntax-extra-q-closure-scenario",
         "type": "scenario",
         "prompt": "You create a button handler inside a function and it still remembers the userId after the function finishes. What concept explains this?",
         "correctAnswer": "closure",
-        "explanation": "A closure lets an inner function remember variables from the scope where it was created.",
+        "explanation": "A closure lets an inner function remember variables from the scope where it was created.\n\nExample:\nfunction makeCounter(){ let count = 0; return () => ++count; }",
         "options": [
           "closure",
           "hoisting",
@@ -1673,7 +1673,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the operator used for safe nested property access, as in user.profile?.name.",
         "correctAnswer": "?.",
-        "explanation": "Optional chaining uses ?. to avoid throwing when an intermediate value is null or undefined.",
+        "explanation": "Optional chaining uses ?. to avoid throwing when an intermediate value is null or undefined.\n\nExample:\nconst city = user.profile?.address?.city;",
         "acceptedAnswers": [
           "?.",
           "optional chaining"
@@ -1684,7 +1684,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: let and const can be accessed safely before their declaration because they are hoisted like var.",
         "correctAnswer": "False",
-        "explanation": "let and const are hoisted in the sense that JavaScript knows about them, but they are in the temporal dead zone until the declaration line runs.",
+        "explanation": "let and const are hoisted in the sense that JavaScript knows about them, but they are in the temporal dead zone until the declaration line runs.\n\nExample:\n0 === false // false\n0 == false // true",
         "options": [
           "True",
           "False"
@@ -1695,7 +1695,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Which option best describes a pure function?",
         "correctAnswer": "It returns the same output for the same input and avoids changing outside state.",
-        "explanation": "Pure functions are predictable because they depend on inputs and do not mutate external state.",
+        "explanation": "Pure functions are predictable because they depend on inputs and do not mutate external state.\n\nExample:\nconst addVat = price => price * 1.2;",
         "options": [
           "It returns the same output for the same input and avoids changing outside state.",
           "It always calls an API.",
@@ -1708,7 +1708,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the keyword used to bring a named export into another JavaScript file.",
         "correctAnswer": "import",
-        "explanation": "ES modules use import to bring exported values into another file.",
+        "explanation": "ES modules use import to bring exported values into another file.\n\nExample:\nexport function formatName(name) {}\nimport { formatName } from \"./formatName\";",
         "acceptedAnswers": [
           "import"
         ]
@@ -1718,7 +1718,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A JSON.parse call might fail because the server returned invalid JSON. What language feature should you use to handle that failure?",
         "correctAnswer": "try/catch",
-        "explanation": "try/catch lets you catch thrown errors and show a useful fallback instead of crashing the app.",
+        "explanation": "try/catch lets you catch thrown errors and show a useful fallback instead of crashing the app.\n\nExample:\ntry { await save(); } catch (error) { showError(error); }",
         "options": [
           "try/catch",
           "Array.map",
@@ -1939,12 +1939,12 @@ export const topics = [
         "prompt": "Which option best describes map()?",
         "options": [
           "map() creates a new array by transforming every item in the original array.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "pop() removes and returns the last item from an array.",
+          "join() turns array items into a string separated by the text you provide.",
+          "Method chaining runs several array operations in sequence."
         ],
         "correctAnswer": "map() creates a new array by transforming every item in the original array.",
-        "explanation": "map() creates a new array by transforming every item in the original array. Use it when the output has the same number of items."
+        "explanation": "map() creates a new array by transforming every item in the original array. Use it when the output has the same number of items.\n\nExample:\nusers.map(user => user.name)"
       },
       {
         "id": "js-array-methods-q-02",
@@ -1955,20 +1955,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "filter() creates a new array containing only items that pass a condition. Use it when you want a subset of the original array."
+        "explanation": "filter() creates a new array containing only items that pass a condition. Use it when you want a subset of the original array.\n\nExample:\nusers.filter(user => user.active)"
       },
       {
         "id": "js-array-methods-q-03",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to find(). What is the best choice?",
+        "prompt": "Scenario: From an array of users, you need the first user whose `id` matches `targetId`. Which array method fits best?",
         "options": [
           "find()",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "includes",
+          "splice()",
+          "sort"
         ],
         "correctAnswer": "find()",
-        "explanation": "find() returns the first item that matches a condition, or undefined if nothing matches. Use it when you need one item. Example: users.find(user => user.id === selectedId)"
+        "explanation": "find() returns the first item that matches a condition, or undefined if nothing matches. Use it when you need one item. Example: users.find(user => user.id === selectedId)\n\nExample:\nusers.find(user => user.id === selectedId)"
       },
       {
         "id": "js-array-methods-q-04",
@@ -1980,7 +1980,7 @@ export const topics = [
           "some()",
           "some"
         ],
-        "explanation": "some() returns true if at least one item passes a condition. Use it for yes/no checks."
+        "explanation": "some() returns true if at least one item passes a condition. Use it for yes/no checks.\n\nExample:\nusers.some(user => user.role === \"admin\")"
       },
       {
         "id": "js-array-methods-q-05",
@@ -1988,12 +1988,12 @@ export const topics = [
         "prompt": "Which option best describes every()?",
         "options": [
           "every() returns true only if all items pass a condition.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "indexOf() returns the index of a value or -1 if the value is not found.",
+          "toSorted() returns a sorted copy instead of mutating the original array.",
+          "pop() removes and returns the last item from an array."
         ],
         "correctAnswer": "every() returns true only if all items pass a condition.",
-        "explanation": "every() returns true only if all items pass a condition. It is useful for validation checks."
+        "explanation": "every() returns true only if all items pass a condition. It is useful for validation checks.\n\nExample:\nfields.every(field => field.value.trim() !== \"\")"
       },
       {
         "id": "js-array-methods-q-06",
@@ -2004,20 +2004,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "reduce() combines an array into a single value such as a total, object, map or grouped structure. Use it when map or filter are not enough."
+        "explanation": "reduce() combines an array into a single value such as a total, object, map or grouped structure. Use it when map or filter are not enough.\n\nExample:\norders.reduce((total, order) => total + order.price, 0)"
       },
       {
         "id": "js-array-methods-q-07",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to forEach(). What is the best choice?",
+        "prompt": "Scenario: You want to run a side effect for every item in an array, such as logging each value, without creating a new array. Which method fits best?",
         "options": [
           "forEach()",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "find()",
+          "some",
+          "includes"
         ],
         "correctAnswer": "forEach()",
-        "explanation": "forEach() runs a function for each item but does not return a useful new array. Use it for side effects, not transformations. Example: items.forEach(item => console.log(item))"
+        "explanation": "forEach() runs a function for each item but does not return a useful new array. Use it for side effects, not transformations. Example: items.forEach(item => console.log(item))\n\nExample:\nitems.forEach(item => console.log(item))"
       },
       {
         "id": "js-array-methods-q-08",
@@ -2029,7 +2029,7 @@ export const topics = [
           "includes()",
           "includes"
         ],
-        "explanation": "includes() checks whether an array contains a specific value and returns true or false."
+        "explanation": "includes() checks whether an array contains a specific value and returns true or false.\n\nExample:\nallowedRoles.includes(user.role)"
       },
       {
         "id": "js-array-methods-q-09",
@@ -2037,12 +2037,12 @@ export const topics = [
         "prompt": "Which option best describes indexOf()?",
         "options": [
           "indexOf() returns the index of a value or -1 if the value is not found.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "toSorted() returns a sorted copy instead of mutating the original array.",
+          "pop() removes and returns the last item from an array.",
+          "join() turns array items into a string separated by the text you provide."
         ],
         "correctAnswer": "indexOf() returns the index of a value or -1 if the value is not found.",
-        "explanation": "indexOf() returns the index of a value or -1 if the value is not found. includes() is clearer when you only need a boolean."
+        "explanation": "indexOf() returns the index of a value or -1 if the value is not found. includes() is clearer when you only need a boolean.\n\nExample:\nnames.indexOf(\"Jay\")"
       },
       {
         "id": "js-array-methods-q-10",
@@ -2053,20 +2053,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "slice() returns a shallow copy of part of an array without mutating the original array."
+        "explanation": "slice() returns a shallow copy of part of an array without mutating the original array.\n\nExample:\nallowedRoles.includes(user.role)"
       },
       {
         "id": "js-array-methods-q-11",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to splice(). What is the best choice?",
+        "prompt": "Scenario: You need to remove two items from the middle of an existing array and mutate that same array. Which method fits best?",
         "options": [
           "splice()",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "splice",
+          "flatMap",
+          "at"
         ],
         "correctAnswer": "splice()",
-        "explanation": "splice() changes the original array by removing, replacing or inserting items. Be careful because it mutates. Example: items.splice(1, 2)"
+        "explanation": "splice() changes the original array by removing, replacing or inserting items. Be careful because it mutates. Example: items.splice(1, 2)\n\nExample:\nitems.splice(1, 2)"
       },
       {
         "id": "js-array-methods-q-12",
@@ -2078,7 +2078,7 @@ export const topics = [
           "sort()",
           "sort"
         ],
-        "explanation": "sort() sorts an array in place and mutates it. For numbers, provide a compare function because default sorting treats values as strings."
+        "explanation": "sort() sorts an array in place and mutates it. For numbers, provide a compare function because default sorting treats values as strings.\n\nExample:\nnumbers.sort((a, b) => a - b)"
       },
       {
         "id": "js-array-methods-q-13",
@@ -2086,12 +2086,12 @@ export const topics = [
         "prompt": "Which option best describes toSorted()?",
         "options": [
           "toSorted() returns a sorted copy instead of mutating the original array.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "When you need the position of the matching item in the array.",
+          "map() creates a new array by transforming every item in the original array.",
+          "every() returns true only if all items pass a condition."
         ],
         "correctAnswer": "toSorted() returns a sorted copy instead of mutating the original array.",
-        "explanation": "toSorted() returns a sorted copy instead of mutating the original array. It is useful when you want immutable updates."
+        "explanation": "toSorted() returns a sorted copy instead of mutating the original array. It is useful when you want immutable updates.\n\nExample:\nconst sorted = users.toSorted((a, b) => a.name.localeCompare(b.name));"
       },
       {
         "id": "js-array-methods-q-14",
@@ -2102,20 +2102,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "flat() creates a new array with nested arrays flattened by a chosen depth."
+        "explanation": "flat() creates a new array with nested arrays flattened by a chosen depth.\n\nExample:\nallowedRoles.includes(user.role)"
       },
       {
         "id": "js-array-methods-q-15",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to flatMap(). What is the best choice?",
+        "prompt": "Scenario: Each order contains multiple line items, and you want one flat array of all line items after mapping over the orders. Which method fits best?",
         "options": [
           "flatMap()",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "splice()",
+          "sort",
+          "push"
         ],
         "correctAnswer": "flatMap()",
-        "explanation": "flatMap() maps each item and then flattens the result by one level. It is useful when one input item may produce multiple outputs. Example: orders.flatMap(order => order.items)"
+        "explanation": "flatMap() maps each item and then flattens the result by one level. It is useful when one input item may produce multiple outputs. Example: orders.flatMap(order => order.items)\n\nExample:\norders.flatMap(order => order.items)"
       },
       {
         "id": "js-array-methods-q-16",
@@ -2127,7 +2127,7 @@ export const topics = [
           "push()",
           "push"
         ],
-        "explanation": "push() adds items to the end of an array and mutates the original array."
+        "explanation": "push() adds items to the end of an array and mutates the original array.\n\nExample:\nitems.push(newItem)"
       },
       {
         "id": "js-array-methods-q-17",
@@ -2135,12 +2135,12 @@ export const topics = [
         "prompt": "Which option best describes pop()?",
         "options": [
           "pop() removes and returns the last item from an array.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "join() turns array items into a string separated by the text you provide.",
+          "Method chaining runs several array operations in sequence.",
+          "When you need the position of the matching item in the array."
         ],
         "correctAnswer": "pop() removes and returns the last item from an array.",
-        "explanation": "pop() removes and returns the last item from an array. It mutates the original array."
+        "explanation": "pop() removes and returns the last item from an array. It mutates the original array.\n\nExample:\nconst last = items.pop();"
       },
       {
         "id": "js-array-methods-q-18",
@@ -2151,20 +2151,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "shift() removes and returns the first item from an array. It mutates the array and can be costly on large arrays."
+        "explanation": "shift() removes and returns the first item from an array. It mutates the array and can be costly on large arrays.\n\nExample:\nconst first = queue.shift();"
       },
       {
         "id": "js-array-methods-q-19",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to unshift(). What is the best choice?",
+        "prompt": "Scenario: You need to add a new notification to the beginning of an existing array. Which method fits best?",
         "options": [
           "unshift()",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "splice()",
+          "sort",
+          "flatMap()"
         ],
         "correctAnswer": "unshift()",
-        "explanation": "unshift() adds items to the start of an array and mutates it. Example: items.unshift(newFirstItem)"
+        "explanation": "unshift() adds items to the start of an array and mutates it. Example: items.unshift(newFirstItem)\n\nExample:\nitems.unshift(newFirstItem)"
       },
       {
         "id": "js-array-methods-q-20",
@@ -2176,7 +2176,7 @@ export const topics = [
           "concat()",
           "concat"
         ],
-        "explanation": "concat() joins arrays or values into a new array without mutating the originals."
+        "explanation": "concat() joins arrays or values into a new array without mutating the originals.\n\nExample:\nconst all = oldItems.concat(newItems);"
       },
       {
         "id": "js-array-methods-q-21",
@@ -2184,12 +2184,12 @@ export const topics = [
         "prompt": "Which option best describes join()?",
         "options": [
           "join() turns array items into a string separated by the text you provide.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Method chaining runs several array operations in sequence.",
+          "When you need the position of the matching item in the array.",
+          "map() creates a new array by transforming every item in the original array."
         ],
         "correctAnswer": "join() turns array items into a string separated by the text you provide.",
-        "explanation": "join() turns array items into a string separated by the text you provide."
+        "explanation": "join() turns array items into a string separated by the text you provide.\n\nExample:\ntags.join(\", \")"
       },
       {
         "id": "js-array-methods-q-22",
@@ -2200,20 +2200,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "at() reads an item by index and supports negative indexes for reading from the end."
+        "explanation": "at() reads an item by index and supports negative indexes for reading from the end.\n\nExample:\nusers.some(user => user.role === \"admin\")"
       },
       {
         "id": "js-array-methods-q-23",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to Array.isArray(). What is the best choice?",
+        "prompt": "Scenario: An API field could be a string or an array. You need to check whether it is actually an array before mapping over it. What should you use?",
         "options": [
           "Array.isArray()",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "unshift()",
+          "concat",
+          "Set"
         ],
         "correctAnswer": "Array.isArray()",
-        "explanation": "Array.isArray() safely checks whether a value is an array. typeof returns object for arrays, so it is not enough. Example: Array.isArray(value)"
+        "explanation": "Array.isArray() safely checks whether a value is an array. typeof returns object for arrays, so it is not enough. Example: Array.isArray(value)\n\nExample:\nArray.isArray(value)"
       },
       {
         "id": "js-array-methods-q-24",
@@ -2225,7 +2225,7 @@ export const topics = [
           "Set",
           "Set"
         ],
-        "explanation": "Set stores unique values. Converting an array to a Set and back is a common way to remove duplicate primitive values."
+        "explanation": "Set stores unique values. Converting an array to a Set and back is a common way to remove duplicate primitive values.\n\nExample:\nconst unique = [...new Set(ids)];"
       },
       {
         "id": "js-array-methods-q-25",
@@ -2233,19 +2233,19 @@ export const topics = [
         "prompt": "Which option best describes method chaining?",
         "options": [
           "Method chaining runs several array operations in sequence.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "every() returns true only if all items pass a condition.",
+          "indexOf() returns the index of a value or -1 if the value is not found.",
+          "toSorted() returns a sorted copy instead of mutating the original array."
         ],
         "correctAnswer": "Method chaining runs several array operations in sequence.",
-        "explanation": "Method chaining runs several array operations in sequence. Keep chains readable by splitting them across lines when they get long."
+        "explanation": "Method chaining runs several array operations in sequence. Keep chains readable by splitting them across lines when they get long.\n\nExample:\nusers.filter(u => u.active).map(u => u.email)"
       },
       {
         "id": "js-array-methods-extra-q-slice-splice",
         "type": "multiple-choice",
         "prompt": "Which method mutates the original array?",
         "correctAnswer": "splice",
-        "explanation": "splice changes the original array. slice returns a new copied section.",
+        "explanation": "splice changes the original array. slice returns a new copied section.\n\nExample:\nitems.slice(0, 3);\nitems.splice(1, 1);",
         "options": [
           "splice",
           "slice",
@@ -2258,7 +2258,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: toSorted() sorts the array without mutating the original array.",
         "correctAnswer": "True",
-        "explanation": "toSorted creates a sorted copy. sort mutates the original array.",
+        "explanation": "toSorted creates a sorted copy. sort mutates the original array.\n\nExample:\nallowedRoles.includes(user.role)",
         "options": [
           "True",
           "False"
@@ -2269,7 +2269,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "You have an array of orders and each order has an items array. You want one flat list of all items. Which method is a good fit?",
         "correctAnswer": "flatMap",
-        "explanation": "flatMap can return each order’s items and flatten the result into one array.",
+        "explanation": "flatMap can return each order’s items and flatten the result into one array.\n\nExample:\norders.flatMap(order => order.items)",
         "options": [
           "flatMap",
           "every",
@@ -2282,7 +2282,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the method that can get the last array item using items.____(-1).",
         "correctAnswer": "at",
-        "explanation": "The at method supports negative indexes like -1 for the last item.",
+        "explanation": "The at method supports negative indexes like -1 for the last item.\n\nExample:\nconst last = items.at(-1);",
         "acceptedAnswers": [
           "at",
           ".at"
@@ -2293,7 +2293,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "You need to remove duplicate primitive values from an array of strings. Which built-in object is commonly used?",
         "correctAnswer": "Set",
-        "explanation": "Set only keeps unique values, so [...new Set(values)] is a common dedupe pattern.",
+        "explanation": "Set only keeps unique values, so [...new Set(values)] is a common dedupe pattern.\n\nExample:\nconst unique = [...new Set(ids)];",
         "options": [
           "Set",
           "Map",
@@ -2306,7 +2306,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "When is findIndex more useful than find?",
         "correctAnswer": "When you need the position of the matching item in the array.",
-        "explanation": "find returns the item. findIndex returns its index.",
+        "explanation": "find returns the item. findIndex returns its index.\n\nExample:\nconst index = users.findIndex(u => u.id === id);",
         "options": [
           "When you need the position of the matching item in the array.",
           "When you need a boolean result only.",
@@ -2527,12 +2527,12 @@ export const topics = [
         "prompt": "Which option best describes length?",
         "options": [
           "length gives the number of UTF-16 code units in a string.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "charAt() returns the character at a specific index.",
+          "Number() converts a string to a number when possible.",
+          "Normalising means converting text into a consistent format before comparing or storing it, such as trimming and lowercasing."
         ],
         "correctAnswer": "length gives the number of UTF-16 code units in a string.",
-        "explanation": "length gives the number of UTF-16 code units in a string. It is commonly used for simple validation but can be imperfect for emojis."
+        "explanation": "length gives the number of UTF-16 code units in a string. It is commonly used for simple validation but can be imperfect for emojis.\n\nExample:\npassword.length >= 8"
       },
       {
         "id": "js-string-methods-q-02",
@@ -2543,20 +2543,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "trim() removes whitespace from the start and end of a string. It is useful before validation or comparison."
+        "explanation": "trim() removes whitespace from the start and end of a string. It is useful before validation or comparison.\n\nExample:\n/^\\S+@\\S+\\.\\S+$/.test(email);"
       },
       {
         "id": "js-string-methods-q-03",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to toLowerCase(). What is the best choice?",
+        "prompt": "Scenario: You want a case-insensitive comparison, so `Hello` and `hello` are treated the same. Which string method helps?",
         "options": [
           "toLowerCase()",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "endsWith()",
+          "slice",
+          "replace()"
         ],
         "correctAnswer": "toLowerCase()",
-        "explanation": "toLowerCase() returns a lowercase copy of the string. Use it for case-insensitive comparisons. Example: role.toLowerCase() === \"admin\""
+        "explanation": "toLowerCase() returns a lowercase copy of the string. Use it for case-insensitive comparisons. Example: role.toLowerCase() === \"admin\"\n\nExample:\nrole.toLowerCase() === \"admin\""
       },
       {
         "id": "js-string-methods-q-04",
@@ -2568,7 +2568,7 @@ export const topics = [
           "toUpperCase()",
           "toUpperCase"
         ],
-        "explanation": "toUpperCase() returns an uppercase copy of the string. It is useful for normalising codes or labels."
+        "explanation": "toUpperCase() returns an uppercase copy of the string. It is useful for normalising codes or labels.\n\nExample:\ncountryCode.toUpperCase()"
       },
       {
         "id": "js-string-methods-q-05",
@@ -2576,12 +2576,12 @@ export const topics = [
         "prompt": "Which option best describes includes()?",
         "options": [
           "includes() checks whether a string contains another string and returns true or false.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "charAt() returns the character at a specific index.",
+          "Number() converts a string to a number when possible.",
+          "Normalising means converting text into a consistent format before comparing or storing it, such as trimming and lowercasing."
         ],
         "correctAnswer": "includes() checks whether a string contains another string and returns true or false.",
-        "explanation": "includes() checks whether a string contains another string and returns true or false."
+        "explanation": "includes() checks whether a string contains another string and returns true or false.\n\nExample:\nmessage.includes(\"error\")"
       },
       {
         "id": "js-string-methods-q-06",
@@ -2592,20 +2592,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "startsWith() checks whether a string begins with a given prefix."
+        "explanation": "startsWith() checks whether a string begins with a given prefix.\n\nExample:\nmessage.includes(\"error\")"
       },
       {
         "id": "js-string-methods-q-07",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to endsWith(). What is the best choice?",
+        "prompt": "Scenario: You need to check whether a filename finishes with `.png`. Which string method fits best?",
         "options": [
           "endsWith()",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "toUpperCase",
+          "slice",
+          "replace()"
         ],
         "correctAnswer": "endsWith()",
-        "explanation": "endsWith() checks whether a string ends with a given suffix. Example: fileName.endsWith(\".ts\")"
+        "explanation": "endsWith() checks whether a string ends with a given suffix. Example: fileName.endsWith(\".ts\")\n\nExample:\nfileName.endsWith(\".ts\")"
       },
       {
         "id": "js-string-methods-q-08",
@@ -2617,7 +2617,7 @@ export const topics = [
           "slice()",
           "slice"
         ],
-        "explanation": "slice() returns part of a string without changing the original string."
+        "explanation": "slice() returns part of a string without changing the original string.\n\nExample:\nid.slice(0, 8)"
       },
       {
         "id": "js-string-methods-q-09",
@@ -2625,12 +2625,12 @@ export const topics = [
         "prompt": "Which option best describes substring()?",
         "options": [
           "substring() returns characters between two indexes but handles arguments differently from slice.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "match() searches a string using a regular expression and returns match information or null.",
+          "charAt() returns the character at a specific index.",
+          "Number() converts a string to a number when possible."
         ],
         "correctAnswer": "substring() returns characters between two indexes but handles arguments differently from slice.",
-        "explanation": "substring() returns characters between two indexes but handles arguments differently from slice. In modern code, slice is often clearer."
+        "explanation": "substring() returns characters between two indexes but handles arguments differently from slice. In modern code, slice is often clearer.\n\nExample:\nname.substring(0, 3)"
       },
       {
         "id": "js-string-methods-q-10",
@@ -2641,20 +2641,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "split() turns a string into an array by cutting it at a separator."
+        "explanation": "split() turns a string into an array by cutting it at a separator.\n\nExample:\nmessage.includes(\"error\")"
       },
       {
         "id": "js-string-methods-q-11",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to replace(). What is the best choice?",
+        "prompt": "Scenario: You need to change the first matching part of a string, such as replacing `cat` with `dog`. Which method fits best?",
         "options": [
           "replace()",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "test",
+          "localeCompare",
+          "normalise the input"
         ],
         "correctAnswer": "replace()",
-        "explanation": "replace() returns a new string with the first matching text or pattern replaced. Use a global regex for all matches. Example: text.replace(\" \", \"-\")"
+        "explanation": "replace() returns a new string with the first matching text or pattern replaced. Use a global regex for all matches. Example: text.replace(\" \", \"-\")\n\nExample:\ntext.replace(\" \", \"-\")"
       },
       {
         "id": "js-string-methods-q-12",
@@ -2666,7 +2666,7 @@ export const topics = [
           "replaceAll()",
           "replaceAll"
         ],
-        "explanation": "replaceAll() returns a new string with every matching substring replaced."
+        "explanation": "replaceAll() returns a new string with every matching substring replaced.\n\nExample:\nslug.replaceAll(\" \", \"-\")"
       },
       {
         "id": "js-string-methods-q-13",
@@ -2674,12 +2674,12 @@ export const topics = [
         "prompt": "Which option best describes match()?",
         "options": [
           "match() searches a string using a regular expression and returns match information or null.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Number() converts a string to a number when possible.",
+          "Normalising means converting text into a consistent format before comparing or storing it, such as trimming and lowercasing.",
+          "To calculate each replacement based on the matched text."
         ],
         "correctAnswer": "match() searches a string using a regular expression and returns match information or null.",
-        "explanation": "match() searches a string using a regular expression and returns match information or null."
+        "explanation": "match() searches a string using a regular expression and returns match information or null.\n\nExample:\nemail.match(/@(.+)$/)"
       },
       {
         "id": "js-string-methods-q-14",
@@ -2690,20 +2690,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "RegExp.test() checks whether a string matches a pattern and returns true or false."
+        "explanation": "RegExp.test() checks whether a string matches a pattern and returns true or false.\n\nExample:\n/^\\d+$/.test(value)"
       },
       {
         "id": "js-string-methods-q-15",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to padStart(). What is the best choice?",
+        "prompt": "Scenario: You need to display order number `7` as `007`. Which string method fits best?",
         "options": [
           "padStart()",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "toUpperCase",
+          "endsWith()",
+          "slice"
         ],
         "correctAnswer": "padStart()",
-        "explanation": "padStart() adds characters to the beginning of a string until it reaches a target length. Example: String(month).padStart(2, \"0\")"
+        "explanation": "padStart() adds characters to the beginning of a string until it reaches a target length. Example: String(month).padStart(2, \"0\")\n\nExample:\nString(month).padStart(2, \"0\")"
       },
       {
         "id": "js-string-methods-q-16",
@@ -2715,7 +2715,7 @@ export const topics = [
           "padEnd()",
           "padEnd"
         ],
-        "explanation": "padEnd() adds characters to the end of a string until it reaches a target length."
+        "explanation": "padEnd() adds characters to the end of a string until it reaches a target length.\n\nExample:\nlabel.padEnd(10, \".\")"
       },
       {
         "id": "js-string-methods-q-17",
@@ -2723,12 +2723,12 @@ export const topics = [
         "prompt": "Which option best describes charAt()?",
         "options": [
           "charAt() returns the character at a specific index.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Number() converts a string to a number when possible.",
+          "Normalising means converting text into a consistent format before comparing or storing it, such as trimming and lowercasing.",
+          "To calculate each replacement based on the matched text."
         ],
         "correctAnswer": "charAt() returns the character at a specific index.",
-        "explanation": "charAt() returns the character at a specific index. Bracket syntax is more common in modern code."
+        "explanation": "charAt() returns the character at a specific index. Bracket syntax is more common in modern code.\n\nExample:\nname.charAt(0)"
       },
       {
         "id": "js-string-methods-q-18",
@@ -2739,20 +2739,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "String indexing with brackets reads a character at a position. It returns undefined when the index is out of range."
+        "explanation": "String indexing with brackets reads a character at a position. It returns undefined when the index is out of range.\n\nExample:\nname[0]"
       },
       {
         "id": "js-string-methods-q-19",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to localeCompare(). What is the best choice?",
+        "prompt": "Scenario: You need to sort names alphabetically in a way that respects language/locale rules. Which method fits best?",
         "options": [
           "localeCompare()",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "padEnd",
+          "String",
+          "escaping characters"
         ],
         "correctAnswer": "localeCompare()",
-        "explanation": "localeCompare() compares strings in a way that is useful for sorting text alphabetically. Example: names.sort((a,b) => a.localeCompare(b))"
+        "explanation": "localeCompare() compares strings in a way that is useful for sorting text alphabetically. Example: names.sort((a,b) => a.localeCompare(b))\n\nExample:\nnames.sort((a,b) => a.localeCompare(b))"
       },
       {
         "id": "js-string-methods-q-20",
@@ -2764,7 +2764,7 @@ export const topics = [
           "String()",
           "String"
         ],
-        "explanation": "String() converts a value to a string. It is often clearer than relying on implicit conversion."
+        "explanation": "String() converts a value to a string. It is often clearer than relying on implicit conversion.\n\nExample:\nString(userId)"
       },
       {
         "id": "js-string-methods-q-21",
@@ -2772,12 +2772,12 @@ export const topics = [
         "prompt": "Which option best describes Number()?",
         "options": [
           "Number() converts a string to a number when possible.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "To calculate each replacement based on the matched text.",
+          "length gives the number of UTF-16 code units in a string.",
+          "includes() checks whether a string contains another string and returns true or false."
         ],
         "correctAnswer": "Number() converts a string to a number when possible.",
-        "explanation": "Number() converts a string to a number when possible. Always consider invalid input because the result may be NaN."
+        "explanation": "Number() converts a string to a number when possible. Always consider invalid input because the result may be NaN.\n\nExample:\nconst count = Number(inputValue);"
       },
       {
         "id": "js-string-methods-q-22",
@@ -2788,20 +2788,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Template literals can span multiple lines, which is useful for readable longer strings or generated text."
+        "explanation": "Template literals can span multiple lines, which is useful for readable longer strings or generated text.\n\nExample:\nconst html = `<section>\n  <h1>${title}</h1>\n</section>`;"
       },
       {
         "id": "js-string-methods-q-23",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to escaping characters. What is the best choice?",
+        "prompt": "Scenario: You need to include quotation marks inside a string without ending the string early. What technique is needed?",
         "options": [
           "escaping characters",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "localeCompare()",
+          "String",
+          "immutable"
         ],
         "correctAnswer": "escaping characters",
-        "explanation": "Escaping lets you include special characters like quotes or new lines inside strings. Example: const quote = \"He said \\\"hello\\\"\";"
+        "explanation": "Escaping lets you include special characters like quotes or new lines inside strings. Example: const quote = \"He said \\\"hello\\\"\";\n\nExample:\nconst quote = \"He said \\\"hello\\\"\";"
       },
       {
         "id": "js-string-methods-q-24",
@@ -2813,7 +2813,7 @@ export const topics = [
           "string immutability",
           "string immutability"
         ],
-        "explanation": "Strings are immutable, so string methods return new strings instead of changing the original value."
+        "explanation": "Strings are immutable, so string methods return new strings instead of changing the original value.\n\nExample:\nconst upper = name.toUpperCase();"
       },
       {
         "id": "js-string-methods-q-25",
@@ -2821,19 +2821,19 @@ export const topics = [
         "prompt": "Which option best describes normalising strings?",
         "options": [
           "Normalising means converting text into a consistent format before comparing or storing it, such as trimming and lowercasing.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Number() converts a string to a number when possible.",
+          "To calculate each replacement based on the matched text.",
+          "length gives the number of UTF-16 code units in a string."
         ],
         "correctAnswer": "Normalising means converting text into a consistent format before comparing or storing it, such as trimming and lowercasing.",
-        "explanation": "Normalising means converting text into a consistent format before comparing or storing it, such as trimming and lowercasing."
+        "explanation": "Normalising means converting text into a consistent format before comparing or storing it, such as trimming and lowercasing.\n\nExample:\nconst normalised = email.trim().toLowerCase();"
       },
       {
         "id": "js-string-methods-extra-q-encode-scenario",
         "type": "scenario",
         "prompt": "A search box lets users type spaces and symbols. What should you use before placing the query in a URL parameter?",
         "correctAnswer": "encodeURIComponent",
-        "explanation": "encodeURIComponent safely escapes user text for a URL component.",
+        "explanation": "encodeURIComponent safely escapes user text for a URL component.\n\nExample:\n`/search?q=${encodeURIComponent(query)}`",
         "options": [
           "encodeURIComponent",
           "JSON.parse",
@@ -2846,7 +2846,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the RegExp method that returns true or false when checking a string pattern.",
         "correctAnswer": "test",
-        "explanation": "RegExp.test returns a boolean indicating whether the string matches the pattern.",
+        "explanation": "RegExp.test returns a boolean indicating whether the string matches the pattern.\n\nExample:\n/^\\d+$/.test(value)",
         "acceptedAnswers": [
           "test",
           ".test"
@@ -2857,7 +2857,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Which method is best for locale-aware string sorting?",
         "correctAnswer": "localeCompare",
-        "explanation": "localeCompare compares strings using locale-aware rules.",
+        "explanation": "localeCompare compares strings using locale-aware rules.\n\nExample:\nnames.sort((a,b) => a.localeCompare(b));",
         "options": [
           "localeCompare",
           "includes",
@@ -2870,7 +2870,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: Intl can help format dates, numbers and currency for users.",
         "correctAnswer": "True",
-        "explanation": "Intl provides built-in internationalisation formatting APIs.",
+        "explanation": "Intl provides built-in internationalisation formatting APIs.\n\nExample:\nmessage.includes(\"error\")",
         "options": [
           "True",
           "False"
@@ -2881,7 +2881,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A typed-answer quiz marks “ Response.Ok ” wrong even though the idea is correct. What should the checker do before comparing?",
         "correctAnswer": "normalise the input",
-        "explanation": "Trimming whitespace and lowercasing makes answer comparison more forgiving and practical.",
+        "explanation": "Trimming whitespace and lowercasing makes answer comparison more forgiving and practical.\n\nExample:\nconst normalised = answer.trim().toLowerCase();",
         "options": [
           "normalise the input",
           "delete the question",
@@ -2894,7 +2894,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Why might you pass a function to replace()?",
         "correctAnswer": "To calculate each replacement based on the matched text.",
-        "explanation": "A replace callback receives match information and returns the replacement string.",
+        "explanation": "A replace callback receives match information and returns the replacement string.\n\nExample:\nname.replace(/\\b\\w/g, char => char.toUpperCase());",
         "options": [
           "To calculate each replacement based on the matched text.",
           "To make replace run asynchronously.",
@@ -3115,12 +3115,12 @@ export const topics = [
         "prompt": "Which option best describes dot property access?",
         "options": [
           "Dot property access reads a known property name from an object.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "It makes updates and lookups easier without deeply walking nested arrays.",
+          "Default values provide a fallback when the destructured property is undefined.",
+          "Object.keys() returns an array of an object’s own enumerable property names."
         ],
         "correctAnswer": "Dot property access reads a known property name from an object.",
-        "explanation": "Dot property access reads a known property name from an object. It is the cleanest option when the key is fixed."
+        "explanation": "Dot property access reads a known property name from an object. It is the cleanest option when the key is fixed.\n\nExample:\nuser.name"
       },
       {
         "id": "objects-destructuring-q-02",
@@ -3131,20 +3131,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Bracket access reads a property using a dynamic key stored in a variable or a key that is not a valid identifier."
+        "explanation": "Bracket access reads a property using a dynamic key stored in a variable or a key that is not a valid identifier.\n\nExample:\nuser[fieldName]"
       },
       {
         "id": "objects-destructuring-q-03",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to object destructuring. What is the best choice?",
+        "prompt": "Scenario: A function receives `{ id, name, role }` and you want to pull `name` and `role` into variables in one line. What should you use?",
         "options": [
           "object destructuring",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "rest destructuring",
+          "rename destructuring",
+          "object spread"
         ],
         "correctAnswer": "object destructuring",
-        "explanation": "Object destructuring pulls properties out of an object into variables. It makes common data access shorter and clearer. Example: const { id, name } = user;"
+        "explanation": "Object destructuring pulls properties out of an object into variables. It makes common data access shorter and clearer. Example: const { id, name } = user;\n\nExample:\nconst { id, name } = user;"
       },
       {
         "id": "objects-destructuring-q-04",
@@ -3156,7 +3156,7 @@ export const topics = [
           "renaming destructured properties",
           "renaming destructured properties"
         ],
-        "explanation": "Renaming during destructuring lets you store a property in a variable with a different name."
+        "explanation": "Renaming during destructuring lets you store a property in a variable with a different name.\n\nExample:\nconst { id: userId } = user;"
       },
       {
         "id": "objects-destructuring-q-05",
@@ -3164,12 +3164,12 @@ export const topics = [
         "prompt": "Which option best describes default destructuring values?",
         "options": [
           "Default values provide a fallback when the destructured property is undefined.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Data mapping converts one data shape into another, such as changing an API response into UI-friendly view models.",
+          "It makes updates and lookups easier without deeply walking nested arrays.",
+          "Dot property access reads a known property name from an object."
         ],
         "correctAnswer": "Default values provide a fallback when the destructured property is undefined.",
-        "explanation": "Default values provide a fallback when the destructured property is undefined."
+        "explanation": "Default values provide a fallback when the destructured property is undefined.\n\nExample:\nconst { role = \"user\" } = account;"
       },
       {
         "id": "objects-destructuring-q-06",
@@ -3180,20 +3180,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Nested destructuring pulls values out of objects inside objects. Use it carefully because too much nesting can hurt readability."
+        "explanation": "Nested destructuring pulls values out of objects inside objects. Use it carefully because too much nesting can hurt readability.\n\nExample:\nconst { address: { city } } = user;"
       },
       {
         "id": "objects-destructuring-q-07",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to object spread. What is the best choice?",
+        "prompt": "Scenario: You want to create an updated user object while keeping the original object unchanged. What syntax helps?",
         "options": [
           "object spread",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "normalised data",
+          "delete",
+          "reference equality"
         ],
         "correctAnswer": "object spread",
-        "explanation": "Object spread copies enumerable properties into a new object. It is commonly used for immutable updates. Example: const updated = { ...user, name: \"Jay\" };"
+        "explanation": "Object spread copies enumerable properties into a new object. It is commonly used for immutable updates. Example: const updated = { ...user, name: \"Jay\" };\n\nExample:\nconst updated = { ...user, name: \"Jay\" };"
       },
       {
         "id": "objects-destructuring-q-08",
@@ -3205,7 +3205,7 @@ export const topics = [
           "object rest",
           "object rest"
         ],
-        "explanation": "Object rest collects remaining properties into a new object after destructuring selected ones."
+        "explanation": "Object rest collects remaining properties into a new object after destructuring selected ones.\n\nExample:\nconst { password, ...safeUser } = user;"
       },
       {
         "id": "objects-destructuring-q-09",
@@ -3213,12 +3213,12 @@ export const topics = [
         "prompt": "Which option best describes Object.keys()?",
         "options": [
           "Object.keys() returns an array of an object’s own enumerable property names.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "It makes updates and lookups easier without deeply walking nested arrays.",
+          "Dot property access reads a known property name from an object.",
+          "Default values provide a fallback when the destructured property is undefined."
         ],
         "correctAnswer": "Object.keys() returns an array of an object’s own enumerable property names.",
-        "explanation": "Object.keys() returns an array of an object’s own enumerable property names."
+        "explanation": "Object.keys() returns an array of an object’s own enumerable property names.\n\nExample:\nObject.keys(errors)"
       },
       {
         "id": "objects-destructuring-q-10",
@@ -3229,20 +3229,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Object.values() returns an array of an object’s own enumerable property values."
+        "explanation": "Object.values() returns an array of an object’s own enumerable property values.\n\nExample:\nObject.values(scores)"
       },
       {
         "id": "objects-destructuring-q-11",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to Object.entries(). What is the best choice?",
+        "prompt": "Scenario: You need to loop through both the keys and values of an object, such as `theme: dark`. What should you use?",
         "options": [
           "Object.entries()",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "computed property name",
+          "Map",
+          "rest destructuring"
         ],
         "correctAnswer": "Object.entries()",
-        "explanation": "Object.entries() returns an array of key-value pairs, useful for looping over objects. Example: Object.entries(formData).map(([key, value]) => ...)"
+        "explanation": "Object.entries() returns an array of key-value pairs, useful for looping over objects. Example: Object.entries(formData).map(([key, value]) => ...)\n\nExample:\nObject.entries(formData).map(([key, value]) => ...)"
       },
       {
         "id": "objects-destructuring-q-12",
@@ -3254,7 +3254,7 @@ export const topics = [
           "Object.fromEntries()",
           "Object.fromEntries"
         ],
-        "explanation": "Object.fromEntries() builds an object from key-value pairs. It is often used after transforming entries."
+        "explanation": "Object.fromEntries() builds an object from key-value pairs. It is often used after transforming entries.\n\nExample:\nObject.fromEntries(entries)"
       },
       {
         "id": "objects-destructuring-q-13",
@@ -3262,12 +3262,12 @@ export const topics = [
         "prompt": "Which option best describes safe nested access?",
         "options": [
           "Use optional chaining when a nested object may be missing.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Dot property access reads a known property name from an object.",
+          "Default values provide a fallback when the destructured property is undefined.",
+          "Object.keys() returns an array of an object’s own enumerable property names."
         ],
         "correctAnswer": "Use optional chaining when a nested object may be missing.",
-        "explanation": "Use optional chaining when a nested object may be missing. This prevents runtime errors from accessing properties of undefined."
+        "explanation": "Use optional chaining when a nested object may be missing. This prevents runtime errors from accessing properties of undefined.\n\nExample:\nuser.profile?.avatarUrl"
       },
       {
         "id": "objects-destructuring-q-14",
@@ -3278,20 +3278,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Computed property names let you use an expression as the object key when creating or updating an object."
+        "explanation": "Computed property names let you use an expression as the object key when creating or updating an object.\n\nExample:\nconst updated = { ...form, [fieldName]: value };"
       },
       {
         "id": "objects-destructuring-q-15",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to shallow copy. What is the best choice?",
+        "prompt": "Scenario: You copy an object with nested data, but the nested object is still shared between the original and the copy. What kind of copy is this?",
         "options": [
           "shallow copy",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "normalised data",
+          "delete",
+          "reference equality"
         ],
         "correctAnswer": "shallow copy",
-        "explanation": "A shallow copy copies only the top level. Nested objects still share references with the original. Example: const copy = { ...user };"
+        "explanation": "A shallow copy copies only the top level. Nested objects still share references with the original. Example: const copy = { ...user };\n\nExample:\nconst copy = { ...user };"
       },
       {
         "id": "objects-destructuring-q-16",
@@ -3303,7 +3303,7 @@ export const topics = [
           "deep copy",
           "deep copy"
         ],
-        "explanation": "A deep copy copies nested objects too. Use structuredClone for supported data when you need an actual deep copy."
+        "explanation": "A deep copy copies nested objects too. Use structuredClone for supported data when you need an actual deep copy.\n\nExample:\nconst copy = structuredClone(settings);"
       },
       {
         "id": "objects-destructuring-q-17",
@@ -3311,12 +3311,12 @@ export const topics = [
         "prompt": "Which option best describes mutation?",
         "options": [
           "Mutation means changing an existing object or array directly.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "It makes updates and lookups easier without deeply walking nested arrays.",
+          "Dot property access reads a known property name from an object.",
+          "Default values provide a fallback when the destructured property is undefined."
         ],
         "correctAnswer": "Mutation means changing an existing object or array directly.",
-        "explanation": "Mutation means changing an existing object or array directly. It can be okay sometimes, but immutable updates are safer in UI state."
+        "explanation": "Mutation means changing an existing object or array directly. It can be okay sometimes, but immutable updates are safer in UI state.\n\nExample:\nuser.name = \"New name\";"
       },
       {
         "id": "objects-destructuring-q-18",
@@ -3327,20 +3327,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "An immutable update creates a new value instead of changing the old one. This helps React and similar tools detect changes."
+        "explanation": "An immutable update creates a new value instead of changing the old one. This helps React and similar tools detect changes.\n\nExample:\nsetUser({ ...user, name: \"Jay\" });"
       },
       {
         "id": "objects-destructuring-q-19",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to data shape. What is the best choice?",
+        "prompt": "Scenario: Before building UI, you need to understand what fields an API object contains and how they are nested. What are you checking?",
         "options": [
           "data shape",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "rest destructuring",
+          "object destructuring",
+          "rename destructuring"
         ],
         "correctAnswer": "data shape",
-        "explanation": "Data shape means the structure of an object or response, including property names, nesting and value types. Example: { id: string, status: \"online\" }"
+        "explanation": "Data shape means the structure of an object or response, including property names, nesting and value types. Example: { id: string, status: \"online\" }\n\nExample:\n{ id: string, status: \"online\" }"
       },
       {
         "id": "objects-destructuring-q-20",
@@ -3352,7 +3352,7 @@ export const topics = [
           "normalised data",
           "normalised data"
         ],
-        "explanation": "Normalised data avoids duplicate nested copies by storing entities by id. It makes updates easier in complex state."
+        "explanation": "Normalised data avoids duplicate nested copies by storing entities by id. It makes updates easier in complex state.\n\nExample:\nconst usersById = { \"1\": { id: \"1\", name: \"A\" } };"
       },
       {
         "id": "objects-destructuring-q-21",
@@ -3360,12 +3360,12 @@ export const topics = [
         "prompt": "Which option best describes dictionary object?",
         "options": [
           "A dictionary object uses keys to look up values, often by id or name.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Dot property access reads a known property name from an object.",
+          "Default values provide a fallback when the destructured property is undefined.",
+          "Object.keys() returns an array of an object’s own enumerable property names."
         ],
         "correctAnswer": "A dictionary object uses keys to look up values, often by id or name.",
-        "explanation": "A dictionary object uses keys to look up values, often by id or name. In TypeScript this is often typed with Record."
+        "explanation": "A dictionary object uses keys to look up values, often by id or name. In TypeScript this is often typed with Record.\n\nExample:\nconst usersById = { [user.id]: user };"
       },
       {
         "id": "objects-destructuring-q-22",
@@ -3376,20 +3376,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Object.hasOwn() checks whether a property exists directly on the object rather than its prototype."
+        "explanation": "Object.hasOwn() checks whether a property exists directly on the object rather than its prototype.\n\nExample:\nObject.hasOwn(user, \"email\")"
       },
       {
         "id": "objects-destructuring-q-23",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to delete. What is the best choice?",
+        "prompt": "Scenario: You need to remove the `temporaryToken` property from an object. Which operator can do that?",
         "options": [
           "delete",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "rest destructuring",
+          "object destructuring",
+          "rename destructuring"
         ],
         "correctAnswer": "delete",
-        "explanation": "delete removes a property from an object. For immutable code, prefer creating a new object without that property. Example: delete draft.tempValue;"
+        "explanation": "delete removes a property from an object. For immutable code, prefer creating a new object without that property. Example: delete draft.tempValue;\n\nExample:\ndelete draft.tempValue;"
       },
       {
         "id": "objects-destructuring-q-24",
@@ -3401,7 +3401,7 @@ export const topics = [
           "object reference equality",
           "object reference equality"
         ],
-        "explanation": "Objects are compared by reference, not by identical contents. Two separate objects with the same properties are not equal with ===."
+        "explanation": "Objects are compared by reference, not by identical contents. Two separate objects with the same properties are not equal with ===.\n\nExample:\n{} === {} // false"
       },
       {
         "id": "objects-destructuring-q-25",
@@ -3409,19 +3409,19 @@ export const topics = [
         "prompt": "Which option best describes mapping API data?",
         "options": [
           "Data mapping converts one data shape into another, such as changing an API response into UI-friendly view models.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Default values provide a fallback when the destructured property is undefined.",
+          "Object.keys() returns an array of an object’s own enumerable property names.",
+          "Use optional chaining when a nested object may be missing."
         ],
         "correctAnswer": "Data mapping converts one data shape into another, such as changing an API response into UI-friendly view models.",
-        "explanation": "Data mapping converts one data shape into another, such as changing an API response into UI-friendly view models."
+        "explanation": "Data mapping converts one data shape into another, such as changing an API response into UI-friendly view models.\n\nExample:\napiUsers.map(user => ({ label: user.name, value: user.id }))"
       },
       {
         "id": "objects-destructuring-extra-q-computed-type",
         "type": "type-answer",
         "prompt": "Type the syntax feature used here: const obj = { [key]: value };",
         "correctAnswer": "computed property name",
-        "explanation": "Computed property names use square brackets to calculate an object key.",
+        "explanation": "Computed property names use square brackets to calculate an object key.\n\nExample:\nconst updated = { ...form, [fieldName]: value };",
         "acceptedAnswers": [
           "computed property name",
           "computed property names",
@@ -3434,7 +3434,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "You need a lookup where keys may be objects and entries are frequently added and removed. Which structure is often better than a plain object?",
         "correctAnswer": "Map",
-        "explanation": "Map supports non-string keys and has useful methods like set, get, has and delete.",
+        "explanation": "Map supports non-string keys and has useful methods like set, get, has and delete.\n\nExample:\nconst cache = new Map();\ncache.set(userId, user);",
         "options": [
           "Map",
           "Array.prototype.map",
@@ -3447,7 +3447,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: structuredClone can deep clone many values more safely than JSON.parse(JSON.stringify(value)).",
         "correctAnswer": "True",
-        "explanation": "structuredClone handles more built-in types and avoids some JSON cloning pitfalls.",
+        "explanation": "structuredClone handles more built-in types and avoids some JSON cloning pitfalls.\n\nExample:\nconst copy = structuredClone(settings);",
         "options": [
           "True",
           "False"
@@ -3458,7 +3458,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "You want to remove password from a user object before sending it to the UI. Which pattern is a good fit?",
         "correctAnswer": "rest destructuring",
-        "explanation": "const { password, ...safeUser } = user collects the remaining safe fields.",
+        "explanation": "const { password, ...safeUser } = user collects the remaining safe fields.\n\nExample:\nconst { password, ...safeUser } = user;",
         "options": [
           "rest destructuring",
           "Array.sort",
@@ -3471,7 +3471,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Which method checks whether an object directly owns a property?",
         "correctAnswer": "Object.hasOwn",
-        "explanation": "Object.hasOwn(obj, key) checks direct ownership rather than inherited prototype properties.",
+        "explanation": "Object.hasOwn(obj, key) checks direct ownership rather than inherited prototype properties.\n\nExample:\nObject.hasOwn(user, \"email\")",
         "options": [
           "Object.hasOwn",
           "Object.values",
@@ -3484,7 +3484,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Why normalise complex entity data by ID?",
         "correctAnswer": "It makes updates and lookups easier without deeply walking nested arrays.",
-        "explanation": "Normalised data stores entities once and references them by ID, which helps larger apps manage state.",
+        "explanation": "Normalised data stores entities once and references them by ID, which helps larger apps manage state.\n\nExample:\nconst usersById = { \"u1\": { id: \"u1\", name: \"Sam\" } };",
         "options": [
           "It makes updates and lookups easier without deeply walking nested arrays.",
           "It automatically encrypts user data.",
@@ -3705,12 +3705,12 @@ export const topics = [
         "prompt": "Which option best describes Promise?",
         "options": [
           "A Promise represents a value that may be available now, later, or never because it failed.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Top-level await lets modules await Promises outside an async function in supported environments.",
+          "An empty state is what the UI shows when a request succeeds but returns no useful items.",
+          "Sequential awaiting runs async work one step at a time."
         ],
         "correctAnswer": "A Promise represents a value that may be available now, later, or never because it failed.",
-        "explanation": "A Promise represents a value that may be available now, later, or never because it failed. It is the core object behind async JavaScript."
+        "explanation": "A Promise represents a value that may be available now, later, or never because it failed. It is the core object behind async JavaScript.\n\nExample:\nconst promise = fetch(\"/api/users\");"
       },
       {
         "id": "async-fetch-q-02",
@@ -3721,20 +3721,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "async makes a function return a Promise and allows await inside it. It is used to write asynchronous code that reads more like synchronous code."
+        "explanation": "async makes a function return a Promise and allows await inside it. It is used to write asynchronous code that reads more like synchronous code.\n\nExample:\nasync function loadUsers() { return await fetchUsers(); }"
       },
       {
         "id": "async-fetch-q-03",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to await. What is the best choice?",
+        "prompt": "Scenario: You need to pause inside an async function until a promise resolves before using its result. What keyword should you use?",
         "options": [
           "await",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "finally",
+          "exponential backoff",
+          "stale response"
         ],
         "correctAnswer": "await",
-        "explanation": "await pauses inside an async function until a Promise settles. It gives you the resolved value or throws if the Promise rejects. Example: const data = await response.json();"
+        "explanation": "await pauses inside an async function until a Promise settles. It gives you the resolved value or throws if the Promise rejects. Example: const data = await response.json();\n\nExample:\nconst data = await response.json();"
       },
       {
         "id": "async-fetch-q-04",
@@ -3746,7 +3746,7 @@ export const topics = [
           "then()",
           "then"
         ],
-        "explanation": "then() runs a callback when a Promise resolves. async/await is often easier to read, but then() is still common."
+        "explanation": "then() runs a callback when a Promise resolves. async/await is often easier to read, but then() is still common.\n\nExample:\nfetch(url).then(response => response.json())"
       },
       {
         "id": "async-fetch-q-05",
@@ -3754,12 +3754,12 @@ export const topics = [
         "prompt": "Which option best describes catch()?",
         "options": [
           "catch() handles a rejected Promise.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "An empty state is what the UI shows when a request succeeds but returns no useful items.",
+          "Sequential awaiting runs async work one step at a time.",
+          "Debounce waits until input has stopped changing for a short time before running work."
         ],
         "correctAnswer": "catch() handles a rejected Promise.",
-        "explanation": "catch() handles a rejected Promise. With async/await, you often use try/catch instead."
+        "explanation": "catch() handles a rejected Promise. With async/await, you often use try/catch instead.\n\nExample:\nfetch(url).catch(error => console.error(error))"
       },
       {
         "id": "async-fetch-q-06",
@@ -3770,20 +3770,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "finally() runs after a Promise settles whether it succeeded or failed. It is useful for cleanup like stopping a loading spinner."
+        "explanation": "finally() runs after a Promise settles whether it succeeded or failed. It is useful for cleanup like stopping a loading spinner.\n\nExample:\ntry {} finally { setLoading(false); }"
       },
       {
         "id": "async-fetch-q-07",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to fetch(). What is the best choice?",
+        "prompt": "Scenario: Your frontend needs to request JSON data from `/api/users`. Which browser API is commonly used?",
         "options": [
           "fetch()",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "stale response",
+          "await",
+          "then"
         ],
         "correctAnswer": "fetch()",
-        "explanation": "fetch() sends an HTTP request and returns a Promise for a Response object. It does not automatically throw for HTTP error status codes. Example: const response = await fetch(\"/api/devices\");"
+        "explanation": "fetch() sends an HTTP request and returns a Promise for a Response object. It does not automatically throw for HTTP error status codes. Example: const response = await fetch(\"/api/devices\");\n\nExample:\nconst response = await fetch(\"/api/devices\");"
       },
       {
         "id": "async-fetch-q-08",
@@ -3795,7 +3795,7 @@ export const topics = [
           "response.json()",
           "response.json"
         ],
-        "explanation": "response.json() reads and parses the response body as JSON. It returns a Promise, so you usually await it."
+        "explanation": "response.json() reads and parses the response body as JSON. It returns a Promise, so you usually await it.\n\nExample:\nconst data = await response.json();"
       },
       {
         "id": "async-fetch-q-09",
@@ -3803,12 +3803,12 @@ export const topics = [
         "prompt": "Which option best describes response.ok?",
         "options": [
           "response.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Debounce waits until input has stopped changing for a short time before running work.",
+          "Top-level await lets modules await Promises outside an async function in supported environments.",
+          "A Promise represents a value that may be available now, later, or never because it failed."
         ],
         "correctAnswer": "response.",
-        "explanation": "response.ok is true when the HTTP status is between 200 and 299. Check it before trusting the response body."
+        "explanation": "response.ok is true when the HTTP status is between 200 and 299. Check it before trusting the response body.\n\nExample:\nif (!response.ok) throw new Error(\"Request failed\");"
       },
       {
         "id": "async-fetch-q-10",
@@ -3819,20 +3819,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "A network error means the request could not complete at the transport level, such as no internet or DNS failure. It is different from a 404 response."
+        "explanation": "A network error means the request could not complete at the transport level, such as no internet or DNS failure. It is different from a 404 response.\n\nExample:\ntry { await fetch(url); } catch (error) {}"
       },
       {
         "id": "async-fetch-q-11",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to HTTP error. What is the best choice?",
+        "prompt": "Scenario: A request returns status `500`, and the app should show a server-error message instead of treating it as success. What are you handling?",
         "options": [
           "HTTP error",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "stale response",
+          "await",
+          "then"
         ],
         "correctAnswer": "HTTP error",
-        "explanation": "An HTTP error is a response like 400 or 500. fetch still resolves the Promise, so you must check the status yourself. Example: if (response.status === 404) showNotFound();"
+        "explanation": "An HTTP error is a response like 400 or 500. fetch still resolves the Promise, so you must check the status yourself. Example: if (response.status === 404) showNotFound();\n\nExample:\nif (response.status === 404) showNotFound();"
       },
       {
         "id": "async-fetch-q-12",
@@ -3844,7 +3844,7 @@ export const topics = [
           "loading state",
           "loading state"
         ],
-        "explanation": "Loading state tracks whether async work is in progress so the UI can show feedback and avoid duplicate actions."
+        "explanation": "Loading state tracks whether async work is in progress so the UI can show feedback and avoid duplicate actions.\n\nExample:\nsetLoading(true);\ntry { await save(); } finally { setLoading(false); }"
       },
       {
         "id": "async-fetch-q-13",
@@ -3852,12 +3852,12 @@ export const topics = [
         "prompt": "Which option best describes empty state?",
         "options": [
           "An empty state is what the UI shows when a request succeeds but returns no useful items.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Debounce waits until input has stopped changing for a short time before running work.",
+          "Top-level await lets modules await Promises outside an async function in supported environments.",
+          "A Promise represents a value that may be available now, later, or never because it failed."
         ],
         "correctAnswer": "An empty state is what the UI shows when a request succeeds but returns no useful items.",
-        "explanation": "An empty state is what the UI shows when a request succeeds but returns no useful items. It should guide the user on what to do next."
+        "explanation": "An empty state is what the UI shows when a request succeeds but returns no useful items. It should guide the user on what to do next.\n\nExample:\nif (devices.length === 0) return <EmptyState />;"
       },
       {
         "id": "async-fetch-q-14",
@@ -3868,20 +3868,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "An error state is the UI shown when something fails. Good error states explain the problem and give a recovery action."
+        "explanation": "An error state is the UI shown when something fails. Good error states explain the problem and give a recovery action.\n\nExample:\nsetError(\"Could not load devices\");"
       },
       {
         "id": "async-fetch-q-15",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to Promise.all(). What is the best choice?",
+        "prompt": "Scenario: You need to load users, posts, and comments at the same time, then continue when all three requests finish. What should you use?",
         "options": [
           "Promise.all()",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "loading",
+          "AbortController",
+          "race condition"
         ],
         "correctAnswer": "Promise.all()",
-        "explanation": "Promise.all() runs Promises in parallel and resolves when all succeed. It rejects if any one Promise rejects. Example: const [users, teams] = await Promise.all([getUsers(), getTeams()]);"
+        "explanation": "Promise.all() runs Promises in parallel and resolves when all succeed. It rejects if any one Promise rejects. Example: const [users, teams] = await Promise.all([getUsers(), getTeams()]);\n\nExample:\nconst [users, teams] = await Promise.all([getUsers(), getTeams()]);"
       },
       {
         "id": "async-fetch-q-16",
@@ -3893,7 +3893,7 @@ export const topics = [
           "Promise.allSettled()",
           "Promise.allSettled"
         ],
-        "explanation": "Promise.allSettled() waits for all Promises and gives you each result, whether fulfilled or rejected."
+        "explanation": "Promise.allSettled() waits for all Promises and gives you each result, whether fulfilled or rejected.\n\nExample:\nconst results = await Promise.allSettled(requests);"
       },
       {
         "id": "async-fetch-q-17",
@@ -3901,12 +3901,12 @@ export const topics = [
         "prompt": "Which option best describes sequential await?",
         "options": [
           "Sequential awaiting runs async work one step at a time.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Debounce waits until input has stopped changing for a short time before running work.",
+          "Top-level await lets modules await Promises outside an async function in supported environments.",
+          "A Promise represents a value that may be available now, later, or never because it failed."
         ],
         "correctAnswer": "Sequential awaiting runs async work one step at a time.",
-        "explanation": "Sequential awaiting runs async work one step at a time. Use it when each step depends on the previous one."
+        "explanation": "Sequential awaiting runs async work one step at a time. Use it when each step depends on the previous one.\n\nExample:\nconst user = await getUser();\nconst orders = await getOrders(user.id);"
       },
       {
         "id": "async-fetch-q-18",
@@ -3917,20 +3917,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Parallel requests start independent async work at the same time. They can make pages faster when calls do not depend on each other."
+        "explanation": "Parallel requests start independent async work at the same time. They can make pages faster when calls do not depend on each other.\n\nExample:\nawait Promise.all([loadA(), loadB()]);"
       },
       {
         "id": "async-fetch-q-19",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to AbortController. What is the best choice?",
+        "prompt": "Scenario: A user leaves a page while a request is still running, and you want to cancel that request. What should you use?",
         "options": [
           "AbortController",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "HTTP error",
+          "loading",
+          "race condition"
         ],
         "correctAnswer": "AbortController",
-        "explanation": "AbortController can cancel a fetch request. It is useful when a component unmounts or a newer request replaces an older one. Example: const controller = new AbortController();\nfetch(url, { signal: controller.signal });"
+        "explanation": "AbortController can cancel a fetch request. It is useful when a component unmounts or a newer request replaces an older one. Example: const controller = new AbortController();\nfetch(url, { signal: controller.signal });\n\nExample:\nconst controller = new AbortController();\nfetch(url, { signal: controller.signal });"
       },
       {
         "id": "async-fetch-q-20",
@@ -3942,7 +3942,7 @@ export const topics = [
           "race condition",
           "race condition"
         ],
-        "explanation": "A race condition happens when the final result depends on unpredictable timing. In UIs, an older request can overwrite a newer result."
+        "explanation": "A race condition happens when the final result depends on unpredictable timing. In UIs, an older request can overwrite a newer result.\n\nExample:\nSearch request A returns after request B and overwrites B."
       },
       {
         "id": "async-fetch-q-21",
@@ -3950,12 +3950,12 @@ export const topics = [
         "prompt": "Which option best describes debounce?",
         "options": [
           "Debounce waits until input has stopped changing for a short time before running work.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "An empty state is what the UI shows when a request succeeds but returns no useful items.",
+          "Sequential awaiting runs async work one step at a time.",
+          "Top-level await lets modules await Promises outside an async function in supported environments."
         ],
         "correctAnswer": "Debounce waits until input has stopped changing for a short time before running work.",
-        "explanation": "Debounce waits until input has stopped changing for a short time before running work. It is useful for search boxes."
+        "explanation": "Debounce waits until input has stopped changing for a short time before running work. It is useful for search boxes.\n\nExample:\ndebounce(search, 300)"
       },
       {
         "id": "async-fetch-q-22",
@@ -3966,20 +3966,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Throttle limits how often a function can run over time. It is useful for scroll or resize events."
+        "explanation": "Throttle limits how often a function can run over time. It is useful for scroll or resize events.\n\nExample:\nthrottle(handleScroll, 200)"
       },
       {
         "id": "async-fetch-q-23",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to async error handling. What is the best choice?",
+        "prompt": "Scenario: An awaited request may fail, so you need a reliable way to catch and handle that failure. What concept is this?",
         "options": [
           "async error handling",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "stale response",
+          "await",
+          "then"
         ],
         "correctAnswer": "async error handling",
-        "explanation": "Async errors should be caught and turned into useful UI or logs. Do not silently ignore them. Example: try { await save(); } catch (error) { setError(\"Save failed\"); }"
+        "explanation": "Async errors should be caught and turned into useful UI or logs. Do not silently ignore them. Example: try { await save(); } catch (error) { setError(\"Save failed\"); }\n\nExample:\ntry { await save(); } catch (error) { setError(\"Save failed\"); }"
       },
       {
         "id": "async-fetch-q-24",
@@ -3991,7 +3991,7 @@ export const topics = [
           "microtask queue",
           "microtask queue"
         ],
-        "explanation": "Promise callbacks run in the microtask queue after the current synchronous code finishes. This explains some async ordering surprises."
+        "explanation": "Promise callbacks run in the microtask queue after the current synchronous code finishes. This explains some async ordering surprises.\n\nExample:\nPromise.resolve().then(() => console.log(\"promise\"));"
       },
       {
         "id": "async-fetch-q-25",
@@ -3999,19 +3999,19 @@ export const topics = [
         "prompt": "Which option best describes top-level await?",
         "options": [
           "Top-level await lets modules await Promises outside an async function in supported environments.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "An empty state is what the UI shows when a request succeeds but returns no useful items.",
+          "Sequential awaiting runs async work one step at a time.",
+          "Debounce waits until input has stopped changing for a short time before running work."
         ],
         "correctAnswer": "Top-level await lets modules await Promises outside an async function in supported environments.",
-        "explanation": "Top-level await lets modules await Promises outside an async function in supported environments. Use it carefully because it can delay module loading."
+        "explanation": "Top-level await lets modules await Promises outside an async function in supported environments. Use it carefully because it can delay module loading.\n\nExample:\nconst config = await loadConfig();"
       },
       {
         "id": "async-fetch-extra-q-abort-scenario",
         "type": "scenario",
         "prompt": "A user types quickly in a search box and old fetches keep returning after newer ones. What API can help cancel old fetch requests?",
         "correctAnswer": "AbortController",
-        "explanation": "AbortController can cancel fetch requests using a signal.",
+        "explanation": "AbortController can cancel fetch requests using a signal.\n\nExample:\nconst controller = new AbortController();\nfetch(url, { signal: controller.signal });",
         "options": [
           "AbortController",
           "Object.freeze",
@@ -4024,7 +4024,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Which Promise method is best when you want all results, including failures?",
         "correctAnswer": "Promise.allSettled",
-        "explanation": "Promise.allSettled returns the status and value/reason for each promise.",
+        "explanation": "Promise.allSettled returns the status and value/reason for each promise.\n\nExample:\nconst results = await Promise.allSettled(requests);",
         "options": [
           "Promise.allSettled",
           "Promise.all",
@@ -4037,7 +4037,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the Promise method or try/catch block section that runs whether an operation succeeds or fails.",
         "correctAnswer": "finally",
-        "explanation": "finally is used for cleanup after success or failure.",
+        "explanation": "finally is used for cleanup after success or failure.\n\nExample:\ntry { await save(); } finally { setLoading(false); }",
         "acceptedAnswers": [
           "finally",
           ".finally"
@@ -4048,7 +4048,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: Promise .then callbacks run synchronously before the current function finishes.",
         "correctAnswer": "False",
-        "explanation": "Promise callbacks are queued as microtasks and run after the current synchronous work completes.",
+        "explanation": "Promise callbacks are queued as microtasks and run after the current synchronous work completes.\n\nExample:\ntry {} finally { setLoading(false); }",
         "options": [
           "True",
           "False"
@@ -4059,7 +4059,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "An API returns temporary 503 errors. What retry strategy helps avoid hammering the server?",
         "correctAnswer": "exponential backoff",
-        "explanation": "Exponential backoff waits longer between retries, giving the server time to recover.",
+        "explanation": "Exponential backoff waits longer between retries, giving the server time to recover.\n\nExample:\nretry after 1s, then 2s, then 4s",
         "options": [
           "exponential backoff",
           "infinite immediate retries",
@@ -4072,7 +4072,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "An older request finishes last and overwrites newer search results. What is this issue commonly called?",
         "correctAnswer": "stale response",
-        "explanation": "A stale response is outdated by the time it arrives and should not update the UI.",
+        "explanation": "A stale response is outdated by the time it arrives and should not update the UI.\n\nExample:\nif (requestId !== latestRequestId) return;",
         "options": [
           "stale response",
           "type narrowing",
@@ -4293,12 +4293,12 @@ export const topics = [
         "prompt": "Which option best describes GET?",
         "options": [
           "GET requests read data without changing server state.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "DELETE requests remove a resource when the caller is authorised.",
+          "Headers carry metadata such as content type, auth tokens and caching instructions.",
+          "200 OK means the request succeeded and usually has a response body."
         ],
         "correctAnswer": "GET requests read data without changing server state.",
-        "explanation": "GET requests read data without changing server state."
+        "explanation": "GET requests read data without changing server state.\n\nExample:\nGET /api/devices"
       },
       {
         "id": "api-http-basics-q-02",
@@ -4309,20 +4309,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "POST requests usually create a resource or submit data for processing."
+        "explanation": "POST requests usually create a resource or submit data for processing.\n\nExample:\nPOST /api/devices"
       },
       {
         "id": "api-http-basics-q-03",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to PUT. What is the best choice?",
+        "prompt": "Scenario: The client sends the full updated version of an existing profile to `/users/123`. Which HTTP method is commonly used?",
         "options": [
           "PUT",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "cursor pagination",
+          "ETag",
+          "Content-Type"
         ],
         "correctAnswer": "PUT",
-        "explanation": "PUT usually replaces a whole resource with the supplied representation. Example: PUT /api/devices/123"
+        "explanation": "PUT usually replaces a whole resource with the supplied representation. Example: PUT /api/devices/123\n\nExample:\nPUT /api/devices/123"
       },
       {
         "id": "api-http-basics-q-04",
@@ -4334,7 +4334,7 @@ export const topics = [
           "PATCH",
           "PATCH"
         ],
-        "explanation": "PATCH updates part of an existing resource."
+        "explanation": "PATCH updates part of an existing resource.\n\nExample:\nPATCH /api/devices/123"
       },
       {
         "id": "api-http-basics-q-05",
@@ -4342,12 +4342,12 @@ export const topics = [
         "prompt": "Which option best describes DELETE?",
         "options": [
           "DELETE requests remove a resource when the caller is authorised.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Headers carry metadata such as content type, auth tokens and caching instructions.",
+          "200 OK means the request succeeded and usually has a response body.",
+          "401 Unauthorized means authentication is missing or invalid."
         ],
         "correctAnswer": "DELETE requests remove a resource when the caller is authorised.",
-        "explanation": "DELETE requests remove a resource when the caller is authorised."
+        "explanation": "DELETE requests remove a resource when the caller is authorised.\n\nExample:\nDELETE /api/devices/123"
       },
       {
         "id": "api-http-basics-q-06",
@@ -4358,20 +4358,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "A URL identifies where a resource can be found and may include path and query parts."
+        "explanation": "A URL identifies where a resource can be found and may include path and query parts.\n\nExample:\n/api/devices?page=1"
       },
       {
         "id": "api-http-basics-q-07",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to path parameter. What is the best choice?",
+        "prompt": "Scenario: In `/users/42`, the `42` identifies which user the request is about. What is that part called?",
         "options": [
           "path parameter",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "OpenAPI",
+          "cursor pagination",
+          "ETag"
         ],
         "correctAnswer": "path parameter",
-        "explanation": "A path parameter is part of the route and usually identifies a specific resource. Example: /api/users/42"
+        "explanation": "A path parameter is part of the route and usually identifies a specific resource. Example: /api/users/42\n\nExample:\n/api/users/42"
       },
       {
         "id": "api-http-basics-q-08",
@@ -4383,7 +4383,7 @@ export const topics = [
           "query parameter",
           "query parameter"
         ],
-        "explanation": "A query parameter modifies the request, often for filtering, sorting or pagination."
+        "explanation": "A query parameter modifies the request, often for filtering, sorting or pagination.\n\nExample:\n/api/users?role=admin"
       },
       {
         "id": "api-http-basics-q-09",
@@ -4391,12 +4391,12 @@ export const topics = [
         "prompt": "Which option best describes headers?",
         "options": [
           "Headers carry metadata such as content type, auth tokens and caching instructions.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Sorting controls the order results are returned in.",
+          "GET requests read data without changing server state.",
+          "DELETE requests remove a resource when the caller is authorised."
         ],
         "correctAnswer": "Headers carry metadata such as content type, auth tokens and caching instructions.",
-        "explanation": "Headers carry metadata such as content type, auth tokens and caching instructions."
+        "explanation": "Headers carry metadata such as content type, auth tokens and caching instructions.\n\nExample:\nContent-Type: application/json"
       },
       {
         "id": "api-http-basics-q-10",
@@ -4407,20 +4407,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "A request body contains data sent to the server, often JSON for POST, PUT or PATCH."
+        "explanation": "A request body contains data sent to the server, often JSON for POST, PUT or PATCH.\n\nExample:\nbody: JSON.stringify(payload)"
       },
       {
         "id": "api-http-basics-q-11",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to response body. What is the best choice?",
+        "prompt": "Scenario: An API sends back JSON like `{ \"id\": 42, \"name\": \"Aydin\" }`. What part of the response contains that data?",
         "options": [
           "response body",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "filtering",
+          "OpenAPI",
+          "cursor pagination"
         ],
         "correctAnswer": "response body",
-        "explanation": "A response body contains data returned by the server, often JSON. Example: { \"id\": \"123\", \"status\": \"online\" }"
+        "explanation": "A response body contains data returned by the server, often JSON. Example: { \"id\": \"123\", \"status\": \"online\" }\n\nExample:\n{ \"id\": \"123\", \"status\": \"online\" }"
       },
       {
         "id": "api-http-basics-q-12",
@@ -4432,7 +4432,7 @@ export const topics = [
           "status code",
           "status code"
         ],
-        "explanation": "A status code tells the client the high-level result of the request."
+        "explanation": "A status code tells the client the high-level result of the request.\n\nExample:\n200, 404, 500"
       },
       {
         "id": "api-http-basics-q-13",
@@ -4440,12 +4440,12 @@ export const topics = [
         "prompt": "Which option best describes 200 OK?",
         "options": [
           "200 OK means the request succeeded and usually has a response body.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "422 Validation Error often means the request shape was valid but business validation failed.",
+          "Sorting controls the order results are returned in.",
+          "GET requests read data without changing server state."
         ],
         "correctAnswer": "200 OK means the request succeeded and usually has a response body.",
-        "explanation": "200 OK means the request succeeded and usually has a response body."
+        "explanation": "200 OK means the request succeeded and usually has a response body.\n\nExample:\nHTTP 200"
       },
       {
         "id": "api-http-basics-q-14",
@@ -4456,20 +4456,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "201 Created means a resource was successfully created."
+        "explanation": "201 Created means a resource was successfully created.\n\nExample:\nPOST returns 201"
       },
       {
         "id": "api-http-basics-q-15",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to 204 No Content. What is the best choice?",
+        "prompt": "Scenario: A delete request succeeds, but the server has no JSON or text to send back. Which status code fits best?",
         "options": [
           "204 No Content",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "PATCH",
+          "path parameter",
+          "query parameter"
         ],
         "correctAnswer": "204 No Content",
-        "explanation": "204 No Content means success with no response body to parse. Example: DELETE returns 204"
+        "explanation": "204 No Content means success with no response body to parse. Example: DELETE returns 204\n\nExample:\nDELETE returns 204"
       },
       {
         "id": "api-http-basics-q-16",
@@ -4481,7 +4481,7 @@ export const topics = [
           "400 Bad Request",
           "400 Bad Request"
         ],
-        "explanation": "400 Bad Request means the request is malformed or missing required data."
+        "explanation": "400 Bad Request means the request is malformed or missing required data.\n\nExample:\nmissing required field"
       },
       {
         "id": "api-http-basics-q-17",
@@ -4489,12 +4489,12 @@ export const topics = [
         "prompt": "Which option best describes 401 Unauthorized?",
         "options": [
           "401 Unauthorized means authentication is missing or invalid.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Sorting controls the order results are returned in.",
+          "GET requests read data without changing server state.",
+          "DELETE requests remove a resource when the caller is authorised."
         ],
         "correctAnswer": "401 Unauthorized means authentication is missing or invalid.",
-        "explanation": "401 Unauthorized means authentication is missing or invalid."
+        "explanation": "401 Unauthorized means authentication is missing or invalid.\n\nExample:\nexpired token"
       },
       {
         "id": "api-http-basics-q-18",
@@ -4505,20 +4505,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "403 Forbidden means the user is authenticated but not allowed to do that action."
+        "explanation": "403 Forbidden means the user is authenticated but not allowed to do that action.\n\nExample:\nno permission"
       },
       {
         "id": "api-http-basics-q-19",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to 404 Not Found. What is the best choice?",
+        "prompt": "Scenario: The client requests `/products/999`, but no product exists with that ID. Which status code fits best?",
         "options": [
           "404 Not Found",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "PUT",
+          "PATCH",
+          "path parameter"
         ],
         "correctAnswer": "404 Not Found",
-        "explanation": "404 Not Found means the requested resource or route could not be found. Example: unknown id"
+        "explanation": "404 Not Found means the requested resource or route could not be found. Example: unknown id\n\nExample:\nunknown id"
       },
       {
         "id": "api-http-basics-q-20",
@@ -4530,7 +4530,7 @@ export const topics = [
           "409 Conflict",
           "409 Conflict"
         ],
-        "explanation": "409 Conflict means the request conflicts with current server state."
+        "explanation": "409 Conflict means the request conflicts with current server state.\n\nExample:\nduplicate email"
       },
       {
         "id": "api-http-basics-q-21",
@@ -4538,12 +4538,12 @@ export const topics = [
         "prompt": "Which option best describes 422 Validation Error?",
         "options": [
           "422 Validation Error often means the request shape was valid but business validation failed.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Headers carry metadata such as content type, auth tokens and caching instructions.",
+          "200 OK means the request succeeded and usually has a response body.",
+          "401 Unauthorized means authentication is missing or invalid."
         ],
         "correctAnswer": "422 Validation Error often means the request shape was valid but business validation failed.",
-        "explanation": "422 Validation Error often means the request shape was valid but business validation failed."
+        "explanation": "422 Validation Error often means the request shape was valid but business validation failed.\n\nExample:\ninvalid field value"
       },
       {
         "id": "api-http-basics-q-22",
@@ -4554,20 +4554,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "500 Internal Server Error means the server failed unexpectedly."
+        "explanation": "500 Internal Server Error means the server failed unexpectedly.\n\nExample:\nuncaught exception"
       },
       {
         "id": "api-http-basics-q-23",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to pagination. What is the best choice?",
+        "prompt": "Scenario: An endpoint has 10,000 results, so it returns page 1, page 2, and so on instead of everything at once. What is this called?",
         "options": [
           "pagination",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "PUT",
+          "PATCH",
+          "path parameter"
         ],
         "correctAnswer": "pagination",
-        "explanation": "Pagination breaks large result sets into pages or cursors. Example: ?page=2&limit=20"
+        "explanation": "Pagination breaks large result sets into pages or cursors. Example: ?page=2&limit=20\n\nExample:\n?page=2&limit=20"
       },
       {
         "id": "api-http-basics-q-24",
@@ -4579,7 +4579,7 @@ export const topics = [
           "filtering",
           "filtering"
         ],
-        "explanation": "Filtering returns only resources that match criteria."
+        "explanation": "Filtering returns only resources that match criteria.\n\nExample:\n?status=online"
       },
       {
         "id": "api-http-basics-q-25",
@@ -4587,19 +4587,19 @@ export const topics = [
         "prompt": "Which option best describes sorting?",
         "options": [
           "Sorting controls the order results are returned in.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "DELETE requests remove a resource when the caller is authorised.",
+          "Headers carry metadata such as content type, auth tokens and caching instructions.",
+          "200 OK means the request succeeded and usually has a response body."
         ],
         "correctAnswer": "Sorting controls the order results are returned in.",
-        "explanation": "Sorting controls the order results are returned in."
+        "explanation": "Sorting controls the order results are returned in.\n\nExample:\n?sort=createdAt_desc"
       },
       {
         "id": "api-http-basics-extra-q-idempotent-mcq",
         "type": "multiple-choice",
         "prompt": "Which HTTP method is usually designed to be idempotent?",
         "correctAnswer": "PUT",
-        "explanation": "PUT usually replaces a resource, so repeating the same request should leave the resource in the same final state.",
+        "explanation": "PUT usually replaces a resource, so repeating the same request should leave the resource in the same final state.\n\nExample:\nDELETE /devices/123 can be retried safely if deleting an already-deleted device still leaves it deleted.",
         "options": [
           "PUT",
           "POST",
@@ -4612,7 +4612,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the common API specification standard also known through Swagger tooling.",
         "correctAnswer": "OpenAPI",
-        "explanation": "OpenAPI describes API contracts and can power docs, validation and generated clients.",
+        "explanation": "OpenAPI describes API contracts and can power docs, validation and generated clients.\n\nExample:\nGET /devices/{id} -> DeviceResponse",
         "acceptedAnswers": [
           "openapi",
           "open api",
@@ -4624,7 +4624,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A large activity feed changes constantly while users page through it. Which pagination style is usually more reliable?",
         "correctAnswer": "cursor pagination",
-        "explanation": "Cursor pagination avoids many duplicate/missing item problems that offset pagination can have on changing datasets.",
+        "explanation": "Cursor pagination avoids many duplicate/missing item problems that offset pagination can have on changing datasets.\n\nExample:\nGET /logs?cursor=eyJpZCI6...",
         "options": [
           "cursor pagination",
           "offset pagination always",
@@ -4637,7 +4637,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: A webhook lets a system notify another system by sending an HTTP request when an event happens.",
         "correctAnswer": "True",
-        "explanation": "Webhooks are event-driven callbacks sent over HTTP.",
+        "explanation": "Webhooks are event-driven callbacks sent over HTTP.\n\nExample:\nPOST /webhooks/payment-succeeded",
         "options": [
           "True",
           "False"
@@ -4648,7 +4648,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "Two users edit the same resource. Which header concept can help prevent blindly overwriting a newer version?",
         "correctAnswer": "ETag",
-        "explanation": "ETags with If-Match can ensure you update only the version you previously fetched.",
+        "explanation": "ETags with If-Match can ensure you update only the version you previously fetched.\n\nExample:\nIf-Match: \"abc123\"",
         "options": [
           "ETag",
           "Accept-Language",
@@ -4661,7 +4661,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Which header tells the server what format the client is sending in the request body?",
         "correctAnswer": "Content-Type",
-        "explanation": "Content-Type describes the request body format, such as application/json.",
+        "explanation": "Content-Type describes the request body format, such as application/json.\n\nExample:\nAccept: application/json",
         "options": [
           "Content-Type",
           "Accept",
@@ -4882,12 +4882,12 @@ export const topics = [
         "prompt": "Which option best describes API key?",
         "options": [
           "An API key is a secret-like identifier used to authenticate or track API access.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Sanitisation removes or neutralises unsafe input.",
+          "User-facing errors should be clear, kind and actionable.",
+          "Request ids help trace one request across logs and services."
         ],
         "correctAnswer": "An API key is a secret-like identifier used to authenticate or track API access.",
-        "explanation": "An API key is a secret-like identifier used to authenticate or track API access."
+        "explanation": "An API key is a secret-like identifier used to authenticate or track API access.\n\nExample:\nx-api-key: abc"
       },
       {
         "id": "api-auth-errors-q-02",
@@ -4898,20 +4898,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "A bearer token is sent in the Authorization header and grants access to whoever holds it."
+        "explanation": "A bearer token is sent in the Authorization header and grants access to whoever holds it.\n\nExample:\nAuthorization: Bearer token"
       },
       {
         "id": "api-auth-errors-q-03",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to JWT. What is the best choice?",
+        "prompt": "Scenario: After login, the server gives the client a signed token that can be sent with later requests to prove identity. What is it?",
         "options": [
           "JWT",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "session cookie",
+          "Content-Type",
+          "CORS"
         ],
         "correctAnswer": "JWT",
-        "explanation": "A JWT is a signed token format that can carry claims such as user id and expiry. Example: eyJ..."
+        "explanation": "A JWT is a signed token format that can carry claims such as user id and expiry. Example: eyJ...\n\nExample:\neyJ..."
       },
       {
         "id": "api-auth-errors-q-04",
@@ -4923,7 +4923,7 @@ export const topics = [
           "session cookie",
           "session cookie"
         ],
-        "explanation": "A session cookie stores a browser login identifier that the server can verify."
+        "explanation": "A session cookie stores a browser login identifier that the server can verify.\n\nExample:\nSet-Cookie: session=..."
       },
       {
         "id": "api-auth-errors-q-05",
@@ -4931,12 +4931,12 @@ export const topics = [
         "prompt": "Which option best describes OAuth?",
         "options": [
           "OAuth lets a user grant an app limited access without sharing their password.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "User-facing errors should be clear, kind and actionable.",
+          "Request ids help trace one request across logs and services.",
+          "They cannot be read by JavaScript, reducing token theft from XSS."
         ],
         "correctAnswer": "OAuth lets a user grant an app limited access without sharing their password.",
-        "explanation": "OAuth lets a user grant an app limited access without sharing their password."
+        "explanation": "OAuth lets a user grant an app limited access without sharing their password.\n\nExample:\nSign in with Google"
       },
       {
         "id": "api-auth-errors-q-06",
@@ -4947,20 +4947,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "A refresh token is used to get new access tokens when short-lived ones expire."
+        "explanation": "A refresh token is used to get new access tokens when short-lived ones expire.\n\nExample:\nrefreshToken"
       },
       {
         "id": "api-auth-errors-q-07",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to Content-Type. What is the best choice?",
+        "prompt": "Scenario: The server needs to know the request body is JSON rather than plain text or form data. Which header tells it this?",
         "options": [
           "Content-Type",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "session cookie",
+          "CORS",
+          "validation error"
         ],
         "correctAnswer": "Content-Type",
-        "explanation": "Content-Type tells the server or client what format the body uses. Example: application/json"
+        "explanation": "Content-Type tells the server or client what format the body uses. Example: application/json\n\nExample:\napplication/json"
       },
       {
         "id": "api-auth-errors-q-08",
@@ -4972,7 +4972,7 @@ export const topics = [
           "CORS",
           "CORS"
         ],
-        "explanation": "CORS is a browser security mechanism controlling which origins can read API responses."
+        "explanation": "CORS is a browser security mechanism controlling which origins can read API responses.\n\nExample:\nAccess-Control-Allow-Origin"
       },
       {
         "id": "api-auth-errors-q-09",
@@ -4980,12 +4980,12 @@ export const topics = [
         "prompt": "Which option best describes CSRF?",
         "options": [
           "CSRF is an attack where another site tries to submit actions using a user’s cookies.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "They cannot be read by JavaScript, reducing token theft from XSS.",
+          "An API key is a secret-like identifier used to authenticate or track API access.",
+          "OAuth lets a user grant an app limited access without sharing their password."
         ],
         "correctAnswer": "CSRF is an attack where another site tries to submit actions using a user’s cookies.",
-        "explanation": "CSRF is an attack where another site tries to submit actions using a user’s cookies."
+        "explanation": "CSRF is an attack where another site tries to submit actions using a user’s cookies.\n\nExample:\nanti-CSRF token"
       },
       {
         "id": "api-auth-errors-q-10",
@@ -4996,20 +4996,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "XSS is when attacker-controlled script runs in a user’s browser."
+        "explanation": "XSS is when attacker-controlled script runs in a user’s browser.\n\nExample:\nescape user content"
       },
       {
         "id": "api-auth-errors-q-11",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to validation error. What is the best choice?",
+        "prompt": "Scenario: A signup form submits an invalid email and a password that is too short. What kind of error should the API return?",
         "options": [
           "validation error",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "idempotency",
+          "idempotency key",
+          "secret management"
         ],
         "correctAnswer": "validation error",
-        "explanation": "A validation error tells the client submitted data failed required rules. Example: email is required"
+        "explanation": "A validation error tells the client submitted data failed required rules. Example: email is required\n\nExample:\nemail is required"
       },
       {
         "id": "api-auth-errors-q-12",
@@ -5021,7 +5021,7 @@ export const topics = [
           "rate limiting",
           "rate limiting"
         ],
-        "explanation": "Rate limiting restricts how many requests a client can make in a time window."
+        "explanation": "Rate limiting restricts how many requests a client can make in a time window.\n\nExample:\n429 Too Many Requests"
       },
       {
         "id": "api-auth-errors-q-13",
@@ -5029,12 +5029,12 @@ export const topics = [
         "prompt": "Which option best describes retry?",
         "options": [
           "A retry repeats a failed request, usually only for safe or temporary failures.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Request ids help trace one request across logs and services.",
+          "They cannot be read by JavaScript, reducing token theft from XSS.",
+          "An API key is a secret-like identifier used to authenticate or track API access."
         ],
         "correctAnswer": "A retry repeats a failed request, usually only for safe or temporary failures.",
-        "explanation": "A retry repeats a failed request, usually only for safe or temporary failures."
+        "explanation": "A retry repeats a failed request, usually only for safe or temporary failures.\n\nExample:\nretry after 503"
       },
       {
         "id": "api-auth-errors-q-14",
@@ -5045,20 +5045,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Exponential backoff waits longer between retries to avoid overwhelming a service."
+        "explanation": "Exponential backoff waits longer between retries to avoid overwhelming a service.\n\nExample:\n1s, 2s, 4s"
       },
       {
         "id": "api-auth-errors-q-15",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to idempotency. What is the best choice?",
+        "prompt": "Scenario: Retrying the same payment request should not accidentally charge the customer twice. What API design concept helps?",
         "options": [
           "idempotency",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "JWT",
+          "session cookie",
+          "Content-Type"
         ],
         "correctAnswer": "idempotency",
-        "explanation": "An idempotent operation can be repeated safely with the same result. Example: PUT same payload twice"
+        "explanation": "An idempotent operation can be repeated safely with the same result. Example: PUT same payload twice\n\nExample:\nPUT same payload twice"
       },
       {
         "id": "api-auth-errors-q-16",
@@ -5070,7 +5070,7 @@ export const topics = [
           "idempotency key",
           "idempotency key"
         ],
-        "explanation": "An idempotency key helps the server avoid creating duplicates when a request is retried."
+        "explanation": "An idempotency key helps the server avoid creating duplicates when a request is retried.\n\nExample:\nIdempotency-Key"
       },
       {
         "id": "api-auth-errors-q-17",
@@ -5078,12 +5078,12 @@ export const topics = [
         "prompt": "Which option best describes sanitisation?",
         "options": [
           "Sanitisation removes or neutralises unsafe input.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "An API key is a secret-like identifier used to authenticate or track API access.",
+          "OAuth lets a user grant an app limited access without sharing their password.",
+          "CSRF is an attack where another site tries to submit actions using a user’s cookies."
         ],
         "correctAnswer": "Sanitisation removes or neutralises unsafe input.",
-        "explanation": "Sanitisation removes or neutralises unsafe input."
+        "explanation": "Sanitisation removes or neutralises unsafe input.\n\nExample:\nstrip dangerous HTML"
       },
       {
         "id": "api-auth-errors-q-18",
@@ -5094,20 +5094,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Least privilege means only granting the minimum permissions required."
+        "explanation": "Least privilege means only granting the minimum permissions required.\n\nExample:\nread-only token"
       },
       {
         "id": "api-auth-errors-q-19",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to secret management. What is the best choice?",
+        "prompt": "Scenario: API keys must not be committed to GitHub and should be stored securely in environment variables or a vault. What is this practice called?",
         "options": [
           "secret management",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "validation error",
+          "rate limiting",
+          "idempotency"
         ],
         "correctAnswer": "secret management",
-        "explanation": "Secrets should be stored outside frontend code and source control. Example: .env on server"
+        "explanation": "Secrets should be stored outside frontend code and source control. Example: .env on server\n\nExample:\n.env on server"
       },
       {
         "id": "api-auth-errors-q-20",
@@ -5119,7 +5119,7 @@ export const topics = [
           "logging errors",
           "logging errors"
         ],
-        "explanation": "Error logs should include useful context without leaking secrets or personal data."
+        "explanation": "Error logs should include useful context without leaking secrets or personal data.\n\nExample:\nlog request id not token"
       },
       {
         "id": "api-auth-errors-q-21",
@@ -5127,12 +5127,12 @@ export const topics = [
         "prompt": "Which option best describes user-facing errors?",
         "options": [
           "User-facing errors should be clear, kind and actionable.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "They cannot be read by JavaScript, reducing token theft from XSS.",
+          "An API key is a secret-like identifier used to authenticate or track API access.",
+          "OAuth lets a user grant an app limited access without sharing their password."
         ],
         "correctAnswer": "User-facing errors should be clear, kind and actionable.",
-        "explanation": "User-facing errors should be clear, kind and actionable."
+        "explanation": "User-facing errors should be clear, kind and actionable.\n\nExample:\nTry again in a moment"
       },
       {
         "id": "api-auth-errors-q-22",
@@ -5143,20 +5143,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Server validation is required even if the frontend also validates."
+        "explanation": "Server validation is required even if the frontend also validates.\n\nExample:\nnever trust client input"
       },
       {
         "id": "api-auth-errors-q-23",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to HTTPS. What is the best choice?",
+        "prompt": "Scenario: Login details are being sent over the network and must be encrypted in transit. What protocol should be used?",
         "options": [
           "HTTPS",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "secret management",
+          "logging errors",
+          "webhooks"
         ],
         "correctAnswer": "HTTPS",
-        "explanation": "HTTPS encrypts traffic between client and server. Example: https://api.example.com"
+        "explanation": "HTTPS encrypts traffic between client and server. Example: https://api.example.com\n\nExample:\nhttps://api.example.com"
       },
       {
         "id": "api-auth-errors-q-24",
@@ -5168,7 +5168,7 @@ export const topics = [
           "webhooks",
           "webhooks"
         ],
-        "explanation": "Webhooks let one system call another when an event happens."
+        "explanation": "Webhooks let one system call another when an event happens.\n\nExample:\npayment.succeeded webhook"
       },
       {
         "id": "api-auth-errors-q-25",
@@ -5176,19 +5176,19 @@ export const topics = [
         "prompt": "Which option best describes request ids?",
         "options": [
           "Request ids help trace one request across logs and services.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "A retry repeats a failed request, usually only for safe or temporary failures.",
+          "Sanitisation removes or neutralises unsafe input.",
+          "User-facing errors should be clear, kind and actionable."
         ],
         "correctAnswer": "Request ids help trace one request across logs and services.",
-        "explanation": "Request ids help trace one request across logs and services."
+        "explanation": "Request ids help trace one request across logs and services.\n\nExample:\nx-request-id"
       },
       {
         "id": "api-auth-errors-extra-q-httponly-mcq",
         "type": "multiple-choice",
         "prompt": "Why are HttpOnly cookies useful for sessions?",
         "correctAnswer": "They cannot be read by JavaScript, reducing token theft from XSS.",
-        "explanation": "HttpOnly prevents browser JavaScript from reading the cookie value.",
+        "explanation": "HttpOnly prevents browser JavaScript from reading the cookie value.\n\nExample:\nSet-Cookie: session=...; HttpOnly; Secure",
         "options": [
           "They cannot be read by JavaScript, reducing token theft from XSS.",
           "They make requests faster.",
@@ -5201,7 +5201,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the attack where a logged-in browser is tricked into making an unwanted request.",
         "correctAnswer": "CSRF",
-        "explanation": "CSRF stands for cross-site request forgery.",
+        "explanation": "CSRF stands for cross-site request forgery.\n\nExample:\nSameSite=Lax or Strict",
         "acceptedAnswers": [
           "csrf",
           "cross-site request forgery",
@@ -5213,7 +5213,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: If the frontend validates a form, the backend does not need to validate it again.",
         "correctAnswer": "False",
-        "explanation": "Clients can be bypassed. Server-side validation is required to protect the system.",
+        "explanation": "Clients can be bypassed. Server-side validation is required to protect the system.\n\nExample:\nnever trust client input",
         "options": [
           "True",
           "False"
@@ -5224,7 +5224,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A React app needs to call OpenAI. Where should the API key be kept?",
         "correctAnswer": "on a backend/server, not in browser code",
-        "explanation": "Frontend code is visible to users, so secrets must be kept server-side.",
+        "explanation": "Frontend code is visible to users, so secrets must be kept server-side.\n\nExample:\nOPENAI_API_KEY belongs on the backend, not in browser JS.",
         "options": [
           "on a backend/server, not in browser code",
           "inside a public GitHub repo",
@@ -5237,7 +5237,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What HTTP method is commonly used for a CORS preflight request?",
         "correctAnswer": "OPTIONS",
-        "explanation": "Browsers send OPTIONS requests to check allowed methods/headers for certain cross-origin requests.",
+        "explanation": "Browsers send OPTIONS requests to check allowed methods/headers for certain cross-origin requests.\n\nExample:\nOPTIONS /api/devices",
         "options": [
           "OPTIONS",
           "PATCH",
@@ -5250,7 +5250,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A device-reading token only needs to submit telemetry. Which permission model is safest?",
         "correctAnswer": "least privilege",
-        "explanation": "Least privilege gives the token only the minimum permissions needed, reducing damage if leaked.",
+        "explanation": "Least privilege gives the token only the minimum permissions needed, reducing damage if leaked.\n\nExample:\nA read-only token should not be able to delete devices.",
         "options": [
           "least privilege",
           "full admin access",
@@ -5471,12 +5471,12 @@ export const topics = [
         "prompt": "Which option best describes type annotation?",
         "options": [
           "A type annotation explicitly tells TypeScript what type a variable, parameter or return value should have.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "void means a function does not return a meaningful value.",
+          "typeof narrowing checks primitive runtime types.",
+          "Strict null checking forces you to handle null and undefined before using values."
         ],
         "correctAnswer": "A type annotation explicitly tells TypeScript what type a variable, parameter or return value should have.",
-        "explanation": "A type annotation explicitly tells TypeScript what type a variable, parameter or return value should have."
+        "explanation": "A type annotation explicitly tells TypeScript what type a variable, parameter or return value should have.\n\nExample:\nconst id: string = \"123\""
       },
       {
         "id": "ts-basics-narrowing-q-02",
@@ -5487,20 +5487,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Type inference means TypeScript works out the type from the value or usage."
+        "explanation": "Type inference means TypeScript works out the type from the value or usage.\n\nExample:\nfunction assertUser(value: unknown): asserts value is User { ... }"
       },
       {
         "id": "ts-basics-narrowing-q-03",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to interface. What is the best choice?",
+        "prompt": "Scenario: Several functions receive a `User` object with `id`, `name`, and `email`, and you want to define that object shape clearly in TypeScript. What should you use?",
         "options": [
           "interface",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "any",
+          "type guard",
+          "discriminated union"
         ],
         "correctAnswer": "interface",
-        "explanation": "An interface describes the shape of an object and is often used for public object contracts. Example: interface User { id: string }"
+        "explanation": "An interface describes the shape of an object and is often used for public object contracts. Example: interface User { id: string }\n\nExample:\ninterface User { id: string }"
       },
       {
         "id": "ts-basics-narrowing-q-04",
@@ -5512,7 +5512,7 @@ export const topics = [
           "type alias",
           "type alias"
         ],
-        "explanation": "A type alias names any type, including unions, primitives, objects and function types."
+        "explanation": "A type alias names any type, including unions, primitives, objects and function types.\n\nExample:\ntype ID = string | number"
       },
       {
         "id": "ts-basics-narrowing-q-05",
@@ -5520,12 +5520,12 @@ export const topics = [
         "prompt": "Which option best describes union type?",
         "options": [
           "A union type allows a value to be one of several possible types.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Array types describe lists of values with the same item type.",
+          "void means a function does not return a meaningful value.",
+          "typeof narrowing checks primitive runtime types."
         ],
         "correctAnswer": "A union type allows a value to be one of several possible types.",
-        "explanation": "A union type allows a value to be one of several possible types."
+        "explanation": "A union type allows a value to be one of several possible types.\n\nExample:\nstring | null"
       },
       {
         "id": "ts-basics-narrowing-q-06",
@@ -5536,20 +5536,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "A literal type restricts a value to an exact string, number or boolean."
+        "explanation": "A literal type restricts a value to an exact string, number or boolean.\n\nExample:\nfunction assertUser(value: unknown): asserts value is User { ... }"
       },
       {
         "id": "ts-basics-narrowing-q-07",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to optional property. What is the best choice?",
+        "prompt": "Scenario: A `User` usually has an avatar URL, but some users do not. How should that property be typed?",
         "options": [
           "optional property",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "function type",
+          "return type",
+          "any"
         ],
         "correctAnswer": "optional property",
-        "explanation": "An optional property may be missing or undefined. Example: name?: string"
+        "explanation": "An optional property may be missing or undefined. Example: name?: string\n\nExample:\nname?: string"
       },
       {
         "id": "ts-basics-narrowing-q-08",
@@ -5561,7 +5561,7 @@ export const topics = [
           "readonly",
           "readonly"
         ],
-        "explanation": "readonly prevents reassignment of a property through that type."
+        "explanation": "readonly prevents reassignment of a property through that type.\n\nExample:\nreadonly id: string"
       },
       {
         "id": "ts-basics-narrowing-q-09",
@@ -5569,12 +5569,12 @@ export const topics = [
         "prompt": "Which option best describes array type?",
         "options": [
           "Array types describe lists of values with the same item type.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "A type annotation explicitly tells TypeScript what type a variable, parameter or return value should have.",
+          "A union type allows a value to be one of several possible types.",
+          "void means a function does not return a meaningful value."
         ],
         "correctAnswer": "Array types describe lists of values with the same item type.",
-        "explanation": "Array types describe lists of values with the same item type."
+        "explanation": "Array types describe lists of values with the same item type.\n\nExample:\nUser[]"
       },
       {
         "id": "ts-basics-narrowing-q-10",
@@ -5585,20 +5585,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "A tuple describes an array with fixed positions and types."
+        "explanation": "A tuple describes an array with fixed positions and types.\n\nExample:\nfunction assertUser(value: unknown): asserts value is User { ... }"
       },
       {
         "id": "ts-basics-narrowing-q-11",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to function type. What is the best choice?",
+        "prompt": "Scenario: A component accepts an `onSave` callback, and you want TypeScript to check its parameters and return value. What should you define?",
         "options": [
           "function type",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "type guard",
+          "discriminated union",
+          "never"
         ],
         "correctAnswer": "function type",
-        "explanation": "A function type describes parameter and return types. Example: (id: string) => User"
+        "explanation": "A function type describes parameter and return types. Example: (id: string) => User\n\nExample:\n(id: string) => User"
       },
       {
         "id": "ts-basics-narrowing-q-12",
@@ -5610,7 +5610,7 @@ export const topics = [
           "return type",
           "return type"
         ],
-        "explanation": "A return type documents and checks what a function gives back."
+        "explanation": "A return type documents and checks what a function gives back.\n\nExample:\nfunction getId(): string"
       },
       {
         "id": "ts-basics-narrowing-q-13",
@@ -5618,12 +5618,12 @@ export const topics = [
         "prompt": "Which option best describes void?",
         "options": [
           "void means a function does not return a meaningful value.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "A union type allows a value to be one of several possible types.",
+          "Array types describe lists of values with the same item type.",
+          "typeof narrowing checks primitive runtime types."
         ],
         "correctAnswer": "void means a function does not return a meaningful value.",
-        "explanation": "void means a function does not return a meaningful value."
+        "explanation": "void means a function does not return a meaningful value.\n\nExample:\nfunction log(): void"
       },
       {
         "id": "ts-basics-narrowing-q-14",
@@ -5634,20 +5634,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "unknown is safer than any because you must narrow it before using it."
+        "explanation": "unknown is safer than any because you must narrow it before using it.\n\nExample:\nlet value: unknown"
       },
       {
         "id": "ts-basics-narrowing-q-15",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to any. What is the best choice?",
+        "prompt": "Scenario: You are temporarily migrating old JavaScript code and need to bypass type checking for one value, although it is not ideal long term. What type does this?",
         "options": [
           "any",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "function type",
+          "return type",
+          "type guard"
         ],
         "correctAnswer": "any",
-        "explanation": "any disables type checking for that value and should be used rarely. Example: let value: any"
+        "explanation": "any disables type checking for that value and should be used rarely. Example: let value: any\n\nExample:\nlet value: any"
       },
       {
         "id": "ts-basics-narrowing-q-16",
@@ -5659,7 +5659,7 @@ export const topics = [
           "type guard",
           "type guard"
         ],
-        "explanation": "A type guard narrows a value inside a conditional."
+        "explanation": "A type guard narrows a value inside a conditional.\n\nExample:\ntypeof value === \"string\""
       },
       {
         "id": "ts-basics-narrowing-q-17",
@@ -5667,12 +5667,12 @@ export const topics = [
         "prompt": "Which option best describes typeof narrowing?",
         "options": [
           "typeof narrowing checks primitive runtime types.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "unknown forces you to narrow or check the value before using it.",
+          "It can hide a real null/undefined runtime bug.",
+          "A type annotation explicitly tells TypeScript what type a variable, parameter or return value should have."
         ],
         "correctAnswer": "typeof narrowing checks primitive runtime types.",
-        "explanation": "typeof narrowing checks primitive runtime types."
+        "explanation": "typeof narrowing checks primitive runtime types.\n\nExample:\ntypeof input === \"number\""
       },
       {
         "id": "ts-basics-narrowing-q-18",
@@ -5683,20 +5683,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "The in operator can narrow object unions by checking for a property."
+        "explanation": "The in operator can narrow object unions by checking for a property.\n\nExample:\nfunction assertUser(value: unknown): asserts value is User { ... }"
       },
       {
         "id": "ts-basics-narrowing-q-19",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to discriminated union. What is the best choice?",
+        "prompt": "Scenario: A `Payment` can be `{ type: 'card', last4: string }` or `{ type: 'paypal', email: string }`, and you want TypeScript to narrow based on `type`. What should you use?",
         "options": [
           "discriminated union",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "type guard",
+          "never",
+          "as assertion"
         ],
         "correctAnswer": "discriminated union",
-        "explanation": "A discriminated union uses a shared literal property to safely narrow variants. Example: { kind: \"success\" } | { kind: \"error\" }"
+        "explanation": "A discriminated union uses a shared literal property to safely narrow variants. Example: { kind: \"success\" } | { kind: \"error\" }\n\nExample:\n{ kind: \"success\" } | { kind: \"error\" }"
       },
       {
         "id": "ts-basics-narrowing-q-20",
@@ -5708,7 +5708,7 @@ export const topics = [
           "never",
           "never"
         ],
-        "explanation": "never represents a value that should be impossible, useful for exhaustive checks."
+        "explanation": "never represents a value that should be impossible, useful for exhaustive checks.\n\nExample:\nconst _exhaustive: never = value"
       },
       {
         "id": "ts-basics-narrowing-q-21",
@@ -5716,12 +5716,12 @@ export const topics = [
         "prompt": "Which option best describes null checking?",
         "options": [
           "Strict null checking forces you to handle null and undefined before using values.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "A type annotation explicitly tells TypeScript what type a variable, parameter or return value should have.",
+          "A union type allows a value to be one of several possible types.",
+          "Array types describe lists of values with the same item type."
         ],
         "correctAnswer": "Strict null checking forces you to handle null and undefined before using values.",
-        "explanation": "Strict null checking forces you to handle null and undefined before using values."
+        "explanation": "Strict null checking forces you to handle null and undefined before using values.\n\nExample:\nuser?.name"
       },
       {
         "id": "ts-basics-narrowing-q-22",
@@ -5732,20 +5732,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "The non-null assertion tells TypeScript a value is not null, but it can hide real bugs."
+        "explanation": "The statement is true: non-null assertion is only a TypeScript hint. It can be useful when you know more than the compiler, but overusing it can hide real null bugs.\n\nExample:\nconst root = document.getElementById(\"root\");\nroot!.innerHTML = \"Loaded\"; // Use carefully: ! removes the TypeScript warning, not the runtime risk."
       },
       {
         "id": "ts-basics-narrowing-q-23",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to as assertion. What is the best choice?",
+        "prompt": "Scenario: You know a DOM element is an `HTMLInputElement`, but TypeScript only sees a general `Element`. What can you use to tell TypeScript the more specific type?",
         "options": [
           "as assertion",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "enum alternative",
+          "interface",
+          "type alias"
         ],
         "correctAnswer": "as assertion",
-        "explanation": "A type assertion tells TypeScript to treat a value as another type. Use it carefully. Example: value as User"
+        "explanation": "A type assertion tells TypeScript to treat a value as another type. Use it carefully. Example: value as User\n\nExample:\nvalue as User"
       },
       {
         "id": "ts-basics-narrowing-q-24",
@@ -5757,7 +5757,7 @@ export const topics = [
           "enum alternative",
           "enum alternative"
         ],
-        "explanation": "String literal unions are often simpler and safer than enums in frontend code."
+        "explanation": "String literal unions are often simpler and safer than enums in frontend code.\n\nExample:\ntype Size = \"sm\" | \"md\""
       },
       {
         "id": "ts-basics-narrowing-q-25",
@@ -5765,19 +5765,19 @@ export const topics = [
         "prompt": "Which option best describes satisfies?",
         "options": [
           "satisfies checks that a value matches a type while preserving precise inferred values.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "unknown forces you to narrow or check the value before using it.",
+          "It can hide a real null/undefined runtime bug.",
+          "A type annotation explicitly tells TypeScript what type a variable, parameter or return value should have."
         ],
         "correctAnswer": "satisfies checks that a value matches a type while preserving precise inferred values.",
-        "explanation": "satisfies checks that a value matches a type while preserving precise inferred values."
+        "explanation": "satisfies checks that a value matches a type while preserving precise inferred values.\n\nExample:\nconst routes = {...} satisfies Record<string,string>"
       },
       {
         "id": "ts-basics-narrowing-extra-q-unknown-any",
         "type": "multiple-choice",
         "prompt": "Why is unknown safer than any?",
         "correctAnswer": "unknown forces you to narrow or check the value before using it.",
-        "explanation": "any disables type checking. unknown keeps safety until you prove the type.",
+        "explanation": "any disables type checking. unknown keeps safety until you prove the type.\n\nExample:\nfunction handle(value: unknown) {\n  if (typeof value === \"string\") value.toUpperCase();\n}",
         "options": [
           "unknown forces you to narrow or check the value before using it.",
           "unknown automatically converts values to strings.",
@@ -5790,7 +5790,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the TypeScript type often used for unreachable/exhaustive code paths.",
         "correctAnswer": "never",
-        "explanation": "never represents values that should not occur.",
+        "explanation": "never represents values that should not occur.\n\nExample:\nconst exhaustive: never = value;",
         "acceptedAnswers": [
           "never"
         ]
@@ -5800,7 +5800,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: satisfies can check an object against a type while preserving useful literal information.",
         "correctAnswer": "True",
-        "explanation": "satisfies verifies assignability without forcing the value to be typed exactly as the annotation.",
+        "explanation": "satisfies verifies assignability without forcing the value to be typed exactly as the annotation.\n\nExample:\nfunction assertUser(value: unknown): asserts value is User { ... }",
         "options": [
           "True",
           "False"
@@ -5811,7 +5811,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A state object has status: \"loading\" | \"success\" | \"error\" and each status has different fields. What TS pattern is this?",
         "correctAnswer": "discriminated union",
-        "explanation": "The status field discriminates which object shape is currently available.",
+        "explanation": "The status field discriminates which object shape is currently available.\n\nExample:\ntype State = { status: \"loading\" } | { status: \"success\"; data: User[] };",
         "options": [
           "discriminated union",
           "CSS cascade",
@@ -5824,7 +5824,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What is the main risk of the non-null assertion operator (!)?",
         "correctAnswer": "It can hide a real null/undefined runtime bug.",
-        "explanation": "The non-null assertion only changes TypeScript checking; it does not add a runtime guard.",
+        "explanation": "The non-null assertion operator (!) tells TypeScript to stop warning about null or undefined, but it does not check anything at runtime. If the value is actually null, the app can still crash.\n\nExample:\nconst root = document.getElementById(\"root\");\nroot!.innerHTML = \"Loaded\"; // Compiles, but crashes if root is actually null.",
         "options": [
           "It can hide a real null/undefined runtime bug.",
           "It makes a value read-only.",
@@ -5837,7 +5837,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "In React TypeScript, what generic event type is commonly used for an input onChange handler?",
         "correctAnswer": "React.ChangeEvent<HTMLInputElement>",
-        "explanation": "React.ChangeEvent<HTMLInputElement> gives the event a typed input target.",
+        "explanation": "React.ChangeEvent<HTMLInputElement> gives the event a typed input target.\n\nExample:\nfunction onInput(e: React.ChangeEvent<HTMLInputElement>) {}",
         "acceptedAnswers": [
           "React.ChangeEvent<HTMLInputElement>",
           "changeevent htmlinputelement",
@@ -6057,12 +6057,12 @@ export const topics = [
         "prompt": "Which option best describes generic type parameter?",
         "options": [
           "A generic type parameter lets a function or type work with different types while preserving information.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Function overloads describe multiple call signatures for one implementation.",
+          "A tuple type of the function parameter types.",
+          "Indexed access types read the type of a property from another type."
         ],
         "correctAnswer": "A generic type parameter lets a function or type work with different types while preserving information.",
-        "explanation": "A generic type parameter lets a function or type work with different types while preserving information."
+        "explanation": "A generic type parameter lets a function or type work with different types while preserving information.\n\nExample:\nfunction identity<T>(value: T): T"
       },
       {
         "id": "ts-generics-utilities-q-02",
@@ -6073,20 +6073,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Generics help array helpers return the same item type they receive."
+        "explanation": "Generics help array helpers return the same item type they receive.\n\nExample:\nfunction first<T>(items: T[]): T | undefined"
       },
       {
         "id": "ts-generics-utilities-q-03",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to extends constraint. What is the best choice?",
+        "prompt": "Scenario: A generic function should accept any object, but it must have an `id` property. What generic feature enforces that?",
         "options": [
           "extends constraint",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "Required",
+          "Readonly",
+          "ReturnType"
         ],
         "correctAnswer": "extends constraint",
-        "explanation": "An extends constraint limits what types a generic can accept. Example: T extends { id: string }"
+        "explanation": "An extends constraint limits what types a generic can accept. Example: T extends { id: string }\n\nExample:\nT extends { id: string }"
       },
       {
         "id": "ts-generics-utilities-q-04",
@@ -6098,7 +6098,7 @@ export const topics = [
           "keyof",
           "keyof"
         ],
-        "explanation": "keyof creates a union of the keys of an object type."
+        "explanation": "keyof creates a union of the keys of an object type.\n\nExample:\nkeyof User"
       },
       {
         "id": "ts-generics-utilities-q-05",
@@ -6106,12 +6106,12 @@ export const topics = [
         "prompt": "Which option best describes indexed access type?",
         "options": [
           "Indexed access types read the type of a property from another type.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Function overloads describe multiple call signatures for one implementation.",
+          "A tuple type of the function parameter types.",
+          "A generic type parameter lets a function or type work with different types while preserving information."
         ],
         "correctAnswer": "Indexed access types read the type of a property from another type.",
-        "explanation": "Indexed access types read the type of a property from another type."
+        "explanation": "Indexed access types read the type of a property from another type.\n\nExample:\nUser[\"id\"]"
       },
       {
         "id": "ts-generics-utilities-q-06",
@@ -6122,20 +6122,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Record creates an object type with specific key and value types."
+        "explanation": "Record creates an object type with specific key and value types.\n\nExample:\nRecord<string, User>"
       },
       {
         "id": "ts-generics-utilities-q-07",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to Partial. What is the best choice?",
+        "prompt": "Scenario: An update form only sends the fields that changed, not the whole `User` object. Which utility type models this?",
         "options": [
           "Partial",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "a generic constraint",
+          "template literal types",
+          "extends constraint"
         ],
         "correctAnswer": "Partial",
-        "explanation": "Partial makes every property in a type optional. Example: Partial<User>"
+        "explanation": "Partial makes every property in a type optional. Example: Partial<User>\n\nExample:\nPartial<User>"
       },
       {
         "id": "ts-generics-utilities-q-08",
@@ -6147,7 +6147,7 @@ export const topics = [
           "Required",
           "Required"
         ],
-        "explanation": "Required makes every property in a type required."
+        "explanation": "Required makes every property in a type required.\n\nExample:\nRequired<User>"
       },
       {
         "id": "ts-generics-utilities-q-09",
@@ -6155,12 +6155,12 @@ export const topics = [
         "prompt": "Which option best describes Pick?",
         "options": [
           "Pick creates a type with only selected properties.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "A generic type parameter lets a function or type work with different types while preserving information.",
+          "Indexed access types read the type of a property from another type.",
+          "Parameters extracts a function’s parameter tuple type."
         ],
         "correctAnswer": "Pick creates a type with only selected properties.",
-        "explanation": "Pick creates a type with only selected properties."
+        "explanation": "Pick creates a type with only selected properties.\n\nExample:\nPick<User, \"id\" | \"name\">"
       },
       {
         "id": "ts-generics-utilities-q-10",
@@ -6171,20 +6171,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Omit creates a type without selected properties."
+        "explanation": "Omit creates a type without selected properties.\n\nExample:\nOmit<User, \"password\">"
       },
       {
         "id": "ts-generics-utilities-q-11",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to Readonly. What is the best choice?",
+        "prompt": "Scenario: You want TypeScript to stop code from accidentally changing a config object after creation. Which utility type helps?",
         "options": [
           "Readonly",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "keyof typeof",
+          "a generic constraint",
+          "template literal types"
         ],
         "correctAnswer": "Readonly",
-        "explanation": "Readonly makes all properties readonly. Example: Readonly<User>"
+        "explanation": "Readonly makes all properties readonly. Example: Readonly<User>\n\nExample:\nReadonly<User>"
       },
       {
         "id": "ts-generics-utilities-q-12",
@@ -6196,7 +6196,7 @@ export const topics = [
           "ReturnType",
           "ReturnType"
         ],
-        "explanation": "ReturnType extracts the return type of a function."
+        "explanation": "ReturnType extracts the return type of a function.\n\nExample:\nReturnType<typeof getUser>"
       },
       {
         "id": "ts-generics-utilities-q-13",
@@ -6204,12 +6204,12 @@ export const topics = [
         "prompt": "Which option best describes Parameters?",
         "options": [
           "Parameters extracts a function’s parameter tuple type.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Function overloads describe multiple call signatures for one implementation.",
+          "A tuple type of the function parameter types.",
+          "A generic type parameter lets a function or type work with different types while preserving information."
         ],
         "correctAnswer": "Parameters extracts a function’s parameter tuple type.",
-        "explanation": "Parameters extracts a function’s parameter tuple type."
+        "explanation": "Parameters extracts a function’s parameter tuple type.\n\nExample:\nParameters<typeof search>"
       },
       {
         "id": "ts-generics-utilities-q-14",
@@ -6220,20 +6220,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Awaited unwraps the resolved type of a Promise."
+        "explanation": "Awaited unwraps the resolved type of a Promise.\n\nExample:\nAwaited<Promise<User>>"
       },
       {
         "id": "ts-generics-utilities-q-15",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to NonNullable. What is the best choice?",
+        "prompt": "Scenario: A type is `string | null | undefined`, but after validation you want just `string`. Which utility type removes null and undefined?",
         "options": [
           "NonNullable",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "mapped types",
+          "conditional types",
+          "type-safe API response"
         ],
         "correctAnswer": "NonNullable",
-        "explanation": "NonNullable removes null and undefined from a type. Example: NonNullable<string | null>"
+        "explanation": "NonNullable removes null and undefined from a type. Example: NonNullable<string | null>\n\nExample:\nNonNullable<string | null>"
       },
       {
         "id": "ts-generics-utilities-q-16",
@@ -6245,7 +6245,7 @@ export const topics = [
           "Extract",
           "Extract"
         ],
-        "explanation": "Extract keeps union members assignable to another type."
+        "explanation": "Extract keeps union members assignable to another type.\n\nExample:\nExtract<Event, ClickEvent>"
       },
       {
         "id": "ts-generics-utilities-q-17",
@@ -6253,12 +6253,12 @@ export const topics = [
         "prompt": "Which option best describes Exclude?",
         "options": [
           "Exclude removes union members assignable to another type.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "A generic type parameter lets a function or type work with different types while preserving information.",
+          "Indexed access types read the type of a property from another type.",
+          "Pick creates a type with only selected properties."
         ],
         "correctAnswer": "Exclude removes union members assignable to another type.",
-        "explanation": "Exclude removes union members assignable to another type."
+        "explanation": "Exclude removes union members assignable to another type.\n\nExample:\nExclude<Status, \"loading\">"
       },
       {
         "id": "ts-generics-utilities-q-18",
@@ -6269,20 +6269,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Template literal types build string types from other types."
+        "explanation": "Template literal types build string types from other types.\n\nExample:\n`user:${string}`"
       },
       {
         "id": "ts-generics-utilities-q-19",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to mapped types. What is the best choice?",
+        "prompt": "Scenario: You want to create a new type by transforming every property in an existing type. What TypeScript feature does this?",
         "options": [
           "mapped types",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "ReturnType",
+          "NonNullable",
+          "Extract"
         ],
         "correctAnswer": "mapped types",
-        "explanation": "Mapped types create new object types by looping over keys. Example: { [K in keyof User]: boolean }"
+        "explanation": "Mapped types create new object types by looping over keys. Example: { [K in keyof User]: boolean }\n\nExample:\n{ [K in keyof User]: boolean }"
       },
       {
         "id": "ts-generics-utilities-q-20",
@@ -6294,7 +6294,7 @@ export const topics = [
           "conditional types",
           "conditional types"
         ],
-        "explanation": "Conditional types choose one type or another based on a type relationship."
+        "explanation": "Conditional types choose one type or another based on a type relationship.\n\nExample:\nT extends string ? A : B"
       },
       {
         "id": "ts-generics-utilities-q-21",
@@ -6302,12 +6302,12 @@ export const topics = [
         "prompt": "Which option best describes generic default?",
         "options": [
           "Generic defaults provide a fallback type argument.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Exclude removes union members assignable to another type.",
+          "Function overloads describe multiple call signatures for one implementation.",
+          "A tuple type of the function parameter types."
         ],
         "correctAnswer": "Generic defaults provide a fallback type argument.",
-        "explanation": "Generic defaults provide a fallback type argument."
+        "explanation": "Generic defaults provide a fallback type argument.\n\nExample:\ntype ApiResponse<T = unknown>"
       },
       {
         "id": "ts-generics-utilities-q-22",
@@ -6318,20 +6318,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Generic props let reusable components preserve the item type they render."
+        "explanation": "Generic props let reusable components preserve the item type they render.\n\nExample:\nList<T>"
       },
       {
         "id": "ts-generics-utilities-q-23",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to type-safe API response. What is the best choice?",
+        "prompt": "Scenario: Your API response should be typed so the UI knows `data`, `error`, and loading states safely. What are you aiming for?",
         "options": [
           "type-safe API response",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "Required",
+          "Readonly",
+          "ReturnType"
         ],
         "correctAnswer": "type-safe API response",
-        "explanation": "A generic API response type can describe success data while reusing the wrapper shape. Example: ApiResponse<Device[]>"
+        "explanation": "A generic API response type can describe success data while reusing the wrapper shape. Example: ApiResponse<Device[]>\n\nExample:\nApiResponse<Device[]>"
       },
       {
         "id": "ts-generics-utilities-q-24",
@@ -6343,7 +6343,7 @@ export const topics = [
           "narrowing generic values",
           "narrowing generic values"
         ],
-        "explanation": "Generic values may still need runtime checks before you use specific properties."
+        "explanation": "Generic values may still need runtime checks before you use specific properties.\n\nExample:\nif (typeof value === \"string\")"
       },
       {
         "id": "ts-generics-utilities-q-25",
@@ -6351,19 +6351,19 @@ export const topics = [
         "prompt": "Which option best describes overloads?",
         "options": [
           "Function overloads describe multiple call signatures for one implementation.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Parameters extracts a function’s parameter tuple type.",
+          "Exclude removes union members assignable to another type.",
+          "Generic defaults provide a fallback type argument."
         ],
         "correctAnswer": "Function overloads describe multiple call signatures for one implementation.",
-        "explanation": "Function overloads describe multiple call signatures for one implementation."
+        "explanation": "Function overloads describe multiple call signatures for one implementation.\n\nExample:\nfunction get(id: string): User"
       },
       {
         "id": "ts-generics-utilities-extra-q-awaited-mcq",
         "type": "multiple-choice",
         "prompt": "Which utility type extracts the resolved value type from a Promise-like type?",
         "correctAnswer": "Awaited",
-        "explanation": "Awaited<T> unwraps Promise-like types.",
+        "explanation": "Awaited<T> unwraps Promise-like types.\n\nExample:\ntype Data = Awaited<ReturnType<typeof fetchUser>>;",
         "options": [
           "Awaited",
           "Partial",
@@ -6376,7 +6376,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the pattern that gets keys from a runtime object as a union type, using two TypeScript operators.",
         "correctAnswer": "keyof typeof",
-        "explanation": "keyof typeof objectName creates a union of that object’s keys.",
+        "explanation": "keyof typeof objectName creates a union of that object’s keys.\n\nExample:\nconst routes = { home: \"/\", settings: \"/settings\" } as const;\ntype RouteName = keyof typeof routes;",
         "acceptedAnswers": [
           "keyof typeof",
           "keyof typeof object"
@@ -6387,7 +6387,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "You write a generic function that must read item.id. What should you add to the generic type?",
         "correctAnswer": "a generic constraint",
-        "explanation": "A constraint like T extends { id: string } tells TypeScript id is safe to access.",
+        "explanation": "A constraint like T extends { id: string } tells TypeScript id is safe to access.\n\nExample:\nfunction getId<T extends { id: string }>(item: T) { return item.id; }",
         "options": [
           "a generic constraint",
           "a CSS class",
@@ -6400,7 +6400,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: ReturnType<typeof fn> can help avoid manually duplicating a function’s return type.",
         "correctAnswer": "True",
-        "explanation": "ReturnType derives the result type from an existing function.",
+        "explanation": "ReturnType derives the result type from an existing function.\n\nExample:\ntype Result = ReturnType<typeof createUser>;",
         "options": [
           "True",
           "False"
@@ -6411,7 +6411,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Which TypeScript feature can create types like `${string}Changed`?",
         "correctAnswer": "template literal types",
-        "explanation": "Template literal types compose string literal types.",
+        "explanation": "Template literal types compose string literal types.\n\nExample:\ntype EventName = `${string}Changed`;",
         "options": [
           "template literal types",
           "enum reverse mapping",
@@ -6424,7 +6424,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What does Parameters<typeof fn> return?",
         "correctAnswer": "A tuple type of the function parameter types.",
-        "explanation": "Parameters extracts the argument types of a function.",
+        "explanation": "Parameters extracts the argument types of a function.\n\nExample:\ntype Args = Parameters<typeof saveUser>;",
         "options": [
           "A tuple type of the function parameter types.",
           "The function return type.",
@@ -6645,12 +6645,12 @@ export const topics = [
         "prompt": "Which option best describes component?",
         "options": [
           "A component is a reusable piece of UI with its own structure, inputs and behaviour.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "An event handler is a function that runs when a user or browser event happens.",
+          "Form validation checks user input before submitting or saving.",
+          "Semantic HTML uses elements according to meaning, which improves accessibility and maintainability."
         ],
         "correctAnswer": "A component is a reusable piece of UI with its own structure, inputs and behaviour.",
-        "explanation": "A component is a reusable piece of UI with its own structure, inputs and behaviour."
+        "explanation": "A component is a reusable piece of UI with its own structure, inputs and behaviour.\n\nExample:\n<Button />"
       },
       {
         "id": "frontend-components-events-q-02",
@@ -6661,20 +6661,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Props are inputs passed into a component by its parent."
+        "explanation": "Props are inputs passed into a component by its parent.\n\nExample:\n<Button label=\"Save\" />"
       },
       {
         "id": "frontend-components-events-q-03",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to state. What is the best choice?",
+        "prompt": "Scenario: A counter value changes after a button click and the UI needs to re-render with the new value. What should hold that changing value?",
         "options": [
           "state",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "preventDefault",
+          "controlled input",
+          "event bubbling"
         ],
         "correctAnswer": "state",
-        "explanation": "State is data a component owns that can change over time and affect rendering. Example: const [open, setOpen] = useState(false)"
+        "explanation": "State is data a component owns that can change over time and affect rendering. Example: const [open, setOpen] = useState(false)\n\nExample:\nconst [open, setOpen] = useState(false)"
       },
       {
         "id": "frontend-components-events-q-04",
@@ -6686,7 +6686,7 @@ export const topics = [
           "derived state",
           "derived state"
         ],
-        "explanation": "Derived state is calculated from existing data instead of stored separately."
+        "explanation": "Derived state is calculated from existing data instead of stored separately.\n\nExample:\nconst completed = tasks.filter(t=>t.done).length"
       },
       {
         "id": "frontend-components-events-q-05",
@@ -6694,12 +6694,12 @@ export const topics = [
         "prompt": "Which option best describes rendering?",
         "options": [
           "Rendering means turning component state and props into UI.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "It encapsulates component markup and styles.",
+          "A component is a reusable piece of UI with its own structure, inputs and behaviour.",
+          "An event handler is a function that runs when a user or browser event happens."
         ],
         "correctAnswer": "Rendering means turning component state and props into UI.",
-        "explanation": "Rendering means turning component state and props into UI."
+        "explanation": "Rendering means turning component state and props into UI.\n\nExample:\nreturn <h1>{title}</h1>"
       },
       {
         "id": "frontend-components-events-q-06",
@@ -6710,20 +6710,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Conditional rendering shows different UI depending on state or props."
+        "explanation": "Conditional rendering shows different UI depending on state or props.\n\nExample:\nisLoading ? <Spinner /> : <Content />"
       },
       {
         "id": "frontend-components-events-q-07",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to list rendering. What is the best choice?",
+        "prompt": "Scenario: You have an array of products and need to display one card for each product in the UI. What is this called?",
         "options": [
           "list rendering",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "controlled input",
+          "event bubbling",
+          "accessibility"
         ],
         "correctAnswer": "list rendering",
-        "explanation": "List rendering turns arrays of data into repeated UI elements. Example: items.map(item => <Row key={item.id} />)"
+        "explanation": "List rendering turns arrays of data into repeated UI elements. Example: items.map(item => <Row key={item.id} />)\n\nExample:\nitems.map(item => <Row key={item.id} />)"
       },
       {
         "id": "frontend-components-events-q-08",
@@ -6735,7 +6735,7 @@ export const topics = [
           "key prop",
           "key prop"
         ],
-        "explanation": "A key helps React track list items between renders. Use stable ids rather than array indexes when possible."
+        "explanation": "A key helps React track list items between renders. Use stable ids rather than array indexes when possible.\n\nExample:\nkey={user.id}"
       },
       {
         "id": "frontend-components-events-q-09",
@@ -6743,12 +6743,12 @@ export const topics = [
         "prompt": "Which option best describes event handler?",
         "options": [
           "An event handler is a function that runs when a user or browser event happens.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Semantic HTML uses elements according to meaning, which improves accessibility and maintainability.",
+          "Empty UI explains that there is no data and often suggests the next action.",
+          "Side effects are work outside rendering, like fetching data or updating document title."
         ],
         "correctAnswer": "An event handler is a function that runs when a user or browser event happens.",
-        "explanation": "An event handler is a function that runs when a user or browser event happens."
+        "explanation": "An event handler is a function that runs when a user or browser event happens.\n\nExample:\nonClick={handleClick}"
       },
       {
         "id": "frontend-components-events-q-10",
@@ -6759,20 +6759,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "The event object contains information about the event, such as target or input value."
+        "explanation": "The event object contains information about the event, such as target or input value.\n\nExample:\nevent.target.value"
       },
       {
         "id": "frontend-components-events-q-11",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to preventDefault. What is the best choice?",
+        "prompt": "Scenario: A form submit would reload the page, but you want JavaScript to handle the submit instead. What method should you call?",
         "options": [
           "preventDefault",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "state machine",
+          "state",
+          "derived state"
         ],
         "correctAnswer": "preventDefault",
-        "explanation": "preventDefault stops a browser’s default behaviour, such as form submission reloading the page. Example: event.preventDefault()"
+        "explanation": "preventDefault stops a browser’s default behaviour, such as form submission reloading the page. Example: event.preventDefault()\n\nExample:\nevent.preventDefault()"
       },
       {
         "id": "frontend-components-events-q-12",
@@ -6784,7 +6784,7 @@ export const topics = [
           "controlled input",
           "controlled input"
         ],
-        "explanation": "A controlled input gets its value from state and updates state on change."
+        "explanation": "A controlled input gets its value from state and updates state on change.\n\nExample:\nvalue={name} onChange={...}"
       },
       {
         "id": "frontend-components-events-q-13",
@@ -6792,12 +6792,12 @@ export const topics = [
         "prompt": "Which option best describes form validation?",
         "options": [
           "Form validation checks user input before submitting or saving.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "A component is a reusable piece of UI with its own structure, inputs and behaviour.",
+          "Rendering means turning component state and props into UI.",
+          "An event handler is a function that runs when a user or browser event happens."
         ],
         "correctAnswer": "Form validation checks user input before submitting or saving.",
-        "explanation": "Form validation checks user input before submitting or saving."
+        "explanation": "Form validation checks user input before submitting or saving.\n\nExample:\nif (!email) setError(...)"
       },
       {
         "id": "frontend-components-events-q-14",
@@ -6808,20 +6808,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "CustomEvent lets web components send named events with custom detail data."
+        "explanation": "CustomEvent lets web components send named events with custom detail data.\n\nExample:\nnew CustomEvent(\"change\", { detail })"
       },
       {
         "id": "frontend-components-events-q-15",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to event bubbling. What is the best choice?",
+        "prompt": "Scenario: Clicking a button inside a card also triggers the card's click handler because the event travels upward. What is happening?",
         "options": [
           "event bubbling",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "list rendering",
+          "key prop",
+          "preventDefault"
         ],
         "correctAnswer": "event bubbling",
-        "explanation": "Event bubbling means events move from the target element up through ancestors. Example: click on child bubbles to parent"
+        "explanation": "Event bubbling means events move from the target element up through ancestors. Example: click on child bubbles to parent\n\nExample:\nclick on child bubbles to parent"
       },
       {
         "id": "frontend-components-events-q-16",
@@ -6833,7 +6833,7 @@ export const topics = [
           "accessibility",
           "accessibility"
         ],
-        "explanation": "Accessibility means building UI that works for keyboard, screen reader and disabled users."
+        "explanation": "Accessibility means building UI that works for keyboard, screen reader and disabled users.\n\nExample:\nbutton not clickable div"
       },
       {
         "id": "frontend-components-events-q-17",
@@ -6841,12 +6841,12 @@ export const topics = [
         "prompt": "Which option best describes semantic HTML?",
         "options": [
           "Semantic HTML uses elements according to meaning, which improves accessibility and maintainability.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Its value comes from state and changes update that state.",
+          "It encapsulates component markup and styles.",
+          "A component is a reusable piece of UI with its own structure, inputs and behaviour."
         ],
         "correctAnswer": "Semantic HTML uses elements according to meaning, which improves accessibility and maintainability.",
-        "explanation": "Semantic HTML uses elements according to meaning, which improves accessibility and maintainability."
+        "explanation": "Semantic HTML uses elements according to meaning, which improves accessibility and maintainability.\n\nExample:\n<button>, <nav>, <main>"
       },
       {
         "id": "frontend-components-events-q-18",
@@ -6857,20 +6857,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "aria-label gives an accessible name when visible text is not enough."
+        "explanation": "aria-label gives an accessible name when visible text is not enough.\n\nExample:\naria-label=\"Close dialog\""
       },
       {
         "id": "frontend-components-events-q-19",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to focus state. What is the best choice?",
+        "prompt": "Scenario: A keyboard user tabs onto an input and it shows an outline to indicate it is active. What state is this?",
         "options": [
           "focus state",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "list rendering",
+          "key prop",
+          "preventDefault"
         ],
         "correctAnswer": "focus state",
-        "explanation": "Focus state shows which interactive element currently has keyboard focus. Example: button:focus-visible"
+        "explanation": "Focus state shows which interactive element currently has keyboard focus. Example: button:focus-visible\n\nExample:\nbutton:focus-visible"
       },
       {
         "id": "frontend-components-events-q-20",
@@ -6882,7 +6882,7 @@ export const topics = [
           "loading UI",
           "loading UI"
         ],
-        "explanation": "Loading UI communicates that work is happening and prevents confusion."
+        "explanation": "Loading UI communicates that work is happening and prevents confusion.\n\nExample:\ndisabled save button"
       },
       {
         "id": "frontend-components-events-q-21",
@@ -6890,12 +6890,12 @@ export const topics = [
         "prompt": "Which option best describes empty UI?",
         "options": [
           "Empty UI explains that there is no data and often suggests the next action.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Side effects are work outside rendering, like fetching data or updating document title.",
+          "Its value comes from state and changes update that state.",
+          "It encapsulates component markup and styles."
         ],
         "correctAnswer": "Empty UI explains that there is no data and often suggests the next action.",
-        "explanation": "Empty UI explains that there is no data and often suggests the next action."
+        "explanation": "Empty UI explains that there is no data and often suggests the next action.\n\nExample:\nNo devices yet"
       },
       {
         "id": "frontend-components-events-q-22",
@@ -6906,20 +6906,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Error UI explains failure and offers recovery when possible."
+        "explanation": "Error UI explains failure and offers recovery when possible.\n\nExample:\nRetry button"
       },
       {
         "id": "frontend-components-events-q-23",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to component composition. What is the best choice?",
+        "prompt": "Scenario: You build a page by combining smaller reusable pieces like `Header`, `Card`, and `Button`. What approach is this?",
         "options": [
           "component composition",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "list rendering",
+          "key prop",
+          "preventDefault"
         ],
         "correctAnswer": "component composition",
-        "explanation": "Composition builds complex UI by combining smaller components. Example: <Card><Button /></Card>"
+        "explanation": "Composition builds complex UI by combining smaller components. Example: <Card><Button /></Card>\n\nExample:\n<Card><Button /></Card>"
       },
       {
         "id": "frontend-components-events-q-24",
@@ -6931,7 +6931,7 @@ export const topics = [
           "prop drilling",
           "prop drilling"
         ],
-        "explanation": "Prop drilling means passing props through layers just to reach a deep child."
+        "explanation": "Prop drilling means passing props through layers just to reach a deep child.\n\nExample:\nApp -> Layout -> Panel -> Button"
       },
       {
         "id": "frontend-components-events-q-25",
@@ -6939,19 +6939,19 @@ export const topics = [
         "prompt": "Which option best describes side effects?",
         "options": [
           "Side effects are work outside rendering, like fetching data or updating document title.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "A component is a reusable piece of UI with its own structure, inputs and behaviour.",
+          "Rendering means turning component state and props into UI.",
+          "An event handler is a function that runs when a user or browser event happens."
         ],
         "correctAnswer": "Side effects are work outside rendering, like fetching data or updating document title.",
-        "explanation": "Side effects are work outside rendering, like fetching data or updating document title."
+        "explanation": "Side effects are work outside rendering, like fetching data or updating document title.\n\nExample:\nuseEffect(() => {}, [])"
       },
       {
         "id": "frontend-components-events-extra-q-controlled-input-mcq",
         "type": "multiple-choice",
         "prompt": "What makes an input controlled?",
         "correctAnswer": "Its value comes from state and changes update that state.",
-        "explanation": "Controlled inputs use state as the source of truth.",
+        "explanation": "Controlled inputs use state as the source of truth.\n\nExample:\n<input value={name} onChange={e => setName(e.target.value)} />",
         "options": [
           "Its value comes from state and changes update that state.",
           "It has no event handlers.",
@@ -6964,7 +6964,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the ARIA attribute used to announce dynamic updates to screen readers.",
         "correctAnswer": "aria-live",
-        "explanation": "aria-live tells assistive tech about updated content.",
+        "explanation": "aria-live tells assistive tech about updated content.\n\nExample:\n<div aria-live=\"polite\">Saved successfully</div>",
         "acceptedAnswers": [
           "aria-live",
           "aria live"
@@ -6975,7 +6975,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: You should always store filtered counts in state even when they can be calculated from existing state.",
         "correctAnswer": "False",
-        "explanation": "Derived values should often be calculated from source state to avoid sync bugs.",
+        "explanation": "Derived values should often be calculated from source state to avoid sync bugs.\n\nExample:\nconst [open, setOpen] = useState(false)",
         "options": [
           "True",
           "False"
@@ -6986,7 +6986,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A list has 500 clickable rows. Instead of attaching 500 listeners, what pattern can attach one listener to the parent?",
         "correctAnswer": "event delegation",
-        "explanation": "Event delegation handles child events from a shared parent listener.",
+        "explanation": "Event delegation handles child events from a shared parent listener.\n\nExample:\nlist.addEventListener(\"click\", event => { ... });",
         "options": [
           "event delegation",
           "HTTP polling",
@@ -6999,7 +6999,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "Your UI can accidentally show loading and success at the same time. What thinking model can prevent impossible state combinations?",
         "correctAnswer": "state machine",
-        "explanation": "A state machine defines one current state and valid transitions between states.",
+        "explanation": "A state machine defines one current state and valid transitions between states.\n\nExample:\nidle -> loading -> success | error",
         "options": [
           "state machine",
           "array sorting",
@@ -7012,7 +7012,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What is a major benefit of the Shadow DOM?",
         "correctAnswer": "It encapsulates component markup and styles.",
-        "explanation": "Shadow DOM helps web components avoid style and DOM clashes with the page.",
+        "explanation": "Shadow DOM helps web components avoid style and DOM clashes with the page.\n\nExample:\nclass MyCard extends HTMLElement { attachShadow({ mode: \"open\" }); }",
         "options": [
           "It encapsulates component markup and styles.",
           "It stores API tokens securely.",
@@ -7184,7 +7184,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What are props in React?",
         "correctAnswer": "Read-only inputs passed from a parent to a child component.",
-        "explanation": "Props configure components and should not be mutated by the child.",
+        "explanation": "Props configure components and should not be mutated by the child.\n\nExample:\n<UserCard name=\"Jay\" />",
         "options": [
           "Read-only inputs passed from a parent to a child component.",
           "A database table.",
@@ -7197,7 +7197,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the React hook commonly used for local component state.",
         "correctAnswer": "useState",
-        "explanation": "useState stores state and gives you a setter to update it.",
+        "explanation": "useState stores state and gives you a setter to update it. In practice, this matters because it changes how you would write or review real application code.\n\nExample:\nconst [count, setCount] = useState(0);",
         "acceptedAnswers": [
           "useState",
           "usestate"
@@ -7208,7 +7208,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A list reorders and input values appear attached to the wrong rows. What is a likely issue?",
         "correctAnswer": "unstable keys",
-        "explanation": "Using array indexes or unstable keys can cause React to reuse the wrong list items.",
+        "explanation": "Using array indexes or unstable keys can cause React to reuse the wrong list items.\n\nExample:\nitems.map(item => <Row key={item.id} item={item} />)",
         "options": [
           "unstable keys",
           "too many CSS variables",
@@ -7221,7 +7221,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: Effects that subscribe to external events should usually clean up the subscription.",
         "correctAnswer": "True",
-        "explanation": "Cleanup avoids duplicate listeners and memory leaks.",
+        "explanation": "Cleanup avoids duplicate listeners and memory leaks.\n\nExample:\nreturn () => window.removeEventListener(\"resize\", onResize);",
         "options": [
           "True",
           "False"
@@ -7232,7 +7232,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What is a custom hook mainly used for?",
         "correctAnswer": "Reusing stateful logic between components.",
-        "explanation": "Custom hooks extract reusable hook-based logic into a function.",
+        "explanation": "Custom hooks extract reusable hook-based logic into a function.\n\nExample:\nfunction useWindowSize() { ... }",
         "options": [
           "Reusing stateful logic between components.",
           "Styling only.",
@@ -7245,7 +7245,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A form input value comes from React state and updates with onChange. What is this called?",
         "correctAnswer": "controlled input",
-        "explanation": "A controlled input uses React state as the source of truth.",
+        "explanation": "A controlled input uses React state as the source of truth.\n\nExample:\nconst value = inputRef.current?.value;",
         "options": [
           "controlled input",
           "webhook",
@@ -7258,7 +7258,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "When is Context a reasonable fit?",
         "correctAnswer": "Sharing values like theme/auth through many components.",
-        "explanation": "Context avoids prop drilling for broadly shared values.",
+        "explanation": "Context avoids prop drilling for broadly shared values.\n\nExample:\nconst ThemeContext = createContext(\"light\");",
         "options": [
           "Sharing values like theme/auth through many components.",
           "Replacing every local useState.",
@@ -7271,7 +7271,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "The UI shows a new item immediately before the API confirms it saved. What pattern is this?",
         "correctAnswer": "optimistic UI",
-        "explanation": "Optimistic UI improves perceived speed but needs rollback/error handling.",
+        "explanation": "Optimistic UI improves perceived speed but needs rollback/error handling.\n\nExample:\nShow new todo immediately, then remove it if save fails.",
         "options": [
           "optimistic UI",
           "CSRF",
@@ -7284,7 +7284,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the attribute that gives an accessible name to an icon-only button.",
         "correctAnswer": "aria-label",
-        "explanation": "aria-label provides a text label for assistive technologies.",
+        "explanation": "aria-label provides a text label for assistive technologies. In practice, this matters because it changes how you would write or review real application code.\n\nExample:\n<button aria-label=\"Close dialog\">×</button>",
         "acceptedAnswers": [
           "aria-label",
           "aria label"
@@ -7295,7 +7295,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What is prop drilling?",
         "correctAnswer": "Passing props through layers that do not use them just to reach a deeper child.",
-        "explanation": "Prop drilling can sometimes be reduced with composition or context.",
+        "explanation": "Prop drilling can sometimes be reduced with composition or context.\n\nExample:\nApp -> Layout -> Panel -> Button",
         "options": [
           "Passing props through layers that do not use them just to reach a deeper child.",
           "Sending props to an API.",
@@ -7308,7 +7308,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: Updating a useRef value causes a component rerender.",
         "correctAnswer": "False",
-        "explanation": "Refs persist between renders but changing ref.current does not trigger a rerender.",
+        "explanation": "Refs persist between renders but changing ref.current does not trigger a rerender.\n\nExample:\nconst inputRef = useRef<HTMLInputElement>(null);",
         "options": [
           "True",
           "False"
@@ -7319,7 +7319,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Why lazy-load a large route component?",
         "correctAnswer": "To reduce initial JavaScript downloaded by the user.",
-        "explanation": "Lazy loading supports code splitting and can improve initial load.",
+        "explanation": "Lazy loading supports code splitting and can improve initial load.\n\nExample:\nconst Settings = lazy(() => import(\"./Settings\"));",
         "options": [
           "To reduce initial JavaScript downloaded by the user.",
           "To make TypeScript optional.",
@@ -7332,7 +7332,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the React pattern/component used to catch rendering errors and show fallback UI.",
         "correctAnswer": "error boundary",
-        "explanation": "Error boundaries catch render errors in a subtree.",
+        "explanation": "Error boundaries catch render errors in a subtree.\n\nExample:\n<ErrorBoundary fallback={<ErrorPage />}>",
         "acceptedAnswers": [
           "error boundary",
           "error boundaries"
@@ -7343,7 +7343,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A component stores fullName in state even though it can be calculated from firstName and lastName. What issue might this cause?",
         "correctAnswer": "stale derived state",
-        "explanation": "Duplicating derived values in state can get out of sync.",
+        "explanation": "Duplicating derived values in state can get out of sync.\n\nExample:\nconst fullName = `${first} ${last}`;",
         "options": [
           "stale derived state",
           "CORS preflight",
@@ -7356,7 +7356,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Which prop design is clearest for a reusable button?",
         "correctAnswer": "variant=\"primary\" and disabled as explicit props.",
-        "explanation": "Clear, predictable props make component usage easier.",
+        "explanation": "Clear, predictable props make component usage easier.\n\nExample:\n<Button variant=\"primary\" size=\"sm\" disabled />",
         "options": [
           "variant=\"primary\" and disabled as explicit props.",
           "A prop named x that accepts any value.",
@@ -7369,7 +7369,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A component test clicks Save and checks that a success message appears. What kind of thing is it testing?",
         "correctAnswer": "user-visible behaviour",
-        "explanation": "Good component tests focus on behaviour users can observe.",
+        "explanation": "Good component tests focus on behaviour users can observe.\n\nExample:\nexpect(screen.getByRole(\"button\", { name: /save/i })).toBeEnabled();",
         "options": [
           "user-visible behaviour",
           "private implementation details only",
@@ -7382,7 +7382,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What does Suspense show while waiting for supported async/lazy content?",
         "correctAnswer": "fallback UI",
-        "explanation": "Suspense renders fallback UI while content is not ready.",
+        "explanation": "Suspense renders fallback UI while content is not ready.\n\nExample:\n<ErrorBoundary fallback={<ErrorPage />}>",
         "options": [
           "fallback UI",
           "a SQL query",
@@ -7395,7 +7395,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the phrase for moving shared state to the nearest common parent.",
         "correctAnswer": "lifting state up",
-        "explanation": "Lifting state up lets multiple children share and update the same source of truth.",
+        "explanation": "Lifting state up lets multiple children share and update the same source of truth.\n\nExample:\nParent owns selectedId; list and details receive it.",
         "acceptedAnswers": [
           "lifting state up",
           "lift state up"
@@ -7417,7 +7417,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Which change commonly causes a component to rerender?",
         "correctAnswer": "Its state is updated.",
-        "explanation": "State updates cause React to rerender the component.",
+        "explanation": "State updates cause React to rerender the component.\n\nExample:\nconst [count, setCount] = useState(0);",
         "options": [
           "Its state is updated.",
           "A CSS file exists.",
@@ -7430,7 +7430,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "An effect reads userId but userId is missing from the dependency array. What risk does this create?",
         "correctAnswer": "stale values",
-        "explanation": "Missing dependencies can make effects use old values.",
+        "explanation": "Missing dependencies can make effects use old values.\n\nExample:\nconst fullName = `${first} ${last}`;",
         "options": [
           "stale values",
           "automatic encryption",
@@ -7443,7 +7443,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "How does an uncontrolled input usually keep its current value?",
         "correctAnswer": "In the DOM, read through a ref when needed.",
-        "explanation": "Uncontrolled inputs are managed by the DOM rather than React state.",
+        "explanation": "Uncontrolled inputs are managed by the DOM rather than React state.\n\nExample:\nconst value = inputRef.current?.value;",
         "options": [
           "In the DOM, read through a ref when needed.",
           "In a CDN.",
@@ -7467,7 +7467,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Why separate data-fetching components from display components?",
         "correctAnswer": "It can make display components easier to reuse and test.",
-        "explanation": "Separating concerns keeps UI components focused.",
+        "explanation": "Separating concerns keeps UI components focused.\n\nExample:\nUserPage fetches; UserCard displays.",
         "options": [
           "It can make display components easier to reuse and test.",
           "It makes all API calls synchronous.",
@@ -7480,7 +7480,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A page renders 10,000 rows and scrolling is slow. What UI technique can help?",
         "correctAnswer": "virtualisation",
-        "explanation": "Virtualisation renders only the visible rows plus a buffer.",
+        "explanation": "Virtualisation renders only the visible rows plus a buffer. In practice, this matters because it changes how you would write or review real application code.\n\nExample:\nVirtualise a list with thousands of rows.",
         "options": [
           "virtualisation",
           "JSON.parse",
@@ -7701,12 +7701,12 @@ export const topics = [
         "prompt": "Which option best describes console.log debugging?",
         "options": [
           "console.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "The Network tab shows requests, responses, headers, payloads and timing.",
+          "An integration test checks multiple pieces working together.",
+          "A stub provides a simple fixed response for a dependency."
         ],
         "correctAnswer": "console.",
-        "explanation": "console.log helps inspect values quickly, but should not replace proper debugging or tests."
+        "explanation": "console.log helps inspect values quickly, but should not replace proper debugging or tests.\n\nExample:\nconsole.log({ user })"
       },
       {
         "id": "debugging-testing-quality-q-02",
@@ -7717,20 +7717,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "A breakpoint pauses code so you can inspect variables and step through execution."
+        "explanation": "A breakpoint pauses code so you can inspect variables and step through execution.\n\nExample:\nDevTools Sources breakpoint"
       },
       {
         "id": "debugging-testing-quality-q-03",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to call stack. What is the best choice?",
+        "prompt": "Scenario: An error trace shows the chain of function calls that led to the crash. What is that chain called?",
         "options": [
           "call stack",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "refactoring",
+          "technical debt",
+          "Arrange, Act, Assert"
         ],
         "correctAnswer": "call stack",
-        "explanation": "The call stack shows the chain of function calls that led to the current point. Example: stack trace"
+        "explanation": "The call stack shows the chain of function calls that led to the current point. Example: stack trace\n\nExample:\nstack trace"
       },
       {
         "id": "debugging-testing-quality-q-04",
@@ -7742,7 +7742,7 @@ export const topics = [
           "stack trace",
           "stack trace"
         ],
-        "explanation": "A stack trace shows where an error happened and which calls led there."
+        "explanation": "A stack trace shows where an error happened and which calls led there.\n\nExample:\nError at saveUser"
       },
       {
         "id": "debugging-testing-quality-q-05",
@@ -7750,12 +7750,12 @@ export const topics = [
         "prompt": "Which option best describes Network tab?",
         "options": [
           "The Network tab shows requests, responses, headers, payloads and timing.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Code review checks correctness, readability, maintainability and shared standards.",
+          "Mapping compiled code back to original source for debugging.",
+          "An integration test checks multiple pieces working together."
         ],
         "correctAnswer": "The Network tab shows requests, responses, headers, payloads and timing.",
-        "explanation": "The Network tab shows requests, responses, headers, payloads and timing."
+        "explanation": "The Network tab shows requests, responses, headers, payloads and timing.\n\nExample:\nDevTools Network"
       },
       {
         "id": "debugging-testing-quality-q-06",
@@ -7766,20 +7766,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Reproduction steps describe exactly how to trigger a bug."
+        "explanation": "Reproduction steps describe exactly how to trigger a bug.\n\nExample:\nexpect(result).toEqual(...)"
       },
       {
         "id": "debugging-testing-quality-q-07",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to minimal example. What is the best choice?",
+        "prompt": "Scenario: A bug report includes only the smallest code needed to reproduce the problem, with unrelated code removed. What is this called?",
         "options": [
           "minimal example",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "Arrange, Act, Assert",
+          "flaky test",
+          "a network mock"
         ],
         "correctAnswer": "minimal example",
-        "explanation": "A minimal example removes unrelated code so the cause is easier to find. Example: small failing snippet"
+        "explanation": "A minimal example removes unrelated code so the cause is easier to find. Example: small failing snippet\n\nExample:\nsmall failing snippet"
       },
       {
         "id": "debugging-testing-quality-q-08",
@@ -7791,7 +7791,7 @@ export const topics = [
           "unit test",
           "unit test"
         ],
-        "explanation": "A unit test checks a small function or component behaviour in isolation."
+        "explanation": "A unit test checks a small function or component behaviour in isolation.\n\nExample:\nexpect(sum(1,2)).toBe(3)"
       },
       {
         "id": "debugging-testing-quality-q-09",
@@ -7799,12 +7799,12 @@ export const topics = [
         "prompt": "Which option best describes integration test?",
         "options": [
           "An integration test checks multiple pieces working together.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Linting catches style problems, likely bugs and inconsistent patterns automatically.",
+          "A pure function returns the same output for the same input and has no side effects.",
+          "Code review checks correctness, readability, maintainability and shared standards."
         ],
         "correctAnswer": "An integration test checks multiple pieces working together.",
-        "explanation": "An integration test checks multiple pieces working together."
+        "explanation": "An integration test checks multiple pieces working together.\n\nExample:\nform submits to service"
       },
       {
         "id": "debugging-testing-quality-q-10",
@@ -7815,20 +7815,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "An end-to-end test checks a realistic user flow through the app."
+        "explanation": "An end-to-end test checks a realistic user flow through the app.\n\nExample:\nexpect(result).toEqual(...)"
       },
       {
         "id": "debugging-testing-quality-q-11",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to assertion. What is the best choice?",
+        "prompt": "Scenario: A test checks that the actual result equals the expected result. What is that check called?",
         "options": [
           "assertion",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "flaky test",
+          "a network mock",
+          "linter"
         ],
         "correctAnswer": "assertion",
-        "explanation": "An assertion states what should be true in a test. Example: expect(result).toEqual(...)"
+        "explanation": "An assertion states what should be true in a test. Example: expect(result).toEqual(...)\n\nExample:\nexpect(result).toEqual(...)"
       },
       {
         "id": "debugging-testing-quality-q-12",
@@ -7840,7 +7840,7 @@ export const topics = [
           "mock",
           "mock"
         ],
-        "explanation": "A mock replaces a dependency so a test can control or observe it."
+        "explanation": "A mock replaces a dependency so a test can control or observe it.\n\nExample:\nmock fetch"
       },
       {
         "id": "debugging-testing-quality-q-13",
@@ -7848,12 +7848,12 @@ export const topics = [
         "prompt": "Which option best describes stub?",
         "options": [
           "A stub provides a simple fixed response for a dependency.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "An integration test checks multiple pieces working together.",
+          "Linting catches style problems, likely bugs and inconsistent patterns automatically.",
+          "A pure function returns the same output for the same input and has no side effects."
         ],
         "correctAnswer": "A stub provides a simple fixed response for a dependency.",
-        "explanation": "A stub provides a simple fixed response for a dependency."
+        "explanation": "A stub provides a simple fixed response for a dependency.\n\nExample:\nreturn fake user"
       },
       {
         "id": "debugging-testing-quality-q-14",
@@ -7864,20 +7864,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Test data should be clear and focused on the behaviour being tested."
+        "explanation": "Test data should be clear and focused on the behaviour being tested.\n\nExample:\nexpect(result).toEqual(...)"
       },
       {
         "id": "debugging-testing-quality-q-15",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to edge case. What is the best choice?",
+        "prompt": "Scenario: Your code works for normal input, but you also test empty arrays, zero, and very long strings. What are these unusual cases called?",
         "options": [
           "edge case",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "naming",
+          "single responsibility",
+          "refactoring"
         ],
         "correctAnswer": "edge case",
-        "explanation": "An edge case is an unusual but possible input or state. Example: empty array"
+        "explanation": "An edge case is an unusual but possible input or state. Example: empty array\n\nExample:\nempty array"
       },
       {
         "id": "debugging-testing-quality-q-16",
@@ -7889,7 +7889,7 @@ export const topics = [
           "regression test",
           "regression test"
         ],
-        "explanation": "A regression test prevents a fixed bug from coming back."
+        "explanation": "A regression test prevents a fixed bug from coming back.\n\nExample:\ntest for previous bug"
       },
       {
         "id": "debugging-testing-quality-q-17",
@@ -7897,12 +7897,12 @@ export const topics = [
         "prompt": "Which option best describes linting?",
         "options": [
           "Linting catches style problems, likely bugs and inconsistent patterns automatically.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "The Network tab shows requests, responses, headers, payloads and timing.",
+          "An integration test checks multiple pieces working together.",
+          "A stub provides a simple fixed response for a dependency."
         ],
         "correctAnswer": "Linting catches style problems, likely bugs and inconsistent patterns automatically.",
-        "explanation": "Linting catches style problems, likely bugs and inconsistent patterns automatically."
+        "explanation": "Linting catches style problems, likely bugs and inconsistent patterns automatically.\n\nExample:\nESLint"
       },
       {
         "id": "debugging-testing-quality-q-18",
@@ -7913,20 +7913,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Formatting tools make code style consistent without manual debate."
+        "explanation": "Formatting tools make code style consistent without manual debate.\n\nExample:\nexpect(result).toEqual(...)"
       },
       {
         "id": "debugging-testing-quality-q-19",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to naming. What is the best choice?",
+        "prompt": "Scenario: You rename `x` to `totalPrice` so the code explains its purpose more clearly. What quality issue are you improving?",
         "options": [
           "naming",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "edge case",
+          "regression test",
+          "single responsibility"
         ],
         "correctAnswer": "naming",
-        "explanation": "Good names explain purpose and reduce the need for comments. Example: isLoading not flag"
+        "explanation": "Good names explain purpose and reduce the need for comments. Example: isLoading not flag\n\nExample:\nisLoading not flag"
       },
       {
         "id": "debugging-testing-quality-q-20",
@@ -7938,7 +7938,7 @@ export const topics = [
           "single responsibility",
           "single responsibility"
         ],
-        "explanation": "Single responsibility means a function or component should have one clear reason to change."
+        "explanation": "Single responsibility means a function or component should have one clear reason to change.\n\nExample:\nparseDate separate from render"
       },
       {
         "id": "debugging-testing-quality-q-21",
@@ -7946,12 +7946,12 @@ export const topics = [
         "prompt": "Which option best describes pure function?",
         "options": [
           "A pure function returns the same output for the same input and has no side effects.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Mapping compiled code back to original source for debugging.",
+          "The Network tab shows requests, responses, headers, payloads and timing.",
+          "An integration test checks multiple pieces working together."
         ],
         "correctAnswer": "A pure function returns the same output for the same input and has no side effects.",
-        "explanation": "A pure function returns the same output for the same input and has no side effects."
+        "explanation": "A pure function returns the same output for the same input and has no side effects.\n\nExample:\nadd(a,b)"
       },
       {
         "id": "debugging-testing-quality-q-22",
@@ -7962,20 +7962,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "A side effect changes something outside the function, like network, storage or DOM."
+        "explanation": "A side effect changes something outside the function, like network, storage or DOM.\n\nExample:\nlocalStorage.setItem"
       },
       {
         "id": "debugging-testing-quality-q-23",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to refactoring. What is the best choice?",
+        "prompt": "Scenario: You improve the structure of code without changing what the user sees or how the feature behaves. What is this called?",
         "options": [
           "refactoring",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "unit test",
+          "assertion",
+          "mock"
         ],
         "correctAnswer": "refactoring",
-        "explanation": "Refactoring improves code structure without changing behaviour. Example: extract function"
+        "explanation": "Refactoring improves code structure without changing behaviour. Example: extract function\n\nExample:\nextract function"
       },
       {
         "id": "debugging-testing-quality-q-24",
@@ -7987,7 +7987,7 @@ export const topics = [
           "technical debt",
           "technical debt"
         ],
-        "explanation": "Technical debt is a shortcut that may make future changes harder."
+        "explanation": "Technical debt is a shortcut that may make future changes harder.\n\nExample:\ntemporary hack"
       },
       {
         "id": "debugging-testing-quality-q-25",
@@ -7995,19 +7995,19 @@ export const topics = [
         "prompt": "Which option best describes code review?",
         "options": [
           "Code review checks correctness, readability, maintainability and shared standards.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "A stub provides a simple fixed response for a dependency.",
+          "Linting catches style problems, likely bugs and inconsistent patterns automatically.",
+          "A pure function returns the same output for the same input and has no side effects."
         ],
         "correctAnswer": "Code review checks correctness, readability, maintainability and shared standards.",
-        "explanation": "Code review checks correctness, readability, maintainability and shared standards."
+        "explanation": "Code review checks correctness, readability, maintainability and shared standards.\n\nExample:\npull request review"
       },
       {
         "id": "debugging-testing-quality-extra-q-aaa-mcq",
         "type": "multiple-choice",
         "prompt": "Which test structure means setup, perform behaviour, then check result?",
         "correctAnswer": "Arrange, Act, Assert",
-        "explanation": "AAA makes tests easier to scan and maintain.",
+        "explanation": "AAA makes tests easier to scan and maintain.\n\nExample:\nArrange user data -> Act by calling saveUser -> Assert save was called",
         "options": [
           "Arrange, Act, Assert",
           "Authorise, Authenticate, Audit",
@@ -8020,7 +8020,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the term for a test that sometimes passes and sometimes fails without relevant code changes.",
         "correctAnswer": "flaky test",
-        "explanation": "Flaky tests are unreliable and should be investigated because they reduce trust in the test suite.",
+        "explanation": "Flaky tests are unreliable and should be investigated because they reduce trust in the test suite.\n\nExample:\nA test that fails only on CI every few runs.",
         "acceptedAnswers": [
           "flaky test",
           "flaky"
@@ -8031,7 +8031,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: 100% line coverage guarantees the app is bug-free.",
         "correctAnswer": "False",
-        "explanation": "Coverage only shows what ran. It does not prove the assertions were useful or all behaviours were tested.",
+        "explanation": "Coverage only shows what ran. It does not prove the assertions were useful or all behaviours were tested.\n\nExample:\nA test can call a function without checking the result.",
         "options": [
           "True",
           "False"
@@ -8042,7 +8042,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "You need to test how a component handles a 500 API response without calling the real server. What should you use?",
         "correctAnswer": "a network mock",
-        "explanation": "Network mocking lets tests control API responses reliably.",
+        "explanation": "Network mocking lets tests control API responses reliably.\n\nExample:\nMock GET /devices to return an empty array.",
         "options": [
           "a network mock",
           "a production database",
@@ -8055,7 +8055,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What do source maps help with?",
         "correctAnswer": "Mapping compiled code back to original source for debugging.",
-        "explanation": "Source maps connect bundled/minified output with original files.",
+        "explanation": "Source maps connect bundled/minified output with original files.\n\nExample:\nmain.abcd.js -> src/App.tsx",
         "options": [
           "Mapping compiled code back to original source for debugging.",
           "Encrypting API responses.",
@@ -8068,7 +8068,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Which tool category catches likely code issues such as unused variables or unsafe patterns?",
         "correctAnswer": "linter",
-        "explanation": "Linters analyse code for possible bugs and consistency issues.",
+        "explanation": "Linters analyse code for possible bugs and consistency issues. In practice, this matters because it changes how you would write or review real application code.\n\nExample:\nPrettier formats; ESLint catches no-unused-vars.",
         "options": [
           "linter",
           "formatter only",
@@ -8240,7 +8240,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What is Node.js?",
         "correctAnswer": "A JavaScript runtime outside the browser.",
-        "explanation": "Node lets JavaScript run on servers, scripts and tools.",
+        "explanation": "Node lets JavaScript run on servers, scripts and tools.\n\nExample:\nnode script.js",
         "options": [
           "A JavaScript runtime outside the browser.",
           "A CSS framework.",
@@ -8253,7 +8253,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: package-lock.json helps make installs more reproducible.",
         "correctAnswer": "True",
-        "explanation": "The lockfile records exact dependency versions.",
+        "explanation": "The lockfile records exact dependency versions.\n\nExample:\n\"strict\": true",
         "options": [
           "True",
           "False"
@@ -8264,7 +8264,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Where would a build tool like Vite usually belong?",
         "correctAnswer": "devDependencies",
-        "explanation": "Build tools are usually needed for development/building rather than app runtime.",
+        "explanation": "Build tools are usually needed for development/building rather than app runtime.\n\nExample:\nvite is often a devDependency.",
         "options": [
           "devDependencies",
           "dependencies always",
@@ -8277,7 +8277,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the config file that controls TypeScript compiler settings.",
         "correctAnswer": "tsconfig.json",
-        "explanation": "tsconfig.json configures TypeScript compilation.",
+        "explanation": "tsconfig.json configures TypeScript compilation.\n\nExample:\n\"strict\": true",
         "acceptedAnswers": [
           "tsconfig.json",
           "tsconfig"
@@ -8288,7 +8288,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "You want TypeScript to catch more null/undefined and unsafe typing issues. Which compiler setting group helps?",
         "correctAnswer": "strict mode",
-        "explanation": "TypeScript strict mode enables stronger checks.",
+        "explanation": "TypeScript strict mode enables stronger checks.\n\nExample:\n\"strictNullChecks\": true",
         "options": [
           "strict mode",
           "CORS mode",
@@ -8301,7 +8301,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "In Vite, which prefix is commonly required for env vars exposed to frontend code?",
         "correctAnswer": "VITE_",
-        "explanation": "Vite exposes env variables prefixed with VITE_ to client code.",
+        "explanation": "Vite exposes env variables prefixed with VITE_ to client code.\n\nExample:\nimport.meta.env.VITE_API_URL",
         "options": [
           "VITE_",
           "SECRET_",
@@ -8314,7 +8314,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: A VITE_ variable is safe for private API keys because users cannot see frontend code.",
         "correctAnswer": "False",
-        "explanation": "Frontend-exposed variables are visible to users. Private secrets belong server-side.",
+        "explanation": "Frontend-exposed variables are visible to users. Private secrets belong server-side.\n\nExample:\nimport.meta.env.VITE_API_URL",
         "options": [
           "True",
           "False"
@@ -8325,7 +8325,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the modern JavaScript module keyword used to bring code in from another file.",
         "correctAnswer": "import",
-        "explanation": "ES modules use import and export.",
+        "explanation": "ES modules use import and export.\n\nExample:\nimport fs from \"node:fs\";",
         "acceptedAnswers": [
           "import"
         ]
@@ -8335,7 +8335,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A GitHub repo is huge because it includes node_modules and dist. What should usually happen?",
         "correctAnswer": "ignore generated dependencies and build output",
-        "explanation": "node_modules and dist are normally excluded and recreated with npm install/build.",
+        "explanation": "node_modules and dist are normally excluded and recreated with npm install/build.\n\nExample:\n.gitignore should exclude node_modules and dist.",
         "options": [
           "ignore generated dependencies and build output",
           "commit even more generated files",
@@ -8348,7 +8348,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Which tool is mainly for catching JS/TS code issues based on rules?",
         "correctAnswer": "ESLint",
-        "explanation": "ESLint analyses code for patterns and possible problems.",
+        "explanation": "ESLint analyses code for patterns and possible problems.\n\nExample:\nnpm run lint",
         "options": [
           "ESLint",
           "Prettier only",
@@ -8361,7 +8361,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Which tool is mainly for consistent code formatting?",
         "correctAnswer": "Prettier",
-        "explanation": "Prettier formats code layout consistently.",
+        "explanation": "Prettier formats code layout consistently.\n\nExample:\nnpx prettier . --write",
         "options": [
           "Prettier",
           "TypeScript runtime",
@@ -8374,7 +8374,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "What npm command usually runs a script named build?",
         "correctAnswer": "npm run build",
-        "explanation": "npm run <script> executes scripts from package.json.",
+        "explanation": "npm run <script> executes scripts from package.json.\n\nExample:\nnpm run build",
         "acceptedAnswers": [
           "npm run build"
         ]
@@ -8384,7 +8384,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A dependency has a platform-specific optional package missing in node_modules. What often fixes this local issue?",
         "correctAnswer": "delete node_modules and reinstall",
-        "explanation": "Reinstalling allows npm to fetch the correct optional dependencies for the platform.",
+        "explanation": "Reinstalling allows npm to fetch the correct optional dependencies for the platform.\n\nExample:\nRollup native optional dependency issues.",
         "options": [
           "delete node_modules and reinstall",
           "edit every source file",
@@ -8397,7 +8397,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What is a monorepo?",
         "correctAnswer": "A repository containing multiple apps/packages.",
-        "explanation": "Monorepos keep related packages together with shared tooling.",
+        "explanation": "Monorepos keep related packages together with shared tooling.\n\nExample:\napps/web and packages/ui in one repo.",
         "options": [
           "A repository containing multiple apps/packages.",
           "A single CSS file.",
@@ -8410,7 +8410,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: Workspaces can help manage multiple packages in one repository.",
         "correctAnswer": "True",
-        "explanation": "Workspaces are commonly used in monorepos.",
+        "explanation": "Workspaces are commonly used in monorepos.\n\nExample:\n\"strict\": true",
         "options": [
           "True",
           "False"
@@ -8421,7 +8421,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What is usually true of production builds?",
         "correctAnswer": "They optimise output for deployment.",
-        "explanation": "Production builds often minify and optimise assets.",
+        "explanation": "Production builds often minify and optimise assets.\n\nExample:\nnpm run dev vs npm run build",
         "options": [
           "They optimise output for deployment.",
           "They are always slower for users.",
@@ -8434,7 +8434,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the npm command that checks dependencies for known vulnerabilities.",
         "correctAnswer": "npm audit",
-        "explanation": "npm audit reports known dependency vulnerabilities.",
+        "explanation": "npm audit reports known dependency vulnerabilities.\n\nExample:\nnpm audit",
         "acceptedAnswers": [
           "npm audit"
         ]
@@ -8444,7 +8444,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "Imports like ../../../../components/Button are hard to maintain. What configuration can improve this?",
         "correctAnswer": "path aliases",
-        "explanation": "Path aliases make imports shorter and clearer when configured properly.",
+        "explanation": "Path aliases make imports shorter and clearer when configured properly.\n\nExample:\nimport { Button } from \"@/components/Button\";",
         "options": [
           "path aliases",
           "HTTP cookies",
@@ -8457,7 +8457,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What does a bundler mainly do?",
         "correctAnswer": "Combines/transforms modules into deployable browser assets.",
-        "explanation": "Bundlers process modules, TS, CSS and assets for the browser.",
+        "explanation": "Bundlers process modules, TS, CSS and assets for the browser.\n\nExample:\nVite/Rollup bundles TS, CSS and assets.",
         "options": [
           "Combines/transforms modules into deployable browser assets.",
           "Stores user passwords.",
@@ -8470,7 +8470,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the term for converting TypeScript into JavaScript.",
         "correctAnswer": "transpiling",
-        "explanation": "Transpiling converts source code from one syntax/language level to another.",
+        "explanation": "Transpiling converts source code from one syntax/language level to another.\n\nExample:\ntsc or esbuild transforms .ts files.",
         "acceptedAnswers": [
           "transpiling",
           "transpile",
@@ -8482,7 +8482,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "The project works for one developer but fails for another using a different Node version. What project file can help pin the version?",
         "correctAnswer": ".nvmrc",
-        "explanation": ".nvmrc documents the expected Node version for nvm users.",
+        "explanation": ".nvmrc documents the expected Node version for nvm users. In practice, this matters because it changes how you would write or review real application code.\n\nExample:\n.nvmrc or engines in package.json",
         "options": [
           ".nvmrc",
           "README screenshot",
@@ -8495,7 +8495,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Which file lists npm scripts and dependencies?",
         "correctAnswer": "package.json",
-        "explanation": "package.json is the main Node project manifest.",
+        "explanation": "package.json is the main Node project manifest.\n\nExample:\n\"scripts\": { \"dev\": \"vite\" }",
         "options": [
           "package.json",
           "index.html only",
@@ -8508,7 +8508,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Which syntax is CommonJS?",
         "correctAnswer": "require() and module.exports",
-        "explanation": "CommonJS uses require and module.exports.",
+        "explanation": "CommonJS uses require and module.exports.\n\nExample:\nimport fs from \"node:fs\";",
         "options": [
           "require() and module.exports",
           "import and export only",
@@ -8521,7 +8521,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: Environment variables are a common way to configure apps outside source code.",
         "correctAnswer": "True",
-        "explanation": "Environment variables keep config separate from code.",
+        "explanation": "Environment variables keep config separate from code.\n\nExample:\n\"strict\": true",
         "options": [
           "True",
           "False"
@@ -8532,7 +8532,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A team keeps forgetting the exact build command. What package.json feature should standardise it?",
         "correctAnswer": "npm scripts",
-        "explanation": "Scripts give shared commands like npm run build/test/dev.",
+        "explanation": "Scripts give shared commands like npm run build/test/dev.\n\nExample:\nnpm run build",
         "options": [
           "npm scripts",
           "radio buttons",
@@ -8704,7 +8704,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What does O(n) usually mean?",
         "correctAnswer": "Runtime or memory grows linearly with input size.",
-        "explanation": "O(n) means work grows in proportion to n.",
+        "explanation": "O(n) means work grows in proportion to n.\n\nExample:\nO(n) grows linearly with input size.",
         "options": [
           "Runtime or memory grows linearly with input size.",
           "The code always takes one second.",
@@ -8717,7 +8717,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "You check if each of 10,000 roles is allowed. Which structure is better than repeatedly calling includes on a large array?",
         "correctAnswer": "Set",
-        "explanation": "Set.has is usually clearer and faster for membership checks.",
+        "explanation": "Set.has is usually clearer and faster for membership checks.\n\nExample:\nconst allowed = new Set([\"admin\", \"owner\"]);",
         "options": [
           "Set",
           "String.trim",
@@ -8730,7 +8730,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Which data structure is last-in, first-out?",
         "correctAnswer": "stack",
-        "explanation": "A stack removes the most recently added item first.",
+        "explanation": "A stack removes the most recently added item first.\n\nExample:\npush/pop",
         "options": [
           "stack",
           "queue",
@@ -8743,7 +8743,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the data structure that is first-in, first-out.",
         "correctAnswer": "queue",
-        "explanation": "A queue processes the oldest added item first.",
+        "explanation": "A queue processes the oldest added item first.\n\nExample:\nenqueue/dequeue",
         "acceptedAnswers": [
           "queue"
         ]
@@ -8753,7 +8753,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: Binary search generally requires the data/search space to be sorted or ordered.",
         "correctAnswer": "True",
-        "explanation": "Binary search relies on discarding half the search space using ordering.",
+        "explanation": "Binary search relies on discarding half the search space using ordering.\n\nExample:\nWindow count always equals end - start + 1.",
         "options": [
           "True",
           "False"
@@ -8764,7 +8764,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the recursion term for the condition that stops recursive calls.",
         "correctAnswer": "base case",
-        "explanation": "A base case prevents infinite recursion.",
+        "explanation": "A base case prevents infinite recursion.\n\nExample:\nfunction factorial(n){ if(n<=1)return 1; return n*factorial(n-1); }",
         "acceptedAnswers": [
           "base case",
           "base condition"
@@ -8775,7 +8775,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Which traversal usually uses a queue and explores level by level?",
         "correctAnswer": "BFS",
-        "explanation": "Breadth-first search explores neighbours in layers.",
+        "explanation": "Breadth-first search explores neighbours in layers.\n\nExample:\nqueue.push(start)",
         "options": [
           "BFS",
           "DFS only",
@@ -8788,7 +8788,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Which traversal can naturally use recursion or a stack?",
         "correctAnswer": "DFS",
-        "explanation": "Depth-first search goes deep before backtracking.",
+        "explanation": "Depth-first search goes deep before backtracking.\n\nExample:\nvisit child nodes recursively",
         "options": [
           "DFS",
           "BFS only",
@@ -8801,7 +8801,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "You need the longest substring without repeating characters. Which technique is commonly useful?",
         "correctAnswer": "sliding window",
-        "explanation": "Sliding window tracks a moving range and updates counts efficiently.",
+        "explanation": "Sliding window tracks a moving range and updates counts efficiently.\n\nExample:\nMove start/end indexes while tracking counts.",
         "options": [
           "sliding window",
           "semantic versioning",
@@ -8814,7 +8814,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A sorted array needs two numbers that sum to a target. Which technique is often efficient?",
         "correctAnswer": "two pointers",
-        "explanation": "Two pointers can move inward based on whether the sum is too low or high.",
+        "explanation": "Two pointers can move inward based on whether the sum is too low or high.\n\nExample:\nleft = 0; right = arr.length - 1;",
         "options": [
           "two pointers",
           "random search",
@@ -8827,7 +8827,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the technique that caches results of expensive function calls by input.",
         "correctAnswer": "memoization",
-        "explanation": "Memoization avoids recomputing the same subproblem.",
+        "explanation": "Memoization avoids recomputing the same subproblem.\n\nExample:\nconst memo = new Map();",
         "acceptedAnswers": [
           "memoization",
           "memoisation"
@@ -8838,7 +8838,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Which is an example of an edge case?",
         "correctAnswer": "An empty input array.",
-        "explanation": "Empty input is valid but often missed.",
+        "explanation": "Empty input is valid but often missed.\n\nExample:\n[] or [singleItem]",
         "options": [
           "An empty input array.",
           "A normal list of 10 items.",
@@ -8851,7 +8851,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "Sorting users by age in JS gives weird order because ages are treated like strings. What should you provide?",
         "correctAnswer": "comparator function",
-        "explanation": "A comparator like (a,b)=>a.age-b.age sorts numerically.",
+        "explanation": "A comparator like (a,b)=>a.age-b.age sorts numerically.\n\nExample:\narr.sort((a,b) => a.age - b.age)",
         "options": [
           "comparator function",
           "Bearer token",
@@ -8864,7 +8864,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What does O(n) extra space mean?",
         "correctAnswer": "Extra memory grows linearly with input size.",
-        "explanation": "O(n) space means memory grows with n.",
+        "explanation": "O(n) space means memory grows with n.\n\nExample:\nA Set of all items is O(n) extra space.",
         "options": [
           "Extra memory grows linearly with input size.",
           "No memory is used.",
@@ -8877,7 +8877,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: A greedy algorithm is always correct for every optimisation problem.",
         "correctAnswer": "False",
-        "explanation": "Greedy works only when local choices lead to a global optimum.",
+        "explanation": "Greedy works only when local choices lead to a global optimum.\n\nExample:\nChoose earliest finishing meeting.",
         "options": [
           "True",
           "False"
@@ -8888,7 +8888,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Dynamic programming is especially useful when a problem has what?",
         "correctAnswer": "Overlapping subproblems.",
-        "explanation": "DP stores repeated subproblem results.",
+        "explanation": "DP stores repeated subproblem results.\n\nExample:\nmemo[n] for Fibonacci",
         "options": [
           "Overlapping subproblems.",
           "Only CSS styles.",
@@ -8901,7 +8901,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "You need to access users by id many times. What data shape helps?",
         "correctAnswer": "users by id map",
-        "explanation": "Storing users by ID avoids repeated array scans.",
+        "explanation": "Storing users by ID avoids repeated array scans.\n\nExample:\nconst byId = new Map(users.map(u => [u.id, u]));",
         "options": [
           "users by id map",
           "array of random duplicates",
@@ -8914,7 +8914,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the term for a condition that remains true throughout an algorithm.",
         "correctAnswer": "invariant",
-        "explanation": "Invariants help prove and reason about correctness.",
+        "explanation": "Invariants help prove and reason about correctness.\n\nExample:\nWindow count always equals end - start + 1.",
         "acceptedAnswers": [
           "invariant"
         ]
@@ -8924,7 +8924,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Why might you choose a slightly slower but clearer algorithm for small data?",
         "correctAnswer": "Maintainability can matter more than tiny performance gains.",
-        "explanation": "Good engineering balances speed, readability and context.",
+        "explanation": "Good engineering balances speed, readability and context.\n\nExample:\nUse a Map for speed but explain the memory cost.",
         "options": [
           "Maintainability can matter more than tiny performance gains.",
           "Big O never matters.",
@@ -8937,7 +8937,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What can happen if recursion has no reachable base case?",
         "correctAnswer": "Stack overflow or infinite recursion.",
-        "explanation": "Without a base case recursive calls do not stop.",
+        "explanation": "Without a base case recursive calls do not stop.\n\nExample:\nif (node === null) return;",
         "options": [
           "Stack overflow or infinite recursion.",
           "Automatic API retry.",
@@ -8950,7 +8950,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "Before coding, you ask whether input can be empty and what output format is expected. What skill is this?",
         "correctAnswer": "clarifying requirements",
-        "explanation": "Clarifying requirements prevents solving the wrong problem.",
+        "explanation": "Clarifying requirements prevents solving the wrong problem.\n\nExample:\nAsk: can input be empty?",
         "options": [
           "clarifying requirements",
           "CORS preflight",
@@ -8963,7 +8963,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What is a common average-case benefit of a hash map lookup?",
         "correctAnswer": "O(1) lookup by key.",
-        "explanation": "Hash maps are used for fast key-based access on average.",
+        "explanation": "Hash maps are used for fast key-based access on average.\n\nExample:\nconst byId = new Map(users.map(u => [u.id, u]));",
         "options": [
           "O(1) lookup by key.",
           "Always sorted output.",
@@ -8976,7 +8976,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: A stable sort preserves the relative order of equal items.",
         "correctAnswer": "True",
-        "explanation": "Stable sorting matters when chaining sorts or preserving previous ordering.",
+        "explanation": "Stable sorting matters when chaining sorts or preserving previous ordering.\n\nExample:\nWindow count always equals end - start + 1.",
         "options": [
           "True",
           "False"
@@ -8987,7 +8987,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the notation used to describe algorithm growth as input size increases.",
         "correctAnswer": "Big O",
-        "explanation": "Big O describes growth rate of runtime or memory.",
+        "explanation": "Big O describes growth rate of runtime or memory.\n\nExample:\nO(n) grows linearly with input size.",
         "acceptedAnswers": [
           "big o",
           "big-o",
@@ -8999,7 +8999,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "In an interview, you mention time and space complexity after coding. What are you demonstrating?",
         "correctAnswer": "engineering reasoning",
-        "explanation": "Explaining trade-offs and complexity shows how you think, not just that code runs.",
+        "explanation": "Explaining trade-offs and complexity shows how you think, not just that code runs.\n\nExample:\n“This is O(n) time and O(n) space because of the Set.”",
         "options": [
           "engineering reasoning",
           "CSS specificity",
@@ -9220,12 +9220,12 @@ export const topics = [
         "prompt": "Which option best describes client-server?",
         "options": [
           "Client-server architecture separates the user-facing client from server-side logic and data.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "To prove backups can actually be used during an incident.",
+          "A cache stores frequently used data temporarily to reduce latency or load.",
+          "Vertical scaling gives one machine more CPU or memory."
         ],
         "correctAnswer": "Client-server architecture separates the user-facing client from server-side logic and data.",
-        "explanation": "Client-server architecture separates the user-facing client from server-side logic and data."
+        "explanation": "Client-server architecture separates the user-facing client from server-side logic and data.\n\nExample:\nbrowser calls API"
       },
       {
         "id": "system-design-web-q-02",
@@ -9236,20 +9236,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "The frontend runs in the user’s browser or app and handles UI interactions."
+        "explanation": "The frontend runs in the user’s browser or app and handles UI interactions.\n\nExample:\nReact app"
       },
       {
         "id": "system-design-web-q-03",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to backend. What is the best choice?",
+        "prompt": "Scenario: The UI needs data saved in a database and business rules handled on a server. Which part of the app does that work?",
         "options": [
           "backend",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "load balancer",
+          "horizontal scaling",
+          "throughput"
         ],
         "correctAnswer": "backend",
-        "explanation": "The backend runs on servers and handles business logic, auth and data access. Example: Express API"
+        "explanation": "The backend runs on servers and handles business logic, auth and data access. Example: Express API\n\nExample:\nExpress API"
       },
       {
         "id": "system-design-web-q-04",
@@ -9261,7 +9261,7 @@ export const topics = [
           "database",
           "database"
         ],
-        "explanation": "A database stores persistent application data."
+        "explanation": "A database stores persistent application data.\n\nExample:\nPostgres"
       },
       {
         "id": "system-design-web-q-05",
@@ -9269,12 +9269,12 @@ export const topics = [
         "prompt": "Which option best describes cache?",
         "options": [
           "A cache stores frequently used data temporarily to reduce latency or load.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Reliability is the ability to keep behaving correctly over time and failures.",
+          "A queue stores work to be processed asynchronously.",
+          "WebSockets keep a two-way connection open for real-time updates."
         ],
         "correctAnswer": "A cache stores frequently used data temporarily to reduce latency or load.",
-        "explanation": "A cache stores frequently used data temporarily to reduce latency or load."
+        "explanation": "A cache stores frequently used data temporarily to reduce latency or load.\n\nExample:\nRedis cache"
       },
       {
         "id": "system-design-web-q-06",
@@ -9285,20 +9285,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "A CDN serves static assets from locations closer to users."
+        "explanation": "A CDN serves static assets from locations closer to users.\n\nExample:\nimages from CDN"
       },
       {
         "id": "system-design-web-q-07",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to load balancer. What is the best choice?",
+        "prompt": "Scenario: Traffic is split across several servers so one server does not receive every request. What component does this?",
         "options": [
           "load balancer",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "SLO",
+          "circuit breaker",
+          "backend"
         ],
         "correctAnswer": "load balancer",
-        "explanation": "A load balancer spreads traffic across multiple servers. Example: Nginx/ALB"
+        "explanation": "A load balancer spreads traffic across multiple servers. Example: Nginx/ALB\n\nExample:\nNginx/ALB"
       },
       {
         "id": "system-design-web-q-08",
@@ -9310,7 +9310,7 @@ export const topics = [
           "horizontal scaling",
           "horizontal scaling"
         ],
-        "explanation": "Horizontal scaling adds more machines or instances to handle more traffic."
+        "explanation": "Horizontal scaling adds more machines or instances to handle more traffic.\n\nExample:\nmore API pods"
       },
       {
         "id": "system-design-web-q-09",
@@ -9318,12 +9318,12 @@ export const topics = [
         "prompt": "Which option best describes vertical scaling?",
         "options": [
           "Vertical scaling gives one machine more CPU or memory.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "A cache stores frequently used data temporarily to reduce latency or load.",
+          "Reliability is the ability to keep behaving correctly over time and failures.",
+          "A queue stores work to be processed asynchronously."
         ],
         "correctAnswer": "Vertical scaling gives one machine more CPU or memory.",
-        "explanation": "Vertical scaling gives one machine more CPU or memory."
+        "explanation": "Vertical scaling gives one machine more CPU or memory.\n\nExample:\nlarger server"
       },
       {
         "id": "system-design-web-q-10",
@@ -9334,20 +9334,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Latency is the time a request takes to get a response."
+        "explanation": "Latency is the time a request takes to get a response.\n\nExample:\n200ms response"
       },
       {
         "id": "system-design-web-q-11",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to throughput. What is the best choice?",
+        "prompt": "Scenario: You measure how many requests a service can handle per second. What metric is this?",
         "options": [
           "throughput",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "monitoring",
+          "queue",
+          "SLO"
         ],
         "correctAnswer": "throughput",
-        "explanation": "Throughput is how much work a system handles over time. Example: requests per second"
+        "explanation": "Throughput is how much work a system handles over time. Example: requests per second\n\nExample:\nrequests per second"
       },
       {
         "id": "system-design-web-q-12",
@@ -9359,7 +9359,7 @@ export const topics = [
           "availability",
           "availability"
         ],
-        "explanation": "Availability is how often a system is working when users need it."
+        "explanation": "Availability is how often a system is working when users need it.\n\nExample:\n99.9% uptime"
       },
       {
         "id": "system-design-web-q-13",
@@ -9367,12 +9367,12 @@ export const topics = [
         "prompt": "Which option best describes reliability?",
         "options": [
           "Reliability is the ability to keep behaving correctly over time and failures.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Client-server architecture separates the user-facing client from server-side logic and data.",
+          "A cache stores frequently used data temporarily to reduce latency or load.",
+          "Vertical scaling gives one machine more CPU or memory."
         ],
         "correctAnswer": "Reliability is the ability to keep behaving correctly over time and failures.",
-        "explanation": "Reliability is the ability to keep behaving correctly over time and failures."
+        "explanation": "Reliability is the ability to keep behaving correctly over time and failures.\n\nExample:\nretry safe jobs"
       },
       {
         "id": "system-design-web-q-14",
@@ -9383,20 +9383,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "A single point of failure can bring down the system if it breaks."
+        "explanation": "A single point of failure can bring down the system if it breaks.\n\nExample:\none database without backup"
       },
       {
         "id": "system-design-web-q-15",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to stateless server. What is the best choice?",
+        "prompt": "Scenario: Any server instance can handle the next request because session data is stored externally, not in memory on one machine. What kind of server is this?",
         "options": [
           "stateless server",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "stateful service",
+          "event-driven design",
+          "polling"
         ],
         "correctAnswer": "stateless server",
-        "explanation": "A stateless server does not store user session data in memory between requests. Example: token-based auth"
+        "explanation": "A stateless server does not store user session data in memory between requests. Example: token-based auth\n\nExample:\ntoken-based auth"
       },
       {
         "id": "system-design-web-q-16",
@@ -9408,7 +9408,7 @@ export const topics = [
           "stateful service",
           "stateful service"
         ],
-        "explanation": "A stateful service stores important state and needs careful persistence."
+        "explanation": "A stateful service stores important state and needs careful persistence.\n\nExample:\ndatabase"
       },
       {
         "id": "system-design-web-q-17",
@@ -9416,12 +9416,12 @@ export const topics = [
         "prompt": "Which option best describes queue?",
         "options": [
           "A queue stores work to be processed asynchronously.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Caching and serving content closer to users.",
+          "To prove backups can actually be used during an incident.",
+          "Client-server architecture separates the user-facing client from server-side logic and data."
         ],
         "correctAnswer": "A queue stores work to be processed asynchronously.",
-        "explanation": "A queue stores work to be processed asynchronously."
+        "explanation": "A queue stores work to be processed asynchronously.\n\nExample:\nsend email job"
       },
       {
         "id": "system-design-web-q-18",
@@ -9432,20 +9432,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "A message broker moves messages between producers and consumers."
+        "explanation": "A message broker moves messages between producers and consumers.\n\nExample:\nRabbitMQ"
       },
       {
         "id": "system-design-web-q-19",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to event-driven design. What is the best choice?",
+        "prompt": "Scenario: When an order is placed, other parts of the system react to an `OrderCreated` message. What design style is this?",
         "options": [
           "event-driven design",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "API gateway",
+          "monitoring",
+          "queue"
         ],
         "correctAnswer": "event-driven design",
-        "explanation": "Event-driven design reacts to events rather than direct request chains. Example: user.created event"
+        "explanation": "Event-driven design reacts to events rather than direct request chains. Example: user.created event\n\nExample:\nuser.created event"
       },
       {
         "id": "system-design-web-q-20",
@@ -9457,7 +9457,7 @@ export const topics = [
           "polling",
           "polling"
         ],
-        "explanation": "Polling repeatedly asks for updates at intervals."
+        "explanation": "Polling repeatedly asks for updates at intervals.\n\nExample:\nGET status every 5s"
       },
       {
         "id": "system-design-web-q-21",
@@ -9465,12 +9465,12 @@ export const topics = [
         "prompt": "Which option best describes WebSocket?",
         "options": [
           "WebSockets keep a two-way connection open for real-time updates.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "A queue stores work to be processed asynchronously.",
+          "Graceful degradation means the app still offers reduced functionality when part of it fails.",
+          "Caching and serving content closer to users."
         ],
         "correctAnswer": "WebSockets keep a two-way connection open for real-time updates.",
-        "explanation": "WebSockets keep a two-way connection open for real-time updates."
+        "explanation": "WebSockets keep a two-way connection open for real-time updates.\n\nExample:\nlive chat"
       },
       {
         "id": "system-design-web-q-22",
@@ -9481,20 +9481,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Rate limits protect systems from abuse or accidental overload."
+        "explanation": "Rate limits protect systems from abuse or accidental overload.\n\nExample:\n100 requests/min"
       },
       {
         "id": "system-design-web-q-23",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to API gateway. What is the best choice?",
+        "prompt": "Scenario: Clients call one entry point, which routes requests to the correct internal service and can handle auth/rate limits. What is this component?",
         "options": [
           "API gateway",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "load balancer",
+          "horizontal scaling",
+          "throughput"
         ],
         "correctAnswer": "API gateway",
-        "explanation": "An API gateway routes, secures and manages API traffic. Example: gateway before services"
+        "explanation": "An API gateway routes, secures and manages API traffic. Example: gateway before services\n\nExample:\ngateway before services"
       },
       {
         "id": "system-design-web-q-24",
@@ -9506,7 +9506,7 @@ export const topics = [
           "monitoring",
           "monitoring"
         ],
-        "explanation": "Monitoring tracks system health with metrics, logs and alerts."
+        "explanation": "Monitoring tracks system health with metrics, logs and alerts.\n\nExample:\nerror rate alert"
       },
       {
         "id": "system-design-web-q-25",
@@ -9514,19 +9514,19 @@ export const topics = [
         "prompt": "Which option best describes graceful degradation?",
         "options": [
           "Graceful degradation means the app still offers reduced functionality when part of it fails.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "Client-server architecture separates the user-facing client from server-side logic and data.",
+          "A cache stores frequently used data temporarily to reduce latency or load.",
+          "Vertical scaling gives one machine more CPU or memory."
         ],
         "correctAnswer": "Graceful degradation means the app still offers reduced functionality when part of it fails.",
-        "explanation": "Graceful degradation means the app still offers reduced functionality when part of it fails."
+        "explanation": "Graceful degradation means the app still offers reduced functionality when part of it fails.\n\nExample:\nshow cached data"
       },
       {
         "id": "system-design-web-extra-q-queue-scenario",
         "type": "scenario",
         "prompt": "Users upload videos and processing takes minutes. What design component can decouple upload from processing?",
         "correctAnswer": "queue",
-        "explanation": "A queue lets the API accept work quickly while workers process jobs asynchronously.",
+        "explanation": "A queue lets the API accept work quickly while workers process jobs asynchronously.\n\nExample:\nAPI -> queue -> worker sends email",
         "options": [
           "queue",
           "CSS grid",
@@ -9539,7 +9539,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the term for a reliability target such as “99.9% of requests succeed”.",
         "correctAnswer": "SLO",
-        "explanation": "An SLO is a service level objective.",
+        "explanation": "An SLO is a service level objective.\n\nExample:\nSLI: p95 latency. SLO: p95 latency under 300ms.",
         "acceptedAnswers": [
           "slo",
           "service level objective"
@@ -9550,7 +9550,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: eventual consistency means data may briefly differ between systems but should converge later.",
         "correctAnswer": "True",
-        "explanation": "Eventual consistency accepts temporary differences in exchange for scalability or availability.",
+        "explanation": "Eventual consistency accepts temporary differences in exchange for scalability or availability.\n\nExample:\nA newly uploaded image may take seconds to appear in search.",
         "options": [
           "True",
           "False"
@@ -9561,7 +9561,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What is a CDN mainly used for in web systems?",
         "correctAnswer": "Caching and serving content closer to users.",
-        "explanation": "CDNs reduce latency and origin load by serving assets from edge locations.",
+        "explanation": "CDNs reduce latency and origin load by serving assets from edge locations.\n\nExample:\nImages, JS bundles and CSS can be served from a CDN.",
         "options": [
           "Caching and serving content closer to users.",
           "Compiling TypeScript only.",
@@ -9574,7 +9574,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A downstream API keeps timing out and is slowing your app. Which reliability pattern temporarily stops calling it?",
         "correctAnswer": "circuit breaker",
-        "explanation": "A circuit breaker opens after repeated failures and gives the dependency time to recover.",
+        "explanation": "A circuit breaker opens after repeated failures and gives the dependency time to recover.\n\nExample:\nIf payment API fails repeatedly, stop calls briefly and show fallback.",
         "options": [
           "circuit breaker",
           "cursor pagination",
@@ -9587,7 +9587,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Why should teams test database restores?",
         "correctAnswer": "To prove backups can actually be used during an incident.",
-        "explanation": "Backups are not enough unless restore steps are known and verified.",
+        "explanation": "Backups are not enough unless restore steps are known and verified.\n\nExample:\nRun a staging restore from last night’s backup.",
         "options": [
           "To prove backups can actually be used during an incident.",
           "To make queries faster in the browser.",
@@ -9759,7 +9759,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What is a performance budget?",
         "correctAnswer": "A limit for metrics like bundle size or load time.",
-        "explanation": "Performance budgets stop apps getting slower gradually.",
+        "explanation": "Performance budgets stop apps getting slower gradually.\n\nExample:\nKeep initial JS under 200 KB gzip.",
         "options": [
           "A limit for metrics like bundle size or load time.",
           "A team salary spreadsheet.",
@@ -9772,7 +9772,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type one Core Web Vital abbreviation related to layout movement.",
         "correctAnswer": "CLS",
-        "explanation": "CLS stands for Cumulative Layout Shift.",
+        "explanation": "CLS stands for Cumulative Layout Shift.\n\nExample:\nLCP, INP, CLS",
         "acceptedAnswers": [
           "CLS",
           "cumulative layout shift"
@@ -9783,7 +9783,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: Lazy-loading off-screen images can improve initial page load.",
         "correctAnswer": "True",
-        "explanation": "Off-screen images do not need to block initial loading.",
+        "explanation": "Off-screen images do not need to block initial loading.\n\nExample:\n<img loading=\"lazy\" />",
         "options": [
           "True",
           "False"
@@ -9794,7 +9794,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A product list is requested often and changes rarely. What technique can reduce repeated server work?",
         "correctAnswer": "caching",
-        "explanation": "Caching reusable results can reduce latency and load.",
+        "explanation": "Caching reusable results can reduce latency and load.\n\nExample:\nCache product list for 60 seconds.",
         "options": [
           "caching",
           "infinite polling",
@@ -9807,7 +9807,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What is a cache invalidation problem?",
         "correctAnswer": "Knowing when cached data should be refreshed or removed.",
-        "explanation": "Cached data can become stale after changes.",
+        "explanation": "Cached data can become stale after changes.\n\nExample:\nInvalidate device cache after PATCH /devices/:id.",
         "options": [
           "Knowing when cached data should be refreshed or removed.",
           "Making CSS valid.",
@@ -9820,7 +9820,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Which trio is commonly associated with observability?",
         "correctAnswer": "logs, metrics and traces",
-        "explanation": "These signals help teams understand production behaviour.",
+        "explanation": "These signals help teams understand production behaviour.\n\nExample:\nLogs + metrics + traces",
         "options": [
           "logs, metrics and traces",
           "HTML, CSS and JPEG",
@@ -9833,7 +9833,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "An alert fires every minute for harmless debug events. What is wrong?",
         "correctAnswer": "it is noisy and not actionable",
-        "explanation": "Good alerts should be meaningful and tied to user impact.",
+        "explanation": "Good alerts should be meaningful and tied to user impact.\n\nExample:\nAlert on high checkout error rate, not every debug log.",
         "options": [
           "it is noisy and not actionable",
           "it uses too many array methods",
@@ -9846,7 +9846,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the reliability concept that stops an operation waiting forever.",
         "correctAnswer": "timeout",
-        "explanation": "Timeouts let apps recover from hanging operations.",
+        "explanation": "Timeouts let apps recover from hanging operations.\n\nExample:\nAbort fetch after 10 seconds.",
         "acceptedAnswers": [
           "timeout",
           "timeouts"
@@ -9857,7 +9857,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A payment request times out and the client retries, risking duplicate charges. What can make retrying safer?",
         "correctAnswer": "idempotency key",
-        "explanation": "Idempotency keys let the server recognise duplicate retries of the same action.",
+        "explanation": "Idempotency keys let the server recognise duplicate retries of the same action.\n\nExample:\nIdempotency-Key: abc123",
         "options": [
           "idempotency key",
           "CSS reset",
@@ -9870,7 +9870,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Which is an example of PII?",
         "correctAnswer": "A user’s email address.",
-        "explanation": "PII can identify a person and should be handled carefully.",
+        "explanation": "PII can identify a person and should be handled carefully.\n\nExample:\nEmail address, full name, NI number",
         "options": [
           "A user’s email address.",
           "A generic button colour.",
@@ -9883,7 +9883,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: It is safe to log Authorization headers in production because logs are private.",
         "correctAnswer": "False",
-        "explanation": "Logs can be accessed by many systems/people and should not contain secrets.",
+        "explanation": "Logs can be accessed by many systems/people and should not contain secrets.\n\nExample:\nNever log Authorization headers.",
         "options": [
           "True",
           "False"
@@ -9894,7 +9894,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the process of measuring where code spends time before optimising.",
         "correctAnswer": "profiling",
-        "explanation": "Profiling helps identify real bottlenecks.",
+        "explanation": "Profiling helps identify real bottlenecks.\n\nExample:\nChrome Performance tab flame chart",
         "acceptedAnswers": [
           "profiling",
           "profile"
@@ -9905,7 +9905,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A component adds a window event listener every mount and never removes it. What issue can this cause?",
         "correctAnswer": "memory leak",
-        "explanation": "Unremoved listeners can keep references alive and duplicate work.",
+        "explanation": "Unremoved listeners can keep references alive and duplicate work.\n\nExample:\nsetInterval without clearInterval on unmount",
         "options": [
           "memory leak",
           "HTTP 201",
@@ -9918,7 +9918,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "How can a feature flag help during an incident?",
         "correctAnswer": "It can disable a risky feature quickly without a new deployment.",
-        "explanation": "Feature flags reduce release and incident response risk.",
+        "explanation": "Feature flags reduce release and incident response risk.\n\nExample:\nTurn off new checkout flow after errors spike.",
         "options": [
           "It can disable a risky feature quickly without a new deployment.",
           "It encrypts every API call.",
@@ -9931,7 +9931,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What does data minimisation mean?",
         "correctAnswer": "Collecting/exposing only the data needed.",
-        "explanation": "Less data means less privacy and security risk.",
+        "explanation": "Less data means less privacy and security risk.\n\nExample:\nDo not send dateOfBirth if the UI only needs displayName.",
         "options": [
           "Collecting/exposing only the data needed.",
           "Storing every possible field.",
@@ -9944,7 +9944,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: Secure defaults mean the safest option should usually be the default behaviour.",
         "correctAnswer": "True",
-        "explanation": "Secure defaults reduce accidental insecure usage.",
+        "explanation": "Secure defaults reduce accidental insecure usage.\n\nExample:\nPrivate by default, public only when explicitly enabled.",
         "options": [
           "True",
           "False"
@@ -9955,7 +9955,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "An API returns 429 with Retry-After. What should the client do?",
         "correctAnswer": "slow down and respect Retry-After",
-        "explanation": "Respecting rate limits prevents retry storms and improves UX.",
+        "explanation": "Respecting rate limits prevents retry storms and improves UX.\n\nExample:\nRespect Retry-After header.",
         "options": [
           "slow down and respect Retry-After",
           "retry in a tight loop",
@@ -9968,7 +9968,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What is graceful degradation?",
         "correctAnswer": "Keeping core functionality working when a non-critical feature fails.",
-        "explanation": "Graceful degradation prevents total failure when part of the system is down.",
+        "explanation": "Graceful degradation prevents total failure when part of the system is down.\n\nExample:\nIf recommendations fail, still show the product page.",
         "options": [
           "Keeping core functionality working when a non-critical feature fails.",
           "Making every feature admin-only.",
@@ -9981,7 +9981,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "Your app ships a surprisingly huge JS file. What tool/process helps find the largest dependencies?",
         "correctAnswer": "bundle analysis",
-        "explanation": "Bundle analysis visualises what contributes to bundle size.",
+        "explanation": "Bundle analysis visualises what contributes to bundle size.\n\nExample:\nnpx vite-bundle-visualizer",
         "options": [
           "bundle analysis",
           "CSRF token",
@@ -9994,7 +9994,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the security process of cleaning/escaping untrusted input before rendering it.",
         "correctAnswer": "sanitisation",
-        "explanation": "Sanitisation helps prevent unsafe content from executing or rendering badly.",
+        "explanation": "Sanitisation helps prevent unsafe content from executing or rendering badly.\n\nExample:\nEscape <script> before rendering.",
         "acceptedAnswers": [
           "sanitisation",
           "sanitization",
@@ -10007,7 +10007,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "Why review dependencies before adding them?",
         "correctAnswer": "They can affect security, bundle size and maintenance risk.",
-        "explanation": "Dependencies are useful but come with trade-offs.",
+        "explanation": "Dependencies are useful but come with trade-offs.\n\nExample:\nCheck package health before adding it.",
         "options": [
           "They can affect security, bundle size and maintenance risk.",
           "They always make apps smaller.",
@@ -10020,7 +10020,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What is a blameless postmortem for?",
         "correctAnswer": "Learning from an incident and defining follow-up actions without personal blame.",
-        "explanation": "Postmortems improve systems and response processes.",
+        "explanation": "Postmortems improve systems and response processes.\n\nExample:\nTimeline, root causes, follow-up actions",
         "options": [
           "Learning from an incident and defining follow-up actions without personal blame.",
           "Punishing the newest developer.",
@@ -10033,7 +10033,7 @@ export const topics = [
         "type": "type-answer",
         "prompt": "Type the production signal category for numeric values like error rate and latency.",
         "correctAnswer": "metrics",
-        "explanation": "Metrics are numeric time-series measurements.",
+        "explanation": "Metrics are numeric time-series measurements.\n\nExample:\np95 latency, 5xx rate",
         "acceptedAnswers": [
           "metrics",
           "metric"
@@ -10044,7 +10044,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "A request travels through frontend, API, worker and database. You need to see where it slows down. What observability signal helps?",
         "correctAnswer": "tracing",
-        "explanation": "Tracing follows a request across system boundaries.",
+        "explanation": "Tracing follows a request across system boundaries.\n\nExample:\nfrontend -> API -> database -> worker",
         "options": [
           "tracing",
           "string padding",
@@ -10057,7 +10057,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: Fallback UI can help users continue when optional data fails to load.",
         "correctAnswer": "True",
-        "explanation": "Fallbacks can preserve core flows when non-critical dependencies fail.",
+        "explanation": "Fallbacks can preserve core flows when non-critical dependencies fail.\n\nExample:\nIf recommendations fail, still show the product page.",
         "options": [
           "True",
           "False"
@@ -10276,12 +10276,12 @@ export const topics = [
         "prompt": "Which option best describes Git commit?",
         "options": [
           "A Git commit saves a snapshot of changes with a message explaining why.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "A pull request proposes changes and invites review before merging.",
+          "Environment variables configure apps without hardcoding secrets or environment-specific values.",
+          "An issue ticket describes work, context, acceptance criteria and discussion."
         ],
         "correctAnswer": "A Git commit saves a snapshot of changes with a message explaining why.",
-        "explanation": "A Git commit saves a snapshot of changes with a message explaining why."
+        "explanation": "A Git commit saves a snapshot of changes with a message explaining why.\n\nExample:\ngit commit -m"
       },
       {
         "id": "professional-dev-workflows-q-02",
@@ -10292,20 +10292,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "A branch lets you work on changes without touching the main line directly."
+        "explanation": "A branch lets you work on changes without touching the main line directly.\n\nExample:\nGiven/When/Then"
       },
       {
         "id": "professional-dev-workflows-q-03",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to merge. What is the best choice?",
+        "prompt": "Scenario: A completed feature branch needs to be combined back into `main`. What Git action is this?",
         "options": [
           "merge",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "CI",
+          "CD",
+          "semantic versioning"
         ],
         "correctAnswer": "merge",
-        "explanation": "A merge combines changes from one branch into another. Example: git merge main"
+        "explanation": "A merge combines changes from one branch into another. Example: git merge main\n\nExample:\ngit merge main"
       },
       {
         "id": "professional-dev-workflows-q-04",
@@ -10317,7 +10317,7 @@ export const topics = [
           "rebase",
           "rebase"
         ],
-        "explanation": "A rebase replays commits on top of another branch to create a cleaner history."
+        "explanation": "A rebase replays commits on top of another branch to create a cleaner history.\n\nExample:\ngit rebase main"
       },
       {
         "id": "professional-dev-workflows-q-05",
@@ -10325,12 +10325,12 @@ export const topics = [
         "prompt": "Which option best describes pull request?",
         "options": [
           "A pull request proposes changes and invites review before merging.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "A Git commit saves a snapshot of changes with a message explaining why.",
+          "Environment variables configure apps without hardcoding secrets or environment-specific values.",
+          "An issue ticket describes work, context, acceptance criteria and discussion."
         ],
         "correctAnswer": "A pull request proposes changes and invites review before merging.",
-        "explanation": "A pull request proposes changes and invites review before merging."
+        "explanation": "A pull request proposes changes and invites review before merging.\n\nExample:\nopen PR"
       },
       {
         "id": "professional-dev-workflows-q-06",
@@ -10341,20 +10341,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Code review improves quality through feedback before code reaches users."
+        "explanation": "Code review improves quality through feedback before code reaches users.\n\nExample:\nrequest changes"
       },
       {
         "id": "professional-dev-workflows-q-07",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to CI. What is the best choice?",
+        "prompt": "Scenario: Every push automatically runs tests and checks before the code is accepted. What practice is this?",
         "options": [
           "CI",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "rollback plan",
+          "merge",
+          "rebase"
         ],
         "correctAnswer": "CI",
-        "explanation": "CI automatically checks code with tests, linting or builds on each change. Example: GitHub Actions"
+        "explanation": "CI automatically checks code with tests, linting or builds on each change. Example: GitHub Actions\n\nExample:\nGitHub Actions"
       },
       {
         "id": "professional-dev-workflows-q-08",
@@ -10366,7 +10366,7 @@ export const topics = [
           "CD",
           "CD"
         ],
-        "explanation": "CD automatically prepares or deploys code after checks pass."
+        "explanation": "CD automatically prepares or deploys code after checks pass.\n\nExample:\ndeploy pipeline"
       },
       {
         "id": "professional-dev-workflows-q-09",
@@ -10374,12 +10374,12 @@ export const topics = [
         "prompt": "Which option best describes environment variable?",
         "options": [
           "Environment variables configure apps without hardcoding secrets or environment-specific values.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "A standup is a short team sync on progress, blockers and plans.",
+          "An ADR records an important architecture decision and why it was made.",
+          "A rollback restores a previous working version if a release causes problems."
         ],
         "correctAnswer": "Environment variables configure apps without hardcoding secrets or environment-specific values.",
-        "explanation": "Environment variables configure apps without hardcoding secrets or environment-specific values."
+        "explanation": "Environment variables configure apps without hardcoding secrets or environment-specific values.\n\nExample:\nVITE_API_URL"
       },
       {
         "id": "professional-dev-workflows-q-10",
@@ -10390,20 +10390,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "A feature flag turns functionality on or off without redeploying code."
+        "explanation": "A feature flag turns functionality on or off without redeploying code.\n\nExample:\nGiven/When/Then"
       },
       {
         "id": "professional-dev-workflows-q-11",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to semantic versioning. What is the best choice?",
+        "prompt": "Scenario: A library version changes from `1.4.2` to `2.0.0` to show a breaking change. What versioning system is this?",
         "options": [
           "semantic versioning",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "major",
+          "rollback plan",
+          "merge"
         ],
         "correctAnswer": "semantic versioning",
-        "explanation": "Semantic versioning communicates breaking, feature and patch changes. Example: 1.4.2"
+        "explanation": "Semantic versioning communicates breaking, feature and patch changes. Example: 1.4.2\n\nExample:\n1.4.2"
       },
       {
         "id": "professional-dev-workflows-q-12",
@@ -10415,7 +10415,7 @@ export const topics = [
           "changelog",
           "changelog"
         ],
-        "explanation": "A changelog records meaningful changes between versions."
+        "explanation": "A changelog records meaningful changes between versions.\n\nExample:\nAdded quiz results"
       },
       {
         "id": "professional-dev-workflows-q-13",
@@ -10423,12 +10423,12 @@ export const topics = [
         "prompt": "Which option best describes issue ticket?",
         "options": [
           "An issue ticket describes work, context, acceptance criteria and discussion.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "A Git commit saves a snapshot of changes with a message explaining why.",
+          "A pull request proposes changes and invites review before merging.",
+          "Environment variables configure apps without hardcoding secrets or environment-specific values."
         ],
         "correctAnswer": "An issue ticket describes work, context, acceptance criteria and discussion.",
-        "explanation": "An issue ticket describes work, context, acceptance criteria and discussion."
+        "explanation": "An issue ticket describes work, context, acceptance criteria and discussion.\n\nExample:\nJira ticket"
       },
       {
         "id": "professional-dev-workflows-q-14",
@@ -10439,20 +10439,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Acceptance criteria define what must be true for work to be considered done."
+        "explanation": "Acceptance criteria define what must be true for work to be considered done.\n\nExample:\nGiven/When/Then"
       },
       {
         "id": "professional-dev-workflows-q-15",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to definition of done. What is the best choice?",
+        "prompt": "Scenario: A team agrees that a ticket is only complete once code is reviewed, tested, documented, and deployed. What is this agreement called?",
         "options": [
           "definition of done",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "rollback plan",
+          "merge",
+          "rebase"
         ],
         "correctAnswer": "definition of done",
-        "explanation": "Definition of done is the team’s shared quality bar before work is complete. Example: tests pass, reviewed"
+        "explanation": "Definition of done is the team’s shared quality bar before work is complete. Example: tests pass, reviewed\n\nExample:\ntests pass, reviewed"
       },
       {
         "id": "professional-dev-workflows-q-16",
@@ -10464,7 +10464,7 @@ export const topics = [
           "Agile sprint",
           "Agile sprint"
         ],
-        "explanation": "A sprint is a short planned period of work, often one or two weeks."
+        "explanation": "A sprint is a short planned period of work, often one or two weeks.\n\nExample:\n2-week sprint"
       },
       {
         "id": "professional-dev-workflows-q-17",
@@ -10472,12 +10472,12 @@ export const topics = [
         "prompt": "Which option best describes standup?",
         "options": [
           "A standup is a short team sync on progress, blockers and plans.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "A Git commit saves a snapshot of changes with a message explaining why.",
+          "A pull request proposes changes and invites review before merging.",
+          "Environment variables configure apps without hardcoding secrets or environment-specific values."
         ],
         "correctAnswer": "A standup is a short team sync on progress, blockers and plans.",
-        "explanation": "A standup is a short team sync on progress, blockers and plans."
+        "explanation": "A standup is a short team sync on progress, blockers and plans.\n\nExample:\ndaily standup"
       },
       {
         "id": "professional-dev-workflows-q-18",
@@ -10488,20 +10488,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "A retrospective helps the team improve its process after a sprint."
+        "explanation": "A retrospective helps the team improve its process after a sprint.\n\nExample:\nGiven/When/Then"
       },
       {
         "id": "professional-dev-workflows-q-19",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to documentation. What is the best choice?",
+        "prompt": "Scenario: A teammate needs instructions explaining how to run the project and use its API. What should be written?",
         "options": [
           "documentation",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "CI",
+          "CD",
+          "semantic versioning"
         ],
         "correctAnswer": "documentation",
-        "explanation": "Documentation explains how code, systems or decisions work for future readers. Example: README"
+        "explanation": "Documentation explains how code, systems or decisions work for future readers. Example: README\n\nExample:\nREADME"
       },
       {
         "id": "professional-dev-workflows-q-20",
@@ -10513,7 +10513,7 @@ export const topics = [
           "README",
           "README"
         ],
-        "explanation": "A README explains what the project is and how to run or use it."
+        "explanation": "A README explains what the project is and how to run or use it.\n\nExample:\nnpm install"
       },
       {
         "id": "professional-dev-workflows-q-21",
@@ -10521,12 +10521,12 @@ export const topics = [
         "prompt": "Which option best describes ADR?",
         "options": [
           "An ADR records an important architecture decision and why it was made.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "A rollback restores a previous working version if a release causes problems.",
+          "Automatically suggesting or requiring reviewers for certain files.",
+          "A Git commit saves a snapshot of changes with a message explaining why."
         ],
         "correctAnswer": "An ADR records an important architecture decision and why it was made.",
-        "explanation": "An ADR records an important architecture decision and why it was made."
+        "explanation": "An ADR records an important architecture decision and why it was made.\n\nExample:\nADR-001"
       },
       {
         "id": "professional-dev-workflows-q-22",
@@ -10537,20 +10537,20 @@ export const topics = [
           "False"
         ],
         "correctAnswer": "True",
-        "explanation": "Dependency updates bring fixes and features but need testing for breaking changes."
+        "explanation": "Dependency updates bring fixes and features but need testing for breaking changes.\n\nExample:\nnpm update"
       },
       {
         "id": "professional-dev-workflows-q-23",
         "type": "scenario",
-        "prompt": "Scenario: You are reviewing code and see a need related to security audit. What is the best choice?",
+        "prompt": "Scenario: The team reviews dependencies, permissions, secrets, and common vulnerabilities before release. What activity is this?",
         "options": [
           "security audit",
-          "Use any unrelated syntax and hope TypeScript catches it",
-          "Ignore the issue until runtime",
-          "Move the logic into CSS"
+          "Agile sprint",
+          "documentation",
+          "README"
         ],
         "correctAnswer": "security audit",
-        "explanation": "A security audit checks dependencies or code for known vulnerabilities. Example: npm audit"
+        "explanation": "A security audit checks dependencies or code for known vulnerabilities. Example: npm audit\n\nExample:\nnpm audit"
       },
       {
         "id": "professional-dev-workflows-q-24",
@@ -10562,7 +10562,7 @@ export const topics = [
           "release branch",
           "release branch"
         ],
-        "explanation": "A release branch stabilises code before shipping a version."
+        "explanation": "A release branch stabilises code before shipping a version.\n\nExample:\nrelease/1.2"
       },
       {
         "id": "professional-dev-workflows-q-25",
@@ -10570,19 +10570,19 @@ export const topics = [
         "prompt": "Which option best describes rollback?",
         "options": [
           "A rollback restores a previous working version if a release causes problems.",
-          "It is only used for styling HTML elements.",
-          "It automatically sends data to a server.",
-          "It is a database table for storing application records."
+          "An issue ticket describes work, context, acceptance criteria and discussion.",
+          "A standup is a short team sync on progress, blockers and plans.",
+          "An ADR records an important architecture decision and why it was made."
         ],
         "correctAnswer": "A rollback restores a previous working version if a release causes problems.",
-        "explanation": "A rollback restores a previous working version if a release causes problems."
+        "explanation": "A rollback restores a previous working version if a release causes problems.\n\nExample:\nrollback deployment"
       },
       {
         "id": "professional-dev-workflows-extra-q-conventional-type",
         "type": "type-answer",
         "prompt": "Type the commit prefix commonly used for a bug fix in Conventional Commits.",
         "correctAnswer": "fix:",
-        "explanation": "fix: marks a commit as a bug fix.",
+        "explanation": "fix: marks a commit as a bug fix.\n\nExample:\nfeat: add quiz results summary",
         "acceptedAnswers": [
           "fix",
           "fix:"
@@ -10593,7 +10593,7 @@ export const topics = [
         "type": "scenario",
         "prompt": "You want to merge unfinished code safely and enable it later for 10% of users. What should you use?",
         "correctAnswer": "feature flag",
-        "explanation": "Feature flags separate code deployment from feature release.",
+        "explanation": "Feature flags separate code deployment from feature release.\n\nExample:\nSmall PRs merged daily into main.",
         "options": [
           "feature flag",
           "git blame",
@@ -10606,7 +10606,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "In semantic versioning, which number usually changes for a breaking change?",
         "correctAnswer": "major",
-        "explanation": "Major version changes indicate breaking changes.",
+        "explanation": "Major version changes indicate breaking changes.\n\nExample:\n2.4.1",
         "options": [
           "major",
           "minor",
@@ -10619,7 +10619,7 @@ export const topics = [
         "type": "true-false",
         "prompt": "True or false: An ADR records why an important technical decision was made.",
         "correctAnswer": "True",
-        "explanation": "ADRs capture context, decision and consequences so future developers understand the reasoning.",
+        "explanation": "ADRs capture context, decision and consequences so future developers understand the reasoning.\n\nExample:\nGiven/When/Then",
         "options": [
           "True",
           "False"
@@ -10630,7 +10630,7 @@ export const topics = [
         "type": "multiple-choice",
         "prompt": "What is CODEOWNERS used for?",
         "correctAnswer": "Automatically suggesting or requiring reviewers for certain files.",
-        "explanation": "CODEOWNERS maps paths to people or teams responsible for reviewing changes.",
+        "explanation": "CODEOWNERS maps paths to people or teams responsible for reviewing changes.\n\nExample:\n/src/design-system/ @team/design-system",
         "options": [
           "Automatically suggesting or requiring reviewers for certain files.",
           "Compiling CSS.",
@@ -10643,12 +10643,12 @@ export const topics = [
         "type": "scenario",
         "prompt": "A release causes a spike in errors. What prepared plan helps restore the previous working version quickly?",
         "correctAnswer": "rollback plan",
-        "explanation": "A rollback plan reduces incident time by making recovery steps clear.",
+        "explanation": "A rollback plan reduces incident time by making recovery steps clear.\n\nExample:\nRevert deployment to version 1.8.3 if error rate rises.",
         "options": [
           "rollback plan",
-          "string trimming",
-          "array flattening",
-          "hover state"
+          "fix:",
+          "feature flag",
+          "major"
         ]
       }
     ]

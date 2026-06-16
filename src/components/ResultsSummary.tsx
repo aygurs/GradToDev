@@ -1,4 +1,5 @@
 import { QuizResult } from '../types/index';
+import { FormattedText } from './FormattedText';
 
 interface ResultsSummaryProps {
   results: QuizResult[];
@@ -61,7 +62,7 @@ export function ResultsSummary({
                 <span className="review-number">Q{index + 1}</span>
               </div>
               <div className="review-content">
-                <p className="review-question">{result.prompt}</p>
+                <FormattedText text={result.prompt} className="review-question" />
                 <p className="review-answer">
                   Your answer: <strong>{result.selectedAnswer}</strong>
                 </p>
@@ -70,7 +71,7 @@ export function ResultsSummary({
                     Correct answer: <strong>{result.correctAnswer}</strong>
                   </p>
                 )}
-                <p className="review-explanation">{result.explanation}</p>
+                <FormattedText text={result.explanation} className="review-explanation" />
               </div>
             </div>
           ))}
